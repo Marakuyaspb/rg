@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Новая заявка</title>
+    <style media="all" type="text/css">
+      table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%;
+      }
+      body {
+        color: #455059;
+        margin: 0;
+        padding: 0;
+      }
+      a{
+        text-decoration: none;
+      }
+      .tel{
+        font-size: 15px;
+      }
+
+      h1, h2, h3, h4 {
+        color: #010305;
+      }
+      h1{
+        font-size: 2.3em;
+        font-weight: 400;
+      }
+      h5{
+        font-weight: 200;
+      }
+
+      td{
+        padding: 5px;
+      }
+      .no_border{
+        border: none;
+      }
+
+      hr{
+        color: #79cbee;
+      }
+    </style>
+</head>
+
+<body>
+
+  <table class='no_border'>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td class='no_border'>
+          <a href='https://renovation-rf.ru'><h1>АИК «Реновация»</h1></a>
+        </td>
+        <td class='no_border'></td> <td class='no_border'></td> <td class='no_border'></td>
+        <td class='no_border'>
+          <p>
+          <strong>Новая заявка на консультацию № {{ callme.id }}</strong>
+          <br>
+            <span class="secondary">
+              {{ callme.created|date:"d M, Y" }}
+            </span>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <br><br>
+
+  <h3>Контактные данные:</h3>
+
+  <table class='no_border'>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td class='no_border'> <strong>Имя:</strong>
+        </td>
+        <td class='no_border'>{{ callme.first_name }}</td>
+      </tr>
+      <tr>
+        <td class='no_border'> <strong>Телефон: </strong> 
+        </td>
+        <td class='no_border'>{{ callme.phone }}</td>
+      </tr>
+      <tr>
+        <td class='no_border'> <strong>E-mail:  </strong>
+        </td>
+        <td class='no_border'>{{ callme.email }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+   <br><br>
+  <center><h4>Сезгә яхшы көн телим!</h4></center>
+  
+  <br><br><br>
+
+</body>
+</html>

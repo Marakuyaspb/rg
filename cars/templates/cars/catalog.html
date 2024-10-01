@@ -1,0 +1,137 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel='stylesheet' href='https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css'>
+<link rel="stylesheet" href='{% static "css/style.css" %}'>
+
+<style type="text/css">
+  
+  .swiper-image-one {
+    background-image: url(http://127.0.0.1:8000/static/img/cases/improvement/kondurcha/reality/13.jpg);
+  }
+
+  .swiper-image-two {
+    background-image: url(http://127.0.0.1:8000/static/img/cases/improvement/kondurcha/reality/27.webp);
+  }
+
+  .swiper-image-three {
+    background-image: url(http://127.0.0.1:8000/static/img/cases/improvement/kondurcha/reality/35.png);
+  }
+
+  .swiper-image-four {
+    background-image: url(http://127.0.0.1:8000/static/img/cases/improvement/kondurcha/reality/15_crop.jpg);
+  }
+
+  .swiper-image-five {
+    background-image: url(http://127.0.0.1:8000/static/img/cases/improvement/kondurcha/reality/2.jpg);
+  }
+
+  .swiper-image-six {
+    background-image: url(http://127.0.0.1:8000/static/img/cases/improvement/kondurcha/reality/34.png);
+  }
+</style>
+
+<section class='pb-4'>
+  <img class='img_header'  src='{% static "headers/3.png" %}'>
+  <div class='container category_header'>
+    <h1 class='we_300 header_name pb-3'>Обследование</h1>
+    <h3 class='pt-2 pb-4 we_300'>Продуманные решения для долгожданного обновления</h3>
+     {% include 'main/form_popup.html' %}
+  </div>
+</section>
+
+<div class='d-none d-md-block d-lg-block d-xl-block d-xxl-block'>
+  <div class="page-wrap">
+    <div id="home-slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-one">
+            <div class="swiper-image" data-swiper-parallax-y="-20%">
+              <div class="swiper-image-inner swiper-image-left swiper-image-one ">
+                <h2 class='slider_h1'><span class="emphasis">Новое пространство</span> <br><span class='we_300'>Для отдыха и спорта.</span></h1>
+                <p>Сначала должны поработать мы</p>
+              </div>
+            </div>
+            <div class="swiper-image" data-swiper-parallax-y="35%">
+              <div class="swiper-image-inner swiper-image-right swiper-image-two">
+                <p class="paragraph pb-3">
+                  Мы начинаем разработку каждого проекта с изучения контекста.</p>
+                <p class="paragraph">При создании концепции будущего пространства, мы стараемся учесть всё: геологические особенности участка, дорожный и пешеходный траффик, историю места.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-two">
+            <div class="swiper-image" data-swiper-parallax-y="-20%">
+              <div class="swiper-image-inner swiper-image-left swiper-image-three">
+                
+              </div>
+            </div>
+            <div class="swiper-image" data-swiper-parallax-y="35%">
+              <div class="swiper-image-inner swiper-image-right swiper-image-four">
+                <div class='white m-5 p-5'>
+                  <h2 class="so_big">‟</h2>
+                  <h3 class='we_300 pb-3'>Долина, немножко тихой воды и луч заката — самые простые вещи, самые обыкновенные, самые дорогие.</h3>
+                  <p class="paragraph">Д. Рёскин</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id='' class='d-block d-md-none'>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="{% static 'img/cases/improvement/kondurcha/reality/15_crop.jpg' %}" class="d-block category_slider" alt="...">
+        <div class="carousel-caption ">
+          <h3 class='we_300 pb-3 black'>Долина, немножко тихой воды и луч заката — самые простые вещи, самые обыкновенные, самые дорогие.</h3>
+          <p class="black">Д. Рёскин</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cases/improvement/kondurcha/reality/35.png' %}" class="d-block category_slider" alt="...">       
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cases/improvement/kondurcha/reality/13.jpg' %}" class="d-block category_slider" alt="...">
+        <div class="carousel-caption ">
+          <h3 class='pb-3 black'>НОВОЕ ПРОСТРАНСТВО</h3>
+          <p class='we_300 pb-3 black'>Для отдыха и спорта</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h3 class='black h2index pt-4'>Проекты </h3>
+  
+  
+
+  <div class='art_container py-5'>
+    {% for car in car %}
+    <a href="{% url 'main:case' category=case.category.category id=case.id %}">
+      <div class='wrap_case_img'>
+        <img src='{{case.main_img.url}}' class='case_prev'>
+        <h3 class='case_name black'>{{car.name}}</h3>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+</div>
+
+
+{% endblock %}

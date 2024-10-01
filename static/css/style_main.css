@@ -55,48 +55,59 @@ h4{
 hr{
   background-color: #a2b5c5!important;
 }
+
+
 .black{
-  color: #010305;
+  color: #1b1918;
 }
-.blue{
-  color: #79cbee;
+.black_hot{
+  color: #261D1D;
+}
+.bordo{
+  color: #31030F;
 }
 .gray_light{
-  color: #d6dee6 ;
+  color: #D9D9D9 ;
 }
 .gray{
-  color: #a2b5c5;
+  color: #777676;
 }
-.gray_dark{
-  color: #455059;
+.red{
+  color: #D41041;
 }
 .white{
   color: #f3f8fd;
 }
+.white_dirty{
+  color: #f3f8fd;
+}
 
 .black_bg{
-  background-color: #010305;
-  /* rgb(1,3,5) */
+  background-color: #1b1918;
 }
-.blue_bg{
-  background-color: #79cbee;
-  /*  rgb(121,183,238) */
+.black_hot_bg{
+  background-color: #261D1D;
+}
+.bordo_bg{
+  background-color: #31030F;
+}
+.red_bg{
+  background-color: #D41041;
 }
 .gray_light_bg{
-  color: #d6dee6;
-  /* rgb(214, 222, 230) */
+  color: #D9D9D9;
 }
 .gray_bg{
-  background-color: #a2b5c5;
-  /* rgb(162,181,197) */
-}
-.gray_dark_bg{
-  background-color: #455059;
+  background-color: #777676;
 }
 .white_bg{
   background-color: #f3f8fd;
-  /* rgb(243,248,253) */
 }
+.white_dirty_bg{
+  background-color: #f3f8fd;
+}
+
+
 .white_bg_tr {
   background-color: rgba(243, 248, 253, 1);
   transition: background-color 1s ease;
@@ -134,7 +145,7 @@ hr{
 }
 
 .logo{
-  max-width: 3.3em;
+  max-width: 5em!important;
   margin-top: .2em;
 }
 .logo_mob{
@@ -142,7 +153,7 @@ hr{
 }
 
 .smm_head{
-    max-width: 3em;
+    max-width: 2.6em;
     margin-top: .1em;
 }
 .head_phone{
@@ -211,10 +222,10 @@ hr{
   border-radius: 8px;
   text-align: center;
   max-width: 14em;
-  padding: .7em 1em;
-  border: 2px solid rgb(243, 248, 253);
-  color: rgb(243, 248, 253);
-  /*background-color: rgba(121,183,238, .8);*/
+  padding: .4em 1em;
+/*  border: 2px solid rgb(243, 248, 253);*/
+  color: #F0F4F5;
+  background-color: #D41041;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .button_dark{
@@ -370,12 +381,13 @@ hr{
 @media (min-width: 811px){
 
   .nav-link{
-    color: #d6dee6!important;
+    color: #31030F!important;
+    font-size: 1em!important;
     font-weight: 300;
     margin: 0 .3em;
   }
   .nav-link:hover{
-    color:  #f3f8fd !important;
+    color:  #5E0A0E !important;
   }
 
 

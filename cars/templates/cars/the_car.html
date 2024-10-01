@@ -1,0 +1,136 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class='card_overlay'>
+	<div class='case_back_header'>
+
+		{% if the_case.main_img %}
+		<img class="w-100 case_header" src="{{ the_case.main_img.url }}">
+		{% endif %}
+
+		{{ the_case.description|linebreaks }}
+	</div>
+
+	<div class='case_container_header container white pb-4'>
+		<h1 class='the_case_header'>{{ the_case.name }}</h1>
+		<p  class='the_case_info'>Адрес: {{ the_case.address }}</p>
+		<p  class='the_case_info'>Заказчик: {{ the_case.customer }}</p>
+		<p  class='the_case_info'>Проект выполнен: {{ the_case.performer }}</p>
+		{% if the_case.architector %}
+			<p  class='the_case_info'>{{ the_case.architector }}</p>
+		{% endif %}
+		{% if the_case.engeneer %}
+			<p class=''><span class='the_case_info'>{{ the_case.engeneer }}</p>
+		{% endif %}
+		<p class=''><span class='the_case_info'>Площадь: {{ the_case.square }}</p>
+		<p class=''><span class='the_case_info'>Год: {{ the_case.year }}</p>
+
+		<br>
+	</div>
+</section>
+
+<br><br>
+
+<section>
+	<div class='container we_300'>
+
+
+		{% if the_case.image_c_1 %}
+
+			<h2 class='the_case_header'>Концепция, проект</h2>
+			<div class='row'>
+				<div class='col-md-6 pe-5'>
+					{{ the_case.concept_text|linebreaks }}
+				</div>
+				<div class='col-md-6 pb-3'>
+					{% include 'main/carousels/carousel_case_concept.html' %}
+				</div>
+			</div>
+
+		{% elif the_case.concept_text %}
+
+			<h2 class='the_case_header'>Концепция, проект</h2>
+			{{ the_case.concept_text|linebreaks }}
+
+		{% endif %}
+
+		
+		
+		{% if the_case.image_r_1 %}
+
+			<h2 class='the_case_header pt-4'>Реализация</h2>
+			<div class='row'>
+				<div class='col-md-6 pe-5'>
+					{{ the_case.realize_text|linebreaks }}
+				</div>
+				<div class='col-md-6 pb-3'>
+					{% include 'main/carousels/carousel_case_realize.html' %}
+				</div>
+			</div>
+
+		{% elif the_case.realize_text %}
+
+			<h2 class='the_case_header pt-4'>Реализация</h2>
+			{{ the_case.realize_text|linebreaks }}
+
+		{% endif %}
+
+
+
+		{% if the_case.image_v_1 %}
+
+			<div class='row pt-4'>
+				<div class='col-md-6 pe-5'>
+					<h2 class='the_case_header pt-3'>Визуализация</h2>
+					{{ the_case.visualization_text|linebreaks }}
+				</div>
+				<div class='col-md-6 py-3'>
+					{% include 'main/carousels/carousel_case_visualization.html' %}
+				</div>
+			</div>
+
+		{% elif the_case.visualization_text %}
+
+			<h2 class='the_case_header pt-3'>Визуализация</h2>
+			{{ the_case.visualization_text|linebreaks }}
+
+		{% endif %}
+
+
+		
+		{% if the_case.image_a_1 %}
+
+			<div class='row pt-4'>
+				<div class='col-md-6 pe-5'>
+					<h2 class='the_case_header pt-3'>Градостроительный анализ</h2>
+					{{ the_case.analisys_text|linebreaks }}
+				<div class='col-md-6 py-3'>
+					{% include 'main/carousels/carousel_case_analisys.html' %}
+				</div>
+			</div>
+
+		{% elif the_case.analisys_text %}
+
+			
+			<h2 class='the_case_header pt-3'>Градостроительный анализ</h2>
+			{{ the_case.analisys_text|linebreaks }}
+
+
+		{% endif %}
+
+	</div>
+</section>
+
+<section class='call_me_form pt-4'>
+	<center>
+	{% include 'main/form_popup.html' %}
+	</center>
+</section>
+
+{% include 'main/carousels/carousel_all.html' %}
+
+
+{% endblock %}

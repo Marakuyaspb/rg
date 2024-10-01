@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <div class='art_container py-5'>
+    {% for car in car %}
+    <a href="{% url 'cars:car' category=car.category.category id=car.id %}">
+      <div class='wrap_case_img'>
+        <img src='{{car.main_img.url}}' class='case_prev'>
+        <h3 class='case_name black'>{{car.name}}</h3>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock %}
