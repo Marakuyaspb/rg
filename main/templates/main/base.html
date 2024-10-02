@@ -61,40 +61,42 @@
 </div>
 
 <!-- PHONE -->
-<div id='nav_mob' class='d-block d-lg-none'>
+<div id='nav_mob' class='d-block d-lg-none '>
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
+    <div class="container-fluid mx-3">
       
-        <a class="navbar-brand" href='{% url "main:index" %}'> 
-          <div class='d-flex'>   
-            <div><img class='logo_mob' src='{% static "brand/logo.svg" %}'></div>
-          </div>
-        </a>
-    
+      <a class="navbar-brand" href='{% url "main:index" %}'> 
+        <div class='d-flex'>   
+          <div><img class='logo_mob  mt-3' src='{% static "brand/logo.svg" %}'></div>
+        </div>
+      </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();">
-        <img class='menu_icon' src="{% static 'img/icons/menu.png' %}">
+        <img class='menu_icon' src="{% static 'icons/menu.png' %}">
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav menu_mob_list">
 
-<!--           <li class="nav-item">
-            <a class="nav-link" href='#'>Блог</a>
-          </li> -->
           <li class="nav-item">
-             <a class="nav-link " href='{% url "cars:catalog" %}'>Каталог</a>
+             <a class="nav-link" href='{% url "cars:catalog" %}'>Каталог</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'>• Новые авто</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'>• Подержанные</a>
           </li>
           <li class="nav-item we_300 ms-2 my-2">——————————</li>
           <li class="nav-item">
-            <a class="nav-link" href='{% url "main:guarantee" %}'>Гарантия</a>
+            <a class="nav-link" href='{% url "main:guarantee" %}'>Оформить гарантию</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href='{% url "main:insurance" %}'>Страхование</a>
+            <a class="nav-link" href='{% url "main:insurance" %}'>Автострахование</a>
           </li>
           <li class="nav-item">
-           <a class="nav-link" href='{% url "main:jurists" %}'>Юристы</a>
+           <a class="nav-link" href='{% url "main:jurists" %}'>Юридическая поддержка</a>
           </li>
 
           <li class="nav-item we_300 ms-2 my-2">——————————</li>
@@ -104,10 +106,18 @@
           <li class="nav-item">
             <a class="nav-link" href='{% url "main:spares" %}'>Запчасти</a>
           </li>
-
+          <li class="nav-item we_300 ms-2 my-2">——————————</li>
+          <li class="nav-item">
+            <a class="nav-link" href='{% url "main:spares" %}'>Отзывы</a>
+            <!-- <a class="nav-link" href='#'>Блог</a> -->
+          </li>
           <li class="nav-item">
             <a class="nav-link" href='{% url "main:index" %}#contact'>Контакты</a>
           </li>
+
+          <div class='pt-3 modal_container' onclick='showModal(this);'>
+            {% include 'main/form_popup_base.html' %}
+          </div>
 
         </ul>
 
@@ -121,60 +131,99 @@
 {% block content %}
 {% endblock %}
 
+<!-- DESCTOP FOOTER -->
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <footer class=' py-4 gray_light we_300 black_hot_bg'>
 
-<footer class='py-4 white gray_dark_bg'>
+  <div class='container'>
+    <div class="d-flex justify-content-between px-4 ">
 
-  <div class="container">
-    <div class="row px-5 pt-3 pb-4">
-
-      <div class='col-md-3 pb-5'>
-
+      <div class=''>
         <a class="" href='{% url "main:index" %}'>
           <div class="center">
-            <img class='footer_logo center' src='{% static "brand/logo.svg" %}'>
+            <img class='footer_logo center' src='{% static "brand/logo_dark.svg" %}'>
           </div>
         </a>
       </div>
 
-      <div class='col-md-3 pb-5'>
-        <h3 class='we_300 pb-4 h3_footer'>О НАС</h3>
-        <a class="nav_footer" href='#'><p>Новости</p></a>
-
+      <div class='py-3'>
+        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Легковые авто</p></a>
+        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Грузовые машины</p></a>
+        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Автобусы</p></a>
+        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Спецтехника</p></a>
       </div>
 
-      <div class='col-md-3 pb-5'>
-        <h3 class='we_300 pb-4 h3_footer'>УСЛУГИ</h3>
-
-      </div>
-             
-
-      <div class='col-md-3'>
-        <h3 class='we_300 pb-4 h3_footer'>КОНТАКТЫ</h3>
-        <p class='pb-3 nav_footer'>+7 999 111 22 33</p>
-        <p class='pb-3 nav_footer'>info@rgauto.ru</p>
-
-        <div class="d-flex justify-content-start">
-          <a  href='#'><img class='smm_head py-2 ps-2' src='{% static "img/icons/vk_gray.png" %}'></a>
-          <a  href='#'><img class='smm_head py-2 pe-2 ms-4' src='{% static "img/icons/inst_gray.png" %}'></a>
-        </div>  
+      <div class='py-3'>
+        <a class="gray_light" href='{% url "main:insurance" %}'><p>Страхование</p></a>
+        <a class="gray_light" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
+        <a class="gray_light" href='{% url "main:spares" %}'><p>Диагностика и сервисное обслуживание</p></a>
+        <a class="gray_light" href='{% url "main:spares" %}'><p>Отзывы</p></a>
       </div>
 
+      <div class='py-3'>
+        <p class="gray_light">+7 999 111 22 33</p>
+        <p class="gray_light">info@rg.ru</p>
+
+
+        <div class="d-flex justify-content-start mt-4">
+          <a href='#'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
+          <a href='#'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
+          <a href='#'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class='gray_light small we_300'>  
+    © 2024, Red Group Auto. Все права защищены.
     </div>
   </div>
   
-  <center class='mt-5 gray container small we_300'>  
-  © 2024, R.E.D. Group. Все права защищены.
-  </center>
+  </footer>
+</div>
 
-</footer>
+<!-- MOBILE FOOTER -->
+<div class='d-block d-lg-none '>
+  <footer class='py-4 white black_hot_bg'>
 
+    <div class="d-flex justify-content-between px-4">
+
+      <div class=''>
+
+        <a class="" href='{% url "main:index" %}'>
+          <div class="center">
+            <img class='footer_logo center' src='{% static "brand/logo_dark.svg" %}'>
+          </div>
+        </a>
+      </div>
+
+      <div class='py-3'>
+        <a class="nav_footer" href='{% url "cars:catalog" %}'><p>Каталог</p></a>
+        <a class="nav_footer" href='{% url "main:insurance" %}'><p>Страхование</p></a>
+        <a class="nav_footer" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
+        <a class="nav_footer" href='{% url "main:spares" %}'><p>Диагностика</p></a>
+        <a class="nav_footer" href='{% url "main:spares" %}'><p>Отзывы</p></a>
+
+        <div class="d-flex justify-content-start mt-4">
+          <a href='#'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
+          <a href='#'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
+          <a href='#'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
+        </div>
+      </div>
+    </div>
+   
+    <center class='mt-3 gray_light small we_300'>  
+    © 2024, Red Group Auto. Все права защищены.
+    </center>
+
+  </footer>
+</div>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js'></script>
-<script  src='{% static "js/script.js" %}'></script>
-<script  src='{% static "js/add_bg.js" %}'></script>
+<script src='{% static "js/script.js" %}'></script>
+<script src='{% static "js/add_bg.js" %}'></script>
 
-<script  src='{% static "js/bootstrap.min.js" %}'></script> 
+<script src='{% static "js/bootstrap.min.js" %}'></script> 
 <script src='{% static "js/modal_form.js" %}'></script>
 
 <script src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>

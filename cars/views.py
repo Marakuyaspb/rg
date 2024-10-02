@@ -9,7 +9,7 @@ from .forms import CallMeForm
 
 
 def catalog(request):
-	cars = Cars.objects.all()
+	cars = Car.objects.all()
 	
 	category = request.GET.get('category')
 	if category:

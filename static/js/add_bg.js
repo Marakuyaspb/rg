@@ -5,9 +5,9 @@ function add_bg() {
     setTimeout(function() {
         if (navbarNav.classList.contains("show")) {
             console.log("yes")
-            nav_mob.classList.add("white_bg_tr");
+            nav_mob.classList.add("white_dirty_bg");
         } else {
-            nav_mob.classList.remove("white_bg_tr");
+            nav_mob.classList.remove("white_dirty_bg");
             console.log("no")
         }
     }, 400); 

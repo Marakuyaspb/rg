@@ -27,7 +27,7 @@ class Status(models.Model):
 		verbose_name_plural = 'Новая/Уже нет'	
 
 	def __str__(self):
-		return self.category
+		return self.status
 
 
 
