@@ -14,20 +14,12 @@ def catalog(request):
 	category = request.GET.get('category')
 	if category:
 		category = int(category)
-		if category == 1:
-			cars = Cars.objects.filter(category=1)
-		elif category == 2:
-			cars = Cars.objects.filter(category=2)
-		elif category == 2:
-			cars = Cars.objects.filter(category=3)
+		cars = cars.filter(category=category)
 	
 	status = request.GET.get('status')
 	if status:
 		status = int(status)
-		if status == 1:
-			cars = Cars.objects.filter(status=1)
-		elif status == 2:
-			cars = Cars.objects.filter(status=2)
+		cars = cars.filter(status=status)
 
 
 	if request.method == 'POST':
@@ -43,7 +35,7 @@ def catalog(request):
 		'cars' : cars,
 	}
 
-	return render(request, 'cars/catalog.html')
+	return render(request, 'cars/catalog.html', context)
 
 
 def fresh_cars(request):
@@ -100,7 +92,7 @@ def the_car(request, category=None, id=None):
 
 	context = {
 		'the_car': the_car,
-		'similar_cars': similar_cases,
+		'similar_cars': similar_cars,
 		'callme_form': callme_form
 	}
 	return render(request, 'cars/the_car.html', context)

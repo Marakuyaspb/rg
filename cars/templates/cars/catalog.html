@@ -38,15 +38,13 @@
 
 
 <div class="container mt-4">
-  <h3 class='black h2index pt-4'>Проекты </h3>
-  
-  
+
 
   <div class='art_container py-5'>
-    {% for car in car %}
-    <a href="{% url 'main:case' category=case.category.category id=case.id %}">
-      <div class='wrap_case_img'>
-        <img src='{{case.main_img.url}}' class='case_prev'>
+    {% for car in cars %}
+    <a href='#'>
+      <div class='wrap_car_img'>
+        <img src='{{car.main_img.url}}' class='case_prev'>
         <h3 class='case_name black'>{{car.name}}</h3>
       </div>
     </a>
