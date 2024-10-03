@@ -10,4 +10,4 @@ class CallMeForm(forms.ModelForm):
 class CarSurvey_Full(forms.ModelForm):
 	class Meta:
 		model = CallMe
-		fields = ['first_name', 'phone']	
+		fields = ['first_name', 'phone']

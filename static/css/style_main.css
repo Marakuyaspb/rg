@@ -291,32 +291,7 @@ tr {
   width: 100%;
 }
 
-/* be_many_angles.webp  */
-#improvement{
-  background-image: url(http://127.0.0.1:8000/static/img/gif/white_breath.webp);
-  background-size: 96% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#projection{
-  background-image: url(http://127.0.0.1:8000/static/img/gif/black_geometry.webp);
-  background-size: 96% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#screening{
-  background-image: url(http://127.0.0.1:8000/static/img/gif/white_oktaedr.webp);
-  background-size: 96% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-#team_pattern{
-  background-image: url(http://127.0.0.1:8000/static/img/gif/kanat.webp);
-  background-size: 70% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 .slider_h1{
   padding-top: 2.5em;

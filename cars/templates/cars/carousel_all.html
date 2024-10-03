@@ -1,0 +1,39 @@
+<style>
+	.owl-prev, .owl-next {
+      position:absolute;
+   }
+  .owl-prev {
+      left:0;
+      top: 120px;
+   }
+   .owl-next {
+      right:0;
+      top:120px;
+   }
+	.owl-nav{
+		padding: 0px 20px;
+	}
+
+	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+		font-family: "Montserrat", sans-serif;
+		font-size: 5em;
+		color: #a2b5c5;
+	}
+</style>
+
+<div class="owl-carousel owl-theme">
+{% for e in similar_cars %}
+	<div class="item">
+	  <a href="{% url 'cars:the_car' id=e.id %}">
+      <div class='wrap_case_img'>
+        <img src='{{e.main_img.url}}' class='case_prev'>
+
+          <h3 class='car_name black ps-3 pt-2'>{{e.name}}</h3>
+          <p class='gray ps-3 pt-2'>{{e.price}} ₽</p>
+        
+
+      </div>
+    </a>
+  </div>
+{% endfor %}
+</div>

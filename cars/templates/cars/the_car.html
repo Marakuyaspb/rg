@@ -7,7 +7,7 @@
 <section class=''>
 	<div class='row'>
 
-		<p class='d-block d-lg-none ps-5 pt-3 pb-1'><a href='{% url "cars:catalog" %}' class='small gray'>Каталог /</a> <a href='{% url "cars:catalog" %}' class='small gray'>Легковые авто</a></p>
+		<p class='d-block d-lg-none ps-5 pt-3 pb-1'><a href='{% url "cars:catalog" %}' class='small gray'>Каталог /</a> <a href='{% url "cars:catalog" %}' class='small gray'>{{ the_car.category }}</a></p>
 
 		<div class='col-md-7 pb-4'>
 			{% if the_car.main_img %}
@@ -22,7 +22,7 @@
 				<p class='d-none d-lg-block d-xl-block d-xxl-block pb-4'><a href='{% url "cars:catalog" %}' class='small gray'>Каталог /</a> <a href='{% url "cars:catalog" %}' class='small gray'>Легковые авто</a></p>
 
 				<h1 class='the_car_name'>{{ the_car.name }}</h1>
-				<h3 class='the_car_price pb-4'>{{ the_car.price }} ₽</h3>
+				<h3 class='the_car_price pt-2 pb-4'>{{ the_car.price }} ₽</h3>
 
 				<table>
 					<tbody class='the_car_info'>
@@ -57,5 +57,7 @@
 	</div>
 
 </section>
+
+{% include 'cars/carousel_all.html' %}
 
 {% endblock %}
