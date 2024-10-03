@@ -8,7 +8,7 @@ html{
   padding: 0;
 }
 body {
-  background-color: #f3f8fd;
+  background-color: #F5F5F5;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -54,6 +54,10 @@ h4{
 }
 hr{
   background-color: #a2b5c5!important;
+}
+
+tr {
+  height: 1.6em;
 }
 
 
@@ -132,9 +136,6 @@ hr{
   margin-left: auto!important;
 }
 
-.small, small {
-  font-size: .75em!important;
-}
 
 .nav_footer{
   color: #D9D9D9!important;
@@ -354,8 +355,20 @@ hr{
 .smaller{
   font-size: .7em;
 }
+.we_200{
+    font-weight: 200;
+}
 .we_300{
     font-weight: 300;
+}
+.we_400{
+    font-weight: 400;
+}
+.we_500{
+    font-weight: 500;
+}
+.we_600{
+    font-weight: 600;
 }
 
 
@@ -541,10 +554,9 @@ hr{
     z-index: -111;
     opacity: .5;
   }
-  .card_overlay {
-    position: relative;
-    max-height: 65vh;
-    background: rgba(0, 0, 0, 0.7);
+
+  .car_summary{
+    padding: .5em 0 0 3em;
   }
 
   .case_container_header{
@@ -553,18 +565,21 @@ hr{
     margin-top: -28em;
     padding: 0 0 0 10em;
   }
-  .the_case_header{
-    font-weight: 200;
-    font-size: 3.4em;
-    padding: .4em 0;
+  .the_car_name{
+    font-weight: 500;
+    font-size: 2em;
+  }
+  .the_car_price{
+    font-size: 1.6em;
   }
   .the_case_param{
     font-weight: 550;
     font-size: 1.2em;
   }
-  .the_case_info{
+  .the_car_info{
     font-weight: 300;
     font-size: 1.2em;
+    line-height: .9em;
   }
 
 
