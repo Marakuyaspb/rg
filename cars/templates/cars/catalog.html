@@ -3,41 +3,87 @@
 
 
 {% block content %}
-<section class='pb-4'>
-  <div class='container'>
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <section class='pb-2'>
+    <div class='container'>
+      <div class="row">
+        <div class='col-6'>
 
-    <div class="row">
-      <div class='col-6'>
+          <h1 class='we_300 header_name pb-3'>АВТО</h1>
+          <h3 class='pt-2 pb-4 red we_300'>В наличии и на заказ</h3>
 
-        <h1 class='we_300 header_name pb-3'>АВТО</h1>
-        <h3 class='pt-2 pb-4 red we_300'>В наличии и на заказ</h3>
+          <div class="d-flex justify-content-start mt-4">
 
-        <div class="d-flex justify-content-start mt-4">
-          <div>{% include 'main/form_popup.html' %}
+            <div>{% include 'main/form_popup.html' %}
+            </div>
+
+            <div>
+              <div class='button_form_base center mt-3 mb-2 ms-3 white'>
+                <div class="d-flex justify-content-start">
+                  <img class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class='pt-1'>В наличии</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div class='thumb button_form_base center mt-3 mb-2 ms-3 white'>В наличии</div>
+
+        </div>
+        <div class='col-6'>
+          <img class='' src='{% static "img/red_car.png" %}'>  
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+
+<div class='d-block d-lg-none '>
+  <section class='pb-2'>
+    <div class='container px-4'>
+      <div class="row">
+        <div class='col-7'>
+
+          <h1 class='we_300 header_name pt-4'>АВТО</h1>
+          <p class='sub_logo pt-2 red we_300'>В наличии</p> 
+          <p class='sub_logo pb-4 red we_300'>и на заказ</p>
+
+        </div>
+        <div class='col-5'>
+          <img class='catalog_head_img' src='{% static "img/red_car.png" %}'> 
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+
+      <div>{% include 'main/form_popup.html' %}
+      </div>
+
+      <div>
+        <div class='button_form_base center mt-3 mb-2 ms-3 white'>
+          <div class="d-flex justify-content-start">
+            <img class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class='pt-1'>В наличии</span>
           </div>
         </div>
       </div>
-      <div class='col-6'>
-        
-      </div>
-
     </div>
-  </div>
-</section>
 
+  </section>
+</div>
 
+<!-- 
 <section id='filter' class='black_bg py-3'>
-  <img class='smm_head mx-2' src='{% static "icons/car.png" %}'>
-  <img class='smm_head mx-2' src='{% static "icons/bus.png" %}'>
-  <img class='smm_head mx-2' src='{% static "icons/work.png" %}'>
-  <img class='smm_head mx-2' src='{% static "icons/away.png" %}'>
-</section>
+  <div class="d-flex justify-content-center">
+    <img class='smm_head mx-2' src='{% static "icons/car.png" %}'>
+    <img class='smm_head mx-2' src='{% static "icons/bus.png" %}'>
+    <img class='smm_head mx-2' src='{% static "icons/work.png" %}'>
+    <img class='smm_head mx-2' src='{% static "icons/away.png" %}'>
+  </div>
+</section> 
 
+ -->
 
-<div class="container mt-4">
+<div class="container">
 
 
   <div class='art_container py-5'>
@@ -45,7 +91,8 @@
     <a href='#'>
       <div class='wrap_car_img'>
         <img src='{{car.main_img.url}}' class='case_prev'>
-        <h3 class='case_name black'>{{car.name}}</h3>
+        <h3 class='car_name black ps-3 mt-4'>{{car.name}}</h3>
+        <p class='black ps-3 pt-2'>{{car.price}} ₽</p>
       </div>
     </a>
     {% endfor %}

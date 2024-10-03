@@ -195,6 +195,13 @@ hr{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: .7em 1em;
 }
+
+.tg_btn_icon{
+  margin: -.05em 0 0 -.4em;
+  height: 1.8em;
+  width: auto;
+}
+
 #menu{
   margin-top: -1.4em;
 }
@@ -373,17 +380,19 @@ hr{
   color: #fff;
   text-align: left!important;
 }
-.wrap_case_img{
+.wrap_car_img{
   background-color: rgb(255,255,255);
   position: relative;
   z-index: 3;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.case_name{
-  padding: 0 20px 2em 20px;
-  margin: -4.2em 0 0 0;
+.car_name{
+  margin: .5em 0 0 0;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
  
 
@@ -472,13 +481,12 @@ hr{
     margin-right: auto;
   }
   .case_prev{
-    height: 400px;
-    width: 400px;
+    height: 280px;
+    width: 100%;
     object-fit: cover;
-    opacity: .5;
   }
   .case_prev:hover{
-    filter: hue-rotate(30deg);
+    /*filter: hue-rotate(30deg);*/
     opacity: 1;
    }
 
@@ -600,8 +608,17 @@ hr{
     object-fit: cover;
   }
 
+  .catalog_head_img{
+    left: -36%;
+    position: relative;
+    width: 28em;
+  }
+  .sub_logo{
+    font-size: 2.2em;
+    line-height: .8;
+  }
   .header_name{
-    font-size: 2.5em;
+    font-size: 4.2em;
   }
   .category_header{
     margin-top: 12em;
@@ -653,10 +670,9 @@ hr{
     margin-right: auto;
   }
   .case_prev{
-    height: 330px;
-    width: 330px;
+    height: 300px;
+    width: 100%;
     object-fit: cover;
-    opacity: .5;
   }
   .case_prev:hover{
     filter: hue-rotate(30deg);

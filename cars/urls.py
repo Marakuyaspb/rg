@@ -11,5 +11,5 @@ urlpatterns = [
     path('catalog/', views.catalog, name = 'catalog'),
     path('fresh/', views.fresh_cars, name = 'fresh_cars'),
     path('used/', views.used_cars, name = 'used_cars'),
-    path('<slug:category>/<int:id>/', views.the_car, name='the_car'),
+    path('<slug:status>/<int:id>/', views.the_car, name='the_car'),
 ]
