@@ -85,10 +85,9 @@
 
 <div class="container">
 
-
   <div class='art_container py-5'>
     {% for car in cars %}
-    <a href='#'>
+    <a href='{% url "cars:the_car" car.id %}'>
       <div class='wrap_car_img'>
         <img src='{{car.main_img.url}}' class='case_prev'>
         <h3 class='car_name black ps-3 mt-4'>{{car.name}}</h3>

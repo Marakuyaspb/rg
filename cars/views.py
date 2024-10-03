@@ -11,11 +11,6 @@ from .forms import CallMeForm
 def catalog(request):
 	cars = Car.objects.all()
 	
-	category = request.GET.get('category')
-	if category:
-		category = int(category)
-		cars = cars.filter(category=category)
-	
 	status = request.GET.get('status')
 	if status:
 		status = int(status)
@@ -77,7 +72,7 @@ def used_cars(request):
 
 
 
-def the_car(request, category=None, id=None):		
+def the_car(request, id):		
 	if id:
 		the_car = get_object_or_404(Car, id=id)
 		similar_cars = Car.objects.filter(category=the_car.category)
