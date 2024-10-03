@@ -17,14 +17,14 @@ class Category(models.Model):
 
 class Status(models.Model):
 	id_st = models.AutoField(primary_key=True)
-	status = models.CharField(max_length=60, verbose_name='Новая/Уже нет')
+	status = models.CharField(max_length=60, verbose_name='Новая / С пробегом')
 	class Meta:
 		ordering = ['status']
 		indexes = [
 			models.Index(fields=['status']),
 		]
-		verbose_name = 'Новая/Уже нет'
-		verbose_name_plural = 'Новая/Уже нет'	
+		verbose_name = 'Новая / С пробегом'
+		verbose_name_plural = 'Новая / С пробегом'	
 
 	def __str__(self):
 		return self.status
@@ -70,17 +70,39 @@ class Car(models.Model):
 		verbose_name_plural = 'Авто'
 
 
-
 # Order call form
 
 class CallMe(models.Model):
 	id = models.AutoField(primary_key=True)
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	email = models.CharField(max_length=30, verbose_name = 'E-mail')
 	created = models.DateTimeField(auto_now_add=True)
 	
 	class Meta:
 		ordering = ['-created']
 		verbose_name = 'Запрос звонка'
 		verbose_name_plural = 'Запросы звонков'
+
+
+class CarSurvey_Full(models.Model):
+	id = models.AutoField(primary_key=True)
+	car_characteristics =  models.CharField(max_length=300, verbose_name = 'Марка, модель, мотор', null=True, blank=True)
+	country = models.CharField(max_length=300, verbose_name = 'Из какой страны Вас интересует автомобиль?', null=True, blank=True)
+	when =  models.CharField(max_length=300, verbose_name = 'Когда планируете покупать? ', null=True, blank=True)
+	payment_type =  models.CharField(max_length=300, verbose_name = 'Форма оплаты за автомобиль? ', null=True, blank=True)
+	max_price =  models.CharField(max_length=300, verbose_name = 'Максимальный бюджет для покупки?', null=True, blank=True)
+	trade_in =  models.CharField(max_length=300, verbose_name = 'Планируете трейд ин? Какой авто? Пробег? ', null=True, blank=True)
+	complectation =  models.CharField(max_length=600, verbose_name = 'Комплектация? ', null=True, blank=True)
+	colors =  models.CharField(max_length=300, verbose_name = 'Желаемые цвета кузова и салона', null=True, blank=True)
+	need_casco=  models.CharField(max_length=300, verbose_name = 'Планируете ли делать Каско', null=True, blank=True)
+	real_price =  models.CharField(max_length=300, verbose_name = 'Какова стоимость реального предложения автомобиля, которое Вам удалось найти?', null=True, blank=True)
+
+	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
+	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
+	created = models.DateTimeField(auto_now_add=True)
+	
+	
+	class Meta:
+		ordering = ['-created']
+		verbose_name = 'Заказ машины: подробный опросник'
+		verbose_name_plural = 'Заказ машины: подробный опросник'

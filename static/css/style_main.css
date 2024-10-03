@@ -67,7 +67,7 @@ hr{
   color: #31030F;
 }
 .gray_light{
-  color: #D9D9D9 ;
+  color: #D9D9D9;
 }
 .gray{
   color: #777676;
@@ -144,7 +144,14 @@ hr{
   margin: 0;
 }
 .nav_footer:hover{
-  color: #79cbee!important;
+  color: #A4A4A4!important;
+}
+
+.nav_footer_mob{
+  color: #D9D9D9!important;
+}
+.nav_footer_mob:hover{
+  color: #A4A4A4!important;
 }
 
 .logo{

@@ -80,13 +80,13 @@
         <ul class="navbar-nav menu_mob_list">
 
           <li class="nav-item">
-             <a class="nav-link" href='{% url "cars:catalog" %}'>Каталог</a>
+             <a class="nav-link" href='{% url "cars:catalog" %}'>Каталог авто</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'>• Новые авто</a>
+             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'><span class='red pe-3'>•</span> Новые</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'>• Подержанные</a>
+             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'><span class='red pe-3'>•</span> С пробегом</a>
           </li>
           <li class="nav-item we_300 ms-2 my-2">——————————</li>
           <li class="nav-item">
@@ -147,17 +147,17 @@
       </div>
 
       <div class='py-3'>
-        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Легковые авто</p></a>
-        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Грузовые машины</p></a>
-        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Автобусы</p></a>
-        <a class="gray_light" href='{% url "cars:catalog" %}'><p>Спецтехника</p></a>
+        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Легковые авто</p></a>
+        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Грузовые машины</p></a>
+        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Автобусы</p></a>
+        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Спецтехника</p></a>
       </div>
 
       <div class='py-3'>
-        <a class="gray_light" href='{% url "main:insurance" %}'><p>Страхование</p></a>
-        <a class="gray_light" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
-        <a class="gray_light" href='{% url "main:spares" %}'><p>Диагностика и сервисное обслуживание</p></a>
-        <a class="gray_light" href='{% url "main:spares" %}'><p>Отзывы</p></a>
+        <a class="nav_footer_mob" href='{% url "main:insurance" %}'><p>Страхование</p></a>
+        <a class="nav_footer_mob" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
+        <a class="nav_footer_mob" href='{% url "main:spares" %}'><p>Диагностика и сервисное обслуживание</p></a>
+        <a class="nav_footer_mob" href='{% url "main:spares" %}'><p>Отзывы</p></a>
       </div>
 
       <div class='py-3'>
