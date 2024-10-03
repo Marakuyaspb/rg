@@ -58,6 +58,9 @@ class Car(models.Model):
 	img_5 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 5')
 	img_6 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 6')
 	img_7 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 7')
+	img_8 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 8')
+	img_9 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 9')
+	img_10 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 10')
 
 	available = models.BooleanField(default=True)
 
@@ -101,7 +104,7 @@ class CarSurvey_Full(models.Model):
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
 	created = models.DateTimeField(auto_now_add=True)
 	
-	
+
 	class Meta:
 		ordering = ['-created']
 		verbose_name = 'Заказ машины: подробный опросник'
