@@ -11,43 +11,17 @@
      {% include 'main/form_popup.html' %}
 </div>
 
-
-  <div class='container mt-5'>
-      
-      <div class='row py-5'>
-        <div class="col-md-4 blur_bg">
-          <a href='{% url "cars:catalog" %}'>
-            <div class="card_bg" id='catalog'>
-              <h2 class='h2_card_bg  py-3 blur_bg  black'>Выбрать авто</h2>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href='{% url "main:guarantee" %}'>
-            <div class="card_bg" id='guarantee'>
-              <h2 class='h2_card_bg py-3 blur_bg black'>Оформить гарантию</h2>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href='{% url "main:insurance" %}'>
-            <div class="card_bg" id='insurance'>
-              <h2 class='h2_card_bg py-3 blur_bg black'>Страхование</h2>
-            </div>
-          </a>
-        </div>
-      </div> 
-
-  </div>
-    
+<!-- DESCTOP -->
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  {% include 'main/parts/directions.html' %}
+</div>
+<!-- PHONE -->
+<div id='nav_mob' class='d-block d-lg-none '>    
   <div class='container'>
 
   </div>
+</div>
 
-  <hr class='mt-5'>
-  <section id='' class='my-5 '>
-
-  </section>
 
 
 
