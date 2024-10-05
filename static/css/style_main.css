@@ -12,7 +12,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-
   padding: 0;
 }
 video{
@@ -175,7 +174,7 @@ tr {
 }
 
 .logo{
-  max-width: 5em!important;
+  max-width: 6em!important;
   margin-top: .2em;
 }
 .logo_mob{

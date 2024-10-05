@@ -34,6 +34,13 @@ def feedback(request):
 
 
 def guarantee(request):
+	cars = Car.objects.all()
+	callme_form = handle_callme_form(request)
+
+	context = {
+		'callme_form': callme_form,
+		'cars' : cars,
+	}
 	return render(request, 'main/guarantee.html', context)
 
 
