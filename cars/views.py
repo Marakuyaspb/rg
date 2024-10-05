@@ -4,8 +4,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template.loader import get_template
 from django.conf import settings
 
-from .models import Category, Status, Car, CallMe
-from .forms import CallMeForm
+from .models import Category, Status, Car
+from .forms_generator import handle_callme_form, handle_want_this_car_form, handle_survey_full_form, handle_guarantee_count_form, handle_need_diagnostic_form, handle_need_service_form, handle_shesterenky_need_form, handle_casco_count_form, handle_legal_help_form
 
 
 def catalog(request):
@@ -16,14 +16,7 @@ def catalog(request):
 		status = int(status)
 		cars = cars.filter(status=status)
 
-
-	if request.method == 'POST':
-		callme_form = CallMeForm(request.POST)
-		if callme_form.is_valid():
-			callme = callme_form.save()
-			send_email_task.delay(callme.first_name)
-	else:
-		callme_form = CallMeForm()
+	callme_form = handle_callme_form(request)
 
 	context = {
 		'callme_form': callme_form,

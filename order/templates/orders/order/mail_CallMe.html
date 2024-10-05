@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Новая заявка</title>
+    <style media="all" type="text/css">
+      table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%;
+      }
+      body {
+        color: #1b1918;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1{
+        font-size: 3.5em;
+        font-weight: 550;
+      }
+      h5{
+        font-weight: 200;
+      }
+      table, th, td{
+        border: 2px solid #D9D9D9;
+      }
+      td{
+        padding: 5px;
+      }
+      .no_border{
+        border: none;
+      }
+    </style>
+</head>
+
+<body>
+  <table class='no_border'>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td class='no_border'>
+          <a href='https://ya.ru/'><h1>RG</h1></a>
+        </td>
+        <td class='no_border'></td> <td class='no_border'></td> <td class='no_border'></td>
+        <td class='no_border'>
+          <p>
+          <strong>Заявка № {{ order.id }}</strong>
+          <br>
+            <span class="secondary">
+              {{ order.created|date:"d M, Y" }}
+            </span>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <br><br>
+
+  <h3>Клиент</h3>
+
+  <table class='no_border'>
+    <thead></thead>
+    <tbody>
+      
+      <tr>
+        <td class='no_border'> <strong>Имя:</strong>
+        </td>
+        <td class='no_border'>{{ order.first_name }}</td>
+      </tr>
+
+      <tr>
+        <td class='no_border'> <strong>Телефон: </strong> 
+        </td>
+        <td class='no_border'>{{ order.phone }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</body>
+</html>

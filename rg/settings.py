@@ -1,5 +1,6 @@
-from pathlib import Path
 import os, sys
+from pathlib import Path
+from celery import Celery
 from dotenv import load_dotenv
 
 env_path = Path('.') / '.env'
@@ -28,7 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main.apps.MainConfig',
-    'cars.apps.CarsConfig'
+    'cars.apps.CarsConfig',
+    'order.apps.OrderConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -114,3 +117,24 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# CELERY
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rg.settings')
+
+app = Celery('rg')
+app.config_from_object('django.conf:settings', namespace='CELERY')
+app.autodiscover_tasks()
+
+
+EMAIL_DEBUG = True
+
+#SMTP
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_DEBUG = True
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER =  str(os.getenv('YANDEX_APP_MAIL'))
+EMAIL_HOST_PASSWORD =  str(os.getenv('YANDEX_APP_PASSWORD'))
