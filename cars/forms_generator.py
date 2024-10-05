@@ -1,4 +1,5 @@
-from .forms import CallMeForm
+from .forms import *
+from .models import *
 from order.tasks import callme_created 
 
 
@@ -7,7 +8,11 @@ def handle_callme_form(request):
     if request.method == 'POST':
         callme_form = CallMeForm(request.POST)
         if callme_form.is_valid():
-            callme = callme_form.save()
+            callme = CallMe(
+                first_name=callme_form.cleaned_data['first_name'],
+                phone=callme_form.cleaned_data['phone']
+            )
+            callme.save()
             callme_created.delay(callme.first_name)
         return callme_form 
     else:

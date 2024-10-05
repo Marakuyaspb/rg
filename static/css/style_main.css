@@ -529,6 +529,7 @@ tr {
     margin-left: auto;
     margin-right: auto;
     width: 20em;
+    border-radius: 8px;
   }
   .close {
     color: #fff;
@@ -736,7 +737,7 @@ tr {
   }
 
   .callme_container{
-    /*margin-top: 4em;*/
+    border-radius: 8px;
     width: 100vw;
   }
   .close {
@@ -821,7 +822,10 @@ tr {
 
 }
 
-
+.popup_big_logo{
+  max-width: 10em;
+  margin: 1.5em auto;
+}
 
 .thumb {
   display: block;
@@ -834,5 +838,3 @@ tr {
 .block {
     display: block;      
   
-
-

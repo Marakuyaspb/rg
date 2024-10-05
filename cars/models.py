@@ -88,8 +88,8 @@ class CallMe(models.Model):
 
 	class Meta:
 		ordering = ['-created']
-		verbose_name = 'Хочу такую же'
-		verbose_name_plural = 'Запросы: хочу такую же!'
+		verbose_name = 'Заявка: перезвоните мне'
+		verbose_name_plural = 'Заявки: перезвоните мне'
 
 	def __str__(self):
 		return self.first_name
@@ -247,8 +247,8 @@ class LegalHelp(models.Model):
 	
 	class Meta:
 		ordering = ['-created']
-		verbose_name = 'Заявка на рассчет КАСКО'
-		verbose_name_plural = 'Заявки на рассчет КАСКО'
+		verbose_name = 'Запрос юридической поддержки'
+		verbose_name_plural = 'Запросы юридической поддержки'
 
 	def __str__(self):
 		return self.first_name

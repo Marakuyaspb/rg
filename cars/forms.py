@@ -1,10 +1,13 @@
 from django import forms
-from .models import Car, CallMe, WantThisCar, CarSurveyFull, GuaranteeCount, NeedDiagnostic, NeedServece, ShesterenkyNeed, CascoCount, LegalHelp
+from .models import *
 
 
 class CallMeForm(forms.Form):
 	first_name = forms.CharField(max_length=30)
 	phone = forms.CharField(max_length=30)
+	class Meta:
+		model = CallMe
+		fields = ['first_name', 'phone']
 
 
 class WantThisCarForm(forms.Form):

@@ -5,7 +5,7 @@ from django.template.loader import get_template
 from django.conf import settings
 
 from .models import Category, Status, Car
-from .forms_generator import handle_callme_form, handle_want_this_car_form, handle_survey_full_form, handle_guarantee_count_form, handle_need_diagnostic_form, handle_need_service_form, handle_shesterenky_need_form, handle_casco_count_form, handle_legal_help_form
+from .forms_generator import *
 
 
 def catalog(request):
