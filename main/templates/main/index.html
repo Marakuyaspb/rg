@@ -13,7 +13,7 @@
         <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
 
         <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
-         {% include 'main/popups/form_popup.html' %}
+         {% include 'cars/popups/form_popup.html' %}
     </div>
     <div class='col-md-6'>
       <img class='main_right_img' src="{% static 'img/black_car.png' %}" />
@@ -35,7 +35,7 @@
   </div>
 
   <h2 class='pt-2 pb-4 we_300 index_sub'>Лучшие машины ойкумены</h2>
-         {% include 'main/popups/form_popup.html' %}
+    {% include 'cars/popups/form_popup.html' %}
   </div>
 
 
@@ -43,12 +43,12 @@
 
 
 <!-- DESCTOP -->
-<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+<div class='d-none d-lg-block d-xl-block d-xxl-block pb-5'>
   {% include 'main/parts/directions.html' %}
 </div>
 
 <!-- PHONE -->
-<div class='d-block d-lg-none '>
+<div class='d-block d-lg-none'>
   {% include 'main/parts/directions_mob.html' %}
 </div>
 

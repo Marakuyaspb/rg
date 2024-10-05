@@ -456,13 +456,11 @@ tr {
     position: relative;
   }
 
-
   .main_right_img{ 
     position: relative;
     right: -3em;
     top:-2em;
   }
-
 
   .footer_brand{
     font-weight: 100;
@@ -472,7 +470,6 @@ tr {
   .footer_logo{
     height: 10em;
   }
-
 
   .cat_container_header{
     margin-top: -32em;
