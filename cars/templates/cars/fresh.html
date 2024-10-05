@@ -4,7 +4,7 @@
 
 {% block content %}
 
-  <div class='art_container py-5'>
+  <div class='cars_container py-5'>
     {% for car in car %}
     <a href="{% url 'cars:car' category=car.category.category id=car.id %}">
       <div class='wrap_case_img'>

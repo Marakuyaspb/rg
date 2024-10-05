@@ -3,13 +3,44 @@
 
 {% block content %}
 
-<img class='img_header' src='{% static "img/under_bridge.jpg" %}'/>
 
-<div class='container '>
-  <h1>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
-  <h2 class='pt-2 pb-4 we_300'>Лучшие машины ойкумены</h2>
-     {% include 'main/form_popup.html' %}
+
+<div class='desctop_84'>
+
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <div class='row'>
+    <div class='col-md-6'>
+        <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
+
+        <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
+         {% include 'main/popups/form_popup.html' %}
+    </div>
+    <div class='col-md-6'>
+      <img class='main_right_img' src="{% static 'img/black_car.png' %}" />
+    </div> 
+  </div>
 </div>
+
+<div class='d-block d-lg-none'>
+  <div class='row'>
+    <div class='col-md-6 pt-4'>
+      <h1 class='very_big'>ПРОСТР</h1>
+      <h1 class='very_big'>АНСТВО</h1>
+      <h1 class='very_big'>ДВИЖЕ</h1>
+      <h1 class='very_big'>НИЯ</h1>
+    </div>
+    <div class='col-md-6'>
+      <img class='main_right_img' src="{% static 'img/black_car.png' %}" />
+    </div> 
+  </div>
+
+  <h2 class='pt-2 pb-4 we_300 index_sub'>Лучшие машины ойкумены</h2>
+         {% include 'main/popups/form_popup.html' %}
+  </div>
+
+
+</div>
+
 
 <!-- DESCTOP -->
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>

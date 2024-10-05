@@ -60,6 +60,18 @@ tr {
   height: 1.6em;
 }
 
+:root{
+  --black:#1b1918;
+  --black_hot: #261D1D;
+  --bordo_dark: #31030F;
+  --bordo: #31030F;
+  --gray_light: #D9D9D9;
+  --gray: #777676;
+  --red: #D41041;
+  --white: #f3f8fd;
+  --white_dirty: #f3f8fd;
+}
+
 
 .black{
   color: #1b1918;
@@ -68,6 +80,9 @@ tr {
   color: #261D1D;
 }
 .bordo{
+  color: #31030F;
+}
+.bordo_dark{
   color: #31030F;
 }
 .gray_light{
@@ -136,6 +151,10 @@ tr {
   margin-left: auto!important;
 }
 
+.desctop_84{
+  width: 84%;
+  margin: .5em auto;
+}
 
 .nav_footer{
   color: #D9D9D9!important;
@@ -395,7 +414,7 @@ tr {
 
   .nav-link{
     color: #31030F!important;
-    font-size: 1em!important;
+    font-size: 1.1em!important;
     font-weight: 300;
     margin: 0 .3em;
   }
@@ -424,9 +443,26 @@ tr {
     margin-top: -30em;
     padding-bottom: 6em;
   }
-  .header_name{
-    font-size: 6em;
+
+  .very_big{
+    color: var(--red);
+    font-size: 9em;
+    font-weight: 200;
   }
+
+  .index_sub{
+    color: var(--bordo_dark);
+    font-size: 4em;
+    position: relative;
+  }
+
+
+  .main_right_img{ 
+    position: relative;
+    right: -3em;
+    top:-2em;
+  }
+
 
   .footer_brand{
     font-weight: 100;
@@ -460,7 +496,7 @@ tr {
 
 
 
-  .art_container {
+  .cars_container {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -486,15 +522,6 @@ tr {
     transform: translate(-50%, -50%);
   }
 
-  .brand_aik {
-    font-size: 1.5em!important;
-    font-weight: 400;
-    padding-top: .6em;
-  }
-
-  .thumb{
-    width: 100%;
-  }
   .partner_logo{
     max-height: 5em
   }
@@ -607,9 +634,29 @@ tr {
     font-size: 2.2em;
     line-height: .8;
   }
-  .header_name{
-    font-size: 4.2em;
+
+
+  .very_big{
+    color: var(--black);
+    font-size: 4.5em;
+    font-weight: 300;
+    line-height: .9;
+    width: 86%;
   }
+  .index_sub{
+    color: var(--red);
+    font-size: 2.4em;
+    position: relative;
+    top: -1em;
+  }
+
+  .main_right_img{
+    height: 35vh;
+    position: relative;
+    right: -2em;
+    top: -2.5em;
+  }
+
   .category_header{
     margin-top: 12em;
     padding-bottom: 6em;
@@ -651,7 +698,7 @@ tr {
   }
   
 
-  .art_container {
+  .cars_container {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -759,7 +806,7 @@ tr {
 .modal_full{
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
