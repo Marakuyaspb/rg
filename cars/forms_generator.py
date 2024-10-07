@@ -31,12 +31,13 @@ def handle_want_this_car_form(request):
     if request.method == 'POST':
         want_this_car_form = WantThisCarForm(request.POST)
         if want_this_car_form.is_valid():
-            want_this_car = WantThisCarForm(
+            want_this_car = WantThisCar(
                 first_name=want_this_car_form.cleaned_data['first_name'],
                 phone=want_this_car_form.cleaned_data['phone'],
                 car_name=want_this_car_form.cleaned_data['car_name']
             )
             want_this_car.save()
+            want_this_car_created.delay(want_this_car.first_name)
         return want_this_car_form 
     else:
         want_this_car_form = WantThisCarForm()
@@ -51,7 +52,7 @@ def handle_car_survey_full_form(request):
     if request.method == 'POST':
         car_survey_full_form = CarSurveyFullForm(request.POST)
         if car_survey_full_form.is_valid():
-            car_survey_full = CarSurveyFullForm(    
+            car_survey_full = CarSurveyFull(    
                 car_characteristics=car_survey_full_form.cleaned_data['car_characteristics'],
                 country=car_survey_full_form.cleaned_data['country'],
                 when=car_survey_full_form.cleaned_data['when'],
@@ -81,7 +82,7 @@ def handle_guarantee_count_form(request):
     if request.method == 'POST':
         guarantee_count_form = GuaranteeCountForm(request.POST)
         if guarantee_count_form.is_valid():
-            guarantee_count = WantThisCarForm(
+            guarantee_count = WantThisCar(
                 who_sold=guarantee_count_form.cleaned_data['who_sold'],
                 have_goverment_number=guarantee_count_form.cleaned_data['have_goverment_number'],
                 goverment_number=guarantee_count_form.cleaned_data['goverment_number'],
@@ -105,7 +106,7 @@ def handle_need_diagnostic_form(request):
     if request.method == 'POST':
         need_diagnostic_form = NeedDiagnosticForm(request.POST)
         if need_diagnostic_form.is_valid():
-            need_diagnostic = WantThisCarForm(
+            need_diagnostic = WantThisCar(
                 first_name=need_diagnostic_form.cleaned_data['first_name'],
                 phone=need_diagnostic_form.cleaned_data['phone'],
                 urgency=need_diagnostic_form.cleaned_data['urgency']
@@ -126,7 +127,7 @@ def handle_need_service_form(request):
     if request.method == 'POST':
         need_service_form = NeedServeceForm(request.POST)
         if need_service_form.is_valid():
-            need_service = WantThisCarForm(
+            need_service = WantThisCar(
                 first_name=need_service_form.cleaned_data['first_name'],
                 phone=need_service_form.cleaned_data['phone'],
                 urgency=need_service_form.cleaned_data['urgency']
@@ -147,7 +148,7 @@ def handle_shesterenky_need_form(request):
     if request.method == 'POST':
         shesterenky_need_form = ShesterenkyNeedForm(request.POST)
         if shesterenky_need_form.is_valid():
-            shesterenky_need = WantThisCarForm(
+            shesterenky_need = WantThisCar(
                 year=shesterenky_need_form.cleaned_data['year'],
                 vin=shesterenky_need_form.cleaned_data['vin'],
                 its_name=shesterenky_need_form.cleaned_data['its_name'],
@@ -171,7 +172,7 @@ def handle_casco_count_form(request):
     if request.method == 'POST':
         casco_count_form = CascoCountForm(request.POST)
         if casco_count_form.is_valid():
-            casco_count = WantThisCarForm(
+            casco_count = WantThisCar(
                 budget=casco_count_form.cleaned_data['budget'],
                 type=casco_count_form.cleaned_data['type'],
                 first_name=casco_count_form.cleaned_data['first_name'],
@@ -193,7 +194,7 @@ def handle_legal_help_form(request):
     if request.method == 'POST':
         legal_help_form = LegalHelpForm(request.POST)
         if legal_help_form.is_valid():
-            legal_help = WantThisCarForm(
+            legal_help = WantThisCar(
                 where_auto=legal_help_form.cleaned_data['where_auto'],
                 documents=legal_help_form.cleaned_data['documents'],
                 first_name=legal_help_form.cleaned_data['first_name'],

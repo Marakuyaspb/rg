@@ -305,3 +305,59 @@ Traceback (most recent call last):
   File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
     want_this_car = WantThisCarForm(
 TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 17:19:44,299 - Internal Server Error: /2/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 17:27:00,865 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 17:27:06,351 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 17:27:21,130 - /media/aa/A/rg/order/forms.py changed, reloading.
+2024-10-07 17:27:24,882 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 17:27:25,066 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 17:27:31,432 - Internal Server Error: /6/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 17:30:35,290 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 17:40:51,323 - /media/aa/A/rg/order/tasks.py changed, reloading.
+2024-10-07 17:41:12,492 - /media/aa/A/rg/order/tasks.py changed, reloading.
+2024-10-07 17:41:22,163 - Internal Server Error: /6/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 17:42:11,744 - /media/aa/A/rg/order/tasks.py changed, reloading.
+2024-10-07 20:17:58,887 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:18:06,915 - Internal Server Error: /4/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 20:18:50,148 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 20:19:37,219 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
