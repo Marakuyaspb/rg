@@ -846,15 +846,4 @@ tr {
 
 .block {
     display: block;      
-  
-
-.owl-theme .owl-dots .owl-dot span {
-  width: .25em!important;
-  height: 4px!important;
-  margin: 5px 7px!important;
-  background: #261D1D!important;
-  display: block!important;
-  -webkit-backface-visibility: visible!important;
-  transition: opacity .2s ease!important;
-  border-radius: 0!important;
 }
