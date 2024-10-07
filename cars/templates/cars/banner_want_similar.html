@@ -1,0 +1,77 @@
+{% load static %}
+<style type="text/css">
+  .banner_big{
+    font-size: 7.6em;
+    font-weight: 300;
+    line-height: .9;
+  }
+  .color_block{
+    position: relative;
+    right: -3em;
+  }
+  .upper_color{
+    position: relative;
+    z-index: 4;
+    margin: -20em 0 0 20em;
+    padding-bottom: 10em;
+  }
+</style>
+
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <div class='w-100 black_bg white py-5'>
+    <div class='container py-5'>
+      <h1 class='banner_big'>ХОЧУ ТАКУЮ ЖЕ, НО</h1>
+      <h1 class='banner_big'>С ПЕРЛАМУТРОВЫМИ</h1>
+      <h1 class='banner_big'>ФАРАМИ!</h1>
+    </div>
+  </div>
+
+  <div class='w-100 black white_bg'>
+    <div class='row'>
+      <div class='col-md-5'>
+        <center class='py-5'>
+          <h1 class='very_big mt-5'>— ЛЕГКО!</h1>
+           {% include 'cars/popups/popup_search_auto.html' %}
+        </center>
+      </div>
+      <div class='col-md-7'>
+        <img class='color_block ps-5' src="{% static 'img/red_trapts.svg' %}" />
+        <div class='upper_color'>
+          <div class="d-flex justify-content-start">
+            <img class='' src="{% static 'icons/search_white.png' %}" />
+            <h4 class='white we_400 ps-3 pt-3'>Подберем машину с учетом ваших потребностей и пожеланий. </h4>
+          </div>
+          <div class="d-flex justify-content-start mt-3">
+            <img class='' src="{% static 'icons/world_white.png' %}" />
+             <h4 class='white we_400 ps-3 pt-4'>Организуем доставку из любой точки мира.</h4>
+          </div>
+        </div>
+
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div class='d-block d-lg-none'>
+  <div class='row'>
+    <div class='col-md-6 pt-4 red_bg white'>
+      <h1 class='very_big'>ХОЧУ</h1>
+      <h1 class='very_big'>ТАКУЮ ЖЕ,</h1>
+      <h1 class='very_big'>НО С</h1>
+      <h1 class='very_big'>ПЕРЛАМУТ</h1>
+      <h1 class='very_big'>РОВЫМИ</h1>
+      <h1 class='very_big'>ФАРАМИ!</h1>
+    </div>
+    <div class='col-md-6'>
+      <h1 class='very_big'>— ЛЕГКО!</h1>
+      <div class="d-flex justify-content-start">
+        <img class='' src="{% static 'icons/search.png' %}" />
+        <p>Подберем машину с учетом ваших потребностей и пожеланий. </p>
+      </div>
+      <div class="d-flex justify-content-start">
+        <img class='' src="{% static 'icons/world.png' %}" />
+         <p>Организуем доставку из любой точки мира.</p>
+      </div>
+    </div> 
+  </div>
+</div>

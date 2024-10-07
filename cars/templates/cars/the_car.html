@@ -6,7 +6,6 @@
 
 <section class=''>
 	<div class='row'>
-
 		<p class='d-block d-lg-none ps-5 pt-3 pb-1'><a href='{% url "cars:catalog" %}' class='small gray'>Каталог /</a> <a href='{% url "cars:catalog" %}' class='small gray'>{{ the_car.category }}</a></p>
 
 		<div class='col-md-7 pb-4'>
@@ -53,9 +52,16 @@
 			</div>
 		</div>
 	</div>
-
 </section>
 
+
+
+{% include 'cars/banner_want_similar.html' %}
+<section class='pt-5'>
+	<div class='desctop_84 my-4'>
+		<h2 class='we_400 red'>ПОПУЛЯРНЫЕ МОДЕЛИ</h2>
+	</div>
 {% include 'cars/carousel_all.html' %}
+</section>
 
 {% endblock %}

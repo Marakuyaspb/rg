@@ -361,3 +361,489 @@ Traceback (most recent call last):
 TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
 2024-10-07 20:18:50,148 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
 2024-10-07 20:19:37,219 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 20:30:24,369 - Internal Server Error: /23/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 83, in the_car
+    return render(request, 'cars/the_car.html', context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'static'. Did you forget to register or load this tag?
+2024-10-07 20:36:33,006 - Internal Server Error: /23/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 83, in the_car
+    return render(request, 'cars/the_car.html', context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 19: 'static'. Did you forget to register or load this tag?
+2024-10-07 20:37:18,507 - Internal Server Error: /23/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 83, in the_car
+    return render(request, 'cars/the_car.html', context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 19: 'static'. Did you forget to register or load this tag?
+2024-10-07 20:37:18,620 - Not Found: /favicon.ico
+2024-10-07 20:37:37,808 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:37:37,823 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:37:37,831 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:37:37,843 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:37:37,862 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:37:37,866 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:37:37,898 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:37:37,915 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:37:37,924 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:37:37,944 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:37:38,112 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:37:38,150 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:37:38,162 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:37:38,170 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:37:38,180 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:37:38,185 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:37:38,197 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:37:38,200 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:37:38,222 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:37:38,223 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:38:21,225 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:38:21,233 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:38:21,247 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:38:21,247 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:38:21,254 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:38:21,262 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:38:21,273 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:38:21,297 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:38:21,301 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:38:21,310 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:38:21,371 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:38:21,386 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:38:21,389 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:38:21,400 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:38:21,402 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:38:21,409 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:38:21,419 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:38:21,434 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:38:30,314 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:38:30,327 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:38:30,339 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:38:30,355 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:38:30,371 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:38:30,373 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:38:30,383 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:38:30,398 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:38:30,407 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:38:30,415 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:39:12,806 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:39:12,817 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:39:12,818 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:39:12,818 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:39:12,831 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:39:12,832 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:39:12,842 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:39:12,855 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:39:12,882 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:39:12,884 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:39:13,077 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:39:13,084 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:39:13,096 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:39:13,100 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:39:13,107 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:39:13,114 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:39:13,131 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:39:13,135 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:39:13,145 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:39:13,153 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:41:15,363 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:41:15,374 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:41:15,386 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:41:15,387 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:41:15,390 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:41:15,393 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:41:15,405 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:41:15,418 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:41:15,425 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:41:15,434 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:41:15,745 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:41:15,763 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:41:15,763 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:41:15,769 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:41:15,777 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:41:15,788 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:41:15,795 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:41:15,801 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:41:15,811 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:41:15,819 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:41:34,915 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:41:34,922 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:41:34,929 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:41:34,973 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:41:34,975 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:41:34,978 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:41:34,988 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:41:34,994 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:41:35,051 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:41:35,063 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:41:35,629 - Not Found: /media/Volkswagen_Terramont_Х_1.jpg
+2024-10-07 20:41:35,638 - Not Found: /media/Volkswagen_Terramont_Х_2.jpg
+2024-10-07 20:41:35,653 - Not Found: /media/Volkswagen_Terramont_Х_3.jpg
+2024-10-07 20:41:35,654 - Not Found: /media/Volkswagen_Terramont_Х_5.jpg
+2024-10-07 20:41:35,664 - Not Found: /media/Volkswagen_Terramont_Х_4.jpg
+2024-10-07 20:41:35,669 - Not Found: /media/Volkswagen_Terramont_Х_6.jpg
+2024-10-07 20:41:35,682 - Not Found: /media/Volkswagen_Terramont_Х_7.jpg
+2024-10-07 20:41:35,689 - Not Found: /media/Volkswagen_Terramont_Х_8.jpg
+2024-10-07 20:41:35,697 - Not Found: /media/Volkswagen_Terramont_Х_9.jpg
+2024-10-07 20:41:35,705 - Not Found: /media/Volkswagen_Terramont_Х_10.jpg
+2024-10-07 20:41:45,683 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:41:45,896 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:43:10,363 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:43:10,537 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:43:24,302 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:43:24,602 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:43:33,199 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:43:33,381 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:02,054 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:02,188 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:07,632 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:23,581 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:23,732 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:35,045 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:35,198 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:41,500 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:44:41,630 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:47:35,312 - Internal Server Error: /6/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: cars/popups/banner_want_similar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 83, in the_car
+    return render(request, 'cars/the_car.html', context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: cars/popups/banner_want_similar.html
+2024-10-07 20:47:55,999 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:47:56,152 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:48:31,866 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:48:31,990 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:48:47,077 - Internal Server Error: /6/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: cars/popups/search_auto.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 83, in the_car
+    return render(request, 'cars/the_car.html', context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: cars/popups/search_auto.html
+2024-10-07 20:49:13,936 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:49:14,091 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:49:44,018 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:49:44,200 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:50:46,859 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:50:46,961 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:50:48,450 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:50:48,590 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:51:24,391 - Not Found: /media/cars/Audi_A7L_black_10.jpg
+2024-10-07 20:51:24,571 - Not Found: /media/cars/Audi_A7L_black_10.jpg
