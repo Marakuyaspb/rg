@@ -72,12 +72,12 @@ def the_car(request, id):
 		similar_cars = Car.objects.filter(category=the_car.category)
 	
 	callme_form = handle_callme_form(request)
-	want_this_car_form = handle_want_this_car_form(request)
+	want_this_car = handle_want_this_car_form(request)
 
 	context = {
 		'the_car': the_car,
 		'similar_cars': similar_cars,
 		'callme_form': callme_form,
-		'want_this_car_form': want_this_car_form,
+		'want_this_car': want_this_car,
 	}
 	return render(request, 'cars/the_car.html', context)

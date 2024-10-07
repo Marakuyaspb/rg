@@ -208,3 +208,100 @@ NameError: name 'form' is not defined
 2024-10-07 16:23:34,211 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
 2024-10-07 16:24:12,602 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
 2024-10-07 16:28:01,479 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:38:49,822 - Not Found: /favicon.ico
+2024-10-07 16:40:42,846 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-07 16:43:28,391 - Internal Server Error: /14/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 36, in handle_want_this_car_form
+    car_name=car_name
+NameError: name 'car_name' is not defined
+2024-10-07 16:46:46,839 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:46:53,341 - Internal Server Error: /14/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 37, in handle_want_this_car_form
+    car_name=car_name
+NameError: name 'car_name' is not defined
+2024-10-07 16:47:24,370 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:47:28,993 - Internal Server Error: /14/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 16:47:38,473 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:47:58,138 - Internal Server Error: /14/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 16:54:29,138 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:54:35,956 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:55:04,460 - Internal Server Error: /14/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 16:57:10,522 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:57:34,141 - Internal Server Error: /5/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 16:58:54,681 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 16:59:12,926 - Internal Server Error: /5/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'
+2024-10-07 17:01:58,444 - Internal Server Error: /2/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 34, in handle_want_this_car_form
+    want_this_car = WantThisCarForm(
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'first_name'

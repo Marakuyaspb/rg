@@ -1,5 +1,6 @@
 from order.forms import *
 from order.models import *
+from .models import *
 from order.tasks import * 
 
 
@@ -33,10 +34,9 @@ def handle_want_this_car_form(request):
             want_this_car = WantThisCarForm(
                 first_name=want_this_car_form.cleaned_data['first_name'],
                 phone=want_this_car_form.cleaned_data['phone'],
-                car_name=car_name
+                car_name=want_this_car_form.cleaned_data['car_name']
             )
             want_this_car.save()
-            want_this_car_created.delay(want_this_car.first_name)
         return want_this_car_form 
     else:
         want_this_car_form = WantThisCarForm()

@@ -4,18 +4,21 @@
     <div class='thumb button_form_base mt-3 mb-5 py-2'>Хочу такую же</div>
 
     <div class='modal_full hide'>
-      <span class="close" onclick="closeModal(this);">&times;</span>
-
-      <div class=''>
-        
+      <div class=''> 
         <form method="post" class="callme_container white_bg">
+          
+          <div class='d-flex flex-row-reverse pe-3'>
+            <span class="close" onclick="closeModal(this);">&times;</span>
+          </div>
+
           <img class='w-100 p-5' src='{% static "brand/logo.svg" %}'>
           <div class='form_container we_300'>
 
             {{ want_this_car.as_p }}
             
             {% csrf_token %}
-          
+             <input type="hidden" name="car_name" value="{{ the_car.name }}, {{ the_car.year }}, {{ the_car.engine }}, {{ the_car.transmission }}, {{ the_car.drive }}">
+
           <center class='py-3'><input type="submit" value="Хочу такую же" class="button_dark"></center>
 
           <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
