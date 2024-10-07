@@ -10,9 +10,7 @@
 		<p class='d-block d-lg-none ps-5 pt-3 pb-1'><a href='{% url "cars:catalog" %}' class='small gray'>Каталог /</a> <a href='{% url "cars:catalog" %}' class='small gray'>{{ the_car.category }}</a></p>
 
 		<div class='col-md-7 pb-4'>
-			{% if the_car.main_img %}
-			<img class="w-100 " src="{{ the_car.main_img.url }}">
-			{% endif %}
+			{% include 'cars/carousel_the_car.html' %}
 		</div>
 
 		<div class='col-md-5 pb-4 ps-5'>
@@ -22,7 +20,7 @@
 				<p class='d-none d-lg-block d-xl-block d-xxl-block pb-4'><a href='{% url "cars:catalog" %}' class='small gray'>Каталог /</a> <a href='{% url "cars:catalog" %}' class='small gray'>Легковые авто</a></p>
 
 				<h1 class='the_car_name'>{{ the_car.name }}</h1>
-				<h3 class='the_car_price pt-2 pb-4'>{{ the_car.price }} ₽</h3>
+				<h3 class='the_car_price price_display pt-2 pb-4'>{{ the_car.price }} ₽</h3>
 
 				<table>
 					<tbody class='the_car_info'>

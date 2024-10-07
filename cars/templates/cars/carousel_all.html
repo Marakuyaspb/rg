@@ -1,4 +1,15 @@
 <style>
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: .25em!important;
+    height: 4px!important;
+    margin: 5px 7px!important;
+    display: block!important;
+    -webkit-backface-visibility: visible!important;
+    transition: opacity .2s ease!important;
+    border-radius: 0!important;
+  }
+
 	.owl-prev, .owl-next {
       position:absolute;
    }
@@ -21,7 +32,8 @@
 	}
 </style>
 
-<div class="owl-carousel owl-theme py-4">
+<div class="owl-carousel owl-carousel-five py-4">
+
 {% for e in similar_cars %}
 	<div class="item">
 	  <a href="{% url 'cars:the_car' id=e.id %}">
@@ -29,7 +41,7 @@
         <img src='{{e.main_img.url}}' class='case_prev'>
 
           <h3 class='car_name black ps-3 pt-2'>{{e.name}}</h3>
-          <p class='gray ps-3 pt-2'>{{e.price}} ₽</p>      
+          <p class='gray ps-3 pt-2 price_display'>{{e.price}} ₽</p>      
 
       </div>
     </a>

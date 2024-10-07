@@ -551,8 +551,9 @@ tr {
 
   /* THE CASE PAGE */
 
-  .case_header{
-    max-height: 65vh;
+  .car_header{
+    height: 40em;
+    overflow-y: clip;
     object-fit: cover;
   }
   .case_back_header{
@@ -760,10 +761,12 @@ tr {
 
   /* THE CASE PAGE */
 
-  .case_header{
-    height: 70vh;
+  .car_header{
+    height: 30em;
+    overflow-y: clip;
     object-fit: cover;
   }
+
   .the_case_header{
     font-weight: 200;
     font-size: 2.3em;
@@ -844,3 +847,14 @@ tr {
 .block {
     display: block;      
   
+
+.owl-theme .owl-dots .owl-dot span {
+  width: .25em!important;
+  height: 4px!important;
+  margin: 5px 7px!important;
+  background: #261D1D!important;
+  display: block!important;
+  -webkit-backface-visibility: visible!important;
+  transition: opacity .2s ease!important;
+  border-radius: 0!important;
+}

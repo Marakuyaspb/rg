@@ -1,0 +1,189 @@
+2024-10-07 12:17:44,212 - Internal Server Error: /admin/order/callme/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/models/options.py", line 676, in get_field
+    return self.fields_map[field_name]
+KeyError: <function callMe_detail at 0x741fde1f1ea0>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 290, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 330, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/models/options.py", line 678, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: CallMe has no field named '<function callMe_detail at 0x741fde1f1ea0>'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 346, in result_list
+    "results": list(results(cl)),
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 322, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 313, in __init__
+    super().__init__(*items)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 218, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 296, in lookup_field
+    value = attr(obj)
+  File "/media/aa/A/rg/order/admin.py", line 8, in callMe_detail
+    url = reverse('order:admin_callMe_detail', args=[obj.id])
+  File "/home/aa/.local/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_callMe_detail' not found. 'admin_callMe_detail' is not a valid view function or pattern name.
+2024-10-07 12:17:44,325 - Not Found: /favicon.ico
+2024-10-07 12:22:17,356 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:22:37,481 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:23:14,759 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:23:39,728 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:23:46,615 - Not Found: /admin/order/2/
+2024-10-07 12:27:32,666 - Not Found: /favicon.ico
+2024-10-07 12:27:34,180 - Not Found: /admin/order/3/
+2024-10-07 12:29:04,893 - Not Found: /admin/order/2/
+2024-10-07 12:36:09,017 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:36:13,927 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:36:17,028 - Not Found: /admin/order/2/
+2024-10-07 12:36:17,142 - Not Found: /favicon.ico
+2024-10-07 12:36:20,881 - Not Found: /favicon.ico
+2024-10-07 12:36:24,285 - Not Found: /admin/callme/3/
+2024-10-07 12:37:09,033 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:37:13,082 - Not Found: /favicon.ico
+2024-10-07 12:38:16,421 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:38:25,388 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:38:28,465 - Not Found: /favicon.ico
+2024-10-07 12:38:48,794 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:38:53,596 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:39:14,707 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:39:18,473 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:39:34,882 - Not Found: /favicon.ico
+2024-10-07 12:39:51,255 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:40:13,784 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:41:18,866 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:41:43,417 - Not Found: /favicon.ico
+2024-10-07 12:42:11,853 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:42:16,623 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:42:24,398 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:43:14,874 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:43:17,625 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:43:21,371 - Not Found: /favicon.ico
+2024-10-07 12:43:47,054 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:44:41,909 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:46:35,141 - Not Found: /favicon.ico
+2024-10-07 12:46:37,865 - Not Found: /favicon.ico
+2024-10-07 12:47:13,997 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:47:46,398 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:47:51,209 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:48:18,464 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:48:49,840 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 12:48:57,938 - Not Found: /favicon.ico
+2024-10-07 12:49:20,548 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 12:49:26,583 - Not Found: /admin/callme/3/
+2024-10-07 12:49:59,584 - /media/aa/A/rg/order/urls.py changed, reloading.
+2024-10-07 12:50:01,705 - Not Found: /favicon.ico
+2024-10-07 12:50:03,163 - Not Found: /favicon.ico
+2024-10-07 12:50:09,443 - Not Found: /favicon.ico
+2024-10-07 12:51:21,106 - Not Found: /favicon.ico
+2024-10-07 12:54:56,406 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:04:20,334 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 13:04:43,301 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:07:04,725 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 13:08:45,733 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:12:51,524 - /media/aa/A/rg/order/models.py changed, reloading.
+2024-10-07 13:13:42,530 - /media/aa/A/rg/order/models.py changed, reloading.
+2024-10-07 13:14:04,314 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:14:20,242 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:15:05,931 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:15:17,777 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:15:40,911 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:16:26,000 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 13:16:33,812 - /media/aa/A/rg/order/admin.py changed, reloading.
+2024-10-07 14:26:22,801 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 14:27:01,288 - /media/aa/A/rg/order/models.py changed, reloading.
+2024-10-07 14:27:26,429 - /media/aa/A/rg/order/forms.py changed, reloading.
+2024-10-07 14:29:18,339 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 14:29:36,410 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 14:38:51,590 - /media/aa/A/rg/order/forms.py changed, reloading.
+2024-10-07 14:39:26,963 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 14:40:08,482 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 14:40:40,838 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 14:41:05,957 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-07 14:44:07,139 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 14:50:49,503 - /media/aa/A/rg/order/models.py changed, reloading.
+2024-10-07 14:51:21,828 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-07 14:51:32,003 - Internal Server Error: /4/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 75, in the_car
+    want_this_car_form = handle_want_this_car_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 28, in handle_want_this_car_form
+    if form.is_valid():
+NameError: name 'form' is not defined
+2024-10-07 14:51:55,419 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-07 14:52:23,169 - Not Found: /favicon.ico

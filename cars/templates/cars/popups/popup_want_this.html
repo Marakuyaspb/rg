@@ -1,7 +1,7 @@
  {% load static %}
  <div class='modal_container' onclick='showModal(this);'>
     
-    <div class='button_form_base mt-3 mb-5 py-2'>Хочу такую же</div>
+    <div class='thumb button_form_base mt-3 mb-5 py-2'>Хочу такую же</div>
 
     <div class='modal_full hide'>
       <span class="close" onclick="closeModal(this);">&times;</span>
@@ -12,7 +12,7 @@
           <img class='w-100 p-5' src='{% static "brand/logo.svg" %}'>
           <div class='form_container we_300'>
 
-            {{ callme_form.as_p }}
+            {{ want_this_car.as_p }}
             
             {% csrf_token %}
           

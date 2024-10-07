@@ -13,7 +13,7 @@ class CallMeForm(forms.Form):
 class WantThisCarForm(forms.Form):
 	first_name = forms.CharField(label="Имя", required=True)
 	phone = forms.CharField(label="Телефон", required=True)
-	car_id = forms.CharField()
+	car_name = forms.CharField(widget=forms.HiddenInput())
 
 
 class CarSurveyFullForm(forms.Form):

@@ -1,6 +1,6 @@
 from order.forms import *
-from .models import *
-from order.tasks import callme_created 
+from order.models import *
+from order.tasks import * 
 
 
 # JUST CALL ME / phone + name /
@@ -23,7 +23,23 @@ def handle_callme_form(request):
 
 # WANT THIS CAR
 def handle_want_this_car_form(request):
-    pass
+    if request.method == 'POST':
+        want_this_car_form = WantThisCarForm(request.POST)
+        if want_this_car_form.is_valid():
+            want_this_car = WantThisCarForm(
+                first_name=want_this_car_form.cleaned_data['first_name'],
+                phone=want_this_car_form.cleaned_data['phone']
+            )
+            want_this_car.save()
+            want_this_car_created.delay(want_this_car.first_name)
+        return want_this_car_form 
+    else:
+        want_this_car_form = WantThisCarForm()
+
+    return want_this_car_form
+
+
+
 
 # CAR SURVEY FULL
 def handle_survey_full_form(request):

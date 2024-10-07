@@ -1,0 +1,85 @@
+<style>
+
+	.owl-theme .owl-dots .owl-dot span {
+		width: .25em!important;
+		height: 4px!important;
+		margin: 5px 7px!important;
+		display: block!important;
+		-webkit-backface-visibility: visible!important;
+		transition: opacity .2s ease!important;
+		border-radius: 0!important;
+	}
+	.owl-prev, .owl-next {
+      position:absolute;
+   }
+  .owl-prev {
+      left:0;
+      top: 120px;
+   }
+   .owl-next {
+      right:0;
+      top:120px;
+   }
+	.owl-nav{
+		padding: 0px 20px;
+	}
+
+	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+		font-family: "Montserrat", sans-serif;
+		font-size: 5em;
+		color: #a2b5c5;
+	}
+</style>
+
+<div class="owl-carousel owl-carousel-one-by-one owl-theme">
+	<div class="item">
+	{% if the_car.img_1 %}
+		<img class="w-100 car_header" src="{{ the_car.img_1.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_2 %}
+		<img class="w-100 car_header" src="{{ the_car.img_2.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_3 %}
+		<img class="w-100 car_header" src="{{ the_car.img_3.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_4 %}
+		<img class="w-100 car_header" src="{{ the_car.img_4.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_5 %}
+		<img class="w-100 car_header" src="{{ the_car.img_5.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_6 %}
+		<img class="w-100 car_header" src="{{ the_car.img_6.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_7 %}
+		<img class="w-100 car_header" src="{{ the_car.img_7.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_8 %}
+		<img class="w-100 car_header" src="{{ the_car.img_8.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_9 %}
+		<img class="w-100 car_header" src="{{ the_car.img_9.url }}">
+	{% endif %}
+	</div>
+	<div class="item">
+	{% if the_car.img_10 %}
+		<img class="w-100 car_header" src="{{ the_car.img_10.url }}">
+	{% endif %}
+	</div>
+</div>

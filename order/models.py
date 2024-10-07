@@ -18,10 +18,9 @@ class CallMe(models.Model):
 
 
 
-
 class WantThisCar(models.Model):
 	id = models.AutoField(primary_key=True)
-	car_id = models.CharField(max_length=30, verbose_name = 'Марка машины')
+	car_name = models.CharField(max_length=30, verbose_name = 'Марка машины')
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
 	created = models.DateTimeField(auto_now_add=True)
@@ -46,7 +45,7 @@ class CarSurveyFull(models.Model):
 	trade_in =  models.CharField(max_length=300, verbose_name = 'Планируете трейд ин? Какой авто? Пробег?', null=True, blank=True)
 	complectation =  models.CharField(max_length=600, verbose_name = 'Комплектация?', null=True, blank=True)
 	colors =  models.CharField(max_length=300, verbose_name = 'Желаемые цвета кузова и салона', null=True, blank=True)
-	need_casco = models.BooleanField(verbose_name = 'Планируете ли делать Каско', default=True)
+	need_casco = models.BooleanField(verbose_name = 'Планируете ли делать Каско?', default=True)
 	real_price =  models.CharField(max_length=300, verbose_name = 'Какова стоимость реального предложения автомобиля, которое Вам удалось найти?', null=True, blank=True)
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')

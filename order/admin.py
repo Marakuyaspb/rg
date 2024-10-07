@@ -1,24 +1,21 @@
-import csv
-import datetime
 from django.contrib import admin
-from django.http import HttpResponse
+from pathlib import Path
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from .models import *
 
-def callMe_detail(obj):
-	url = reverse('orders:admin_callMe_detail', args=[obj.id])
-	return mark_safe(f'<a href="{url}">View</a>')
+
 
 @admin.register(CallMe)
 class CallMeAdmin(admin.ModelAdmin):
 	list_display = ['id', 'first_name', 'phone', 'created']
 	list_filter = ['created']
 
-@admin.register(CarSurveyFull)
-class CarSurveyFullAdmin(admin.ModelAdmin):
-	list_display = ['id', 'first_name', 'phone', 'max_price', 'payment_type', 'created']
+@admin.register(WantThisCar)
+class WantThisCarAdmin(admin.ModelAdmin):
+	list_display = ['id', 'first_name', 'phone', 'created']
 	list_filter = ['created']
+
 
 @admin.register(GuaranteeCount)
 class GuaranteeCountAdmin(admin.ModelAdmin):
@@ -49,3 +46,19 @@ class CascoCountAdmin(admin.ModelAdmin):
 class LegalHelpAdmin(admin.ModelAdmin):
 	list_display = ['id', 'first_name', 'phone', 'where_auto', 'documents', 'created']
 	list_filter = ['created']
+
+
+
+# GIANT form
+def CarSurveyFull_detail(obj):
+	url = reverse('order:admin_CarSurveyFull_detail', args=[obj.id])
+	return mark_safe(
+		f'<a href="{url}">Подробно</a>'
+	)
+	
+@admin.register(CarSurveyFull)
+class CarSurveyFullAdmin(admin.ModelAdmin):
+	list_display = ['id', 'first_name', 'phone', 'max_price', 'payment_type', 'created', CarSurveyFull_detail]
+	list_filter = ['created']
+
+

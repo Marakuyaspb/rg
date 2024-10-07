@@ -1,12 +1,12 @@
 {% block title %}
-Заказ {{ order.id }} {{ block.super }}
+{{ carsurveyfull.id }} {{ block.super }}
 {% endblock %}
 
 
 {% block content %}
 
 <div class="module">
-<h3>Заявка № {{ order.id }}</h3>
+<h3>Заявка № {{ carsurveyfull.id }}</h3>
 	<ul class="object-tools">
 		<li>
 		<a onclick="window.print();">
@@ -18,16 +18,63 @@
 	<table>
 		<tr>
 			<th>Создан</th>
-			<td>{{ order.created }}</td>
+			<td>{{ carsurveyfull.created }}</td>
 		</tr>
+
 		<tr>
 			<th>Покупатель</th>
-			<td>{{ order.first_name }}</td>
+			<td><strong>{{ carsurveyfull.first_name }}</strong></td>
 		</tr>
 		<tr>
 			<th>Телефон</th>
-			<td>{{ order.phone }}</td>
+			<td><strong>{{ carsurveyfull.phone }}</strong></td>
 		</tr>
+
+		<tr>
+			<th>Марка, модель, мотор</th>
+			<td>{{ carsurveyfull.car_characteristics }}</td>
+		</tr>
+		<tr>
+			<th>Из какой страны Вас интересует автомобиль?</th>
+			<td>{{ carsurveyfull.country }}</td>
+		</tr>
+		<tr>
+			<th>Когда планируете покупать?</th>
+			<td>{{ carsurveyfull.max_price }}</td>
+		</tr>
+		<tr>
+			<th>Когда планируете покупать?</th>
+			<td>{{ carsurveyfull.when }}</td>
+		</tr>
+		<tr>
+			<th>Форма оплаты за автомобиль?</th>
+			<td>{{ carsurveyfull.payment_type }}</td>
+		</tr>
+		<tr>
+			<th>Максимальный бюджет для покупки?</th>
+			<td>{{ carsurveyfull.max_price }}</td>
+		</tr>
+		<tr>
+			<th>Планируете трейд ин? Какой авто? Пробег?</th>
+			<td>{{ carsurveyfull.trade_in }}</td>
+		</tr>
+		<tr>
+			<th>Комплектация?</th>
+			<td>{{ carsurveyfull.complectation }}</td>
+		</tr>
+		<tr>
+			<th>Желаемые цвета кузова и салона</th>
+			<td>{{ carsurveyfull.colors }}</td>
+		</tr>
+		<tr>
+			<th>Планируете ли делать Каско</th>
+			<td>{{ carsurveyfull.need_casco }}</td>
+		</tr>
+		<tr>
+			<th>Какова стоимость реального предложения автомобиля, которое Вам удалось найти?</th>
+			<td>{{ carsurveyfull.real_price }}</td>
+		</tr>
+
 	</table>
 </div>
 

@@ -65,22 +65,19 @@ def used_cars(request):
 
 
 
+
 def the_car(request, id):		
 	if id:
 		the_car = get_object_or_404(Car, id=id)
 		similar_cars = Car.objects.filter(category=the_car.category)
-
-	if request.method == 'POST':
-		callme_form = CallMeForm(request.POST)
-		if callme_form.is_valid():
-			callme_form.save()
-			send_email_task.delay(callme.first_name)
-	else:
-		callme_form = CallMeForm()
+	
+	callme_form = handle_callme_form(request)
+	want_this_car_form = handle_want_this_car_form(request)
 
 	context = {
 		'the_car': the_car,
 		'similar_cars': similar_cars,
-		'callme_form': callme_form
+		'callme_form': callme_form,
+		'want_this_car_form': want_this_car_form,
 	}
 	return render(request, 'cars/the_car.html', context)
