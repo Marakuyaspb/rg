@@ -60,15 +60,15 @@ tr {
 }
 
 :root{
-  --black:#1b1918;
-  --black_hot: #261D1D;
-  --bordo_dark: #31030F;
-  --bordo: #31030F;
-  --gray_light: #D9D9D9;
-  --gray: #777676;
-  --red: #D41041;
-  --white: #f3f8fd;
-  --white_dirty: #f3f8fd;
+  --black:rgb(27, 25, 24);
+  --black_hot: rgb(38, 29, 29);
+  --bordo_dark: rgb(49, 3, 15);
+  --bordo: rgb(49, 3, 15);
+  --gray_light: rgb(217, 217, 217);
+  --gray: rgb(119, 118, 118);
+  --red: rgb(212, 16, 65);
+  --white: rgb(250, 249, 249);
+  --white_dirty: rgb(245, 245, 245);
 }
 
 
@@ -94,10 +94,10 @@ tr {
   color: #D41041;
 }
 .white{
-  color: #f3f8fd;
+  color: #FAF9F9;
 }
 .white_dirty{
-  color: #f3f8fd;
+  color: #F5F5F5;
 }
 
 .black_bg{
