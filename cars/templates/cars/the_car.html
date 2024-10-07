@@ -54,12 +54,24 @@
 	</div>
 </section>
 
+<section class='pt-5'>
+	<div class='desctop_84 my-4'>
+		<h2 class='we_400 red the_car_name'>ПОХОЖИЕ МОДЕЛИ</h2>
+	</div>
+{% include 'cars/carousel_all.html' %}
+</section>
 
 
 {% include 'cars/banner_want_similar.html' %}
+
+
 <section class='pt-5'>
 	<div class='desctop_84 my-4'>
-		<h2 class='we_400 red'>ПОПУЛЯРНЫЕ МОДЕЛИ</h2>
+
+		<div class="d-flex justify-content-around">
+			<h2 class='we_400 red the_car_name'>ПОПУЛЯРНЫЕ МОДЕЛИ</h2>
+			<div>{% include 'cars/popups/btn_to_tg.html' %}</div>
+		</div>
 	</div>
 {% include 'cars/carousel_all.html' %}
 </section>
