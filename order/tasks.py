@@ -5,18 +5,18 @@ import weasyprint
 
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
-from .models import Order
+from .models import *
 
 
 @shared_task
 def callme_created(order_id):
-  order = Order.objects.get(id=order_id)
-  subject = f'Новая заявка № {order.id}'
+  callme = CallMe.objects.get(id=id)
+  subject = f'Новая заявка № {callme.id}'
   message = (
     f'Привет, продаван!\n\n'
     f'Поступила новая заявка на обратный звонок. Данные клиента:'
-    f'Имя: {order.first_name}'
-    f'Телефон {order.phone}'
+    f'Имя: {callme.first_name}'
+    f'Телефон {callme.phone}'
     )
 
   email = EmailMessage(

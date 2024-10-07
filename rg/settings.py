@@ -15,7 +15,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -121,7 +121,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CELERY
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rg.settings')
-
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
 app = Celery('rg')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()

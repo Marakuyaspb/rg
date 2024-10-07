@@ -1,0 +1,34 @@
+{% block title %}
+Заказ {{ order.id }} {{ block.super }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="module">
+<h3>Заявка № {{ order.id }}</h3>
+	<ul class="object-tools">
+		<li>
+		<a onclick="window.print();">
+		Распечатать заказ
+		</a>
+		</li>
+	</ul>
+
+	<table>
+		<tr>
+			<th>Создан</th>
+			<td>{{ order.created }}</td>
+		</tr>
+		<tr>
+			<th>Покупатель</th>
+			<td>{{ order.first_name }}</td>
+		</tr>
+		<tr>
+			<th>Телефон</th>
+			<td>{{ order.phone }}</td>
+		</tr>
+	</table>
+</div>
+
+{% endblock %}

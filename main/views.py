@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.template.loader import get_template, render_to_string
 from django.urls import reverse
 
-from cars.models import Category, Status, Car, CallMe
+from cars.models import *
 from cars.forms_generator import *
 
 
