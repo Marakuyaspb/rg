@@ -67,6 +67,7 @@ tr {
   --gray_light: rgb(217, 217, 217);
   --gray: rgb(119, 118, 118);
   --red: rgb(212, 16, 65);
+  --red_deep: rgb(192, 14, 59);
   --white: rgb(250, 249, 249);
   --white_dirty: rgb(245, 245, 245);
 }
@@ -93,6 +94,9 @@ tr {
 .red{
   color: #D41041;
 }
+.red_deep{
+  color: #C00E3B;
+}
 .white{
   color: #FAF9F9;
 }
@@ -111,6 +115,9 @@ tr {
 }
 .red_bg{
   background-color: #D41041;
+}
+.red_deep_bg{
+  background-color: #C00E3B;
 }
 .gray_light_bg{
   color: #D9D9D9;

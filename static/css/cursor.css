@@ -2,14 +2,15 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: rgb(212, 16, 65);
+    background-color: rgb(192, 14, 59);
     border-radius: 50%;
-    pointer-events: none; /* Allow clicks to pass through */
+    pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 999;
 }
 
 .follower{
+
     opacity: 0.2;
     background-color: rgb(212, 16, 65);
     border-radius: 50%;
