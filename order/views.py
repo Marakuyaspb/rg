@@ -24,7 +24,7 @@ def callme_order_create(request):
 			callme_order = form.save()
 			CallMeItem.objects.create(callme_order=callme_order, first_name='first_name', phone='phone')
 
-		# SEND EmAIL TO MANAGER
+		# SEND EMAIL TO MANAGER
 			context = {
 			  'callme_order': callme_order,
 			}
@@ -43,6 +43,8 @@ def callme_order_create(request):
 	else:
 		callme_form = CallMeForm()
 	return render(request, 'orders/order/create.html', {'callme_form': callme_form})
+
+
 
 
 

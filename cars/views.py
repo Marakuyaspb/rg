@@ -27,7 +27,7 @@ def catalog(request):
 
 
 def fresh_cars(request):
-	cars = Cars.objects.filter(status=1)
+	cars = Car.objects.filter(status=1)
 
 	if request.method == 'POST':
 		callme_form = CallMeForm(request.POST)
@@ -46,7 +46,7 @@ def fresh_cars(request):
 
 
 def used_cars(request):
-	cars = Cars.objects.filter(status=2)
+	cars = Car.objects.filter(status=2)
 
 	if request.method == 'POST':
 		callme_form = CallMeForm(request.POST)
@@ -70,6 +70,8 @@ def the_car(request, id):
 	if id:
 		the_car = get_object_or_404(Car, id=id)
 		similar_cars = Car.objects.filter(category=the_car.category)
+		new_cars = Car.objects.filter(status=1)
+		used_cars = Car.objects.filter(status=2)
 	
 	callme_form = handle_callme_form(request)
 	want_this_car = handle_want_this_car_form(request)
@@ -77,6 +79,8 @@ def the_car(request, id):
 	context = {
 		'the_car': the_car,
 		'similar_cars': similar_cars,
+		'new_cars': new_cars,
+		'used_cars': used_cars,
 		'callme_form': callme_form,
 		'want_this_car': want_this_car,
 	}

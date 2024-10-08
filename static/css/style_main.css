@@ -3,6 +3,22 @@
 /* ====================================
 General Styles
 ==================================== */
+
+
+:root{
+  --black:rgb(27, 25, 24);
+  --black_hot: rgb(38, 29, 29);
+  --bordo_dark: rgb(49, 3, 15);
+  --bordo: rgb(49, 3, 15);
+  --gray_light: rgb(217, 217, 217);
+  --gray: rgb(119, 118, 118);
+  --red: rgb(212, 16, 65);
+  --red_deep: rgb(192, 14, 59);
+  --white: rgb(250, 249, 249);
+  --white_dirty: rgb(245, 245, 245);
+}
+
+
 html{
   margin: 0;
   padding: 0;
@@ -13,6 +29,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   padding: 0;
+  background-color: var(--white)!important;
 }
 video{
   width: 100%;
@@ -59,18 +76,6 @@ tr {
   height: 1.6em;
 }
 
-:root{
-  --black:rgb(27, 25, 24);
-  --black_hot: rgb(38, 29, 29);
-  --bordo_dark: rgb(49, 3, 15);
-  --bordo: rgb(49, 3, 15);
-  --gray_light: rgb(217, 217, 217);
-  --gray: rgb(119, 118, 118);
-  --red: rgb(212, 16, 65);
-  --red_deep: rgb(192, 14, 59);
-  --white: rgb(250, 249, 249);
-  --white_dirty: rgb(245, 245, 245);
-}
 
 
 .black{
@@ -206,6 +211,8 @@ tr {
 .mob_header_img{
   margin-top: -4.5em;
 }
+
+
 
 .btn_consult{
   backdrop-filter: blur(5px);
@@ -586,8 +593,28 @@ tr {
     font-size: 1.2em;
     line-height: .9em;
   }
+  .banner_big{
+    font-size: 7.6em;
+    font-weight: 300;
+    line-height: .9;
+  }
+  .banner_middle{
+    font-size: 4.2em;
+    font-weight: 300;
+    line-height: .9;
+  }
 
 
+  .btn_red{
+    background-color: var(--red);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--white);
+    font-size: 1.1em;
+    font-weight: 300;
+    padding: .4em .8em;
+  }
 }
 
 
@@ -790,6 +817,28 @@ tr {
   .the_case_info{
     font-weight: 300;
     font-size: 1.1em;
+  }
+
+  .banner_big{
+    font-size: 3em;
+    font-weight: 300;
+    line-height: .9;
+  }
+  .banner_middle{
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: .9;
+  }
+
+  .btn_red{
+    background-color: var(--red);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--white);
+    font-size: .9em;
+    font-weight: 300;
+    padding: .4em .8em;
   }
 
 }

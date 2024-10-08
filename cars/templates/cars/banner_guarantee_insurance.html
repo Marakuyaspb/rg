@@ -1,0 +1,116 @@
+{% load static %}
+
+<style type="text/css">
+  .screen_half{
+    flex: 1;
+    max-width: 50%;
+  }
+  .banner_img{
+    opacity: .5;
+  }
+  .banner_text{
+    position: absolute;
+    z-index: 8;
+    margin: -26em 0 0 10em;
+
+  }
+
+  .content_wrap_mob  {
+    position: relative;
+    height: 100%;
+  }
+
+  .wrap_dir_mob{
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    background-color:rgba(38, 29, 29, .5);
+  }
+
+  .direction_image_mob{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: .9;    
+  }
+
+  .profile_detail_mob{
+    position: absolute; 
+    bottom: 0.5em;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #f3f8fd;
+    z-index: 111;
+  }
+</style>
+
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+
+  <div class="d-flex flex-row w-100 black_bg">
+    <div class='screen_half'>
+      <img class='w-100 banner_img' src="{% static 'img/working.jpg' %}" class="" alt="" />
+
+      <div class="banner_text">
+        <h2 class='we_400 banner_middle white'>ДИАГНОСТИКА</h2>
+        <h2 class='we_400 banner_middle white'>И ОФОРМЛЕНИЕ</h2>
+        <h2 class='we_400 banner_middle white'>ГАРАНТИИ</h2>
+        <a href='{% url "main:guarantee" %}'>
+          <button class='mt-5 btn_red'>Записаться</button>
+        </a>
+      </div>
+    </div>
+    <div class='screen_half'>
+      <img class='w-100 banner_img' src="{% static 'img/insurance.jpg' %}" class="" alt="" />
+
+      <div class="banner_text">
+        <h2 class='we_400 banner_middle white'>НУЖНА</h2>
+        <h2 class='we_400 banner_middle white'>СТРАХОВКА?</h2>
+
+        <a href='{% url "main:insurance" %}'>
+          <button class='mt-5 btn_red'>Рассчитать</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class='d-block d-lg-none'> 
+  <div class="content_wrap_mob">
+    <div class="wrap_dir_mob">  
+      <img src="{% static 'img/working.png' %}" class="direction_image_mob" alt="" />      
+        <div class="profile_detail_mob">
+          <h2 class='we_400 white banner_middle'>ДИАГНОСТИКА</h2>
+          <h2 class='we_400 white banner_middle'>И ОФОРМЛЕНИЕ</h2>
+          <h2 class='we_400 white banner_middle'>ГАРАНТИИ</h2>
+
+          <a href='{% url "main:guarantee" %}'>
+            <button class='mt-5 btn_red'>Записаться</button>
+          </a>
+        </div>
+    </div>
+
+    <div class="wrap_dir_mob">     
+      <img src="{% static 'img/insurance.png' %}" class="direction_image_mob" alt="Автострахование" />     
+        <div class="profile_detail_mob">
+          <h2 class='we_400 white banner_middle'>НУЖНА</h2>
+          <h2 class='we_400 white banner_middle'>СТРАХОВКА?</h2>
+
+          <a href='{% url "main:insurance" %}'>
+            <button class='mt-5 btn_red'>Рассчитать</button>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>

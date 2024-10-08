@@ -1,9 +1,16 @@
+import os
+import logging
+from django.conf import settings
+from django.core.mail import send_mail, send_mass_mail
+from django.template import loader
+
 from order.forms import *
 from order.models import *
 from .models import *
 from order.tasks import * 
 
 
+logging.basicConfig(filename='mail_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 
 # JUST CALL ME / phone + name /
@@ -17,7 +24,25 @@ def handle_callme_form(request):
             )
             callme.save()
             callme_created.delay(callme.id)
-        return callme_form 
+            
+            context = {
+                'callme_order': callme,
+            }
+
+            try:
+                send_mail(
+                    'Новый заказ',
+                    'Здравствуйте!',
+                    settings.EMAIL_HOST_USER,
+                    ['aa@madfox.io'],
+                    fail_silently=True,
+                    html_message=loader.get_template('orders/order/mail_CallMe.html').render(context)
+                )
+                logging.info("Mail to manager sent successfully")
+            except Exception as e:
+                logging.error(f"Error sending mail to: {str(e)}")
+
+            return callme_form             
     else:
         callme_form = CallMeForm()
 

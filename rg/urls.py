@@ -5,7 +5,7 @@ from django.contrib import admin
 
 from main import urls
 from cars import urls
-
+from order import urls
 
 admin.site.site_header = 'Система Централизованного Управления Контентом'
 
