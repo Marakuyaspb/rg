@@ -14,23 +14,28 @@
   <div class='desctop_84'>
     <h1 class='index_sub'>ДИАГНОСТИКА И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
     <h2 class='we_300'>Опытные мастера, качественное оборудование</h2>  
-
+<br>
     <div class="row mt-4">
       <div class='col-md-6'>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce massa lorem, lobortis non pellentesque at, porta et sem. </p>
         <p>Praesent sed nibh in enim vehicula eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla non efficitur ligula. Pellentesque lobortis elementum commodo. Maecenas nec odio non libero feugiat fermentum ut ut ipsum. </p>
         <p>Nunc sit amet massa lobortis, convallis tellus eget, congue ante. Sed vitae est non neque viverra finibus vel eu libero. Maecenas vitae nisi sapien. 
         </p>
+        <br>
+        {% include 'cars/popups/popup_call_me.html' %}
       </div>
 
       <div class='col-md-6'>
         <img class='w-100 salon_photo' src="{% static 'img/working.jpg' %}" class="direction_image_mob" alt="Каталог авто" />
       </div>
     </div>
-     
-
-     {% include 'cars/popups/popup_call_me.html' %}
+      <br>
   </div>
+
+<section>
+    {% include 'cars/banner_catalog_feedback.html' %}
+</section>
+
 
 
 {% endblock %}

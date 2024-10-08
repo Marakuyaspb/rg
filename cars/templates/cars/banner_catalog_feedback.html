@@ -1,0 +1,118 @@
+{% load static %}
+
+<style type="text/css">
+  .screen_half{
+    flex: 1;
+    max-width: 50%;
+  }
+  .banner_img{
+    opacity: .3;
+  }
+  .banner_text{
+    position: absolute;
+    z-index: 8;
+    margin: -32em 0 0 10em;
+
+  }
+
+  .content_wrap_mob  {
+    position: relative;
+    height: 100%;
+  }
+
+  .wrap_dir_mob{
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    background-color:rgba(38, 29, 29, .5);
+  }
+
+  .direction_image_mob{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: .9;    
+  }
+
+  .profile_detail_mob{
+    position: absolute; 
+    bottom: 0.5em;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #f3f8fd;
+    z-index: 111;
+  }
+</style>
+
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+
+  <div class="d-flex flex-row w-100 black_bg">
+    <div class='screen_half'>
+      <img class='w-100 banner_img' src="{% static 'img/dream.jpg' %}" class="" alt="" />
+
+      <div class="banner_text">
+        <h2 class='we_400 white banner_middle'>ВЫБРАТЬ</h2>
+          <h2 class='we_400 white banner_middle'>МАШИНУ</h2>
+          <h2 class='we_400 white banner_middle'>МЕЧТЫ</h2>
+
+          <a href='{% url "cars:catalog" %}'>
+            <button class='mt-5 btn_red'>В каталог</button>
+          </a>
+      </div>
+    </div>
+    <div class='screen_half'>
+      <img class='w-100 banner_img' src="{% static 'img/feedback.jpg' %}" class="" alt="" />
+
+      <div class="banner_text">
+        <h2 class='we_400 white banner_middle'>ЧТО ГОВОРЯТ</h2>
+          <h2 class='we_400 white banner_middle'>НАШИ</h2>
+          <h2 class='we_400 white banner_middle'>КЛИЕНТЫ</h2>
+          <a href='{% url "main:feedback" %}'>
+            <button class='mt-5 btn_red'>Смотреть отзывы</button>
+          </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class='d-block d-lg-none'> 
+  <div class="content_wrap_mob">
+    <div class="wrap_dir_mob">  
+      <img src="{% static 'img/dream.jpg' %}" class="direction_image_mob" alt="" />      
+        <div class="profile_detail_mob">
+          <h2 class='we_400 white banner_middle'>ВЫБРАТЬ</h2>
+          <h2 class='we_400 white banner_middle'>МАШИНУ</h2>
+          <h2 class='we_400 white banner_middle'>МЕЧТЫ</h2>
+
+          <a href='{% url "cars:catalog" %}'>
+            <button class='mt-5 btn_red'>В каталог</button>
+          </a>
+        </div>
+    </div>
+
+    <div class="wrap_dir_mob">     
+      <img src="{% static 'img/feedback.jpg' %}" class="direction_image_mob" alt="Автострахование" />     
+        <div class="profile_detail_mob">
+          <h2 class='we_400 white banner_middle'>ЧТО ГОВОРЯТ</h2>
+          <h2 class='we_400 white banner_middle'>НАШИ</h2>
+          <h2 class='we_400 white banner_middle'>КЛИЕНТЫ</h2>
+          <a href='{% url "main:feedback" %}'>
+            <button class='mt-5 btn_red'>Смотреть отзывы</button>
+          </a>
+        </div>
+    </div>
+
+  </div>
+</div>
