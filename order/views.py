@@ -16,6 +16,33 @@ from .forms import *
 logging.basicConfig(filename='mail_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 #ПРОСТО ЗАКАЗ
+def callme_order_create(request):
+	callme_order = CallMe(request)
+	if request.method == 'POST':
+		form = CallMeForm(request.POST)
+		if form.is_valid():
+			callme_order = form.save()
+			CallMeItem.objects.create(callme_order=callme_order, first_name='first_name', phone='phone')
+
+		# SEND EmAIL TO MANAGER
+			context = {
+			  'callme_order': callme_order,
+			}
+			try:
+				send_mail('Новый заказ',
+					'Здавствуйте!', 
+					settings.EMAIL_HOST_USER,
+					['aa@madfox.io'],
+					fail_silently=True,
+					html_message=loader.get_template('orders/order/mail_CallMe.html').render(context)
+				)
+				logging.info(f"Mail to manager send successfully")
+			except Exception as e:
+				logging.error(f"Error sending mail to: {str(e)}")
+			return render(request, 'orders/order/created.html', {'callme_order': callme_order})
+	else:
+		callme_form = CallMeForm()
+	return render(request, 'orders/order/create.html', {'callme_form': callme_form})
 
 
 

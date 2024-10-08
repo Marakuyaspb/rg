@@ -5,16 +5,23 @@ from cars.models import Car
 class CallMe(models.Model):
 	id = models.AutoField(primary_key=True)
 	first_name = models.CharField(max_length=30)
-	phone = models.CharField(max_length=30, verbose_name='Телефон')
+	phone = models.CharField(max_length=30)
 	created = models.DateTimeField(auto_now_add=True)
 
 	class Meta:
 		ordering = ['-created']
 		verbose_name = 'Заявка: перезвоните мне'
 		verbose_name_plural = 'Заявки: перезвоните мне'
-
 	def __str__(self):
 		return self.first_name
+
+
+class CallMeItem(models.Model):
+	callme_order = models.ForeignKey(CallMe,related_name='items', on_delete=models.CASCADE)
+	created = models.DateTimeField(auto_now_add=True)
+	def __str__(self):
+	    return str(self.id)
+
 
 
 
@@ -32,6 +39,14 @@ class WantThisCar(models.Model):
 
 	def __str__(self):
 		return self.first_name
+
+class CallMeItem(models.Model):
+	order = models.ForeignKey(CallMe,related_name='items', on_delete=models.CASCADE)
+	car = models.ForeignKey(Car, related_name='order_items', on_delete=models.CASCADE)
+	created = models.DateTimeField(auto_now_add=True)
+	def __str__(self):
+	    return str(self.id)
+
 
 
 

@@ -126,7 +126,6 @@ app = Celery('rg')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 
-
 EMAIL_DEBUG = True
 
 #SMTP

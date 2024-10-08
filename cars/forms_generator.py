@@ -16,7 +16,7 @@ def handle_callme_form(request):
                 phone=callme_form.cleaned_data['phone']
             )
             callme.save()
-            callme_created.delay(callme.first_name)
+            callme_created.delay(callme.id)
         return callme_form 
     else:
         callme_form = CallMeForm()
@@ -37,7 +37,7 @@ def handle_want_this_car_form(request):
                 car_name=want_this_car_form.cleaned_data['car_name']
             )
             want_this_car.save()
-            want_this_car_created.delay(want_this_car.first_name)
+            want_this_car_created.delay(want_this_car.id)
         return want_this_car_form 
     else:
         want_this_car_form = WantThisCarForm()
