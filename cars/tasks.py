@@ -9,8 +9,8 @@ from .models import *
 
 
 @shared_task
-def callme_created(order_id):
-  callme = CallMe.objects.get(id=order_id)
+def callme_created(id):
+  callme = CallMe.objects.get(id=id)
   subject = f'Новая заявка № {callme.id}'
   message = (
     f'Привет, продаван!\n\n'
@@ -25,7 +25,11 @@ def callme_created(order_id):
     'settings.EMAIL_HOST_USER',
     [settings.EMAIL_HOST_USER]
   )
-  email.send()
+  try:
+      email.send()
+      logger.info("Email sent successfully.")
+  except Exception as e:
+      logger.error(f"Error sending email: {str(e)}")
 
 
 

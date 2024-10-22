@@ -4,12 +4,34 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template.loader import get_template
 from django.conf import settings
 
-from .models import Category, Status, Car
+from .models import *
+from .forms import *
 from .forms_generator import *
+from .filters import *
 
 
 def catalog(request):
+
+	sort_by = request.GET.get('sort_by', 'asc')
+	form = FilterForm(request.GET or None)
+
 	cars = Car.objects.all()
+
+	products_list = Car.objects.all()
+	products_list = cars_ordering(Car, products_list, sort_by)
+
+	queryset = products_list
+
+
+	if request.method == 'GET':
+		queryset = cars_filtering(request, queryset)
+
+		print(queryset)
+
+
+	unique_values = unique_names(request)
+
+
 	
 	status = request.GET.get('status')
 	if status:
@@ -21,6 +43,11 @@ def catalog(request):
 	context = {
 		'callme_form': callme_form,
 		'cars' : cars,
+		'sort_by': sort_by,
+		'products_list': products_list,
+		'unique_color': unique_values['unique_color'],
+		'unique_year': unique_values['unique_year'],
+		'unique_drive': unique_values['unique_drive'],
 	}
 
 	return render(request, 'cars/catalog.html', context)

@@ -4,10 +4,9 @@ from django.conf import settings
 from django.core.mail import send_mail, send_mass_mail
 from django.template import loader
 
-from order.forms import *
-from order.models import *
+from .forms import *
 from .models import *
-from order.tasks import * 
+from .tasks import * 
 
 
 logging.basicConfig(filename='mail_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -34,11 +33,11 @@ def handle_callme_form(request):
                     'Новый заказ',
                     'Здравствуйте!',
                     settings.EMAIL_HOST_USER,
-                    ['aa@madfox.io'],
+                    ['komy.kabachok@yandex.ru'],
                     fail_silently=True,
-                    html_message=loader.get_template('orders/order/mail_CallMe.html').render(context)
+                    html_message=loader.get_template('order/mail_CallMe.html').render(context)
                 )
-                logging.info("Mail to manager sent successfully")
+                logging.info("Mail to manager sent successfully!!!1")
             except Exception as e:
                 logging.error(f"Error sending mail to: {str(e)}")
 

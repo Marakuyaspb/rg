@@ -5,7 +5,6 @@ from django.contrib import admin
 
 from main import urls
 from cars import urls
-from order import urls
 
 admin.site.site_header = 'Система Централизованного Управления Контентом'
 
@@ -14,7 +13,6 @@ admin.site.site_header = 'Система Централизованного Уп
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('cars.urls')),
-    path('', include('order.urls')),
     path('', include('main.urls')),
 ]
 

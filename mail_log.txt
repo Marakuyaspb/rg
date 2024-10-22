@@ -1427,3 +1427,717 @@ Traceback (most recent call last):
   File "/home/aa/.local/lib/python3.10/site-packages/django/urls/base.py", line 82, in reverse
     raise NoReverseMatch("%s is not a registered namespace" % key)
 django.urls.exceptions.NoReverseMatch: 'car' is not a registered namespace
+2024-10-08 23:14:08,246 - Mail to manager sent successfully
+2024-10-14 11:04:31,156 - Not Found: /favicon.ico
+2024-10-14 11:06:17,475 - Mail to manager sent successfully
+2024-10-14 11:06:55,195 - Mail to manager sent successfully
+2024-10-14 11:10:54,149 - Mail to manager sent successfully
+2024-10-14 11:12:11,814 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-14 13:33:39,870 - /media/aa/A/rg/order/views.py changed, reloading.
+2024-10-14 13:33:54,567 - Mail to manager sent successfully
+2024-10-14 13:40:26,541 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-14 13:43:29,787 - Mail to manager sent successfully
+2024-10-14 13:46:53,792 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-14 13:47:27,177 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-14 13:47:31,947 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-14 13:47:51,410 - Mail to manager sent successfully!!!
+2024-10-14 13:48:36,263 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-14 13:48:52,354 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-14 13:49:08,161 - Mail to manager sent successfully!!!1
+2024-10-14 13:56:07,397 - /media/aa/A/rg/cars/models.py changed, reloading.
+2024-10-14 13:57:12,067 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-14 13:59:24,394 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-14 14:00:49,330 - /media/aa/A/rg/rg/urls.py changed, reloading.
+2024-10-14 14:02:14,528 - /media/aa/A/rg/cars/models.py changed, reloading.
+2024-10-14 14:02:20,327 - /media/aa/A/rg/cars/models.py changed, reloading.
+2024-10-14 14:09:15,026 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-14 14:28:32,508 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-14 14:28:58,773 - No hostname was supplied. Reverting to default 'localhost'
+2024-10-14 14:29:04,877 - Internal Server Error: /spares/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 93, in spares
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-14 14:29:56,555 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 19, in catalog
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-21 20:48:13,652 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-21 20:55:56,499 - No hostname was supplied. Reverting to default 'localhost'
+2024-10-21 20:56:02,631 - Internal Server Error: /25/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 76, in the_car
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-21 20:56:02,782 - Not Found: /favicon.ico
+2024-10-21 20:59:33,735 - Internal Server Error: /25/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 76, in the_car
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-22 18:12:21,119 - No hostname was supplied. Reverting to default 'localhost'
+2024-10-22 18:12:27,240 - Internal Server Error: /25/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 76, in the_car
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-22 18:12:27,375 - Not Found: /favicon.ico
+2024-10-22 18:14:57,771 - /media/aa/A/rg/cars/admin.py changed, reloading.
+2024-10-22 18:15:48,463 - /media/aa/A/rg/cars/admin.py changed, reloading.
+2024-10-22 18:17:23,236 - /media/aa/A/rg/cars/admin.py changed, reloading.
+2024-10-22 18:20:01,455 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 18:20:06,245 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 18:21:10,503 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-22 18:25:33,890 - No hostname was supplied. Reverting to default 'localhost'
+2024-10-22 18:25:40,003 - Internal Server Error: /25/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 77, in the_car
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-22 18:26:18,034 - Internal Server Error: /25/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 77, in the_car
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-22 21:03:59,569 - Internal Server Error: /25/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 77, in the_car
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-22 21:24:27,204 - /media/aa/A/rg/cars/models.py changed, reloading.
+2024-10-22 21:29:24,959 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: cars_car.color_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 27, in catalog
+    return render(request, 'cars/catalog.html', context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/template/defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: cars_car.color_id
+2024-10-22 21:29:25,106 - Not Found: /favicon.ico
+2024-10-22 21:30:52,391 - /media/aa/A/rg/cars/models.py changed, reloading.
+2024-10-22 21:31:12,332 - /media/aa/A/rg/cars/models.py changed, reloading.
+2024-10-22 21:31:34,494 - /media/aa/A/rg/cars/models.py changed, reloading.
+2024-10-22 21:39:05,481 - /media/aa/A/rg/cars/admin.py changed, reloading.
+2024-10-22 21:39:16,178 - /media/aa/A/rg/cars/admin.py changed, reloading.
+2024-10-22 21:39:20,887 - /media/aa/A/rg/cars/admin.py changed, reloading.
+2024-10-22 21:39:39,740 - /media/aa/A/rg/cars/admin.py changed, reloading.
+2024-10-22 21:39:48,262 - Not Found: /favicon.ico
+2024-10-22 21:40:13,537 - Not Found: /favicon.ico
+2024-10-22 21:40:52,051 - Not Found: /favicon.ico
+2024-10-22 21:41:05,396 - Not Found: /favicon.ico
+2024-10-22 21:41:27,940 - Not Found: /favicon.ico
+2024-10-22 21:41:36,958 - Not Found: /favicon.ico
+2024-10-22 21:41:50,580 - Not Found: /favicon.ico
+2024-10-22 21:42:13,631 - Not Found: /favicon.ico
+2024-10-22 21:43:06,832 - Not Found: /favicon.ico
+2024-10-22 23:18:03,563 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:18:44,256 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:19:30,836 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:19:56,021 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:20:06,904 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:20:10,214 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 16, in catalog
+    form = FilterForm(request.GET or None)
+NameError: name 'FilterForm' is not defined
+2024-10-22 23:20:10,380 - Not Found: /favicon.ico
+2024-10-22 23:21:49,757 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-22 23:21:52,083 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/cars/views.py", line 21, in catalog
+    products_list = product_ordering(Car, products_list, sort_by)
+NameError: name 'product_ordering' is not defined
+2024-10-22 23:21:52,221 - Not Found: /favicon.ico
+2024-10-22 23:22:40,534 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:33:58,294 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:34:34,776 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-22 23:35:10,299 - /media/aa/A/rg/cars/views.py changed, reloading.
