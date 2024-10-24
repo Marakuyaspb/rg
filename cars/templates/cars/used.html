@@ -3,18 +3,27 @@
 
 
 {% block content %}
+<div class='desctop_84'>
+  <h1 class='we_300 pt-4 ps-4'>Авто с пробегом</h1>
+  <h3 class='we_200 ps-4'>Прошли полное ТО в нашей мастерской</h3>
+
+  <div class="d-flex justify-content-center">
+    <form method="get" class='pb-2'>
+      <button class="btn_transperent" type="submit" name="sort_by" value="desc">Сначала дорогие ↑</button>
+      <button class="btn_transperent" type="submit" name="sort_by" value="asc">Сначала бюджетные ↓</button>
+    </form> 
+</div>
 
   <div class='cars_container py-5'>
-    {% for car in car %}
-    <a href="{% url 'cars:car' category=car.category.category id=car.id %}">
+    {% for car in cars %}
+    <a href='{% url "cars:the_car" car.id %}'>
       <div class='wrap_case_img'>
         <img src='{{car.main_img.url}}' class='case_prev'>
-        <h3 class='case_name black'>{{car.name}}</h3>
+        <h3 class='car_name black ps-3 mt-4'>{{car.name}}</h3>
+        <p class='black ps-3 pt-2 price_display'>{{car.price}} ₽</p>
       </div>
     </a>
     {% endfor %}
   </div>
-
 </div>
-
 {% endblock %}

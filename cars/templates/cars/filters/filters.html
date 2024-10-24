@@ -3,8 +3,8 @@
 
 <style>
 	.filter_header{
-		font-size: 1.3em!important;
-		font-weight: 300;
+		font-size: 1.2em!important;
+		font-weight: 500;
 		padding: 1.2em .5em .5em 0em;
 		color: var(--white);
 	}
@@ -12,10 +12,10 @@
 
 <div class='desctop_84'>
 
-	<div class="py-3 d-flex justify-content-center">
-		<center>
+	<div class="d-flex justify-content-center">
+		<center id='just_status' class="py-3">
 			<form method="get" class='pb-2'>
-				<button class="btn_outline_white m-1" type="submit" name="status" value="1">НОВЫЕ</button>
+				<button class="btn_outline_white m-1" type="submit" name="status" value="1">НОВЫЕ АВТО</button>
 				<button class="btn_outline_white m-1" type="submit" name="status" value="2">С ПРОБЕГОМ</button>
 			</form>
 			<button id='btn_show' class='btn_transperent white m-1' onclick="ShowFilters();">Показать все фильтры →</button>
@@ -27,13 +27,30 @@
 
 	<div id='all_filters' class='hide'>
 
-		<div class='d-flex justify-content-end'><p id='btn_hide' class='we_300 gray m-1' onclick="HideFilters();">Скрыть фильтры</p></div>
+		<div class='d-flex justify-content-center'><p id='btn_hide' class='we_300 white m-1 pt-4 pb-3' onclick="HideFilters();">Свернуть фильтры ↑</p></div>
 
 
 		<form method="get">
       	{% csrf_token %}
 
       	<center>
+			<label class="checkbox white we_300 px-2">
+			    <input class="checkbox-input_red" type="checkbox" name="status" value="1">
+			    <span class="checkbox-checkmark-box_red">
+			      <span class="checkbox-checkmark_red"></span>
+			    </span>
+			 Новая машина
+			</label>
+
+
+			<label class="checkbox white we_300 px-2">
+			    <input class="checkbox-input_red" type="checkbox"name="status" value="2">
+			    <span class="checkbox-checkmark-box_red">
+			      <span class="checkbox-checkmark_red"></span>
+			    </span>
+			 С пробегом
+			</label>
+
 
 			<h3 class='filter_header'>Цвет</h3>
 				{% for the_color in unique_color %}
@@ -136,7 +153,7 @@
 			<h3 class='filter_header'>Год выпуска</h3>
 				{% for year in unique_year %}
 					<label class="checkbox white we_300 px-2">
-					    <input class="checkbox-input_red" type="checkbox" name='year' value="{{ years.year }}">
+					    <input class="checkbox-input_red" type="checkbox" name='year' value="{{ year.year }}">
 					    <span class="checkbox-checkmark-box_red">
 					      <span class="checkbox-checkmark_red"></span>
 					    </span>
@@ -150,7 +167,7 @@
 			<h3 class='filter_header'>Трансмиссия</h3>
 				{% for transmission in unique_transmission %}
 					<label class="checkbox white we_300 px-2">
-					    <input class="checkbox-input_red" type="checkbox" name='transmission' value="{{ transmissions.transmission }}">
+					    <input class="checkbox-input_red" type="checkbox" name='transmission' value="{{ transmission.transmission }}">
 					    <span class="checkbox-checkmark-box_red">
 					      <span class="checkbox-checkmark_red"></span>
 					    </span>
@@ -163,7 +180,7 @@
 			<h3 class='filter_header'>Привод</h3>
 				{% for drive in unique_drive %}
 					<label class="checkbox white we_300 px-2">
-					    <input class="checkbox-input_red" type="checkbox" name='drive' value="{{ drives.drive }}">
+					    <input class="checkbox-input_red" type="checkbox" name='drive' value="{{ drive.drive }}">
 					    <span class="checkbox-checkmark-box_red">
 					      <span class="checkbox-checkmark_red"></span>
 					    </span>
@@ -175,7 +192,7 @@
 			</div>
 
 			<center>
-				<button type="submit" name='filter_products' class=" button_form_base my-3">Показать варианты</button>
+				<button type="submit" name='filter_products' class=" button_form_base my-5">Показать варианты</button>
 			</center>
 
 		</form>
@@ -187,15 +204,19 @@
 <script type="text/javascript">
 	function ShowFilters(e){
 		let all_filters = document.getElementById('all_filters');
+		let just_status = document.getElementById('just_status');
 		let btn_show = document.getElementById('btn_show');
 		all_filters.classList.remove('hide');
+		just_status.classList.add('hide');
 		btn_show.classList.add('hide');
 	}
 
 	function HideFilters(e){
 		let all_filters = document.getElementById('all_filters');
+		let just_status = document.getElementById('just_status');
 		let btn_show = document.getElementById('btn_show');
 		all_filters.classList.add('hide');
+		just_status.classList.remove('hide');
 		btn_show.classList.remove('hide');
 	}
 </script>

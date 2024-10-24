@@ -13,8 +13,7 @@ from .filters import *
 def catalog(request):
 	sort_by = request.GET.get('sort_by', 'asc')
 	
-
-	form = FilterForm(request.GET or None)
+	# form = FilterForm(request.GET or None)
 
 	cars = Car.objects.all()
 
@@ -26,18 +25,18 @@ def catalog(request):
 
 	if request.method == 'GET':
 		queryset = cars_filtering(request, queryset)
-
 		print(queryset)
 
 
 	unique_values = unique_names(request)
-
 
 	
 	status = request.GET.get('status')
 	if status:
 		status = int(status)
 		cars = cars.filter(status=status)
+
+
 
 	callme_form = handle_callme_form(request)
 
@@ -54,8 +53,12 @@ def catalog(request):
 	return render(request, 'cars/catalog.html', context)
 
 
+
+
 def fresh_cars(request):
 	cars = Car.objects.filter(status=1)
+	sort_by = request.GET.get('sort_by', 'asc')
+	cars_sort = cars_ordering(Car, cars, sort_by)
 
 	if request.method == 'POST':
 		callme_form = CallMeForm(request.POST)
@@ -66,6 +69,7 @@ def fresh_cars(request):
 		callme_form = CallMeForm()
 
 	context = {
+		'cars_sort':cars_sort,
 		'callme_form': callme_form,
 		'cars' : cars,
 	}
@@ -73,8 +77,11 @@ def fresh_cars(request):
 	return render(request, 'cars/fresh.html', context)
 
 
+
 def used_cars(request):
 	cars = Car.objects.filter(status=2)
+	sort_by = request.GET.get('sort_by', 'asc')
+	cars_sort = cars_ordering(Car, cars, sort_by)
 
 	if request.method == 'POST':
 		callme_form = CallMeForm(request.POST)
@@ -85,6 +92,7 @@ def used_cars(request):
 		callme_form = CallMeForm()
 
 	context = {
+		'cars_sort':cars_sort,
 		'callme_form': callme_form,
 		'cars' : cars,
 	}
@@ -106,7 +114,7 @@ def the_car(request, id):
 
 	context = {
 		'the_car': the_car,
-		'sort_by': sort_by,
+		# 'sort_by': sort_by,
 		'similar_cars': similar_cars,
 		'new_cars': new_cars,
 		'used_cars': used_cars,

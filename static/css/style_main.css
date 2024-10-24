@@ -37,6 +37,9 @@ video{
 a {
   text-decoration: none!important;
 }
+button{
+  cursor: pointer;
+}
 input{
   width: 100%;
   border: 1px solid #010305;
@@ -426,8 +429,8 @@ tr {
 .button_form_base{
   border-radius: 8px;
   text-align: center;
-  max-width: 14em;
   padding: .4em 1em;
+  border: none;
 /*  border: 2px solid rgb(243, 248, 253);*/
   color: #F0F4F5;
   background-color: #D41041;
@@ -864,6 +867,7 @@ tr {
     position: relative;
     right: -2em;
     top: -2.5em;
+    overflow-x: clip;
   }
 
   .category_header{

@@ -2,8 +2,8 @@ from django import forms
 from .models import *
 
 
-class FilterForm(forms.Form):
-	color_id = forms.ModelMultipleChoiceField(queryset=Color.objects.all(), required=False)
+# class FilterForm(forms.Form):
+# 	color_id = forms.ModelMultipleChoiceField(queryset=Color.objects.all(), required=False)
 
 
 class CallMeForm(forms.Form):

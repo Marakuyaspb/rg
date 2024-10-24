@@ -39,11 +39,13 @@
           <span class='pt-2 bordo'>|</span>
           <a class="nav-link" href='{% url "main:insurance" %}'>Страхование</a>
           <span class='pt-2 bordo'>|</span>
-          <a class="nav-link" href='{% url "main:guarantee" %}'>Гарантия</a>
+          <a class="nav-link" href='{% url "main:guarantee" %}'>Оформление гарантии</a>
           <span class='pt-2 bordo'>|</span>
           <a class="nav-link" href='{% url "main:service" %}'>Диагностика</a>
           <span class='pt-2 bordo'>|</span>      
-          <a class="nav-link" href='{% url "main:spares" %}'>Отзывы</a>
+          <a class="nav-link" href='{% url "main:spares" %}'>Запчасти</a>
+          <span class='pt-2 bordo'>|</span>      
+          <a class="nav-link" href='{% url "main:feedback" %}'>Отзывы</a>
         </div>
 
 
@@ -89,10 +91,10 @@
              <a class="nav-link" href='{% url "cars:catalog" %}'>Каталог авто</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'><span class='red pe-3'>•</span> Новые</a>
+             <a class="nav-link ps-2" href='{% url "cars:fresh_cars" %}'><span class='red pe-3'>•</span> Новые</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link ps-2" href='{% url "cars:catalog" %}'><span class='red pe-3'>•</span> С пробегом</a>
+             <a class="nav-link ps-2" href='{% url "cars:used_cars" %}'><span class='red pe-3'>•</span> С пробегом</a>
           </li>
           <li class="nav-item we_300 ms-2 my-2">——————————</li>
           <li class="nav-item">

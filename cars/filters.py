@@ -13,11 +13,14 @@ def cars_ordering(instance, queryset, sort_by):
 def cars_filtering(request, queryset):
 	filters = Q()
 
+	statuses = request.GET.getlist('status')
 	color_ids = request.GET.getlist('color_id')
 	years = request.GET.getlist('year')
 	drives = request.GET.getlist('drive')
 	transmissions = request.GET.getlist('transmission')
 
+	if statuses:
+		filters &= Q(status=statuses)
 	if color_ids:
 		filters &= Q(color_id__in=color_ids)
 	if years:
