@@ -11,8 +11,9 @@ from .filters import *
 
 
 def catalog(request):
-
 	sort_by = request.GET.get('sort_by', 'asc')
+	
+
 	form = FilterForm(request.GET or None)
 
 	cars = Car.objects.all()
@@ -43,10 +44,10 @@ def catalog(request):
 	context = {
 		'callme_form': callme_form,
 		'cars' : cars,
-		'sort_by': sort_by,
 		'products_list': products_list,
 		'unique_color': unique_values['unique_color'],
 		'unique_year': unique_values['unique_year'],
+		'unique_transmission': unique_values['unique_transmission'],
 		'unique_drive': unique_values['unique_drive'],
 	}
 
@@ -105,6 +106,7 @@ def the_car(request, id):
 
 	context = {
 		'the_car': the_car,
+		'sort_by': sort_by,
 		'similar_cars': similar_cars,
 		'new_cars': new_cars,
 		'used_cars': used_cars,

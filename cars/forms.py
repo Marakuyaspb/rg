@@ -6,7 +6,6 @@ class FilterForm(forms.Form):
 	color_id = forms.ModelMultipleChoiceField(queryset=Color.objects.all(), required=False)
 
 
-
 class CallMeForm(forms.Form):
 	first_name = forms.CharField(label="Имя", required=True)
 	phone = forms.CharField(label="Телефон", required=True)

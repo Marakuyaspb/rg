@@ -3,148 +3,180 @@
 
 <style>
 	.filter_header{
-		font-size: 1.25em!important;
+		font-size: 1.3em!important;
 		font-weight: 300;
-		padding: 1em .5em;
-		color: var(--black);
+		padding: 1.2em .5em .5em 0em;
+		color: var(--white);
 	}
 </style>
 
 <div class='desctop_84'>
-	<div class="py-3">
-		<form method="get">
-			{% csrf_token %}
-			<button class="btn_transperent" type="submit" name="sort_by" value="desc">Сначала дорогие ↑</button>
-			<button class="btn_transperent" type="submit" name="sort_by" value="asc">Сначала бюджетные ↓</button>
-		</form>
+
+	<div class="py-3 d-flex justify-content-center">
+		<center>
+			<form method="get" class='pb-2'>
+				<button class="btn_outline_white m-1" type="submit" name="status" value="1">НОВЫЕ</button>
+				<button class="btn_outline_white m-1" type="submit" name="status" value="2">С ПРОБЕГОМ</button>
+			</form>
+			<button id='btn_show' class='btn_transperent white m-1' onclick="ShowFilters();">Показать все фильтры →</button>
+		</center>
 	</div>
 
-	<div id='btn_show' class='btn_transperent mb-3' onclick="ShowFilters();">Показать все фильтры</div>
+	
 
 
 	<div id='all_filters' class='hide'>
-		<div id='btn_hide' class='btn_transperent mb-3' onclick="HideFilters();">Скрыть фильтры</div>
+
+		<div class='d-flex justify-content-end'><p id='btn_hide' class='we_300 gray m-1' onclick="HideFilters();">Скрыть фильтры</p></div>
 
 
 		<form method="get">
       	{% csrf_token %}
-		<h3 class='filter_header'>Цвет</h3>
-		{% for the_color in unique_color %}
 
-			<style>
-				.checkbox-input_{{ the_color.color_id }} {
-					position: absolute;
-					opacity: 0;
-					cursor: pointer;
-					height: 0;
-					width: 0;
+      	<center>
 
-					&:focus ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
-						border-color: #{{ the_color.color_code }};
-					}
+			<h3 class='filter_header'>Цвет</h3>
+				{% for the_color in unique_color %}
 
-					&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
-					.checkbox-checkmark_{{ the_color.color_id }} {
-						&:after {
-							display: block;
+					<style>
+						.checkbox-input_{{ the_color.color_id }} {
+							position: absolute;
+							opacity: 0;
+							cursor: pointer;
+							height: 0;
+							width: 0;
+
+							&:focus ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+								border-color: #{{ the_color.color_code }};
+							}
+
+							&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+							.checkbox-checkmark_{{ the_color.color_id }} {
+								&:after {
+									display: block;
+								}
+							}
 						}
-					}
-				}
 
-				&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
-					.checkbox-checkmark {
-						background-color: {{ the_color.color_code }};
-						border: 2px solid {{ the_color.color_code }};
-					}
-				}
+						&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+							.checkbox-checkmark {
+								background-color: {{ the_color.color_code }};
+								border: 2px solid {{ the_color.color_code }};
+							}
+						}
 
-				&:disabled ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
-					.checkbox-checkmark_{{ the_color.color_id }} {
-						border: 2px solid {{ the_color.color_code }};
-						cursor: not-allowed;
-					}
-				}
+						&:disabled ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+							.checkbox-checkmark_{{ the_color.color_id }} {
+								border: 2px solid {{ the_color.color_code }};
+								cursor: not-allowed;
+							}
+						}
 
-				&:disabled {
-					&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+						&:disabled {
+							&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+								.checkbox-checkmark_{{ the_color.color_id }} {
+									background-color: {{ the_color.color_code }};
+
+									&:after {
+									background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='%2374767B'/%3E%3C/svg%3E%0A") no-repeat center;
+									background-size: contain;
+									}
+								}
+							}
+						}
+						}
+
+						.checkbox-checkmark-box_{{ the_color.color_id }} {
+							min-width: 36px;
+							max-width: 36px;
+							min-height: 36px;
+							max-height: 36px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+
+							}
+
 						.checkbox-checkmark_{{ the_color.color_id }} {
+							min-width: 26px;
+							max-width: 26px;
+							min-height: 26px;
+							max-height: 26px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25) inset;
+							-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25) inset;
+							-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25) inset;
+							border-radius: 4px;
+							cursor: pointer;
 							background-color: {{ the_color.color_code }};
 
 							&:after {
-							background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='%2374767B'/%3E%3C/svg%3E%0A") no-repeat center;
+							content: "";
+							display: none;
+							background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center;
+							width: 24px;
+							height: 20px;
 							background-size: contain;
 							}
 						}
-					}
-				}
-				}
+					</style>
 
-				.checkbox-checkmark-box_{{ the_color.color_id }} {
-					min-width: 36px;
-					max-width: 36px;
-					min-height: 36px;
-					max-height: 36px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-
-					}
-
-				.checkbox-checkmark_{{ the_color.color_id }} {
-					min-width: 26px;
-					max-width: 26px;
-					min-height: 26px;
-					max-height: 26px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					border: 2px solid {{ the_color.color_code }};
-					border-radius: 4px;
-					cursor: pointer;
-					background-color: {{ the_color.color_code }};
-
-					&:after {
-					content: "";
-					display: none;
-					background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center;
-					width: 24px;
-					height: 20px;
-					background-size: contain;
-					}
-				}
-			</style>
-
-			<label class="checkbox we_300">
-				<input class="checkbox-input_{{ the_color.color_id }}" type="checkbox" value="{{ the_color.color_id }}" name="color_id">
-				<span class="checkbox-checkmark-box_{{ the_color.color_id }}">
-				<span class="checkbox-checkmark_{{ the_color.color_id }}"></span>
-				</span>
-				{{ the_color.color_name }}
-			</label>
-		{% endfor %}
+					<label class="checkbox white we_300 p-1">
+						<input class="checkbox-input_{{ the_color.color_id }}" type="checkbox" value="{{ the_color.color_id }}" name="color_id">
+						<span class="checkbox-checkmark-box_{{ the_color.color_id }}">
+						<span class="checkbox-checkmark_{{ the_color.color_id }}"></span>
+						</span>
+						{{ the_color.color_name }}
+					</label>
+				{% endfor %}
+			<div class="row">
+			<div class='col-md-4'>
+			<h3 class='filter_header'>Год выпуска</h3>
+				{% for year in unique_year %}
+					<label class="checkbox white we_300 px-2">
+					    <input class="checkbox-input_red" type="checkbox" name='year' value="{{ years.year }}">
+					    <span class="checkbox-checkmark-box_red">
+					      <span class="checkbox-checkmark_red"></span>
+					    </span>
+					 {{ year.year }}
+					</label>
+				{% endfor %}
 
 
-		<h3 class='filter_header'>Год выпуска</h3>
-			{% for year in unique_year %}
-				<label class="checkbox">
-				    <input class="checkbox-input" type="checkbox" name='collection_id' value="{{ collection.collection_id }}">
-				    <span class="checkbox-checkmark-box">
-				      <span class="checkbox-checkmark"></span>
-				    </span>
-				 {{ year.year }}
-				</label>
-			{% endfor %}
+			</div>
+				<div class='col-md-4'>
+			<h3 class='filter_header'>Трансмиссия</h3>
+				{% for transmission in unique_transmission %}
+					<label class="checkbox white we_300 px-2">
+					    <input class="checkbox-input_red" type="checkbox" name='transmission' value="{{ transmissions.transmission }}">
+					    <span class="checkbox-checkmark-box_red">
+					      <span class="checkbox-checkmark_red"></span>
+					    </span>
+					 {{ transmission.transmission }}
+					</label>
+				{% endfor %}
+				</div>
+				<div class='col-md-4'>
 
-		<h3 class='filter_header'>Привод</h3>
-			{% for drive in unique_drive %}
-				<label class="checkbox">
-				    <input class="checkbox-input" type="checkbox" name='collection_id' value="{{ collection.collection_id }}">
-				    <span class="checkbox-checkmark-box">
-				      <span class="checkbox-checkmark"></span>
-				    </span>
-				 {{ drive.drive }}
-				</label>
-			{% endfor %}
+			<h3 class='filter_header'>Привод</h3>
+				{% for drive in unique_drive %}
+					<label class="checkbox white we_300 px-2">
+					    <input class="checkbox-input_red" type="checkbox" name='drive' value="{{ drives.drive }}">
+					    <span class="checkbox-checkmark-box_red">
+					      <span class="checkbox-checkmark_red"></span>
+					    </span>
+					 {{ drive.drive }}
+					</label>
+				{% endfor %}
+
+				</div>
+			</div>
+
+			<center>
+				<button type="submit" name='filter_products' class=" button_form_base my-3">Показать варианты</button>
+			</center>
 
 		</form>
 
