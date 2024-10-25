@@ -60,8 +60,8 @@ class Car(models.Model):
 		on_delete=models.CASCADE, verbose_name = 'Цвет', null=True)
 
 	name = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Название модели')
-	price = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Цена')
-	price_old = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Цена БЕЗ скидки')
+	price = models.IntegerField(max_length=25, null=True, blank=True, verbose_name = 'Цена')
+	price_old = models.IntegerField(max_length=25, null=True, blank=True, verbose_name = 'Цена БЕЗ скидки')
 	year = models.CharField(max_length=4, null=True, blank=True, verbose_name = 'Год выпуска')
 	engine = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Двигатель, л/с')
 	mileage = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Пробег')

@@ -44,6 +44,7 @@ def catalog(request):
 		'callme_form': callme_form,
 		'cars' : cars,
 		'products_list': products_list,
+		'queryset': queryset,
 		'unique_color': unique_values['unique_color'],
 		'unique_year': unique_values['unique_year'],
 		'unique_transmission': unique_values['unique_transmission'],
@@ -56,9 +57,9 @@ def catalog(request):
 
 
 def fresh_cars(request):
-	cars = Car.objects.filter(status=1)
 	sort_by = request.GET.get('sort_by', 'asc')
-	cars_sort = cars_ordering(Car, cars, sort_by)
+	cars = Car.objects.filter(status=1)
+	cars = cars_ordering(Car, cars, sort_by)
 
 	if request.method == 'POST':
 		callme_form = CallMeForm(request.POST)
@@ -68,10 +69,10 @@ def fresh_cars(request):
 	else:
 		callme_form = CallMeForm()
 
+
 	context = {
-		'cars_sort':cars_sort,
-		'callme_form': callme_form,
 		'cars' : cars,
+		'callme_form': callme_form,
 	}
 
 	return render(request, 'cars/fresh.html', context)
@@ -79,9 +80,9 @@ def fresh_cars(request):
 
 
 def used_cars(request):
-	cars = Car.objects.filter(status=2)
 	sort_by = request.GET.get('sort_by', 'asc')
-	cars_sort = cars_ordering(Car, cars, sort_by)
+	cars = Car.objects.filter(status=2)	
+	cars = cars_ordering(Car, cars, sort_by)
 
 	if request.method == 'POST':
 		callme_form = CallMeForm(request.POST)
@@ -92,9 +93,8 @@ def used_cars(request):
 		callme_form = CallMeForm()
 
 	context = {
-		'cars_sort':cars_sort,
+		'cars':cars,
 		'callme_form': callme_form,
-		'cars' : cars,
 	}
 
 	return render(request, 'cars/used.html', context)

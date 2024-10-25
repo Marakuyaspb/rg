@@ -4,20 +4,32 @@
 
 {% block content %}
 <div class='desctop_84'>
-  <h1 class='we_300 pt-4 ps-4'>Новые машины</h1>
-  <h3 class='we_200 ps-4'>Напрямую с завода</h3>
+  <h1 class='we_300 h1_24-5 pt-4'>НОВЫЕ МАШИНЫ</h1>
+  <h3 class='we_200'>Напрямую с завода</h3>
 
   <div class="d-flex justify-content-center">
-      <form method="get" class='pb-2'>
-        <button class="btn_transperent" type="submit" name="sort_by" value="desc">Сначала дорогие ↑</button>
-        <button class="btn_transperent" type="submit" name="sort_by" value="asc">Сначала бюджетные ↓</button>
-      </form> 
+    <form method="get" class='p-3'>
+      <button class="btn_transperent" type="submit" name="sort_by" value="desc">Сначала дорогие ↑</button>
+      <button class="btn_transperent" type="submit" name="sort_by" value="asc">Сначала бюджетные ↓</button>
+    </form> 
+
+    <div class='d-none d-lg-block d-xl-block d-xxl-block py-3'>
+      <a class='' href='{% url "cars:used_cars" %}'>
+        <button class="btn_transperent" type="" name="" value="asc">Посмотреть авто с пробегом →</button>
+      </a>
+    </div>
+  </div>
+
+  <div class='d-block d-lg-none'>
+    <a class='p-3' href='{% url "cars:used_cars" %}'>
+      <button class="btn_transperent red" type="" name="" value="asc">Посмотреть авто с пробегом →</button>
+    </a>
   </div>
 
   <div class='cars_container py-5'>
     {% for car in cars %}
     <a href='{% url "cars:the_car" car.id %}'>
-      <div class='wrap_case_img'>
+      <div class='wrap_car_img'>
         <img src='{{car.main_img.url}}' class='case_prev'>
         <h3 class='car_name black ps-3 mt-4'>{{car.name}}</h3>
         <p class='black ps-3 pt-2 price_display'>{{car.price}} ₽</p>

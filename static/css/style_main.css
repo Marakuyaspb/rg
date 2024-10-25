@@ -611,6 +611,10 @@ tr {
     padding-bottom: 6em;
   }
 
+
+  .h1_24-5{
+    font-size: 5em;
+  }
   .very_big{
     color: var(--red);
     font-size: 9em;
@@ -831,7 +835,9 @@ tr {
     font-size: 2.2em;
     line-height: .8;
   }
-
+  .h1_24-5{
+    font-size: 2.4em;
+  }
 
   .very_big{
     color: var(--black);

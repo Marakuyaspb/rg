@@ -14,10 +14,12 @@
 
 	<div class="d-flex justify-content-center">
 		<center id='just_status' class="py-3">
-			<form method="get" class='pb-2'>
+			<a href='{% url "cars:fresh_cars" %}'>
 				<button class="btn_outline_white m-1" type="submit" name="status" value="1">НОВЫЕ АВТО</button>
+			</a>
+			<a href='{% url "cars:used_cars" %}'>
 				<button class="btn_outline_white m-1" type="submit" name="status" value="2">С ПРОБЕГОМ</button>
-			</form>
+			</a>
 			<button id='btn_show' class='btn_transperent white m-1' onclick="ShowFilters();">Показать все фильтры →</button>
 		</center>
 	</div>
