@@ -29,7 +29,7 @@
 
 	<div id='all_filters' class='hide'>
 
-		<div class='d-flex justify-content-center'><p id='btn_hide' class='we_300 white m-1 pt-4 pb-3' onclick="HideFilters();">Свернуть фильтры ↑</p></div>
+		<div class='d-flex justify-content-center'><p id='btn_hide' class='we_300 gray m-1 pt-4 pb-3' onclick="HideFilters();">Свернуть фильтры ↑</p></div>
 
 
 		<form method="get">
@@ -151,44 +151,42 @@
 					</label>
 				{% endfor %}
 			<div class="row">
-			<div class='col-md-4'>
-			<h3 class='filter_header'>Год выпуска</h3>
-				{% for year in unique_year %}
-					<label class="checkbox white we_300 px-2">
-					    <input class="checkbox-input_red" type="checkbox" name='year' value="{{ year.year }}">
-					    <span class="checkbox-checkmark-box_red">
-					      <span class="checkbox-checkmark_red"></span>
-					    </span>
-					 {{ year.year }}
-					</label>
-				{% endfor %}
-
-
-			</div>
 				<div class='col-md-4'>
-			<h3 class='filter_header'>Трансмиссия</h3>
-				{% for transmission in unique_transmission %}
-					<label class="checkbox white we_300 px-2">
-					    <input class="checkbox-input_red" type="checkbox" name='transmission' value="{{ transmission.transmission }}">
-					    <span class="checkbox-checkmark-box_red">
-					      <span class="checkbox-checkmark_red"></span>
-					    </span>
-					 {{ transmission.transmission }}
-					</label>
-				{% endfor %}
+				<h3 class='filter_header'>Год выпуска</h3>
+					{% for year in unique_year %}
+						<label class="checkbox white we_300 px-2">
+						    <input class="checkbox-input_red" type="checkbox" name='year' value="{{ year.year }}">
+						    <span class="checkbox-checkmark-box_red">
+						      <span class="checkbox-checkmark_red"></span>
+						    </span>
+						 {{ year.year }}
+						</label>
+					{% endfor %}
 				</div>
 				<div class='col-md-4'>
+					<h3 class='filter_header'>Трансмиссия</h3>
+					{% for transmission in unique_transmission %}
+						<label class="checkbox white we_300 px-2">
+						    <input class="checkbox-input_red" type="checkbox" name='transmission' value="{{ transmission.transmission }}">
+						    <span class="checkbox-checkmark-box_red">
+						      <span class="checkbox-checkmark_red"></span>
+						    </span>
+						 {{ transmission.transmission }}
+						</label>
+					{% endfor %}
+				</div>
 
-			<h3 class='filter_header'>Привод</h3>
-				{% for drive in unique_drive %}
-					<label class="checkbox white we_300 px-2">
-					    <input class="checkbox-input_red" type="checkbox" name='drive' value="{{ drive.drive }}">
-					    <span class="checkbox-checkmark-box_red">
-					      <span class="checkbox-checkmark_red"></span>
-					    </span>
-					 {{ drive.drive }}
-					</label>
-				{% endfor %}
+				<div class='col-md-4'>
+					<h3 class='filter_header'>Привод</h3>
+					{% for drive in unique_drive %}
+						<label class="checkbox white we_300 px-2">
+						    <input class="checkbox-input_red" type="checkbox" name='drive' value="{{ drive.drive }}">
+						    <span class="checkbox-checkmark-box_red">
+						      <span class="checkbox-checkmark_red"></span>
+						    </span>
+						 {{ drive.drive }}
+						</label>
+					{% endfor %}
 
 				</div>
 			</div>
@@ -202,6 +200,8 @@
 	</div>
 
 </div>
+
+
 
 <script type="text/javascript">
 	function ShowFilters(e){

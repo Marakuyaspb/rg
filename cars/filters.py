@@ -20,15 +20,15 @@ def cars_filtering(request, queryset):
 	transmissions = request.GET.getlist('transmission')
 
 	if statuses:
-		filters &= Q(status=statuses)
+		filters &= Q(status__in=statuses)
 	if color_ids:
 		filters &= Q(color_id__in=color_ids)
 	if years:
-		filters &= Q(year=years)
+		filters &= Q(year__in=years)
 	if transmissions:
-		filters &= Q(transmission=transmissions)
+		filters &= Q(transmission__in=transmissions)
 	if drives:
-		filters &= Q(drive=drives)
+		filters &= Q(drive__in=drives)
 
 	return queryset.filter(filters)
 

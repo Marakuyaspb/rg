@@ -60,13 +60,13 @@ class Car(models.Model):
 		on_delete=models.CASCADE, verbose_name = 'Цвет', null=True)
 
 	name = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Название модели')
-	price = models.IntegerField(max_length=25, null=True, blank=True, verbose_name = 'Цена')
-	price_old = models.IntegerField(max_length=25, null=True, blank=True, verbose_name = 'Цена БЕЗ скидки')
+	price = models.IntegerField(null=True, blank=True, verbose_name = 'Цена')
+	price_old = models.IntegerField(null=True, blank=True, verbose_name = 'Цена БЕЗ скидки')
 	year = models.CharField(max_length=4, null=True, blank=True, verbose_name = 'Год выпуска')
-	engine = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Двигатель, л/с')
-	mileage = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Пробег')
-	transmission = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Трансмиссия')
-	drive = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Привод')
+	engine = models.CharField(max_length=20, null=True, blank=True, verbose_name = 'Двигатель, л/с')
+	mileage = models.CharField(max_length=20, null=True, blank=True, verbose_name = 'Пробег')
+	transmission = models.CharField(max_length=50, null=True, blank=True, verbose_name = 'Трансмиссия')
+	drive = models.CharField(max_length=50, null=True, blank=True, verbose_name = 'Привод')
 
 	main_img = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото главное')
 	img_1 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 1')
@@ -81,6 +81,9 @@ class Car(models.Model):
 	img_10 = models.ImageField(upload_to='cars/', null=True, blank=True, verbose_name = 'Фото 10')
 
 	available = models.BooleanField(default=True)
+
+	def __str__(self):
+		return self.name
 
 	class Meta:
 		ordering = ['name']

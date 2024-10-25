@@ -1,8 +1,10 @@
 import os
+from django.conf import settings
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q, F, Count, Value
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.template.loader import get_template
-from django.conf import settings
 
 from .models import *
 from .forms import *
@@ -11,44 +13,40 @@ from .filters import *
 
 
 def catalog(request):
-	sort_by = request.GET.get('sort_by', 'asc')
-	
-	# form = FilterForm(request.GET or None)
-
 	cars = Car.objects.all()
-
-	products_list = Car.objects.all()
-	products_list = cars_ordering(Car, products_list, sort_by)
-
-	queryset = products_list
-
+	queryset = cars
 
 	if request.method == 'GET':
-		queryset = cars_filtering(request, queryset)
-		print(queryset)
+		filtered_queryset = cars_filtering(request, queryset)
+		print(filtered_queryset)
+		if filtered_queryset.exists():
+			queryset = filtered_queryset
+		else:
+			queryset = None
 
 
 	unique_values = unique_names(request)
 
-	
 	status = request.GET.get('status')
 	if status:
 		status = int(status)
 		cars = cars.filter(status=status)
 
 
-
 	callme_form = handle_callme_form(request)
 
+
+
+
 	context = {
-		'callme_form': callme_form,
 		'cars' : cars,
-		'products_list': products_list,
 		'queryset': queryset,
 		'unique_color': unique_values['unique_color'],
 		'unique_year': unique_values['unique_year'],
 		'unique_transmission': unique_values['unique_transmission'],
 		'unique_drive': unique_values['unique_drive'],
+
+		'callme_form': callme_form,
 	}
 
 	return render(request, 'cars/catalog.html', context)
@@ -76,6 +74,7 @@ def fresh_cars(request):
 	}
 
 	return render(request, 'cars/fresh.html', context)
+
 
 
 
@@ -114,7 +113,6 @@ def the_car(request, id):
 
 	context = {
 		'the_car': the_car,
-		# 'sort_by': sort_by,
 		'similar_cars': similar_cars,
 		'new_cars': new_cars,
 		'used_cars': used_cars,

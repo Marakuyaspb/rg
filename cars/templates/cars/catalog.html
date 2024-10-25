@@ -71,7 +71,7 @@
   </section>
 </div>
 
-<section class="black_bg">
+<section class="black_hot_bg">
   {% include 'cars/filters/filters.html' %}
 </section>
 
@@ -89,8 +89,12 @@
 
 <div class="desctop_84">
 
+{% if queryset %}
+
   <div class='cars_container py-5'>
-    {% for car in cars %}
+
+    {% for car in queryset %}
+
     <a href='{% url "cars:the_car" car.id %}'>
       <div class='wrap_car_img'>
         <img src='{{car.main_img.url}}' class='case_prev'>
@@ -99,9 +103,29 @@
       </div>
     </a>
     {% endfor %}
+
   </div>
+
+  {% else %}
+
+  <section id='nothing'>
+    <div class="d-flex justify-content-start py-2">
+      <div>
+        <img class='img_auto' src="{% static 'icons/search_64.png' %}" />
+      </div>
+      <div class='ps-2'>
+        <h1 class='py-3 we_300'>Пожалуйста, измените параметры поиска</h1>
+        <h3 class='pb-3 we_200'>Мы пока не добавили авто с такими параметрами в каталог</h3>
+      </div>
+    </div>
+    
+      
+  </section>
+
+  {% endif %}
 
 </div>
 
+</section>
 
 {% endblock %}

@@ -125,6 +125,9 @@ tr {
 .bordo_bg{
   background-color: #31030F;
 }
+.bordo_dark_bg{
+  background-color: #31030F;
+}
 .red_bg{
   background-color: #D41041;
 }
@@ -687,7 +690,7 @@ tr {
   }
   .case_prev{
     height: 280px;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
   }
   .case_prev:hover{
@@ -701,6 +704,10 @@ tr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .img_auto{
+    height: auto;
+    width: auto;
   }
 
   .partner_logo{
