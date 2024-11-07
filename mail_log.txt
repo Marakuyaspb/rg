@@ -3188,3 +3188,478 @@ TypeError: Field 'id_st' expected a number but got ['1'].
 2024-10-25 17:24:45,300 - /media/aa/A/rg/cars/views.py changed, reloading.
 2024-10-25 17:25:46,691 - /media/aa/A/rg/cars/views.py changed, reloading.
 2024-10-25 17:26:05,804 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-28 10:21:52,050 - No hostname was supplied. Reverting to default 'localhost'
+2024-10-28 10:21:58,163 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 16, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-28 10:31:12,423 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 16, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-28 10:38:08,251 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-28 10:38:10,973 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-28 10:43:44,607 - No hostname was supplied. Reverting to default 'localhost'
+2024-10-28 10:43:50,715 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aa/.local/lib/python3.10/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 16, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+2024-10-28 10:46:53,130 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 08:16:40,984 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/virtual/base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 358, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 359, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 699, in _connect
+    for res in socket.getaddrinfo(
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/virtual/base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/virtual/base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/redis.py", line 744, in __init__
+    self.client.ping()
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 1423, in get_connection
+    connection.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 364, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 16, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 25, in handle_callme_form
+    callme_created.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2024-10-31 08:16:41,135 - Not Found: /favicon.ico
+2024-10-31 08:16:52,862 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-31 08:17:01,825 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-31 08:17:13,033 - Error sending mail to: order/mail_CallMe.html
+2024-10-31 08:34:42,891 - Error sending mail to: order/mail_CallMe.html
+2024-10-31 09:00:11,152 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-31 09:00:52,727 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:01:40,696 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-31 09:04:45,644 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:06:43,764 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:06:49,997 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:07:13,545 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:08:25,465 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:08:30,717 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:08:53,325 - Internal Server Error: /guarantee/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 38, in guarantee
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 20, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-31 09:09:59,460 - /media/aa/A/rg/cars/views.py changed, reloading.
+2024-10-31 09:10:44,309 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:10:47,489 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:12:13,832 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:13:55,515 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:14:11,948 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:14:18,261 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:15:46,983 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:16:54,120 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:17:03,318 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 16, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 20, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-31 09:17:03,432 - Not Found: /favicon.ico
+2024-10-31 09:22:01,192 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:23:05,396 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-31 09:23:16,738 - /media/aa/A/rg/cars/forms_generator.py changed, reloading.
+2024-10-31 09:23:29,197 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:25:56,875 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:26:06,303 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:26:19,766 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:29:14,950 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:30:32,435 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:32:55,954 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-31 09:33:34,734 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-31 09:33:51,065 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-31 09:34:34,913 - /media/aa/A/rg/rg/settings.py changed, reloading.
+2024-10-31 09:50:28,418 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:50:47,805 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:52:32,977 - /media/aa/A/rg/cars/forms.py changed, reloading.
+2024-10-31 09:57:53,197 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 09:58:33,907 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 10:03:29,974 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 10:03:42,364 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 10:04:01,856 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 10:05:06,136 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 12:35:57,453 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 16, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 23, in handle_callme_form
+    send_email_callme.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email_callme() takes 2 positional arguments but 3 were given
+2024-10-31 12:39:14,384 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 12:40:24,463 - Not Found: /favicon.ico
+2024-10-31 12:41:55,294 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 12:41:57,575 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-10-31 12:42:35,870 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/rg/main/views.py", line 16, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/rg/cars/forms_generator.py", line 23, in handle_callme_form
+    send_email_callme.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email_callme() missing 1 required positional argument: 'phone'
+2024-10-31 12:42:50,760 - /media/aa/A/rg/cars/tasks.py changed, reloading.
+2024-11-07 15:43:01,143 - Internal Server Error: /3/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A2/rg/cars/views.py", line 108, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A2/rg/cars/forms_generator.py", line 46, in handle_want_this_car_form
+    want_this_car_form = WantThisCarForm()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/forms/models.py", line 362, in __init__
+    raise ValueError("ModelForm has no model class specified.")
+ValueError: ModelForm has no model class specified.
+2024-11-07 15:43:01,258 - Not Found: /favicon.ico
+2024-11-07 15:43:09,730 - Internal Server Error: /4/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A2/rg/cars/views.py", line 108, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A2/rg/cars/forms_generator.py", line 46, in handle_want_this_car_form
+    want_this_car_form = WantThisCarForm()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/forms/models.py", line 362, in __init__
+    raise ValueError("ModelForm has no model class specified.")
+ValueError: ModelForm has no model class specified.
+2024-11-07 15:45:56,968 - /media/aa/A2/rg/cars/views.py changed, reloading.
+2024-11-07 15:46:09,278 - /media/aa/A2/rg/cars/views.py changed, reloading.
+2024-11-07 15:46:38,678 - Not Found: /used/
+2024-11-07 15:46:54,761 - Not Found: /used_cars/
+2024-11-07 15:47:01,660 - Not Found: /fresh_cars/
+2024-11-07 15:47:24,105 - Internal Server Error: /7/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A2/rg/cars/views.py", line 107, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A2/rg/cars/forms_generator.py", line 46, in handle_want_this_car_form
+    want_this_car_form = WantThisCarForm()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/forms/models.py", line 362, in __init__
+    raise ValueError("ModelForm has no model class specified.")
+ValueError: ModelForm has no model class specified.
+2024-11-07 15:47:27,696 - Internal Server Error: /7/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A2/rg/cars/views.py", line 107, in the_car
+    want_this_car = handle_want_this_car_form(request)
+  File "/media/aa/A2/rg/cars/forms_generator.py", line 46, in handle_want_this_car_form
+    want_this_car_form = WantThisCarForm()
+  File "/home/aa/.local/lib/python3.10/site-packages/django/forms/models.py", line 362, in __init__
+    raise ValueError("ModelForm has no model class specified.")
+ValueError: ModelForm has no model class specified.
+2024-11-07 15:50:05,865 - /media/aa/A2/rg/cars/forms.py changed, reloading.
+2024-11-07 15:50:39,466 - /media/aa/A2/rg/cars/views.py changed, reloading.
+2024-11-07 15:51:41,410 - /media/aa/A2/rg/cars/forms.py changed, reloading.

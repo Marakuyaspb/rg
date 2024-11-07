@@ -24,7 +24,6 @@ def catalog(request):
 		else:
 			queryset = None
 
-
 	unique_values = unique_names(request)
 
 	status = request.GET.get('status')
@@ -32,11 +31,7 @@ def catalog(request):
 		status = int(status)
 		cars = cars.filter(status=status)
 
-
 	callme_form = handle_callme_form(request)
-
-
-
 
 	context = {
 		'cars' : cars,
@@ -110,13 +105,18 @@ def the_car(request, id):
 	
 	callme_form = handle_callme_form(request)
 	want_this_car = handle_want_this_car_form(request)
+	car_survey_full_form = handle_car_survey_full_form(request)
+
+
 
 	context = {
 		'the_car': the_car,
 		'similar_cars': similar_cars,
 		'new_cars': new_cars,
 		'used_cars': used_cars,
+
 		'callme_form': callme_form,
 		'want_this_car': want_this_car,
+		'car_survey_full_form': car_survey_full_form,
 	}
 	return render(request, 'cars/the_car.html', context)

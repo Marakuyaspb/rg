@@ -16,7 +16,11 @@
 
           <div class='form_container we_300'>
 
-            {{ callme_form.as_p }}
+            <label for="{{ callme_form.first_name.id_for_label }}">{{ callme_form.first_name.label }}</label>
+            {{ callme_form.first_name }}
+
+            <label class='pt-2' for="{{ callme_form.phone.id_for_label }}">{{ callme_form.phone.label }}</label>
+            {{ callme_form.phone }}
             
             {% csrf_token %}
           

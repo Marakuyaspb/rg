@@ -1,54 +1,28 @@
-from io import BytesIO
-from django.conf import settings
 from celery import shared_task
-import weasyprint
+from django.conf import settings
+from django.core.mail import send_mail
 
-from django.template.loader import render_to_string
-from django.core.mail import EmailMessage
 from .models import *
 
-
-@shared_task
-def callme_created(id):
-  callme = CallMe.objects.get(id=id)
-  subject = f'Новая заявка № {callme.id}'
-  message = (
-    f'Привет, продаван!\n\n'
-    f'Поступила новая заявка на обратный звонок. Данные клиента:'
-    f'Имя: {callme.first_name}'
-    f'Телефон {callme.phone}'
-    )
-
-  email = EmailMessage(
-    subject,
-    message,
-    'settings.EMAIL_HOST_USER',
-    [settings.EMAIL_HOST_USER]
-  )
-  try:
-      email.send()
-      logger.info("Email sent successfully.")
-  except Exception as e:
-      logger.error(f"Error sending email: {str(e)}")
+import logging
+import time
+logger = logging.getLogger(__name__)
 
 
 
-@shared_task
-def want_this_car_created(order_id):
-  want_this_car = WantThisCar.objects.get(id=id)
-  subject = f'Новая заявка № {want_this_car.id}'
-  message = (
-    f'Привет, продаван!\n\n'
-    f'Поступила новая заявка авто. Данные клиента:'
-    f'Имя: {want_this_car.first_name}'
-    f'Телефон {want_this_car.phone}'
-    f'Детали: {want_this_car.car_name}'
-    )
+@shared_task(max_retries=3)
+def send_email_callme(first_name, phone):
+	logger.info(f"Preparing to send email for: {first_name}, {phone}")
+	
+	subject = f'Заявка на звонок | {first_name}, {phone}'
+	body = (
+	f'Привет, продаван!\n\nПоступила новая заявка на обратный звонок. Данные клиента:\n\nИмя: {first_name}\nТелефон {phone}'
+	)
+	recipient_list = ['to.the.neizvestnost@yandex.ru']
 
-  email = EmailMessage(
-    subject,
-    message,
-    'settings.EMAIL_HOST_USER',
-    [settings.EMAIL_HOST_USER]
-  )
-  email.send()
+	try:
+		send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
+		logger.info(f"Email sent from {settings.EMAIL_HOST_USER} to {recipient_list}")
+	except Exception as e:
+		logger.error(f"Error sending email: {e}")
+		raise self.retry(exc=e, countdown=5)

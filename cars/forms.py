@@ -2,97 +2,202 @@ from django import forms
 from .models import *
 
 
-# class FilterForm(forms.Form):
-# 	color_id = forms.ModelMultipleChoiceField(queryset=Color.objects.all(), required=False)
 
-
-class CallMeForm(forms.Form):
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
+class CallMeForm(forms.ModelForm):
 	class Meta:
 		model = CallMe
 		fields = ['first_name', 'phone']
+		labels = {
+		'first_name': 'Имя',
+		'phone': 'Телефон',
+		}
 
 
-class WantThisCarForm(forms.Form):
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
-	car_name = forms.CharField(widget=forms.HiddenInput())
+class WantThisCarForm(forms.ModelForm):
+	class Meta:
+		model = WantThisCar
+		fields = ['first_name', 'phone', 'car_name']
+		labels = {
+		'first_name': 'Имя',
+		'phone': 'Телефон',
+		}
+		# car_name = forms.CharField(widget=forms.HiddenInput())
 
 
-class CarSurveyFullForm(forms.Form):
+class CarSurveyFullForm(forms.ModelForm):
 	CHOICES = [
-		('да', 'да'),
-		('нет', 'нет'),
+		(True, 'Да'),
+		(False, 'Нет'),
 	]
+	need_casco = forms.ChoiceField(
+		choices=CHOICES,
+		widget=forms.RadioSelect, 
+		required=False 
+	)
 
-	car_characteristics = forms.CharField(label="Марка, модель, мотор")
-	country = forms.CharField(label="Из какой страны вас интересует автомобиль?")
-	when =  forms.CharField(label="Когда планируете покупать?")
-	payment_type =  forms.CharField(label="Форма оплаты за автомобиль?")
-	max_price =  forms.CharField(label="Максимальный бюджет покупки?")
-	trade_in =  forms.CharField(label="Планируете трейд ин? Какой авто? Пробег?",max_length=300)
-	complectation =  forms.CharField(label="Какую вы хотите комплектацию?")
-	colors = forms.CharField(label="Желаемые цвета кузова и салона")
-	need_casco = forms.ChoiceField(label="Планируете ли делать КАСКО?", choices = CHOICES)
-	real_price =  forms.CharField(label="Какова стоимость реального предложения автомобиля, которое Вам удалось найти?")
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон",required=True)
+	class Meta:
+		model = CarSurveyFull
+		fields = [
+		'car_characteristics',
+		'country',
+		'when',
+		'payment_type',
+		'max_price',
+		'trade_in',
+		'complectation',
+		'colors',
+		'need_casco',
+		'real_price',
+		'first_name',
+		'phone'
+		]
+		labels = {
+		'car_characteristics': 'Марка, модель, мотор',
+		'country': 'Из какой страны вас интересует автомобиль?',
+		'when': 'Когда планируете покупку?',
+		'payment_type': 'Форма оплаты за автомобиль?',
+		'max_price': 'Максимальный бюджет покупки?',
+		'trade_in': 'Планируете трейд ин? Какой авто? Пробег?',
+		'complectation': 'Какую вы хотите комплектацию?',
+		'colors': 'Желаемые цвета кузова и салона',
+		'need_casco': 'Планируете оформлять КАСКО?',
+		'real_price': 'Какова стоимость реального предложения автомобиля, которое Вам удалось найти?',
+		'first_name': 'Имя',
+		'phone': 'Телефон'
+		}
 
 
-class GuaranteeCountForm(forms.Form):
+
+class GuaranteeCountForm(forms.ModelForm):
 	CHOICES = [
-		('да', 'да'),
-		('нет', 'нет'),
+		(True, 'Да'),
+		(False, 'Нет'),
 	]
+	is_gai_record = forms.ChoiceField(
+		choices=CHOICES,
+		widget=forms.RadioSelect, 
+		required=False 
+	)
+	class Meta:
+		model = GuaranteeCount
+		fields = [
+		'who_sold',
+		'have_goverment_number',
+		'goverment_number',
+		'is_gai_record',
+		'first_name',
+		'phone'
+		]
+		labels = {
+		'who_sold': 'Авто куплено через R.E.D. Group?',
+		'have_goverment_number': 'Есть ли Гос. номер?',
+		'goverment_number': 'Планируете оформлять КАСКО?',
+		'is_gai_record': 'Если да, укажите',
+		'first_name': 'Имя',
+		'phone': 'Телефон'
+		}
 
-	who_sold = forms.ChoiceField(label='Авто куплено через R.E.D. Group?', choices = CHOICES)
-	have_goverment_number = forms.ChoiceField(label="Есть ли Гос. номер?", choices = CHOICES)
-	goverment_number = forms.CharField(label="Если да, укажите")
-	is_gai_record = forms.ChoiceField(label="Поставлена ли машина на учёт?", choices = CHOICES)
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
 
 
-class NeedDiagnosticForm(forms.Form):
+class NeedDiagnosticForm(forms.ModelForm):
 	CHOICES = [
-		('да', 'да'),
-		('нет', 'нет'),
+		(True, 'Да'),
+		(False, 'Нет'),
 	]
+	urgency = forms.ChoiceField(
+		choices=CHOICES,
+		widget=forms.RadioSelect, 
+		required=False 
+	)
+	class Meta:
+		model = NeedDiagnostic
+		fields = [
+		'first_name',
+		'phone',
+		'urgency'
+		]
+		labels = {
+		'first_name': 'Имя',
+		'phone': 'Телефон',
+		'urgency': 'Срочно?',
+		}
 
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
-	urgency = forms.ChoiceField(label="Срочно?", choices = CHOICES)
 
-
-class NeedServeceForm(forms.Form):
+class NeedServeceForm(forms.ModelForm):
 	CHOICES = [
-		('да', 'да'),
-		('нет', 'нет'),
+		(True, 'Да'),
+		(False, 'Нет'),
 	]
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
-	urgency = forms.ChoiceField(label="Срочно?", choices = CHOICES)
+	urgency = forms.ChoiceField(
+		choices=CHOICES,
+		widget=forms.RadioSelect, 
+		required=False 
+	)
+	class Meta:
+		model = NeedServece
+		fields = [
+		'first_name',
+		'phone',
+		'urgency'
+		]
+		labels = {
+		'first_name': 'Имя',
+		'phone': 'Телефон',
+		'urgency': 'Срочно?',
+		}
 
 
-class ShesterenkyNeedForm(forms.Form):
-	year = forms.CharField(label="Телефон", required=True)
-	vin = forms.CharField(label="Телефон", required=True)
-	its_name = forms.CharField(label="Телефон",max_length=100)
-	img = forms.ImageField(label="Телефон")
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
+class ShesterenkyNeedForm(forms.ModelForm):
+	class Meta:
+		model = ShesterenkyNeed
+		fields = [
+		'year',
+		'vin',
+		'its_name',
+		'img',
+		'first_name',
+		'phone'
+
+		]
+		labels = {
+		'year': 'Год выпуска',
+		'vin': 'VIN-номер',
+		'its_name': 'Название',
+		'img': 'Фото (если есть)',
+		'first_name': 'Имя',
+		'phone': 'Телефон'
+		}
 
 
-class CascoCountForm(forms.Form):
-	budget =  forms.CharField(label="Телефон", required=True, )
-	type = forms.CharField(label="Телефон", required=True)
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
+class CascoCountForm(forms.ModelForm):
+	class Meta:
+		model = CascoCount
+		fields = [
+		'budget',
+		'type',
+		'first_name',
+		'phone'
+		]
+		labels = {
+		'budget': 'Бюджет',
+		'type': 'Тип',
+		'first_name': 'Имя',
+		'phone': 'Телефон'
+		}
 
 
-class LegalHelpForm(forms.Form):
-	where_auto = forms.CharField(label="Телефон", required=True)
-	documents = forms.CharField(label="Телефон", required=True)
-	first_name = forms.CharField(label="Имя", required=True)
-	phone = forms.CharField(label="Телефон", required=True)
+class LegalHelpForm(forms.ModelForm):
+	class Meta:
+		model = LegalHelp
+		fields = [
+		'where_auto',
+		'documents',
+		'first_name',
+		'phone'
+		]
+		labels = {
+		'where_auto': 'Где сейчас находится машина?',
+		'documents': 'Какие у вас есть документы?',
+		'first_name': 'Имя',
+		'phone': 'Телефон'
+		}

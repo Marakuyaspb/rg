@@ -119,8 +119,25 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
+# REDIS
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379',
+    }
+}
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('127.0.0.1', 6379)],
+        },
+    },
+}
 # CELERY
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
 
 
 EMAIL_DEBUG = True
@@ -131,7 +148,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_DEBUG = True
 EMAIL_HOST = 'smtp.timeweb.ru'
 EMAIL_PORT = 465
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 EMAIL_HOST_USER =  str(os.getenv('TW_MAIL'))
 EMAIL_HOST_PASSWORD =  str(os.getenv('TW_PASSWORD'))
