@@ -7,6 +7,7 @@ from django.template.loader import get_template, render_to_string
 from django.urls import reverse
 
 from cars.models import *
+from cars.forms import *
 from cars.forms_generator import *
 
 
@@ -36,9 +37,11 @@ def feedback(request):
 def guarantee(request):
 	cars = Car.objects.all()
 	callme_form = handle_callme_form(request)
+	guarantee_count_form = handle_guarantee_count_form(request)
 
 	context = {
 		'callme_form': callme_form,
+		'guarantee_count_form': guarantee_count_form,
 		'cars' : cars,
 	}
 	return render(request, 'main/guarantee.html', context)
@@ -47,9 +50,11 @@ def guarantee(request):
 def insurance(request):
 	cars = Car.objects.all()
 	callme_form = handle_callme_form(request)
+	casco_count_form = handle_casco_count_form(request)
 
 	context = {
 		'callme_form': callme_form,
+		'casco_count_form': casco_count_form,
 		'cars' : cars,
 	}
 	return render(request, 'main/insurance.html', context)
@@ -58,9 +63,11 @@ def insurance(request):
 def jurists(request):
 	cars = Car.objects.all()
 	callme_form = handle_callme_form(request)
+	legal_help_form = handle_legal_help_form(request)
 
 	context = {
 		'callme_form': callme_form,
+		'legal_help_form': legal_help_form,
 		'cars' : cars,
 	}
 	return render(request, 'main/jurists.html', context)
@@ -79,10 +86,15 @@ def privacy(request):
 
 def service(request):
 	cars = Car.objects.all()
+
 	callme_form = handle_callme_form(request)
+	need_diagnostic_form = handle_need_diagnostic_form(request)
+	need_service_form = handle_need_service_form(request)
 
 	context = {
 		'callme_form': callme_form,
+		'need_diagnostic_form': need_diagnostic_form,
+		'need_service_form': need_service_form,
 		'cars' : cars,
 	}
 	return render(request, 'main/service.html', context)
@@ -90,10 +102,17 @@ def service(request):
 
 def spares(request):
 	cars = Car.objects.all()
+
 	callme_form = handle_callme_form(request)
+	shesterenky_need_form = handle_shesterenky_need_form(request)
+	need_diagnostic_form = handle_need_diagnostic_form(request)
+	need_service_form = handle_need_service_form(request)
 
 	context = {
 		'callme_form': callme_form,
+		'shesterenky_need_form': shesterenky_need_form,
+		'need_diagnostic_form': need_diagnostic_form,
+		'need_service_form': need_service_form,
 		'cars' : cars,
 	}
 	return render(request, 'main/spares.html', context)

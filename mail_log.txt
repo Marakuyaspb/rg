@@ -3663,3 +3663,69 @@ ValueError: ModelForm has no model class specified.
 2024-11-07 15:50:05,865 - /media/aa/A2/rg/cars/forms.py changed, reloading.
 2024-11-07 15:50:39,466 - /media/aa/A2/rg/cars/views.py changed, reloading.
 2024-11-07 15:51:41,410 - /media/aa/A2/rg/cars/forms.py changed, reloading.
+2024-11-07 21:55:36,085 - /media/aa/A2/rg/cars/forms.py changed, reloading.
+2024-11-07 22:00:51,843 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:02:11,196 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:03:20,448 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:04:31,551 - /media/aa/A2/rg/rg/celery.py changed, reloading.
+2024-11-07 22:06:57,979 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:07:19,579 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:07:27,915 - /media/aa/A2/rg/cars/forms_generator.py changed, reloading.
+2024-11-07 22:09:06,672 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:09:36,359 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:09:47,756 - /media/aa/A2/rg/cars/forms_generator.py changed, reloading.
+2024-11-07 22:13:12,219 - /media/aa/A2/rg/cars/forms_generator.py changed, reloading.
+2024-11-07 22:15:43,843 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:16:21,650 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:17:04,678 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:18:44,350 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:22:17,464 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:22:28,707 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:22:35,931 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:22:51,286 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:24:28,721 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:24:42,040 - /media/aa/A2/rg/cars/forms_generator.py changed, reloading.
+2024-11-07 22:25:15,615 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:25:52,198 - /media/aa/A2/rg/cars/forms_generator.py changed, reloading.
+2024-11-07 22:27:17,562 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:27:49,137 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:28:54,119 - /media/aa/A2/rg/cars/forms_generator.py changed, reloading.
+2024-11-07 22:29:15,635 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:29:35,015 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:30:34,836 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:30:40,018 - /media/aa/A2/rg/cars/tasks.py changed, reloading.
+2024-11-07 22:30:49,243 - /media/aa/A2/rg/cars/forms_generator.py changed, reloading.
+2024-11-07 22:47:18,770 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:47:20,228 - Internal Server Error: /service/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A2/rg/main/views.py", line 86, in service
+    'need_diagnostic_form': need_diagnostic_form,
+NameError: name 'need_diagnostic_form' is not defined
+2024-11-07 22:47:20,343 - Not Found: /favicon.ico
+2024-11-07 22:47:39,264 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:47:44,750 - Internal Server Error: /service/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A2/rg/main/views.py", line 87, in service
+    'need_diagnostic_form': need_diagnostic_form,
+NameError: name 'need_diagnostic_form' is not defined
+2024-11-07 22:48:24,192 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:50:23,290 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:50:55,833 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:51:24,624 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:51:55,324 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:52:46,229 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:53:23,957 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:53:31,217 - /media/aa/A2/rg/main/views.py changed, reloading.
+2024-11-07 22:54:51,585 - /media/aa/A2/rg/cars/views.py changed, reloading.
+2024-11-07 22:55:50,621 - /media/aa/A2/rg/cars/views.py changed, reloading.
+2024-11-07 22:56:03,384 - Not Found: /catalog/fresh_cars/
+2024-11-07 22:56:42,031 - /media/aa/A2/rg/cars/views.py changed, reloading.
+2024-11-07 22:57:21,845 - /media/aa/A2/rg/cars/views.py changed, reloading.

@@ -19,7 +19,7 @@ def handle_callme_form(request):
         if callme_form.is_valid():
             callme = callme_form.save()
 
-            send_email.delay(
+            send_email_callme_form.delay(
                 callme.first_name, 
                 callme.phone
             )
@@ -36,7 +36,7 @@ def handle_want_this_car_form(request):
         if want_this_car_form.is_valid(): 
             want_this_car = want_this_car_form.save()
             
-            send_email.delay(
+            send_email_want_this_car_form.delay(
                 want_this_car.first_name, 
                 want_this_car.phone,
                 want_this_car.car_name
@@ -54,7 +54,7 @@ def handle_car_survey_full_form(request):
         if car_survey_full_form.is_valid():
             car_survey_full = car_survey_full_form.save()
             
-            send_email_callme.delay(
+            send_email_car_survey_full_form.delay(
                 car_survey_full.car_characteristics, 
                 car_survey_full.country,
                 car_survey_full.when,
@@ -81,7 +81,7 @@ def handle_guarantee_count_form(request):
         if guarantee_count_form.is_valid():
             guarantee_count = guarantee_count_form.save()
             
-            send_email_callme.delay(
+            send_email_guarantee_count_form.delay(
                 guarantee_count.who_sold,
                 guarantee_count.have_goverment_number,
                 guarantee_count.goverment_number,
@@ -102,7 +102,7 @@ def handle_need_diagnostic_form(request):
         if need_diagnostic_form.is_valid():
             need_diagnostic = need_diagnostic_form.save()
             
-            send_email.delay(
+            send_email_need_diagnostic_form.delay(
                 need_diagnostic.first_name,
                 need_diagnostic.phone,
                 need_diagnostic.urgency
@@ -136,7 +136,7 @@ def handle_shesterenky_need_form(request):
         shesterenky_need_form = ShesterenkyNeedForm(request.POST)
         if shesterenky_need_form.is_valid():
             shesterenky_need = shesterenky_need_form.save()
-            send_email.delay(
+            send_email_shesterenky_need_form.delay(
                 shesterenky_need.year,
                 shesterenky_need.vin,
                 shesterenky_need.its_name,
@@ -156,7 +156,7 @@ def handle_casco_count_form(request):
         casco_count_form = CascoCountForm(request.POST)
         if casco_count_form.is_valid():
             casco_count = casco_count_form.save()
-            send_email.delay(
+            send_email_casco_count_form.delay(
                 casco_count.budget,
                 casco_count.type,
                 casco_count.first_name,
@@ -174,7 +174,7 @@ def handle_legal_help_form(request):
         legal_help_form = LegalHelpForm(request.POST)
         if legal_help_form.is_valid():
             legal_help = legal_help_form.save()
-            send_email.delay(
+            send_email_legal_help_form.delay(
                 legal_help_form.where_auto,
                 legal_help_form.documents,
                 legal_help_form.first_name,

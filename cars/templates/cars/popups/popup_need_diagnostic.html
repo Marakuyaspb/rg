@@ -1,0 +1,37 @@
+{% load static %}
+
+<div class='modal_container' onclick='showModal(this);'>
+  <button class='thumb button_form_base center mt-3 mb-2 black'>Записаться на диагностику</button>
+
+    <div class='modal_full hide'>
+      <div class=''>
+
+        <form method="post" class="callme_container white_bg">
+          <div class='d-flex flex-row-reverse pe-3'>
+            <span class="close" onclick="closeModal(this);">&times;</span>
+          </div>
+          <h2 class='we_300 ms-4'>ЗАПИСЬ НА ДИАГНОСТИКУ</h2>
+
+          <div class='form_container we_300'>
+
+            
+            <label for="{{ need_diagnostic_form.first_name.id_for_label }}">{{ need_diagnostic_form.first_name.label }}</label>
+            {{ need_diagnostic_form.first_name }}
+
+            <label class='pt-2' for="{{ need_diagnostic_form.phone.id_for_label }}">{{ need_diagnostic_form.phone.label }}</label>
+            {{ need_diagnostic_form.phone }}
+
+            <label class='pt-2' for="{{ need_diagnostic_form.urgency.id_for_label }}">Cрочно?</label>
+            {{ need_diagnostic_form.urgency }}
+            
+            {% csrf_token %}
+          
+          <center class='py-3'><input type="submit" value="Перезвоните мне" class="button_dark"></center>
+
+          <p class='pt-3 smaller'>* Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+</div>

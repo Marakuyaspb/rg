@@ -1,29 +1,21 @@
 {% load static %}
 
 <div class='modal_container' onclick='showModal(this);'>
-    
-  <button class='thumb button_form_base mt-3 mb-4 py-2 black'>Заказать звонок</button>
+  <button class='thumb button_form_base center mt-3 mb-2 black'>Заполнить заявку на подбор</button>
 
-    <div class='modal_full hide'>  
+    <div class='modal_full hide'>
       <div class=''>
-
         
+        <div class='d-flex flex-row-reverse pe-3'>
+          <span class="close" onclick="closeModal(this);">&times;</span>
+        </div>
         
         <form method="post" class="callme_container white_bg">
-
-          <div class='d-flex flex-row-reverse pe-3'>
-            <span class="close" onclick="closeModal(this);">&times;</span>
-          </div>
-        
           <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
 
           <div class='form_container we_300'>
 
-            <label for="{{ callme_form.first_name.id_for_label }}">{{ callme_form.first_name.label }}</label>
-            {{ callme_form.first_name }}
-
-            <label class='pt-2' for="{{ callme_form.phone.id_for_label }}">{{ callme_form.phone.label }}</label>
-            {{ callme_form.phone }}
+            {{ car_survey_full_form.as_p }}
             
             {% csrf_token %}
           
@@ -35,4 +27,4 @@
 
       </div>
     </div>
-  </div>
+</div>

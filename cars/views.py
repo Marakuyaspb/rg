@@ -32,6 +32,7 @@ def catalog(request):
 		cars = cars.filter(status=status)
 
 	callme_form = handle_callme_form(request)
+	car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'cars' : cars,
@@ -42,6 +43,7 @@ def catalog(request):
 		'unique_drive': unique_values['unique_drive'],
 
 		'callme_form': callme_form,
+		'car_survey_full_form': car_survey_full_form
 	}
 
 	return render(request, 'cars/catalog.html', context)
@@ -54,18 +56,13 @@ def fresh_cars(request):
 	cars = Car.objects.filter(status=1)
 	cars = cars_ordering(Car, cars, sort_by)
 
-	if request.method == 'POST':
-		callme_form = CallMeForm(request.POST)
-		if callme_form.is_valid():
-			callme = callme_form.save()
-			send_email_task.delay(callme.first_name)
-	else:
-		callme_form = CallMeForm()
-
+	callme_form = handle_callme_form(request)
+	car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'cars' : cars,
 		'callme_form': callme_form,
+		'car_survey_full_form': car_survey_full_form
 	}
 
 	return render(request, 'cars/fresh.html', context)
@@ -78,17 +75,13 @@ def used_cars(request):
 	cars = Car.objects.filter(status=2)	
 	cars = cars_ordering(Car, cars, sort_by)
 
-	if request.method == 'POST':
-		callme_form = CallMeForm(request.POST)
-		if callme_form.is_valid():
-			callme = callme_form.save()
-			send_email_task.delay(callme.first_name)
-	else:
-		callme_form = CallMeForm()
+	callme_form = handle_callme_form(request)
+	car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'cars':cars,
 		'callme_form': callme_form,
+		'car_survey_full_form': car_survey_full_form
 	}
 
 	return render(request, 'cars/used.html', context)
@@ -106,7 +99,7 @@ def the_car(request, id):
 	callme_form = handle_callme_form(request)
 	want_this_car = handle_want_this_car_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
-
+	casco_count_form = handle_casco_count_form(request)
 
 
 	context = {
@@ -118,5 +111,6 @@ def the_car(request, id):
 		'callme_form': callme_form,
 		'want_this_car': want_this_car,
 		'car_survey_full_form': car_survey_full_form,
+		'casco_count_form': casco_count_form
 	}
 	return render(request, 'cars/the_car.html', context)

@@ -67,7 +67,6 @@ class CarSurveyFullForm(forms.ModelForm):
 		}
 
 
-
 class GuaranteeCountForm(forms.ModelForm):
 	CHOICES = [
 		(True, 'Да'),
@@ -96,7 +95,6 @@ class GuaranteeCountForm(forms.ModelForm):
 		'first_name': 'Имя',
 		'phone': 'Телефон'
 		}
-
 
 
 class NeedDiagnosticForm(forms.ModelForm):
