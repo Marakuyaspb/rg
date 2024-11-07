@@ -1,7 +1,7 @@
 {% load static %}
 
 <div class='modal_container' onclick='showModal(this);'>
-  <button class='thumb button_form_base center mt-3 mb-2 black'>Заполнить заявку на подбор</button>
+  <button class='thumb button_form_base center mt-3 mb-2 black'>Записаться на сервисное обслуживание</button>
 
     <div class='modal_full hide'>
       <div class=''>
@@ -11,11 +11,22 @@
         </div>
         
         <form method="post" class="callme_container white_bg">
-          <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
-
+          
+          <h2 class='we_300 ms-4'>ЗАПИСЬ НА СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h2>
           <div class='form_container we_300'>
 
-            {{ car_survey_full_form.as_p }}
+            <label for="{{ need_service_form.first_name.id_for_label }}">{{ need_service_form.first_name.label }}</label>
+            {{ need_service_form.first_name }}
+
+            <label class='pt-2' for="{{ need_service_form.phone.id_for_label }}">{{ need_service_form.phone.label }}</label>
+            {{ need_service_form.phone }}
+
+            <div class='d-flex justify-content-start py-2'>
+              <label class='' for="{{ need_service_form.urgency.id_for_label }}">Cрочно?</label>
+              {{ need_service_form.urgency }}
+            </div>
+            
+           
             
             {% csrf_token %}
           

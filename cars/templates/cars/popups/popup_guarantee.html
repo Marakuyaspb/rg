@@ -1,27 +1,47 @@
 {% load static %}
 
 <div class='modal_container' onclick='showModal(this);'>
-  <button class='thumb button_form_base center mt-3 mb-2 black'>Заполнить заявку на подбор</button>
+  <button class='thumb button_form_base center mt-3 mb-2 black'>Хочу оформить гарантию</button>
 
     <div class='modal_full hide'>
       <div class=''>
         
-        <div class='d-flex flex-row-reverse pe-3'>
-          <span class="close" onclick="closeModal(this);">&times;</span>
-        </div>
-        
         <form method="post" class="callme_container white_bg">
-          <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
-
+          <div class='d-flex flex-row-reverse pe-3'>
+            <span class="close" onclick="closeModal(this);">&times;</span>
+          </div>
+          <h2 class='we_300 ms-4'>ЗАЯВКА НА ОФОРМЛЕНИЕ ГАРАНТИЙНОГО ОБСЛУЖИВАНИЯ</h2>
           <div class='form_container we_300'>
 
-            {{ car_survey_full_form.as_p }}
-            
+            <div class='d-flex justify-content-start py-2'>
+              <label class='' for="{{ guarantee_count_form.who_sold.id_for_label }}">{{ guarantee_count_form.who_sold.label }}</label>
+              {{ guarantee_count_form.who_sold }}
+            </div>
+
+            <div class='d-flex justify-content-start py-2'>
+              <label class='pt-2' for="{{ guarantee_count_form.have_goverment_number.id_for_label }}">{{ guarantee_count_form.have_goverment_number.label }}</label>
+              {{ guarantee_count_form.have_goverment_number }}
+            </div>
+
+            <label class='pt-2' for="{{ guarantee_count_form.goverment_number.id_for_label }}">{{ guarantee_count_form.goverment_number.label }}</label>
+            {{ guarantee_count_form.goverment_number }}
+            <div class='d-flex justify-content-start py-2'>
+              <label class='pt-2' for="{{ guarantee_count_form.is_gai_record.id_for_label }}">{{ guarantee_count_form.is_gai_record.label }}</label>
+            {{ guarantee_count_form.is_gai_record }}
+            </div>
+
+            <br><br>
+            <label for="{{ guarantee_count_form.first_name.id_for_label }}">{{ guarantee_count_form.first_name.label }}</label>
+            {{ guarantee_count_form.first_name }}
+
+            <label class='pt-2' for="{{ guarantee_count_form.phone.id_for_label }}">{{ guarantee_count_form.phone.label }}</label>
+            {{ guarantee_count_form.phone }}
+
             {% csrf_token %}
           
-          <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+          <center class='py-3'><input type="submit" value="Перезвоните мне" class="button_dark"></center>
 
-          <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+          <p class='pt-3 smaller'>* Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

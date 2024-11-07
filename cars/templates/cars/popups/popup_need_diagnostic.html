@@ -21,8 +21,10 @@
             <label class='pt-2' for="{{ need_diagnostic_form.phone.id_for_label }}">{{ need_diagnostic_form.phone.label }}</label>
             {{ need_diagnostic_form.phone }}
 
-            <label class='pt-2' for="{{ need_diagnostic_form.urgency.id_for_label }}">Cрочно?</label>
-            {{ need_diagnostic_form.urgency }}
+            <div class='d-flex justify-content-start py-2'>
+              <label class='' for="{{ need_diagnostic_form.urgency.id_for_label }}">Cрочно?</label>
+              {{ need_diagnostic_form.urgency }}
+            </div>
             
             {% csrf_token %}
           

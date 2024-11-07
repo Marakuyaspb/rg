@@ -90,11 +90,14 @@ def service(request):
 	callme_form = handle_callme_form(request)
 	need_diagnostic_form = handle_need_diagnostic_form(request)
 	need_service_form = handle_need_service_form(request)
+	guarantee_count_form = handle_guarantee_count_form(request)
 
 	context = {
 		'callme_form': callme_form,
 		'need_diagnostic_form': need_diagnostic_form,
 		'need_service_form': need_service_form,
+		'guarantee_count_form': guarantee_count_form,
+		
 		'cars' : cars,
 	}
 	return render(request, 'main/service.html', context)

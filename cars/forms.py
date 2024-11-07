@@ -25,16 +25,6 @@ class WantThisCarForm(forms.ModelForm):
 
 
 class CarSurveyFullForm(forms.ModelForm):
-	CHOICES = [
-		(True, 'Да'),
-		(False, 'Нет'),
-	]
-	need_casco = forms.ChoiceField(
-		choices=CHOICES,
-		widget=forms.RadioSelect, 
-		required=False 
-	)
-
 	class Meta:
 		model = CarSurveyFull
 		fields = [
@@ -68,15 +58,6 @@ class CarSurveyFullForm(forms.ModelForm):
 
 
 class GuaranteeCountForm(forms.ModelForm):
-	CHOICES = [
-		(True, 'Да'),
-		(False, 'Нет'),
-	]
-	is_gai_record = forms.ChoiceField(
-		choices=CHOICES,
-		widget=forms.RadioSelect, 
-		required=False 
-	)
 	class Meta:
 		model = GuaranteeCount
 		fields = [
@@ -90,23 +71,14 @@ class GuaranteeCountForm(forms.ModelForm):
 		labels = {
 		'who_sold': 'Авто куплено через R.E.D. Group?',
 		'have_goverment_number': 'Есть ли Гос. номер?',
-		'goverment_number': 'Планируете оформлять КАСКО?',
-		'is_gai_record': 'Если да, укажите',
+		'goverment_number': 'Если да, укажите',
+		'is_gai_record': 'Есть регистрация в ГАИ?',
 		'first_name': 'Имя',
 		'phone': 'Телефон'
 		}
 
 
 class NeedDiagnosticForm(forms.ModelForm):
-	CHOICES = [
-		(True, 'Да'),
-		(False, 'Нет'),
-	]
-	urgency = forms.ChoiceField(
-		choices=CHOICES,
-		widget=forms.RadioSelect, 
-		required=False 
-	)
 	class Meta:
 		model = NeedDiagnostic
 		fields = [
@@ -122,15 +94,6 @@ class NeedDiagnosticForm(forms.ModelForm):
 
 
 class NeedServeceForm(forms.ModelForm):
-	CHOICES = [
-		(True, 'Да'),
-		(False, 'Нет'),
-	]
-	urgency = forms.ChoiceField(
-		choices=CHOICES,
-		widget=forms.RadioSelect, 
-		required=False 
-	)
 	class Meta:
 		model = NeedServece
 		fields = [

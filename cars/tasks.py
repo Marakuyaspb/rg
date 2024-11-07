@@ -51,7 +51,7 @@ def send_email_car_survey_full_form(name, phone):
 @shared_task
 def send_email_guarantee_count_form(name, phone):
     subject = f"{name} хочет оформить гарантию! ☎ {phone}"
-    body = f"Имя: {name}\nТелефон: {phone}\n\nАвто куплено через R.E.D. Group? {who_sold}\nЕсть ли Гос. номер? {have_goverment_number}\nПланируете оформлять КАСКО? {goverment_number}\nЕсли да, укажите: {is_gai_record}"
+    body = f"Имя: {name}\nТелефон: {phone}\n\nАвто куплено через R.E.D. Group? {who_sold}\nЕсть ли Гос. номер? {have_goverment_number}\nЕсли да, укажите: {goverment_number}\n Есть регистрация в ГАИ? {is_gai_record}"
     recipient_list = ['sales@rgspace.pro']
 
     try:
