@@ -27,7 +27,17 @@
   }
 </style>
 
-<section class='desctop_84'>
+
+<!-- DESCTOP -->
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <div class="desctop_84">
+
+  </div>
+</div>
+
+<!-- PHONE -->
+<div class='d-block d-lg-none '>
+  <section class='desctop_84'>
   <div class="row mb-5">
     <div class='col-6'>
 
@@ -44,11 +54,11 @@
     <h2 class='we_300 pt-5 index_sub px-3'>Даже если вы приобрели машину не через RG Auto!</h2>
 
 
-<center id='popup_guarantee' class='pb-4'>
-  {% include 'cars/popups/popup_guarantee.html' %}
-</center>
+  <center id='popup_guarantee' class='pb-4'>
+    {% include 'cars/popups/popup_guarantee.html' %}
+  </center>
 
-<img id='car' class='the_top_img' src="{% static 'transperent/cute_car.png' %}" alt="" /> 
+  <img id='car' class='the_top_img' src="{% static 'transperent/cute_car.png' %}" alt="" /> 
 
     <h2 class='we_300 h1_24-5 py-4'>КАК ЭТО РАБОТАЕТ?</h2>
 
@@ -58,14 +68,14 @@
     <p>Заключение договора гарантийного обслуживания
     <br>
     <p>В договоре указывается гарантия на определённую сумму согласно <a class='red' href='#'>принятой градации</a>.
-</section>
+  </section>
 
-<img id='tools' class='w-100' src="{% static 'illustr/key.png' %}" alt="" />
+  <img id='tools' class='w-100' src="{% static 'illustr/key.png' %}" alt="" />
 
-<center class='py-4'>
-  {% include 'cars/popups/popup_guarantee.html' %}
-</center>
-
+  <center class='py-4'>
+    {% include 'cars/popups/popup_guarantee.html' %}
+  </center>
+</div>
 
 <section>
     {% include 'cars/banners/banner_service_feedback.html' %}

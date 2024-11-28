@@ -223,7 +223,9 @@ tr {
 }
 
 
-
+.btn_text{
+  font-size: 16px!important;
+}
 
 .checkbox-input_red {
     position: absolute;
@@ -796,7 +798,7 @@ tr {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: var(--white);
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 300;
     padding: .4em .8em;
   }
@@ -806,7 +808,7 @@ tr {
     color: var(--white);
     border-radius: 8px;
     border: none;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 300;
     padding: .4em .8em;
     font-weight: 300;
