@@ -36,6 +36,9 @@ def feedback(request):
 
 def guarantee(request):
 	cars = Car.objects.all()
+
+	used_cars = Car.objects.filter(status=2)
+
 	callme_form = handle_callme_form(request)
 	guarantee_count_form = handle_guarantee_count_form(request)
 
@@ -43,6 +46,7 @@ def guarantee(request):
 		'callme_form': callme_form,
 		'guarantee_count_form': guarantee_count_form,
 		'cars' : cars,
+		'used_cars': used_cars
 	}
 	return render(request, 'main/guarantee.html', context)
 

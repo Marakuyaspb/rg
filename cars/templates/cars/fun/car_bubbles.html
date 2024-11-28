@@ -1,0 +1,96 @@
+{% load static %}
+<style type="text/css">
+
+	#bubbles_wrap{
+		position: relative;
+		height: 50vh;
+    	overflow: hidden;
+	}
+	#bubbles{
+		position: relative;
+	    width: 100%;
+	    height: 100vh;
+	}
+	.elem {
+	    position: absolute;
+	    transition: transform 0.5s ease;
+	}
+	/*#elem_1, #elem_2, #elem_3, #elem_4, #elem_5{
+		position: absolute;
+    	transition: transform 0.3s ease;
+	}*/
+
+	/* mobile */
+	@media (max-width: 810px) {
+		.the_car_img {
+			max-width: 20em;
+			position: absolute;
+    		z-index: 10;
+    		top: 10%;
+    		left: 10%;
+		}
+
+		#elem_1{
+			max-width: 6em;
+			top: 14%;
+    		left: 50%;
+		}
+		#elem_2{
+			max-width: 3em;
+			top: 0%;
+    		left: 80%;
+		}
+		#elem_3{
+			max-width: 10em;
+			top: 30%;
+    		left: 50%;
+		}
+		#elem_4{
+			max-width: 6em;
+			top: 40%;
+    		left: 8%;
+		}
+		#elem_5{
+			max-width: 10em;
+			top: 0%;
+    		left: 0%;
+		}
+	}
+
+	/* desctop */
+	@media (min-width: 811px){
+		.the_car_img {
+			max-width: 30em;
+			position: absolute;
+    		z-index: 10; 
+		}
+	}
+
+</style>
+
+<section id='bubbles_wrap' class='py-2'>
+	<div id='bubbles'>
+
+		<h1 class='we_300 h1_24-5 pt-4'>ОФОРМИМ СТРАХОВКУ</h1>
+	  	<h2 class='pt-2 pb-4 we_300'>Лучшие машины ойкумены</h2>
+
+		<img id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" />	
+
+		<img id='elem_1' class='elem rellax'  data-rellax-speed="7" src="{% static 'illustr/wallet_front.svg' %}" alt="" />
+		<img id='elem_2' class='elem rellax' data-rellax-speed="-4" src="{% static 'illustr/Cone_01_2_3.svg' %}" alt="" />
+		<img id='elem_3' class='elem rellax' data-rellax-speed="2" src="{% static 'illustr/Cone_01_2_15.svg' %}"  alt="" />
+		<img id='elem_4' class='elem rellax_ho' data-rellax-speed="1" src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
+		<img id='elem_5' class='elem rellax' data-rellax-speed="2" src="{% static 'illustr/Cone_01_2_10.svg' %}" alt="" />
+	</div>
+</section>
+
+
+
+<script src='{% static "js/rellax.min.js" %}'></script>
+
+<script>
+  let rellax = new Rellax('.rellax');
+  let rellax_ho = new Rellax('.rellax_ho');
+
+
+</script>

@@ -389,6 +389,9 @@ tr {
   font-weight: 300;
 }
 
+
+
+
 #menu{
   margin-top: -1.4em;
 }
@@ -793,6 +796,18 @@ tr {
     font-weight: 300;
     padding: .4em .8em;
   }
+
+  .btn_whatsapp{
+    background-color: #2E6C2D;
+    color: var(--white);
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 300;
+    padding: .4em .8em;
+    font-weight: 300;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }
 
 
@@ -956,9 +971,9 @@ tr {
     padding-top: .6em;
   }
 
-  .thumb{
+  /*.thumb{
     width: 100%;
-  }
+  }*/
 
   .partner_logo{
     max-height: 2.2em
@@ -1028,6 +1043,18 @@ tr {
 
   .btn_red{
     background-color: var(--red);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--white);
+    font-size: .9em;
+    font-weight: 300;
+    padding: .4em .8em;
+  }
+
+
+  .btn_whatsapp{
+    background-color: #2E6C2D;
     border-radius: 8px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

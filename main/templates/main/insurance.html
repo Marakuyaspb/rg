@@ -4,16 +4,126 @@
 {% block content %}
 
 
+<style type="text/css">
 
-<div class='desctop_84'>
-  <h1 class='we_300 h1_24-5 pt-4'>ОФОРМИМ СТРАХОВКУ</h1>
-  <h2 class='pt-2 pb-4 we_300'>Лучшие машины ойкумены</h2>
-   {% include 'cars/popups/popup_call_me.html' %}
-</div>
+  #bubbles_wrap{
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+  }
+  #bubbles{
+    position: relative;
+    width: 80%;
+    height: 100vh;
+  }
+  .elem {
+      position: absolute;
+      transition: transform 0.5s ease;
+  }
+
+  /* mobile */
+  @media (max-width: 810px) {
+    .the_car_img {
+      max-width: 20em;
+      position: absolute;
+      z-index: 1;
+      top: 16%;
+      left: 10%;
+    }
+
+    #elem_1{
+      max-width: 5em;
+      top: 20%;
+      left: 55%;
+    }
+    #elem_2{
+      max-width: 3em;
+      top: 0%;
+        left: 80%;
+    }
+    #elem_3{
+      max-width: 10em;
+      top: 30%;
+        left: 70%;
+    }
+    #elem_4{
+      max-width: 6em;
+      top: 38%;
+        left: 8%;
+    }
+    #elem_5{
+      max-width: 10em;
+      top: 0%;
+        left: -5%;
+    }
+    #h1_1{
+      top: 8%;
+      left: 40%;
+      z-index: 555;
+    }
+      #h1_2{
+      top: 40%;
+      left: 5%;
+      z-index: 555;
+    }
+  }
+
+  /* desctop */
+  @media (min-width: 811px){
+    .the_car_img {
+      max-width: 30em;
+      position: absolute;
+        z-index: 10; 
+    }
+  }
+
+</style>
+
+<section id='bubbles_wrap' class='py-2'>
+  <div id='bubbles'>
+
+    <span  id='h1_1' class='elem rellax' data-rellax-speed="-6" data-rellax-zindex="555"><h1 class='we_600 h1_24-5' >ОФОРМИМ </h1></span>
+    <span  id='h1_2' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="555"><h1 class='we_600 h1_24-5 red' >СТРАХОВКУ </h1></span>
+
+    <img id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" /> 
+
+    <!-- <img id='elem_1' class='elem rellax' data-rellax-speed="-5" src="{% static 'illustr/wallet_front.svg' %}" alt="" /> -->
+    <img id='elem_2' class='elem rellax' data-rellax-speed="-1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_3.svg' %}" alt="" />
+    <img id='elem_3' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_15.svg' %}"  alt="" />
+    <img id='elem_4' class='elem rellax' data-rellax-speed="-7" data-rellax-zindex="5"src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
+    <img id='elem_5' class='elem rellax' data-rellax-speed="1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_10.svg' %}" alt="" />
+
+
+  </div>
+</section>
+
+<center id='popup_casco_count'>
+  {% include 'cars/popups/popup_casco_count.html' %}
+</center>
+
+
+<section>
+    <h2></h2>
+</section>
 
 <section>
     {% include 'cars/banners/banner_catalog_feedback.html' %}
 </section>
+
+
+<script src='{% static "js/rellax.min.js" %}'></script>
+
+<script>
+  // Initialize Rellax for vertical parallax
+  let rellax = new Rellax('.rellax');
+
+  // Initialize Rellax for horizontal parallax
+  let rellax_ho = new Rellax('.rellax_ho', {
+    horizontal: true,
+    vertical: false
+  });
+   console.log(rellax_ho); 
+</script>
 
 
 {% endblock %}

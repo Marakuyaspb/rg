@@ -3,17 +3,82 @@
 
 {% block content %}
 
+<style type="text/css">
 
 
-<div class='desctop_84'>
-  <h1 class='we_300 h1_24-5 pt-4'>ОФОРМИМ ГАРАНТИЮ</h1>
-  <h2 class='pt-2 pb-4 we_300'>Лучшие машины ойкумены</h2>
-   {% include 'cars/popups/popup_guarantee.html' %}
-</div>
+  /* mobile */
+  @media (max-width: 810px) {
+    .the_top_img {
+      max-width: 20em;
+    }
+    .gua_head_img{
+      left: 15%;
+      top:25%;
+      position: relative;
+      width: 16em;
+    }
+  }
+
+  /* desctop */
+  @media (min-width: 811px){
+    .the_top_img {
+      max-width: 30em;
+    }
+  }
+
+</style>
+<section class='desctop_84'>
+  <div class="row mb-5">
+    <div class='col-6'>
+
+      <h1 class='very_big'>ОФОР</h1>
+      <h1 class='very_big'>МИМ </h1>
+      <h1 class='very_big'>ГАРАН</h1>
+      <h1 class='very_big'>ТИЮ</h1>
+    </div>
+    <div class='col-6'>
+        <img id='tools' class='gua_head_img' src="{% static 'illustr/tools.png' %}" alt="" />
+    </div>
+  </div>
+ 
+    <h2 class='we_300 pt-5 index_sub px-3'>Даже если вы приобрели машину не через RG Auto!</h2>
+
+
+<center id='popup_guarantee' class='pb-4'>
+  {% include 'cars/popups/popup_guarantee.html' %}
+</center>
+
+<img id='car' class='the_top_img' src="{% static 'transperent/cute_car.png' %}" alt="" /> 
+
+    <h2 class='we_300 h1_24-5 py-4'>КАК ЭТО РАБОТАЕТ?</h2>
+
+    <h3 class='we_300'>Шаг 1</h3>
+    <p>Диагностика автомобиля
+    <h3 class='we_300'>Шаг 2</h3>
+    <p>Заключение договора гарантийного обслуживания
+    <br>
+    <p>В договоре указывается гарантия на определённую сумму согласно <a class='red' href='#'>принятой градации</a>.
+</section>
+
+<img id='tools' class='w-100' src="{% static 'illustr/key.png' %}" alt="" />
+
+<center class='py-4'>
+  {% include 'cars/popups/popup_guarantee.html' %}
+</center>
 
 
 <section>
-    {% include 'cars/banners/banner_catalog_feedback.html' %}
+    {% include 'cars/banners/banner_service_feedback.html' %}
 </section>
+
+
+<section class="desctop_84">
+  <h2 class='banner_middle pt-5'>МАШИНЫ С ПРОБЕГОМ</h2>
+  <h3 class="we_300 red">Из разных точек мира</h3>
+
+
+    {% include 'cars/carousel_used.html' %}
+</section>
+
 
 {% endblock %}

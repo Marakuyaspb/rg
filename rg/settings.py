@@ -132,12 +132,16 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('127.0.0.1', 6379)],
+            'hosts': [('127.0.0.1', 6380)],
         },
     },
 }
 # CELERY
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_TIMEZONE = 'UTC'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_BROKER_URL = 'redis://localhost:6380/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
 
 
 EMAIL_DEBUG = True
