@@ -575,7 +575,11 @@ tr {
   font-size: 1.4em;
 }
  
-
+.salon_photo {
+  height: 22em;
+  overflow-y: clip;
+  object-fit: cover;
+}
 
 
 
@@ -1114,4 +1118,11 @@ tr {
 
 .block {
     display: block;      
+}
+
+
+
+
+.gsap-marker-end, .gsap-marker-start, .gsap-marker-scroller-end, .gsap-marker-scroller-start{
+  opacity: 0%!important;
 }

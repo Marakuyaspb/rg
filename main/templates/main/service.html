@@ -3,43 +3,235 @@
 
 {% block content %}
 <style type="text/css">
-  .salon_photo {
-    height: 22em;
-    overflow-y: clip;
-    object-fit: cover;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .illustr_sm{
+    width: 3em;
+  }
+  .illustr{
+    width: 6em;
+  }
+  .illustr_big{
+    width: 9em;
+  }
+  .slide_scroll {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+
+  .slide_scroll:first-child {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .slide_content{
+    padding: 6em 1em;
+    height: 60vh;
+    width: 100%;
+    overflow-x: clip!important;
+    position: relative;
+  }
+  .illustr, .illustr_sm, .illustr_big{
+    position: absolute;
+  }
+
+
+  #key{
+    animation: levitation_up_10_10 4s infinite;
+  }
+  #chrome8{
+    animation: levitation_up_70 4s infinite;
+  }
+  #cone_black{
+    animation: levitation_up_10_50 4.3s infinite;
+  }
+  #chrome51{
+    animation: levitation_up_70 4s infinite;
+  }
+  #cone_16{
+    animation: levitation_up_10_10 4s infinite;
+  }
+  #cone_4{
+    animation: levitation_up_60_50 4s infinite;
+  }
+
+  @keyframes levitation_up_10_10 {
+    0% {
+      top: 10%;
+      left:10%;
+    }
+    50% {
+      top: 9%;
+      left:10%;
+
+    }
+    100% {
+      top: 10%;
+      left:10%;
+    }
+  }
+  @keyframes levitation_up_10_50 {
+    0% {
+      top: 10%;
+      left:40%;
+    }
+    50% {
+      top: 9%;
+      left:43%;
+
+    }
+    100% {
+      top: 10%;
+      left:40%;
+    }
+  }
+  @keyframes levitation_up_60_50 {
+    0% {
+      top: 60%;
+      left:50%;
+    }
+    50% {
+      top: 57%;
+      left:51%;
+    }
+    100% {
+      top: 60%;
+      left:50%;
+    }
+  }
+
+  @keyframes levitation_up_70 {
+    0% {
+      top: 60%;
+      left:60%;
+    }
+    50% {
+      top: 57%;
+      left:61%;
+    }
+    100% {
+      top: 60%;
+      left:60%;
+    }
   }
 </style>
+<!-- DESCTOP -->
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <div class="desctop_84">
 
+  </div>
+</div>
+<!-- PHONE -->
+<div class='d-block d-lg-none '>
 
-  <div class='desctop_84'>
-    <h1 class='we_300 h1_24-5 pt-4'>ДИАГНОСТИКА И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
-    <h2 class='we_300'>Опытные мастера, качественное оборудование</h2>  
-    <br>
-    <div class="row mt-4">
-      <div class='col-md-6'>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce massa lorem, lobortis non pellentesque at, porta et sem. </p>
-        <p>Praesent sed nibh in enim vehicula eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla non efficitur ligula. Pellentesque lobortis elementum commodo. Maecenas nec odio non libero feugiat fermentum ut ut ipsum. </p>
-        <p>Nunc sit amet massa lobortis, convallis tellus eget, congue ante. Sed vitae est non neque viverra finibus vel eu libero. Maecenas vitae nisi sapien. 
-        </p>
-        <br>
-        {% include 'cars/popups/popup_need_diagnostic.html' %}
+  <div class='px-4 pt-3'>
+    <p class='very_big'>ДИАГ</p>
+    <p class='very_big'>НОСТ</p>
+    <p class='very_big'>ИКА</p>
+    <p class='we_300 h1_24-5 red'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</p>
+  </div>
 
-        {% include 'cars/popups/popup_need_service.html' %}
+  <section class='py-5'>
+  {% include 'cars/popups/popup_need_diagnostic.html' %}
+  </section>
 
-        {% include 'cars/popups/popup_guarantee.html' %}
-      </div>
-
-      <div class='col-md-6'>
-        <img class='w-100 salon_photo' src="{% static 'img/working.jpg' %}" class="direction_image_mob" alt="Каталог авто" />
+  <div class="wrapper">
+    <div class="slide_scroll">
+      
+      <div class='slide_content white_bg'>
+        <img id='key' class='illustr_big pb-3' src="{% static 'illustr/key.png' %}" alt="" />
+        <h2 class='very_big'>ОПЫТ</h2>
+        <div class="d-flex">
+          <h2 class='very_big'>НЫЕ</h2>
+          <img id='chrome8' class='illustr pb-3' src="{% static 'illustr/chrome8.svg' %}" alt="" />
+        </div>
+        <h2 class='we_300 h1_24-5'>МАСТЕРА</h2>     
       </div>
     </div>
-      <br>
+
+    <div class="slide_scroll">
+       <div class='slide_content gray_light_bg'>
+          
+          <h2 class='we_300 h1_24-5 black'>ПОДБОР</h2>
+          <p class='very_big'>КОМПЛ</p>
+          <p class='very_big'>ЕКТУЮ</p>
+          <div class="d-flex ">
+            <p class='very_big'>ЩИХ</p>
+            <img id='chrome51' class='illustr pb-3' src="{% static 'illustr/chrome51.svg' %}">
+          </div>
+
+          <img id='cone_black' class='illustr_sm' src="{% static 'illustr/Cone_black.svg' %}" alt="" />
+      </div>
+    </div>
+
+    <div class="slide_scroll">
+      <div class='slide_content white_bg'>
+        <img class='illustr' id='cone_16' src="{% static 'illustr/Cone_01_2(16).svg' %}">
+        <h2 class='we_300 h1_24-5 pt-4'>КАЧЕСТВЕННОЕ</h2>
+        <h2 class='we_300 h1_24-5'>ОБОРУДОВАНИЕ</h2>
+        <img class='illustr_big' id='cone_4' src="{% static 'illustr/Cone_01_2_10.svg' %}">
+      </div>
+    </div>
+
   </div>
+
+
+  <section class='py-5'>
+  {% include 'cars/popups/popup_need_diagnostic.html' %}
+  </section>
+
+</div>
+
 
 <section>
     {% include 'cars/banners/banner_catalog_feedback.html' %}
 </section>
 
 
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script type="text/javascript">
+  console.clear();
+  gsap.registerPlugin(ScrollTrigger);
+
+  const slides = gsap.utils.toArray(".slide_scroll");
+  slides.shift();
+
+  gsap.to(slides, {
+    duration: 1,
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    stagger: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".wrapper",
+      start: "top top",
+      end: "+=" + 60 * slides.length + "%",
+      scrub: true,
+      snap: 1 / slides.length,
+      pin: true,
+      markers: true
+    }
+  });
+
+</script>
 
 {% endblock %}
