@@ -20,7 +20,51 @@
       position: absolute;
       transition: transform 0.5s ease;
   }
+  .big_insh{
+    font-size: 6em;
+  }
+  #help{
+    height: 8em;
+    position: absolute;
+    animation: levitation_help 6s infinite;
+  }
 
+  #cone{
+    height: 5em;
+    position: absolute;
+    animation: levitation_cone 6s infinite; 
+  }
+  @keyframes levitation_help {
+    0% {
+      top: 20%;
+      left:40%;
+    }
+    50% {
+      top: 21%;
+      left:41%;
+
+    }
+    100% {
+      top: 20%;
+      left:40%;
+    }
+  }
+
+  @keyframes levitation_cone {
+    0% {
+      top: 45%;
+      left:46%;
+    }
+    50% {
+      top: 47%;
+      left:45%;
+
+    }
+    100% {
+      top: 45%;
+      left:46%;
+    }
+  }
   /* mobile */
   @media (max-width: 810px) {
     .the_car_img {
@@ -79,25 +123,47 @@
 
 </style>
 
-<section id='bubbles_wrap' class='py-2'>
-  <div id='bubbles'>
+<!-- DESCTOP -->
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <div class="desctop_84">
+    <div class="row">
+      <div class='col-6'>
+        <h1 class='we_300 pt-4 big_insh pb-3'>ОФОРМИМ СТРАХОВКУ</h1>
+        <h2 class='pt-2 we_300'>С нами надёжно.</h2>
+      </div>
 
-    <span  id='h1_1' class='elem rellax' data-rellax-speed="-6" data-rellax-zindex="555"><h1 class='we_600 h1_24-5' >ОФОРМИМ </h1></span>
-    <span  id='h1_2' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="555"><h1 class='we_600 h1_24-5 red' >СТРАХОВКУ </h1></span>
-
-    <img id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" /> 
-
-    <!-- <img id='elem_1' class='elem rellax' data-rellax-speed="-5" src="{% static 'illustr/wallet_front.svg' %}" alt="" /> -->
-    <img id='elem_2' class='elem rellax' data-rellax-speed="-1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_3.svg' %}" alt="" />
-    <img id='elem_3' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_15.svg' %}"  alt="" />
-    <img id='elem_4' class='elem rellax' data-rellax-speed="-7" data-rellax-zindex="5"src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
-    <img id='elem_5' class='elem rellax' data-rellax-speed="1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_10.svg' %}" alt="" />
+      <div class='col-6'>
+        <img class='w-100' src='{% static "transperent/KIA_K3_yellow_2.png" %}'>  
+        <img id='help' class='' src='{% static "illustr/4.svg" %}'>  
+        <img id='cone' class='' src='{% static "illustr/Cone_black.svg" %}'>  
+      </div>
+    </div>
 
 
   </div>
-</section>
+</div>
 
-<center id='popup_casco_count'>
+<!-- PHONE -->
+<div class='d-block d-lg-none '>
+  <section id='bubbles_wrap' class='py-2'>
+    <div id='bubbles'>
+
+      <span  id='h1_1' class='elem rellax' data-rellax-speed="-6" data-rellax-zindex="555"><h1 class='we_600 h1_24-5' >ОФОРМИМ </h1></span>
+      <span  id='h1_2' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="555"><h1 class='we_600 h1_24-5 red' >СТРАХОВКУ </h1></span>
+
+      <img id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" /> 
+
+      <!-- <img id='elem_1' class='elem rellax' data-rellax-speed="-5" src="{% static 'illustr/wallet_front.svg' %}" alt="" /> -->
+      <img id='elem_2' class='elem rellax' data-rellax-speed="-1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_3.svg' %}" alt="" />
+      <img id='elem_3' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_15.svg' %}"  alt="" />
+      <img id='elem_4' class='elem rellax' data-rellax-speed="-7" data-rellax-zindex="5"src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
+      <img id='elem_5' class='elem rellax' data-rellax-speed="1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_10.svg' %}" alt="" />
+
+    </div>
+  </section>
+</div>
+
+<center id='popup_casco_count' class='py-4'>
   {% include 'cars/popups/popup_casco_count.html' %}
 </center>
 

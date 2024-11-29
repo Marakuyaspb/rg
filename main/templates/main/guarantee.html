@@ -4,7 +4,9 @@
 {% block content %}
 
 <style type="text/css">
-
+  .big_guar{
+    font-size: 6em;
+  }
 
   /* mobile */
   @media (max-width: 810px) {
@@ -25,12 +27,50 @@
       max-width: 30em;
     }
   }
+
+
+  #id_who_sold{
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
+  #id_have_goverment_number{
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
+  #id_is_gai_record {
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
 </style>
 
 
 <!-- DESCTOP -->
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>
   <div class="desctop_84">
+    <div class="row">
+      <div class='col-6'>
+        <h1 class='we_300 pt-4 big_guar red pb-3'>ОФОРМИМ ГАРАНТИЮ</h1>
+        <h2 class='pt-2 we_300'>Даже если вы приобрели машину</h2>
+        <h2 class='pb-4 we_300'>не через RG Auto!</h2>
+      </div>
+
+      <div class='col-6'>
+        <img class='w-100' src='{% static "illustr/big_key.png" %}'>  
+      </div>
+    </div>
+
+    <div class="my-4">
+      {% include 'cars/popups/popup_guarantee.html' %}  
+    </div>
+
+
+    <h2 class='we_400'>ЖДЁМ ВАС В АВТОСЕРВИСЕ</h2>
 
   </div>
 </div>
@@ -81,13 +121,10 @@
     {% include 'cars/banners/banner_service_feedback.html' %}
 </section>
 
-
 <section class="desctop_84">
   <h2 class='banner_middle pt-5'>МАШИНЫ С ПРОБЕГОМ</h2>
   <h3 class="we_300 red">Из разных точек мира</h3>
-
-
-    {% include 'cars/carousel_used.html' %}
+  {% include 'cars/carousel_used.html' %}
 </section>
 
 
