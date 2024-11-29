@@ -3,12 +3,89 @@
 
 {% block content %}
 
+<style type="text/css">
+  #cone_18{
+    height: 5em;
+    position: absolute;
+    animation: levitation_cone_18 6s infinite;
+  }
+  #cone_3{
+    height: 4em;
+    position: absolute;
+    animation: levitation_cone_3 5s infinite; 
+  }
+  #chrome8{
+    height: 14em;
+    position: absolute;
+    animation: levitation_chrome8 5s infinite; 
+  }
+  @keyframes levitation_chrome8 {
+    0% {
+      top: 20%;
+      left:65%;
+    }
+    50% {
+      top: 21%;
+      left:65%;
 
+    }
+    100% {
+      top: 20%;
+      left:65%;
+    }
+  }
+  @keyframes levitation_cone_3 {
+    0% {
+      top: 35%;
+      left:79%;
+    }
+    50% {
+      top: 37%;
+      left:80%;
+
+    }
+    100% {
+      top: 35%;
+      left:79%;
+    }
+  }
+  @keyframes levitation_cone_18 {
+    0% {
+      top: 15%;
+      left:55%;
+    }
+    50% {
+      top: 17%;
+      left:55%;
+
+    }
+    100% {
+      top: 15%;
+      left:55%;
+    }
+  }
+
+  .big_spares{
+    font-size: 6em;
+  }
+</style>
 
   <div class='desctop_84'>
-    <h1 class='we_300 h1_24-5 pt-4'>ЗАПЧАСТИ</h1>
-    <h2 class='pt-2 pb-4 we_300 '>Лучшие машины ойкумены</h2>
-     {% include 'cars/popups/popup_call_me.html' %}
+
+    <h1 class='we_300 big_spares red pt-4'>ЗАПЧАСТИ</h1>
+    <h2 class='pt-2 pb-4 we_300 '>Под заказ из любой точки мира</h2>
+
+    <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+      <img id='cone_18' class='' src='{% static "illustr/Cone_01_2(18).svg" %}'>  
+      <img id='cone_3' class='' src='{% static "illustr/Cone_01_2_3.svg" %}'>  
+      <img id='chrome8' class='' src='{% static "illustr/chrome8.svg" %}'>  
+    </div>
+
+    <p class='pt-4'>Запчасти для иномарок в наличиии и под заказ.</p>
+    <p>У нас есть выходы на официальных производителей и каналы параллельного импорта. Найдем и доставим в Россию любую необходимую деталь.</p>
+    <div class='py-4'>
+      {% include 'cars/popups/popup_shesterenky_need.html' %}
+    </div>
   </div>
 
   <section>
