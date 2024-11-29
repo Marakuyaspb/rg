@@ -15,7 +15,20 @@
 
           <div class='form_container we_300'>
 
-            {{ legal_help_form.as_p }}
+            <label class='' for="{{ legal_help_form.where_auto.id_for_label }}">Где сейчас находится авто? В РФ / в др.стране / на таможне?</label>
+            {{ legal_help_form.where_auto }}
+          
+            <label class='' for="{{ legal_help_form.documents.id_for_label }}">Какие документы у вас есть сейчас?</label>
+            {{ legal_help_form.documents }}
+            
+            <label for="{{ legal_help_form.first_name.id_for_label }}">{{ legal_help_form.first_name.label }}</label>
+            {{ legal_help_form.first_name }}
+
+            <label class='pt-2' for="{{ legal_help_form.phone.id_for_label }}">{{ legal_help_form.phone.label }}</label>
+            {{ legal_help_form.phone }}
+            
+            {% csrf_token %}
+          
             
             {% csrf_token %}
           

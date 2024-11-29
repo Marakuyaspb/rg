@@ -14,14 +14,24 @@
           <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
 
           <div class='form_container we_300'>
+ 
+            <label class='' for="{{ casco_count_form.budget.id_for_label }}">Какой бюджет?</label>
+            {{ casco_count_form.budget }}
+          
+            <label class='' for="{{ casco_count_form.type.id_for_label }}">Дизель / электрокар?</label>
+            {{ casco_count_form.type }}
+            
+            <label for="{{ casco_count_form.first_name.id_for_label }}">{{ casco_count_form.first_name.label }}</label>
+            {{ casco_count_form.first_name }}
 
-            {{ car_survey_full_form.as_p }}
+            <label class='pt-2' for="{{ casco_count_form.phone.id_for_label }}">{{ casco_count_form.phone.label }}</label>
+            {{ casco_count_form.phone }}
             
             {% csrf_token %}
           
-          <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+            <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
-          <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

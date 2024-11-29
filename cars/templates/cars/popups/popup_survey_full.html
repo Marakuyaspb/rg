@@ -15,13 +15,48 @@
 
           <div class='form_container we_300'>
 
-            {{ car_survey_full_form.as_p }}
+            <label class='' for="{{ car_survey_full_form.car_characteristics.id_for_label }}">Марка, модель, мотор</label>
+            {{ car_survey_full_form.car_characteristics }}
+
+            <label class='' for="{{ car_survey_full_form.country.id_for_label }}">Из какой страны Вас интересует автомобиль?</label>
+            {{ car_survey_full_form.country }}
+
+            <label class='' for="{{ car_survey_full_form.when.id_for_label }}">Когда планируете покупать?</label>
+            {{ car_survey_full_form.when }}
+
+            <label class='' for="{{ car_survey_full_form.payment_type.id_for_label }}">Форма оплаты за автомобиль?</label>
+            {{ car_survey_full_form.payment_type }}
+
+            <label class='' for="{{ car_survey_full_form.max_price.id_for_label }}">Максимальный бюджет для покупки?</label>
+            {{ car_survey_full_form.max_price }}
+
+            <label class='' for="{{ car_survey_full_form.trade_in.id_for_label }}">Планируете трейд ин? Какой авто? Пробег?</label>
+            {{ car_survey_full_form.trade_in }}
+
+            <label class='' for="{{ car_survey_full_form.complectation.id_for_label }}">Комплектация?</label>
+            {{ car_survey_full_form.complectation }}
+
+            <label class='' for="{{ car_survey_full_form.colors.id_for_label }}">Желаемые цвета кузова и салона</label>
+            {{ car_survey_full_form.colors }}
+
+            <label class='' for="{{ car_survey_full_form.need_casco.id_for_label }}">Планируете ли делать КАСКО?</label>
+            {{ car_survey_full_form.need_casco }}
+
+            <label class='' for="{{ car_survey_full_form.real_price.id_for_label }}">Какова стоимость реального предложения автомобиля, которое Вам удалось найти?</label>
+            {{ car_survey_full_form.real_price }}
+
+                      
+            <label for="{{ car_survey_full_form.first_name.id_for_label }}">{{ car_survey_full_form.first_name.label }}</label>
+            {{ car_survey_full_form.first_name }}
+
+            <label class='pt-2' for="{{ car_survey_full_form.phone.id_for_label }}">{{ car_survey_full_form.phone.label }}</label>
+            {{ car_survey_full_form.phone }}
             
             {% csrf_token %}
           
-          <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+            <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
-          <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

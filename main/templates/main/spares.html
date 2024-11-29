@@ -4,6 +4,10 @@
 {% block content %}
 
 <style type="text/css">
+  .big_spares{
+    font-size: 6em;
+  }
+
   #cone_18{
     height: 5em;
     position: absolute;
@@ -65,15 +69,89 @@
     }
   }
 
-  .big_spares{
-    font-size: 6em;
+  /* Next block */
+
+  #jet{
+    height: 14em;
+    position: absolute;
+    animation: levitation_jet 5s infinite; 
+  }
+  @keyframes levitation_jet {
+    0% {
+      top:55%;
+      left:15%;
+    }
+    50% {
+      top: 56%;
+      left:15%;
+
+    }
+    100% {
+      top: 55%;
+      left:15%;
+    }
+  }
+  #jet_mob{
+    height: 14em;
+    position: relative;
+    animation: levitation_jet_mob 5s infinite; 
+  }
+  @keyframes levitation_jet_mob {
+    0% {
+      top:0%;
+      left:10%;
+    }
+    50% {
+      top: 1%;
+      left:10%;
+
+    }
+    100% {
+      top: 0%;
+      left:10%;
+    }
+  }
+  
+  .spares_head_img{
+    position: relative;
+    width: 12em;
+    animation: levitation_head_img 5s infinite; 
+  }
+
+  @keyframes levitation_head_img {
+    0% {
+      left: 0%;
+      top:45%;;
+    }
+    50% {
+      left: 3%;
+      top:48%;
+    }
+    100% {
+      left: 0%;
+      top:45%;
+    }
+  }
+
+  .very_big_sp{
+    color: var(--red);
+    font-size: 7.6em;
+    line-height: .9;
+    font-weight: 200;
+  }
+  .big_sp{
+    font-size: 3.2em;
+    line-height: .9;
   }
 </style>
 
+  
+<!-- DESCTOP -->
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
   <div class='desctop_84'>
 
     <h1 class='we_300 big_spares red pt-4'>ЗАПЧАСТИ</h1>
-    <h2 class='pt-2 pb-4 we_300 '>Под заказ из любой точки мира</h2>
+    <h2 class='pt-2 pb-4 we_300'>В наличии и под заказ из любой точки планеты</h2>
 
     <div class='d-none d-lg-block d-xl-block d-xxl-block'>
       <img id='cone_18' class='' src='{% static "illustr/Cone_01_2(18).svg" %}'>  
@@ -81,12 +159,66 @@
       <img id='chrome8' class='' src='{% static "illustr/chrome8.svg" %}'>  
     </div>
 
-    <p class='pt-4'>Запчасти для иномарок в наличиии и под заказ.</p>
-    <p>У нас есть выходы на официальных производителей и каналы параллельного импорта. Найдем и доставим в Россию любую необходимую деталь.</p>
-    <div class='py-4'>
-      {% include 'cars/popups/popup_shesterenky_need.html' %}
+    <div class='row pt-4'>
+
+      <div class='col-md-6'>
+        <p>У нас есть выходы на официальных производителей, дилеров и разные каналы параллельного импорта. Найдем и доставим в Россию любую необходимую деталь!</p>
+      </div>
+      <div class='col-md-6'>
+      </div>
+    </div>
+
+    <div class='row pt-5 pb-3'>
+      <div class='col-md-6'>
+        <img id='jet' class='' src='{% static "illustr/jet.png" %}'>  
+      </div>
+      <div class='col-md-6'>
+        <h2 class='pt-5 pb-2 we_400 red'>ДЕТАЛЬ ТОЧНО ПОДОЙДЁТ?</h2>
+        <p>Чтобы быть уверенными в этом, мы осуществляем подбор по VIN-номеру. Автопроизводители в рамках конкретной модели машины никогда не ограничиваются одной комплектацией. На это разнообразие влияют: дополнительное оснащение, регион эксплуатации и другие факторы.
+        Поэтому укажите, пожалуйста, в заявке на подор VIN-номер.</p>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- PHONE -->
+<div class='d-block d-lg-none '>
+  <section class='desctop_84'>
+    <div class="row">
+      <div class='col-6 pt-3'>
+
+        <h1 class='very_big_sp'>ЗАП</h1>
+        <h1 class='very_big_sp'>ЧАС</h1>
+        <h1 class='very_big_sp'>ТИ</h1>
+
+      </div>
+      <div class='col-6'>
+          <img id='tools' class='spares_head_img' src="{% static 'illustr/chrome8.svg' %}" alt="" />
+      </div>
+    </div>
+      <h2 class='py-5 we_300'>В наличии и под заказ из любой точки планеты</h2>
+
+      <p>У нас есть выходы на официальных производителей, дилеров и разные каналы параллельного импорта. Найдем и доставим в Россию любую необходимую деталь!</p>
+
+      <img id='jet_mob' class='' src='{% static "illustr/jet.png" %}'>
+
+      <h2 class='py-5 mt-2 big_sp we_400 red'>А ДЕТАЛЬ ТОЧНО ПОДОЙДЁТ?</h2>
+      <p>Чтобы быть уверенными в этом, мы осуществляем подбор по VIN-номеру. </p> 
+      <p>Автопроизводители в рамках конкретной модели машины никогда не ограничиваются одной комплектацией.
+      На это разнообразие влияют: дополнительное оснащение, регион эксплуатации и другие факторы.</p> 
+      <p>Поэтому укажите, пожалуйста, в заявке на подор VIN-номер.</p>
+
+</div>
+
+
+  <div class='py-4'>
+    {% include 'cars/popups/popup_shesterenky_need.html' %}
+  </div>
+
+  <section class='desctop_84'>
+    <h2 class=' pt-5'>ПОПУЛЯРНЫЕ МОДЕЛИ</h2>
+    {% include 'cars/carousel_new.html' %}
+  </section>
 
   <section>
     {% include 'cars/banners/banner_guarantee_insurance.html' %}

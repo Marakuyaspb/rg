@@ -109,6 +109,7 @@ def service(request):
 
 def spares(request):
 	cars = Car.objects.all()
+	new_cars = Car.objects.filter(status=1)
 
 	callme_form = handle_callme_form(request)
 	shesterenky_need_form = handle_shesterenky_need_form(request)
@@ -120,6 +121,7 @@ def spares(request):
 		'shesterenky_need_form': shesterenky_need_form,
 		'need_diagnostic_form': need_diagnostic_form,
 		'need_service_form': need_service_form,
-		'cars' : cars,
+		'cars': cars,
+		'new_cars': new_cars,
 	}
 	return render(request, 'main/spares.html', context)

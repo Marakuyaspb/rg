@@ -15,13 +15,29 @@
 
           <div class='form_container we_300'>
 
-            {{ car_survey_full_form.as_p }}
+            <label class='' for="{{ shesterenky_need_form.year.id_for_label }}">Год выпуска авто</label>
+            {{ shesterenky_need_form.year }}
+
+            <label class='' for="{{ shesterenky_need_form.vin.id_for_label }}">VIN-номер</label>
+            {{ shesterenky_need_form.vin }}
+
+            <label class='' for="{{ shesterenky_need_form.its_name.id_for_label }}">Название детали</label>
+            {{ shesterenky_need_form.its_name }}
+
+            <label class='' for="{{ shesterenky_need_form.img.id_for_label }}">Фото детали</label>
+            {{ shesterenky_need_form.img }}
+                      
+            <label for="{{ shesterenky_need_form.first_name.id_for_label }}">{{ shesterenky_need_form.first_name.label }}</label>
+            {{ shesterenky_need_form.first_name }}
+
+            <label class='pt-2' for="{{ shesterenky_need_form.phone.id_for_label }}">{{ shesterenky_need_form.phone.label }}</label>
+            {{ shesterenky_need_form.phone }}
             
             {% csrf_token %}
           
-          <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+            <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
-          <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

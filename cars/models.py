@@ -261,8 +261,8 @@ class CascoCount(models.Model):
 
 class LegalHelp(models.Model):
 	id = models.AutoField(primary_key=True)
-	where_auto = models.CharField(max_length=300, verbose_name = '  Где сейчас находится авто? В РФ/в др.стране/на таможне?', null=True, blank=True)
-	documents = models.CharField(max_length=300, verbose_name = ' Какие документы у вас есть сейчас?', null=True, blank=True)
+	where_auto = models.CharField(max_length=300, verbose_name = 'Где сейчас находится авто? В РФ/в др.стране/на таможне?', null=True, blank=True)
+	documents = models.CharField(max_length=300, verbose_name = 'Какие документы у вас есть сейчас?', null=True, blank=True)
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
