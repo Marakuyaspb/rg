@@ -222,6 +222,10 @@ tr {
   margin-top: -4.5em;
 }
 
+.abstract{
+  position: relative;
+  z-index: -10;
+}
 
 .btn_text{
   font-size: 16px!important;
@@ -512,11 +516,17 @@ tr {
   width: 2em;
   height: 2em;
 }
+.icon_3{
+  width: 3em;
+  height: 3em;
+}
 .so_big{
   font-size: 8em;
   line-height: .5em;
 }
-
+.large_text{
+  font-size:1.2em;
+}
 
 .small{
   font-size: .8em;
@@ -583,7 +593,35 @@ tr {
   object-fit: cover;
 }
 
+#header_cat_img_left{
+  position: absolute;
+  left:6%;
+  transition: right 0.3s ease;
+}
+#header_cat_img_right{
+  position: absolute;
+  right:6%;
+  transition: right 0.3s ease;
+}
 
+.header_cat_img{
+  z-index: -111;
+  margin-top: 15em;
+  width: 30em;
+}
+
+
+#wrap_img_cat{
+  height: 70vh;
+}
+#filters{
+  position: relative;
+}
+
+.desctop_50{
+  width: 50%;
+  margin: 0 auto 0 auto;
+}
 
 /**//**//**//**//**//**/  
 
@@ -642,8 +680,7 @@ tr {
 
   .very_big_catalog{
     color: var(--red);
-    font-size: 13em;
-    font-weight: 200;
+    font-size: 15em;
   }
 
   .catalog_sub{
@@ -730,6 +767,7 @@ tr {
     margin-right: auto;
     width: 20em;
     border-radius: 8px;
+    overflow: hidden;
   }
   .close {
     color: #A3A2A2;
@@ -895,7 +933,6 @@ tr {
     position: relative;
   }
 
-
   .main_right_img{
     height: 35vh;
     position: relative;
@@ -922,7 +959,6 @@ tr {
   .footer_logo{
     height: 8em;
   }
-
 
   .cat_container_header{
     margin-top: -22em;
@@ -988,6 +1024,7 @@ tr {
   .callme_container{
     border-radius: 8px;
     width: 100vw;
+    overflow: hidden;
   }
   .close {
     color: #A3A2A2;
@@ -1087,7 +1124,7 @@ tr {
 .modal_full{
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 777;
   left: 0;
   top: 0;
   width: 100%;

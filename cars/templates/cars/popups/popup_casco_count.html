@@ -1,4 +1,19 @@
 {% load static %}
+<style type="text/css">
+  .ellipse_2_wh{
+    width: 32em;
+    position: relative;
+    z-index: 778;
+    top:-30%;
+    left: 0%;
+  }
+  .form_wrap{
+    position: relative;
+    top: -36%;
+    z-index: 779;
+  }
+
+</style>
 
 <div class='modal_container' onclick='showModal(this);'>
   <button class='thumb button_form_base center mt-3 mb-2 black'>Заполнить заявку на подбор</button>
@@ -6,33 +21,41 @@
     <div class='modal_full hide'>
       <div class=''>
         
-        <div class='d-flex flex-row-reverse pe-3'>
-          <span class="close" onclick="closeModal(this);">&times;</span>
-        </div>
-        
+
         <form method="post" class="callme_container white_bg">
-          <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
 
-          <div class='form_container we_300'>
- 
-            <label class='' for="{{ casco_count_form.budget.id_for_label }}">Какой бюджет?</label>
-            {{ casco_count_form.budget }}
-          
-            <label class='' for="{{ casco_count_form.type.id_for_label }}">Дизель / электрокар?</label>
-            {{ casco_count_form.type }}
+          <img class='ps-5 abstract ellipse_2_wh' src='{% static "abstract/ellipse_twice_white.svg" %}'> 
+
+          <div class='form_wrap'>
+            <div class='d-flex flex-row-reverse pe-3'>
+              <span class="close" onclick="closeModal(this);">&times;</span>
+            </div>
+
+            <div class='form_container we_300'>
+              <h2 class='pb-5 we_200'>ЗАЯВКА НА ОФОРМЛЕНИЕ КАСКО</h2>
+              
+              <label class='pb-1' for="{{ casco_count_form.budget.id_for_label }}">Какой бюджет?</label>
+              {{ casco_count_form.budget }}
+              
+              <label class='pt-3 pb-1' for="{{ casco_count_form.type.id_for_label }}">Дизель / электрокар?</label>
+              {{ casco_count_form.type }}
+
+              <br><br><br>
+
+              <label class='pb-1' for="{{ casco_count_form.first_name.id_for_label }}">{{ casco_count_form.first_name.label }}</label>
+              {{ casco_count_form.first_name }}
+              
+              <label class='pb-1 pt-3 ' for="{{ casco_count_form.phone.id_for_label }}">{{ casco_count_form.phone.label }}</label>
+              {{ casco_count_form.phone }}
+              
+              {% csrf_token %}
             
-            <label for="{{ casco_count_form.first_name.id_for_label }}">{{ casco_count_form.first_name.label }}</label>
-            {{ casco_count_form.first_name }}
+              <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
-            <label class='pt-2' for="{{ casco_count_form.phone.id_for_label }}">{{ casco_count_form.phone.label }}</label>
-            {{ casco_count_form.phone }}
-            
-            {% csrf_token %}
-          
-            <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
-
-            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+              <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            </div>
           </div>
+
         </form>
 
       </div>

@@ -242,7 +242,7 @@ class ShesterenkyNeed(models.Model):
 
 class CascoCount(models.Model):
 	id = models.AutoField(primary_key=True)
-	budget =  models.CharField(max_length=30, verbose_name = 'Какой бюджет?', default=True)
+	budget =  models.CharField(max_length=30, verbose_name = 'Какой бюджет?')
 	type = models.CharField(max_length=30, verbose_name = 'Дизель / электрокар?', null=True, blank=True)
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')

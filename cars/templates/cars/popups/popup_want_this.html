@@ -13,8 +13,12 @@
 
           <img class='w-100 p-5' src='{% static "brand/logo.svg" %}'>
           <div class='form_container we_300'>
+            
+            <label for="{{ want_this_car.first_name.id_for_label }}">{{ want_this_car.first_name.label }}</label>
+            {{ want_this_car.first_name }}
 
-            {{ want_this_car.as_p }}
+            <label class='pt-2' for="{{ want_this_car.phone.id_for_label }}">{{ want_this_car.phone.label }}</label>
+            {{ want_this_car.phone }}
             
             {% csrf_token %}
              <input type="hidden" name="car_name" value="{{ the_car.name }}, {{ the_car.year }}, {{ the_car.engine }}, {{ the_car.transmission }}, {{ the_car.drive }}">

@@ -7,6 +7,9 @@
   .big_guar{
     font-size: 6em;
   }
+  .big_h2_guar{ 
+    font-size: 4em;
+  }
 
   /* mobile */
   @media (max-width: 810px) {
@@ -47,32 +50,210 @@
     margin: .5em;
     padding: .3em 0 0 0;
   }
+
+  .ellipse_twice_white{
+    position: absolute;
+    width: 60em;
+    top: -30%;
+    left: 44%;
+  }
+  #elem_4{
+    height: 9em;
+    position: absolute;
+    animation: levitation_elem_4 5s infinite;
+  }
+  @keyframes levitation_elem_4 {
+    0% {
+      top: 15%;
+      left:75%;
+    }
+    50% {
+      top: 16%;
+      left:75%;
+
+    }
+    100% {
+      top: 15%;
+      left:75%;
+    }
+  }
+
+  #clay{
+    height: 9em;
+    position: absolute;
+    animation: levitation_clay 7s infinite;
+  }
+  @keyframes levitation_clay {
+    0% {
+      top: 45%;
+      left: 38%;
+    }
+    50% {
+      top: 43%;
+      left: 38%;
+
+    }
+    100% {
+      top: 45%;
+      left: 38%;
+    }
+  }
+  #car_d{
+    position: absolute;
+    top: 68%;
+    left: 36%;
+    height: 25em;
+  }
+  .rectangle{
+    height: 30em;
+    position: absolute;
+    z-index: -5;
+    top: 60%;
+    left: 52%;
+  }
+  .rectangle_long{
+    height: 10em;
+    position: absolute;
+    z-index: -6;
+    top: 57%;
+    left: 42%;
+  }
+  .ellipse_2{
+    height: 26em;
+    position: absolute;
+    z-index: -4;
+    top: 76%;
+    left: 82%;
+  }
 </style>
 
 
 <!-- DESCTOP -->
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <img id='elem_4' class='elem rellax' data-rellax-speed="-7" data-rellax-zindex="5"src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
+  <img class='ps-5 abstract ellipse_twice_white' src='{% static "abstract/ellipse_2_white.svg" %}'>
+  
+  <img id='clay' class='elem rellax' data-rellax-speed="-7" data-rellax-zindex="5"src="{% static 'illustr/clay.svg' %}" alt="" />
+
+
   <div class="desctop_84">
     <div class="row">
       <div class='col-6'>
         <h1 class='we_300 pt-4 big_guar red pb-3'>ОФОРМИМ ГАРАНТИЮ</h1>
         <h2 class='pt-2 we_300'>Даже если вы приобрели машину</h2>
         <h2 class='pb-4 we_300'>не через RG Auto!</h2>
+
       </div>
 
-      <div class='col-6'>
+      <div class='col-6'>    
         <img class='w-100' src='{% static "illustr/big_key.png" %}'>  
       </div>
     </div>
+  </div>
 
-    <div class="my-4">
-      {% include 'cars/popups/popup_guarantee.html' %}  
+  <section class='py-5 mt-5'>
+
+    <img id='car_d' class='' src="{% static 'transperent/cute_car.png' %}" alt="" /> 
+    
+    <img class='ps-5 abstract rectangle' src='{% static "abstract/rectangle_white_twice.svg" %}'>
+    <img class='ps-5 abstract rect_white' src='{% static "abstract/rectangle_long_white.svg" %}'>
+    <img class='ps-5 abstract ellipse_2' src='{% static "abstract/ellipse_3_white.svg" %}'>
+
+
+    <div class='row'>
+      <div class='col-6'>
+        <center>
+          <h2 class='big_h2_guar we_200'>КАК ЭТО РАБОТАЕТ?</h2>
+        </center>
+
+        <section class="desctop_50  mt-5">
+          <div class="d-flex align-items-start">
+
+            <div>
+              <img class='icon_3' src='{% static "icons/service.png" %}'>
+            </div>
+            <div class='ms-3'>
+              <h2 class='we_200'>ШАГ 1</h2>
+              <p class="large_text">Диагностика автомобиля
+            </div>
+            
+          </div>
+
+          <div class="d-flex align-items-start mt-3">
+            <div>
+              <img class='icon_3' src='{% static "icons/document.png" %}'>
+            </div>
+            <div class='ms-3'>
+              <h2 class='we_200'>ШАГ 2</h2>
+              <p class="large_text">Заключение договора гарантийного обслуживания
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start mt-3">
+            <div>
+              <img class='icon_3' src='{% static "icons/gradation.png" %}'>
+            </div>
+            <div class='ms-3'>
+              <p class="large_text">В договоре указывается гарантия на определённую сумму согласно <i>принятой градации</i></p>
+            </div>
+          </div>
+        </section>
+
+        <div class="my-4">
+          {% include 'cars/popups/popup_guarantee.html' %}  
+        </div>
+      </div>
+
+      <div class='col-6'>
+        <section class='py-5'>
+          <center>
+            <h2 class=' big_h2_guar we_200'>ПОЧЕМУ МЫ?</h2>
+          </center>
+
+          <section class="desctop_50 mt-5">
+            <div class="d-flex align-items-start">
+
+              <div>
+                <img class='icon_3' src='{% static "icons/professionals.png" %}'>
+              </div>
+              <div class='ms-3'>
+                <p class="large_text">Высококвалифицированные специалисты
+              </div>
+              
+            </div>
+
+            <div class="d-flex align-items-start mt-3">
+              <div>
+                <img class='icon_3' src='{% static "icons/calc.png" %}'>
+              </div>
+              <div class='ms-3'>
+                <p class="large_text">Честные цены
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mt-3">
+              <div>
+                <img class='icon_3' src='{% static "icons/map.png" %}'>
+              </div>
+              <div class='ms-3'>
+                <p class="large_text">Удобное местоположение мастерской
+              </div>
+            </div>
+          </section>
+
+        </section>
+
+        <div class="pt-4 my-5">
+          {% include 'cars/popups/popup_need_diagnostic.html' %}  
+        </div>
+      </div>
     </div>
 
+  </section>
 
-    <h2 class='we_400'>ЖДЁМ ВАС В АВТОСЕРВИСЕ</h2>
 
-  </div>
+
+
 </div>
 
 <!-- PHONE -->

@@ -4,34 +4,33 @@
 
 {% block content %}
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>
-  <section class='pb-2'>
+  <section id='' class='pb-2'>
+    
+    <img id='header_cat_img_left' class='header_cat_img' src='{% static "transperent/Toyota_Corolla_silver.png" %}'> 
+    <img id='header_cat_img_right' class='header_cat_img' src='{% static "transperent/Mitsubishi_Outlander.png" %}'>
+
     <div class='desctop_84'>
-      <div class="row">
-        <div class='col-6'>
+      <center>
 
-          <h1 class='we_200 pt-4 very_big_catalog pb-3'>АВТО</h1>
-          <h3 class='pt-2 pb-4 catalog_sub we_300'>В наличии и на заказ</h3>
+        <h1 class='we_400 pt-4 very_big_catalog pb-3'>МАШИНЫ</h1>
+        <h3 class='pb-4 catalog_sub we_200'>В НАЛИЧИИ И НА ЗАКАЗ</h3>
 
-          <div class="d-flex justify-content-start mt-4">
+        <div class="d-flex justify-content-center mt-4">
 
-            <div>{% include 'cars/popups/popup_call_me.html' %}
-            </div>
+          <div>{% include 'cars/popups/popup_call_me.html' %}
+          </div>
 
-            <div>
-              <div class='button_form_base center mt-3 mb-2 ms-3 white'>
-                <div class="d-flex justify-content-start">
-                  <img class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class=''>В наличии</span>
-                </div>
+          <div>
+            <div class='button_form_base center mt-3 mb-2 ms-3 white'>
+              <div class="d-flex justify-content-start">
+                <img class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class=''>В наличии</span>
               </div>
             </div>
           </div>
-
         </div>
-        <div class='col-6'>
-          <img class='' src='{% static "transperent/KIA_K5_red_2.png" %}'>  
-        </div>
-      </div>
+      </center>    
     </div>
+
 
   </section>
 </div>
@@ -44,8 +43,8 @@
         <div class='col-7'>
 
           <h1 class='we_300 very_big_catalog pt-4'>АВТО</h1>
-          <span class='catalog_sub pt-5 red we_300'>В наличии</span> 
-          <span class='catalog_sub pb-4 red we_300'>и на заказ</span>
+          <span class='catalog_sub pt-5 red we_300'>В НАЛИЧИИ</span> 
+          <span class='catalog_sub pb-4 red we_300'>И НА ЗАКАЗ</span>
 
         </div>
         <div class='col-5'>
@@ -71,7 +70,7 @@
   </section>
 </div>
 
-<section class="black_hot_bg">
+<section id='filters' class="black_hot_bg">
   {% include 'cars/filters/filters.html' %}
 </section>
 

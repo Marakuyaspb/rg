@@ -1,0 +1,64 @@
+{% load static %}
+
+
+<style type="text/css">
+	
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  clip-path: circle(0% at 50% 50%);
+}
+
+.logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+
+</style>
+
+
+<div class="wrapper">
+  <div class="layer gradient-green"></div>
+  <div class="layer gradient-blue">
+    <img src=''>
+  </div>
+  <div class="layer gradient-orange"></div>
+  <div class="layer gradient-purple"></div>
+</div>
+
+
+
+<script type="text/javascript" src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script>
+<script type="text/javascript">
+	console.clear();
+
+const layers = gsap.utils.toArray(".layer");
+const amount = layers.length;
+
+gsap.set(layers, { zIndex: (i) => amount - i });
+
+gsap.to(layers.reverse(), {
+  clipPath: "circle(71% at 50% 50%)",
+  duration: 1,
+  ease: "power1.inOut",
+  stagger: 0.25,
+  repeat: -1,
+  repeatDelay: 1,
+  yoyo: true
+});
+
+</script>
