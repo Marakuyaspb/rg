@@ -20,9 +20,15 @@
       position: absolute;
       transition: transform 0.5s ease;
   }
-  .big_insh{
-    font-size: 6em;
+  /* desctop */
+  @media (min-width: 811px){
+  
+ }
+   /* mobile */
+  @media (max-width: 810px) {
+
   }
+
   #help{
     height: 8em;
     position: absolute;
@@ -65,46 +71,36 @@
       left:46%;
     }
   }
+
+
   /* mobile */
   @media (max-width: 810px) {
+
+    .big_insh{
+      font-size: 4em;
+      line-height: .9em;
+    }
     .the_car_img {
-      max-width: 20em;
+      max-width: 16em;
       position: absolute;
       z-index: 1;
-      top: 16%;
-      left: 10%;
+      top: 25%;
+      left: 46%;
     }
 
-    #elem_1{
-      max-width: 5em;
-      top: 20%;
-      left: 55%;
-    }
-    #elem_2{
-      max-width: 3em;
-      top: 0%;
-        left: 80%;
-    }
-    #elem_3{
-      max-width: 9em;
-      top: 32%;
-      left: 70%;
-    }
-
-    #h1_1{
-      top: 8%;
-      left: 40%;
-      z-index: 555;
-    }
-      #h1_2{
-      top: 40%;
-      left: 5%;
-      z-index: 555;
+    .ellipse_twice{
+      position: absolute;
+      width: 26em;
+      top: 10%;
+      left: 54%;
     }
   }
 
   /* desctop */
   @media (min-width: 811px){
+    .big_insh{
+      font-size: 6em;
+    }
     .the_car_img {
       max-width: 30em;
       position: absolute;
@@ -144,29 +140,25 @@
         <img id='cone' class='' src='{% static "illustr/Cone_black.svg" %}'>  
       </div>
     </div>
-
-
   </div>
-
 </div>
 
 <!-- PHONE -->
 <div class='d-block d-lg-none '>
-  <section id='bubbles_wrap' class='py-2'>
+  <section id='' class='py-2'>
 
 
+    <div class='desctop_84'>
 
-    <div id='bubbles'>
-
-      <span  id='h1_1' class='elem rellax' data-rellax-speed="-6" data-rellax-zindex="555"><h1 class='we_400 h1_24-5' >ОФОРМИМ </h1></span>
-      <span  id='h1_2' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="555"><h1 class='we_400 h1_24-5 red' >СТРАХОВКУ </h1></span>
+    <h1 class='we_400 big_insh'>ОФОР</h1>
+    <h1 class='we_400 big_insh'>МИМ</h1>
+    <h1 class='we_400 big_insh red'>СТРА
+    <h1 class='we_400 big_insh red'>ХОВКУ</h1>
+    <h2 class='pt-3 we_300'>С нами надёжно.</h2>
 
       <img id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" /> 
 
-     
-      <img id='elem_2' class='elem rellax' data-rellax-speed="-1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_3.svg' %}" alt="" />
-      <img id='elem_3' class='elem rellax' data-rellax-speed="2" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_15.svg' %}"  alt="" />
-      <img id='elem_5' class='elem rellax' data-rellax-speed="1" data-rellax-zindex="5" src="{% static 'illustr/Cone_01_2_10.svg' %}" alt="" />
+      <img class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'>
 
     </div>
   </section>

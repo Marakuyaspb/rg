@@ -3,6 +3,39 @@
 
 {% block content %}
 
+<style type="text/css">
+  .wrapper {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide_scroll {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+
+  .slide_scroll:first-child {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .slide_content{
+    padding: 6em 1em;
+    height: 60vh;
+    width: 100%;
+    overflow-x: clip!important;
+    position: relative;
+  }
+</style>
 
 
 <div class='desctop_84'>
@@ -54,5 +87,52 @@
   {% include 'main/parts/directions_mob.html' %}
 </div>
 
+
+  <div class="wrapper">
+    <div class="slide_scroll">
+    </div>
+        <div class="slide_scroll">
+      <div class='slide_content black_bg'>
+      </div>
+    </div>
+    <div class="slide_scroll">
+      <div class='slide_content white_bg'>
+      </div>
+    </div>
+    <div class="slide_scroll">
+      <div class='slide_content red_bg'>
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script type="text/javascript">
+  console.clear();
+  gsap.registerPlugin(ScrollTrigger);
+
+  const slides = gsap.utils.toArray(".slide_scroll");
+  slides.shift();
+
+  gsap.to(slides, {
+    duration: 1,
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    stagger: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".wrapper",
+      start: "top top",
+      end: "+=" + 60 * slides.length + "%",
+      scrub: true,
+      snap: 1 / slides.length,
+      pin: true,
+      markers: true
+    }
+  });
+
+</script>
 
 {% endblock %}

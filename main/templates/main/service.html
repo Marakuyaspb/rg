@@ -3,264 +3,164 @@
 
 {% block content %}
 <style type="text/css">
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  .big_serv{
+    font-size: 6em;
   }
 
-  .wrapper {
-    width: 100%;
-    height: 60vh;
-    position: relative;
-    overflow: hidden;
-  }
-  .illustr_sm{
-    width: 3em;
-  }
-  .illustr{
-    width: 6em;
-  }
-  .illustr_big{
-    width: 9em;
-  }
-  .slide_scroll {
-    width: 100%;
-    height: 60vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--dark);
-    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-  }
-
-  .slide_scroll:first-child {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-
-  .slide_content{
-    padding: 6em 1em;
-    height: 60vh;
-    width: 100%;
-    overflow-x: clip!important;
-    position: relative;
-  }
-  .illustr, .illustr_sm, .illustr_big{
-    position: absolute;
-  }
-
-
-  #key{
-    animation: levitation_up_10_10 4s infinite;
-  }
-  #chrome8{
-    animation: levitation_up_70 4s infinite;
-  }
-  #cone_black{
-    animation: levitation_up_10_50 4.3s infinite;
-  }
   #chrome51{
-    animation: levitation_up_70 4s infinite;
-  }
-  #cone_16{
-    animation: levitation_up_10_10 4s infinite;
-  }
-  #cone_4{
-    animation: levitation_up_60_50 4s infinite;
+    animation: levitation_chrome 5s infinite;
+    position: absolute;
+    width: 14em;
   }
 
-  @keyframes levitation_up_10_10 {
+  @keyframes levitation_chrome {
     0% {
-      top: 10%;
-      left:10%;
+      top: 5%;
+      left:68%;
     }
     50% {
-      top: 9%;
-      left:10%;
+      top: 4%;
+      left:68%;
 
     }
     100% {
-      top: 10%;
-      left:10%;
+      top: 5%;
+      left:68%;
     }
   }
-  @keyframes levitation_up_10_50 {
+.ellipse_3{
+    height: 66em;
+    position: absolute;
+    z-index: -4;
+    top: -20%;
+    left: 54%;
+}
+
+  .ellipse_twice_white{
+    position: absolute;
+    width: 60em;
+    top: -30%;
+    left: 44%;
+  }
+  #elem_4{
+    height: 7em;
+    position: absolute;
+    animation: levitation_elem_4 6s infinite;
+  }
+  @keyframes levitation_elem_4 {
     0% {
-      top: 10%;
-      left:40%;
+      top: 25%;
+      left:92%;
     }
     50% {
-      top: 9%;
-      left:43%;
+      top: 27%;
+      left:92%;
 
     }
     100% {
-      top: 10%;
-      left:40%;
+      top: 25%;
+      left:92%;
     }
   }
-  @keyframes levitation_up_60_50 {
+
+  #clay{
+    height: 9em;
+    position: absolute;
+    animation: levitation_clay 7s infinite;
+  }
+  @keyframes levitation_clay {
     0% {
-      top: 60%;
-      left:50%;
+      top: 35%;
+      left: 48%;
     }
     50% {
-      top: 57%;
-      left:51%;
+      top: 33%;
+      left: 48%;
+
     }
     100% {
-      top: 60%;
-      left:50%;
+      top: 35%;
+      left: 48%;
     }
   }
-  @keyframes levitation_up_70 {
-    0% {
-      top: 60%;
-      left:60%;
-    }
-    50% {
-      top: 57%;
-      left:61%;
-    }
-    100% {
-      top: 60%;
-      left:60%;
-    }
-  }
-  
 </style>
 
 
 <!-- DESCTOP -->
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>
   <div class="desctop_84">
+    <div class='pt-3'>
+      <div class="row">
+        <div class='col-6'>
+        <h1 class='big_serv red pt-2'>ДИАГНОСТИКА</h1>
+        <h1 class='we_300 big_serv black'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
+        <section class='py-5'>
+        {% include 'cars/popups/popup_need_diagnostic.html' %}
+      </section>
+      </div>
 
+      <div class='col-6'>    
+        <img class='w-100' src='{% static "illustr/big_key.png" %}'>  
+      </div>
+    </div>
+
+
+      <img id='elem_4' class='elem rellax' src="{% static 'illustr/gear_top.svg' %}" alt="" />
+      <img id='clay' class='elem rellax' src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
+      <img id='chrome51' class=' pb-3' src="{% static 'illustr/chrome51.svg' %}">
+
+      <img class='ps-5 abstract ellipse_twice_white' src='{% static "abstract/ellipse_2_white.svg" %}'>
+
+      
+
+    </div>
   </div>
 </div>
 
 
 <!-- PHONE -->
 <div class='d-block d-lg-none '>
-
   <div class='px-4 pt-3'>
     <p class='very_big'>ДИАГ</p>
     <p class='very_big'>НОСТ</p>
     <p class='very_big'>ИКА</p>
     <p class='we_300 h1_24-5 red'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</p>
-  </div>
 
-  <section class='py-5'>
+      <section class='py-5'>
   {% include 'cars/popups/popup_need_diagnostic.html' %}
   </section>
-
-  <div class="wrapper">
-    <div class="slide_scroll">
-      
-      <div class='slide_content white_bg'>
-        <img id='key' class='illustr_big pb-3' src="{% static 'illustr/key.png' %}" alt="" />
-        <h2 class='very_big'>ОПЫТ</h2>
-        <div class="d-flex">
-          <h2 class='very_big'>НЫЕ</h2>
-          <img id='chrome8' class='illustr pb-3' src="{% static 'illustr/chrome8.svg' %}" alt="" />
-        </div>
-        <h2 class='we_300 h1_24-5'>МАСТЕРА</h2>     
-      </div>
-    </div>
-
-    <div class="slide_scroll">
-      <div class='slide_content red_bg'>
-      </div>
-    </div>
-    <div class="slide_scroll">
-      <div class='slide_content black_bg'>
-      </div>
-    </div>
-    <div class="slide_scroll">
-      <div class='slide_content white_bg'>
-      </div>
-    </div>
-
-    <div class="slide_scroll">
-       <div class='slide_content gray_light_bg'>
-          
-          <h2 class='we_300 h1_24-5 black'>ПОДБОР</h2>
-          <p class='very_big'>КОМПЛ</p>
-          <p class='very_big'>ЕКТУЮ</p>
-          <div class="d-flex ">
-            <p class='very_big'>ЩИХ</p>
-            <img id='chrome51' class='illustr pb-3' src="{% static 'illustr/chrome51.svg' %}">
-          </div>
-
-          <img id='cone_black' class='illustr_sm' src="{% static 'illustr/Cone_black.svg' %}" alt="" />
-      </div>
-    </div>
-
-    <div class="slide_scroll">
-      <div class='slide_content black_bg'>
-      </div>
-    </div>
-    <div class="slide_scroll">
-      <div class='slide_content white_bg'>
-      </div>
-    </div>
-    <div class="slide_scroll">
-      <div class='slide_content red_bg'>
-      </div>
-    </div>
-
-    <div class="slide_scroll">
-      <div class='slide_content white_bg'>
-        <img class='illustr' id='cone_16' src="{% static 'illustr/Cone_01_2(16).svg' %}">
-        <h2 class='we_300 h1_24-5 pt-4'>КАЧЕСТВЕННОЕ</h2>
-        <h2 class='we_300 h1_24-5'>ОБОРУДОВАНИЕ</h2>
-        <img class='illustr_big' id='cone_4' src="{% static 'illustr/Cone_01_2_10.svg' %}">
-      </div>
-    </div>
-
   </div>
-
-
-  <section class='py-5'>
-  {% include 'cars/popups/popup_need_diagnostic.html' %}
-  </section>
-
 </div>
+
+
+
+<div class="desctop_84">
+  <div class="row">
+    <div class="col-md-4 py-3">
+      <h2 class='we_300'>ОПЫТНЫЕ МАСТЕРА</h2>     
+    </div>
+
+    <div class="col-md-4 py-3">          
+      <h2 class='we_300 '>ПОДБОР КОМПЛЕКТУЮЩИХ</h2>
+    </div>
+
+    <div class="col-md-4 py-3">       
+      <h2 class='we_300'>КАЧЕСТВЕННОЕ ОБОРУДОВАНИЕ</h2>
+    </div>
+
+  </div>
+</div>
+
+  <section class='py-5'>
+  {% include 'cars/popups/popup_need_diagnostic.html' %}
+  </section>
+
 
 
 <section>
     {% include 'cars/banners/banner_catalog_feedback.html' %}
 </section>
 
-
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-<script type="text/javascript">
-  console.clear();
-  gsap.registerPlugin(ScrollTrigger);
-
-  const slides = gsap.utils.toArray(".slide_scroll");
-  slides.shift();
-
-  gsap.to(slides, {
-    duration: 1,
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    stagger: 1,
-    ease: "power2.inOut",
-    scrollTrigger: {
-      trigger: ".wrapper",
-      start: "top top",
-      end: "+=" + 60 * slides.length + "%",
-      scrub: true,
-      snap: 1 / slides.length,
-      pin: true,
-      markers: true
-    }
-  });
 
 </script>
 

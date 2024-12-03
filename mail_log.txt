@@ -5339,3 +5339,4 @@ Traceback (most recent call last):
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '"abstract/ellipse_twice_white.svg' from '"abstract/ellipse_twice_white.svg'
 2024-12-02 23:33:14,529 - Not Found: /favicon.ico
+2024-12-03 14:38:07,642 - Not Found: /favicon.ico
