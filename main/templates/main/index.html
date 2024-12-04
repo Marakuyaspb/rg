@@ -74,8 +74,9 @@
 
 </div>
 
+{% include 'main/parts/index_parallax.html' %}
 
-<img class='w-100' src="{% static 'transperent/founders.png' %}" />
+
 
 <!-- DESCTOP -->
 <div class='d-none d-lg-block d-xl-block d-xxl-block pb-5'>
@@ -88,51 +89,5 @@
 </div>
 
 
-  <div class="wrapper">
-    <div class="slide_scroll">
-    </div>
-        <div class="slide_scroll">
-      <div class='slide_content black_bg'>
-      </div>
-    </div>
-    <div class="slide_scroll">
-      <div class='slide_content white_bg'>
-      </div>
-    </div>
-    <div class="slide_scroll">
-      <div class='slide_content red_bg'>
-      </div>
-    </div>
-  </div>
-
-
-
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-<script type="text/javascript">
-  console.clear();
-  gsap.registerPlugin(ScrollTrigger);
-
-  const slides = gsap.utils.toArray(".slide_scroll");
-  slides.shift();
-
-  gsap.to(slides, {
-    duration: 1,
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    stagger: 1,
-    ease: "power2.inOut",
-    scrollTrigger: {
-      trigger: ".wrapper",
-      start: "top top",
-      end: "+=" + 60 * slides.length + "%",
-      scrub: true,
-      snap: 1 / slides.length,
-      pin: true,
-      markers: true
-    }
-  });
-
-</script>
-
+ 
 {% endblock %}
