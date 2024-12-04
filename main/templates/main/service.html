@@ -6,35 +6,62 @@
   .big_serv{
     font-size: 6em;
   }
+  /*  DESCTOP  */
+  @media (min-width: 811px){
+    #chrome51{
+      animation: levitation_chrome 5s infinite;
+      position: absolute;
+      width: 14em;
+    }
 
-  #chrome51{
-    animation: levitation_chrome 5s infinite;
-    position: absolute;
-    width: 14em;
+    @keyframes levitation_chrome {
+      0% {
+        top: 5%;
+        left:68%;
+      }
+      50% {
+        top: 4%;
+        left:68%;
+
+      }
+      100% {
+        top: 5%;
+        left:68%;
+      }
+    }
+  }
+    /*  PHONE  */
+  @media (max-width: 810px){
+    #chrome51{
+      animation: levitation_chrome 5s infinite;
+      position: absolute;
+      width: 12em;
+    }
+
+    @keyframes levitation_chrome {
+      0% {
+        top: 25%;
+        left:55%;
+      }
+      50% {
+        top: 26%;
+        left:55%;
+
+      }
+      100% {
+        top: 25%;
+        left:55%;
+      }
+    }
   }
 
-  @keyframes levitation_chrome {
-    0% {
-      top: 5%;
-      left:68%;
-    }
-    50% {
-      top: 4%;
-      left:68%;
-
-    }
-    100% {
-      top: 5%;
-      left:68%;
-    }
+  .ellipse_3{
+      height: 66em;
+      position: absolute;
+      z-index: -4;
+      top: -20%;
+      left: 54%;
   }
-.ellipse_3{
-    height: 66em;
-    position: absolute;
-    z-index: -4;
-    top: -20%;
-    left: 54%;
-}
 
   .ellipse_twice_white{
     position: absolute;
@@ -90,28 +117,26 @@
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>
   <div class="desctop_84">
     <div class='pt-3'>
+      
       <div class="row">
         <div class='col-6'>
-        <h1 class='big_serv red pt-2'>ДИАГНОСТИКА</h1>
-        <h1 class='we_300 big_serv black'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
-        <section class='py-5'>
-        {% include 'cars/popups/popup_need_diagnostic.html' %}
-      </section>
-      </div>
+          <h1 class='big_serv red pt-2'>ДИАГНОСТИКА</h1>
+          <h1 class='we_300 big_serv black'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
+          <section class='py-5'>
+            {% include 'cars/popups/popup_need_diagnostic.html' %}
+          </section>
+        </div>
 
-      <div class='col-6'>    
-        <img class='w-100' src='{% static "illustr/big_key.png" %}'>  
+        <div class='col-6'>    
+          <img class='w-100' src='{% static "illustr/big_key.png" %}'>  
+        </div>
       </div>
-    </div>
-
 
       <img id='elem_4' class='elem rellax' src="{% static 'illustr/gear_top.svg' %}" alt="" />
       <img id='clay' class='elem rellax' src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
       <img id='chrome51' class=' pb-3' src="{% static 'illustr/chrome51.svg' %}">
 
       <img class='ps-5 abstract ellipse_twice_white' src='{% static "abstract/ellipse_2_white.svg" %}'>
-
-      
 
     </div>
   </div>
@@ -126,9 +151,13 @@
     <p class='very_big'>ИКА</p>
     <p class='we_300 h1_24-5 red'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</p>
 
-      <section class='py-5'>
-  {% include 'cars/popups/popup_need_diagnostic.html' %}
-  </section>
+
+    <section class='py-2'>
+    {% include 'cars/popups/popup_need_diagnostic.html' %}
+    </section>
+    <img class='w-100' src='{% static "illustr/big_key.png" %}'>
+
+    <img id='chrome51' class=' pb-3' src="{% static 'illustr/chrome51.svg' %}">
   </div>
 </div>
 
@@ -137,25 +166,44 @@
 <div class="desctop_84">
   <div class="row">
     <div class="col-md-4 py-3">
-      <h2 class='we_300'>ОПЫТНЫЕ МАСТЕРА</h2>     
+      <img id='' class='w-100' src="{% static 'office/man.jpeg' %}"> 
+      <h2 class='we_300 py-4'>ОПЫТНЫЕ МАСТЕРА</h2> 
+      <img id='' class='w-100' src="{% static 'office/dreaming.png' %}">   
     </div>
 
-    <div class="col-md-4 py-3">          
-      <h2 class='we_300 '>ПОДБОР КОМПЛЕКТУЮЩИХ</h2>
+    <div class="col-md-4 py-3">
+      <img id='' class='w-100' src="{% static 'office/come.png' %}">         
+      <h2 class='we_300 py-4'>ПОДБОР КОМПЛЕКТУЮЩИХ</h2>
+      <img id='' class='w-100' src="{% static 'office/ironman.jpeg' %}">   
+
     </div>
 
-    <div class="col-md-4 py-3">       
-      <h2 class='we_300'>КАЧЕСТВЕННОЕ ОБОРУДОВАНИЕ</h2>
+    <div class="col-md-4 py-3">
+      <img id='' class='w-100' src="{% static 'office/up.png' %}">     
+      <h2 class='we_300 py-4'>КАЧЕСТВЕННОЕ ОБОРУДОВАНИЕ</h2>
+      <img id='' class='w-100' src="{% static 'office/two_cars.png' %}">   
     </div>
 
   </div>
+
+    <h2 class='we_300 center'>Ждём вас в сервисном центре!</h2>
+
 </div>
+  
 
-  <section class='py-5'>
-  {% include 'cars/popups/popup_need_diagnostic.html' %}
-  </section>
+<section class='py-4'>
+  <center>
+    {% include 'cars/popups/popup_need_diagnostic.html' %}
+  </center>
+</section>
 
-
+<section class="white_dirty_bg">
+  <div class="desctop_84 py-3">
+    <h2 class='big_h2_guar we_200 pt-5'>НОВЫЕ ИНОМАРКИ</h2>
+    <h3 class="we_300 banner_middle red">Из разных точек мира</h3>
+  </div>
+{% include 'cars/carousel_new.html' %}
+</section>
 
 <section>
     {% include 'cars/banners/banner_catalog_feedback.html' %}

@@ -688,7 +688,12 @@ tr {
     font-size: 3.3em;
     position: relative;
   }
-
+  .big_guar{
+    font-size: 6em;
+  }
+  .big_h2_guar{ 
+    font-size: 3.5em;
+  }
   .main_right_img{ 
     position: relative;
     right: -3em;

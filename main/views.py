@@ -14,65 +14,91 @@ from cars.forms_generator import *
 
 def index(request):
 	cars = Car.objects.all()
+	new_cars = Car.objects.filter(status=1)
+	used_cars = Car.objects.filter(status=2)
+
 	callme_form = handle_callme_form(request)
 
 	context = {
 		'callme_form': callme_form,
 		'cars' : cars,
+		'new_cars': new_cars,
+		'used_cars': used_cars,
 	}
 	return render(request, 'main/index.html', context)
 
 
 def feedback(request):
 	cars = Car.objects.all()
+	new_cars = Car.objects.filter(status=1)
+	used_cars = Car.objects.filter(status=2)
+
 	callme_form = handle_callme_form(request)
 
 	context = {
 		'callme_form': callme_form,
 		'cars' : cars,
+		'new_cars': new_cars,
+		'used_cars': used_cars,
+
 	}
 	return render(request, 'main/feedback.html', context)
 
 
 def guarantee(request):
 	cars = Car.objects.all()
-
+	new_cars = Car.objects.filter(status=1)
 	used_cars = Car.objects.filter(status=2)
 
 	callme_form = handle_callme_form(request)
 	guarantee_count_form = handle_guarantee_count_form(request)
-
+	need_service_form = handle_need_service_form(request)
 	context = {
 		'callme_form': callme_form,
 		'guarantee_count_form': guarantee_count_form,
+		'need_service_form': need_service_form,
 		'cars' : cars,
-		'used_cars': used_cars
+		'new_cars': new_cars,
+		'used_cars': used_cars,
 	}
 	return render(request, 'main/guarantee.html', context)
 
 
 def insurance(request):
 	cars = Car.objects.all()
+	new_cars = Car.objects.filter(status=1)
+	used_cars = Car.objects.filter(status=2)
+
 	callme_form = handle_callme_form(request)
 	casco_count_form = handle_casco_count_form(request)
+
 
 	context = {
 		'callme_form': callme_form,
 		'casco_count_form': casco_count_form,
+
 		'cars' : cars,
+		'new_cars': new_cars,
+		'used_cars': used_cars,
 	}
 	return render(request, 'main/insurance.html', context)
 
 
 def jurists(request):
 	cars = Car.objects.all()
+	new_cars = Car.objects.filter(status=1)
+	used_cars = Car.objects.filter(status=2)
+
 	callme_form = handle_callme_form(request)
 	legal_help_form = handle_legal_help_form(request)
 
 	context = {
 		'callme_form': callme_form,
 		'legal_help_form': legal_help_form,
+
 		'cars' : cars,
+		'new_cars': new_cars,
+		'used_cars': used_cars,
 	}
 	return render(request, 'main/jurists.html', context)
 
@@ -90,6 +116,8 @@ def privacy(request):
 
 def service(request):
 	cars = Car.objects.all()
+	new_cars = Car.objects.filter(status=1)
+	used_cars = Car.objects.filter(status=2)
 
 	callme_form = handle_callme_form(request)
 	need_diagnostic_form = handle_need_diagnostic_form(request)
@@ -103,6 +131,8 @@ def service(request):
 		'guarantee_count_form': guarantee_count_form,
 		
 		'cars' : cars,
+		'new_cars': new_cars,
+		'used_cars': used_cars,
 	}
 	return render(request, 'main/service.html', context)
 
@@ -110,6 +140,7 @@ def service(request):
 def spares(request):
 	cars = Car.objects.all()
 	new_cars = Car.objects.filter(status=1)
+	used_cars = Car.objects.filter(status=2)
 
 	callme_form = handle_callme_form(request)
 	shesterenky_need_form = handle_shesterenky_need_form(request)
@@ -121,7 +152,9 @@ def spares(request):
 		'shesterenky_need_form': shesterenky_need_form,
 		'need_diagnostic_form': need_diagnostic_form,
 		'need_service_form': need_service_form,
+
 		'cars': cars,
 		'new_cars': new_cars,
+		'used_cars': used_cars,
 	}
 	return render(request, 'main/spares.html', context)
