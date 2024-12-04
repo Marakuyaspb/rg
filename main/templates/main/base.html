@@ -45,9 +45,11 @@
           <span class='pt-2 bordo'>|</span>      
           <a class="nav-link" href='{% url "main:jurists" %}'>Юридическая поддержка</a>
           <span class='pt-2 bordo'>|</span>
-          <a class="nav-link" href='{% url "main:service" %}'>Сервис и диагностика</a>
+          <a class="nav-link" href='{% url "main:service" %}'>Сервис</a>
           <span class='pt-2 bordo'>|</span>      
           <a class="nav-link" href='{% url "main:spares" %}'>Запчасти</a>
+          <span class='pt-2 bordo'>|</span>      
+          <a class="nav-link" href='{% url "main:contact" %}'>О нас</a>
           
         </div>
 
@@ -125,7 +127,7 @@
             </li>
           -->
           <li class="nav-item">
-            <a class="nav-link" href='{% url "main:index" %}#contact'>Контакты</a>
+            <a class="nav-link" href='{% url "main:contact" %}'>Контакты</a>
           </li>
 
           <div class='pt-3 modal_container' onclick='showModal(this);'>
@@ -214,7 +216,7 @@
         <a class="nav_footer" href='{% url "main:insurance" %}'><p>Страхование</p></a>
         <a class="nav_footer" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
         <a class="nav_footer" href='{% url "main:spares" %}'><p>Диагностика</p></a>
-       <!--  <a class="nav_footer" href='{% url "main:spares" %}'><p>Отзывы</p></a> -->
+       <a class="nav_footer" href='{% url "main:contact" %}'><p>Контакты</p></a>
 
         <div class="d-flex justify-content-start mt-4">
           <a href='#'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
