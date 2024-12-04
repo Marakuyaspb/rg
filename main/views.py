@@ -53,10 +53,13 @@ def guarantee(request):
 	callme_form = handle_callme_form(request)
 	guarantee_count_form = handle_guarantee_count_form(request)
 	need_service_form = handle_need_service_form(request)
+	need_diagnostic_form = handle_need_diagnostic_form(request)
+
 	context = {
 		'callme_form': callme_form,
 		'guarantee_count_form': guarantee_count_form,
 		'need_service_form': need_service_form,
+		'need_diagnostic_form': need_diagnostic_form,
 		'cars' : cars,
 		'new_cars': new_cars,
 		'used_cars': used_cars,

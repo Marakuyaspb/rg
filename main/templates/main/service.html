@@ -122,8 +122,11 @@
         <div class='col-6'>
           <h1 class='big_serv red pt-2'>ДИАГНОСТИКА</h1>
           <h1 class='we_300 big_serv black'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
-          <section class='py-5'>
+          <section class='py-5 d-flex justify-content-start'>
+            {% include 'cars/popups/popup_need_service.html' %}
+            <div class='ms-3'>
             {% include 'cars/popups/popup_need_diagnostic.html' %}
+            </div>
           </section>
         </div>
 
@@ -193,7 +196,7 @@
 
 <section class='py-4'>
   <center>
-    {% include 'cars/popups/popup_need_diagnostic.html' %}
+    {% include 'cars/popups/popup_need_service.html' %}
   </center>
 </section>
 

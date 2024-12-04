@@ -1,4 +1,24 @@
 {% load static %}
+<style type="text/css">
+    #id_who_sold{
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
+  #id_have_goverment_number{
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
+  #id_is_gai_record {
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
+</style>
 
 <div class='modal_container' onclick='showModal(this);'>
   <button class='thumb button_form_base mt-3 mb-2 black'>Хочу оформить гарантию</button>
@@ -10,7 +30,11 @@
           <div class='d-flex flex-row-reverse pe-3'>
             <span class="close" onclick="closeModal(this);">&times;</span>
           </div>
-          <h2 class='we_300 ms-4'>ЗАЯВКА НА ОФОРМЛЕНИЕ <span class='red'>ГАРАНТИЙНОГО ОБСЛУЖИВАНИЯ</span></h2>
+
+          <center>
+             <img class='popup_big_logo' src='{% static "brand/logo.svg" %}'>
+          </center>
+          <h3 class='we_300 ms-4'>ЗАЯВКА НА ОФОРМЛЕНИЕ <span class='red'>ГАРАНТИЙНОГО ОБСЛУЖИВАНИЯ</span></h3>
           <div class='form_container we_300'>
 
             <div class='d-flex justify-content-start py-2'>

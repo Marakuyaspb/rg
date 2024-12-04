@@ -14,19 +14,22 @@
             <span class="close" onclick="closeModal(this);">&times;</span>
           </div>
         
-          <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
+          <img class='popup_big_logo' src='{% static "brand/logo.svg" %}'>
+
+          <h3 class="we_200">ЗАЯВКА НА <span class='red'> ИНДИВИДУАЛЬНЫЙ ПОДБОР</span> АВТО</h3>
 
           <div class='form_container we_300'>
 
-            <label for="{{ callme_form.first_name.id_for_label }}">{{ callme_form.first_name.label }}</label>
+
+            <label class="d-flex justify-content-start" for="{{ callme_form.first_name.id_for_label }}">{{ callme_form.first_name.label }}</label>
             {{ callme_form.first_name }}
 
-            <label class='pt-2' for="{{ callme_form.phone.id_for_label }}">{{ callme_form.phone.label }}</label>
+            <label  class="d-flex justify-content-start pt-2" for="{{ callme_form.phone.id_for_label }}">{{ callme_form.phone.label }}</label>
             {{ callme_form.phone }}
             
             {% csrf_token %}
           
-          <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+          <center class='pt-5 pb-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
           <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>

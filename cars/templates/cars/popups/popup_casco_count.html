@@ -12,7 +12,12 @@
     top: -36%;
     z-index: 779;
   }
-
+  #id_urgency{
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
 </style>
 
 <div class='modal_container' onclick='showModal(this);'>
@@ -24,12 +29,14 @@
 
         <form method="post" class="callme_container white_bg">
 
-          <img class='ps-5 abstract ellipse_2_wh' src='{% static "abstract/ellipse_twice_white.svg" %}'> 
-
           <div class='form_wrap'>
             <div class='d-flex flex-row-reverse pe-3'>
               <span class="close" onclick="closeModal(this);">&times;</span>
             </div>
+
+            <center>
+               <img class='popup_big_logo' src='{% static "brand/logo.svg" %}'>
+            </center>
 
             <div class='form_container we_300'>
               <h2 class='pb-5 we_200'>ЗАЯВКА НА ОФОРМЛЕНИЕ КАСКО</h2>

@@ -1,4 +1,12 @@
 {% load static %}
+<style type="text/css">
+    #id_urgency{
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
+</style>
 
 <div class='modal_container' onclick='showModal(this);'>
   <button class='thumb button_form_base mt-3 mb-2 black'>Записаться на диагностику</button>
@@ -10,6 +18,9 @@
           <div class='d-flex flex-row-reverse pe-3'>
             <span class="close" onclick="closeModal(this);">&times;</span>
           </div>
+
+          <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
+          
           <h2 class='we_300 ms-4'>ЗАПИСЬ НА ДИАГНОСТИКУ</h2>
 
           <div class='form_container we_300'>
@@ -21,8 +32,8 @@
             {{ need_diagnostic_form.phone }}
 
             <div class='d-flex justify-content-start py-2'>
-              <label class='' for="{{ need_diagnostic_form.urgency.id_for_label }}">Cрочно?</label>
               {{ need_diagnostic_form.urgency }}
+              <label class='pt-1' for="{{ need_diagnostic_form.urgency.id_for_label }}">Cрочно?</label>   
             </div>
             
             {% csrf_token %}
