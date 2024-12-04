@@ -5355,3 +5355,5 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2024-12-04 02:09:51,678 - /media/aa/A6/red/rg/main/urls.py changed, reloading.
 2024-12-04 02:10:14,845 - /media/aa/A6/red/rg/main/views.py changed, reloading.
 2024-12-04 02:10:34,178 - /media/aa/A6/red/rg/main/views.py changed, reloading.
+2024-12-04 11:44:40,452 - /media/aa/A6/red/rg/main/urls.py changed, reloading.
+2024-12-04 11:45:08,783 - /media/aa/A6/red/rg/main/views.py changed, reloading.

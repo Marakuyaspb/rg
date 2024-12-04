@@ -1,0 +1,73 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<style type="text/css">
+  #bez_pyli{
+    max-width: 20em;
+  }
+    /* mobile */
+  @media (max-width: 810px) {
+    .big_contact{
+      font-size: 4em;
+    }
+    .ellipse_3{
+      height: 30em;
+      position: absolute;
+      z-index: -4;
+      top: 48%;
+      left: -80%;
+    }
+  }
+    /* desctop */
+  @media (min-width: 811px){
+    .big_contact{
+      font-size: 6em;
+    }
+    .ellipse_3{
+      height: 80em;
+      position: absolute;
+      z-index: -4;
+      top: -6%;
+      left: 55%;
+    }
+  }
+</style>
+
+
+<img class='ps-5 abstract ellipse_3' src='{% static "abstract/ellipse_3.svg" %}'>
+
+<div class='desctop_84 pb-5'>
+
+    <div class="row">
+
+      <div class="col-md-5">
+
+        <h1 class='big_contact pb-3 red we_300'>О НАС</h1>
+        <div class=" we_300">
+          <p><span class='we_400'>Александр</span> — бизнесмен, бородач, пауэрлифтер.</p>
+          <p><span class='we_400'>Фёдор</span> — предприниматель и меценат.</p>
+          <p><span class='we_400'>Дмитрий</span> — ловелас и специалист в сфере недвижимости.</p>
+          <p><span class='we_400'>Игорь</span> — бизнесмен, арт-критик, ЗОЖник. </p>
+
+          <p class="pt-3 we_400">Что нас объединяет?</p>Дружба! И несколько совместных бизнес-проектов.
+          <p>А ещё тяга исследовать новое.
+            Где лучше жить? На каких машинах ездить? А на каких не стоит? Где отличная кухня, а где опасно? Рассказываем правду, показываем настоящий Петербург и жизнь в нём. 
+          <p>Смотрите свежие выпуски на нашем канале:
+        </div>
+
+        <a href='#'><img id='bez_pyli' class='my-4' src="{% static 'logos/bez_pyli.png' %}"></a> 
+          
+        </div>
+        <div class="col-md-7">
+          <img class='w-100' src="{% static 'brand/red-logo-transp-light.png' %}">
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}
