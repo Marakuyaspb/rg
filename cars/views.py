@@ -55,12 +55,15 @@ def fresh_cars(request):
 	sort_by = request.GET.get('sort_by', 'asc')
 	cars = Car.objects.filter(status=1)
 	cars = cars_ordering(Car, cars, sort_by)
+	used_cars = Car.objects.filter(status=2)
 
 	callme_form = handle_callme_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'cars' : cars,
+		'used_cars': used_cars,
+
 		'callme_form': callme_form,
 		'car_survey_full_form': car_survey_full_form
 	}
@@ -69,17 +72,19 @@ def fresh_cars(request):
 
 
 
-
 def used_cars(request):
 	sort_by = request.GET.get('sort_by', 'asc')
 	cars = Car.objects.filter(status=2)	
 	cars = cars_ordering(Car, cars, sort_by)
+	new_cars = Car.objects.filter(status=1)
 
 	callme_form = handle_callme_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'cars':cars,
+		'new_cars': new_cars,
+
 		'callme_form': callme_form,
 		'car_survey_full_form': car_survey_full_form
 	}

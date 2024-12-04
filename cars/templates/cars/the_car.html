@@ -72,11 +72,16 @@
 		</div>
 
 		<div class="d-flex justify-content-start">
-			<h2 class='we_400 red the_car_name pe-5'>МАШИНЫ С ПРОБЕГОМ</h2>
-			<div>{% include 'cars/popups/btn_to_tg.html' %}</div>
+			<h2 class='we_400 red the_car_name pe-5'>МАШИНЫ БЕЗ ПРОБЕГА</h2>
+
+			<a href='#'><div class='button_form_base center mb-2 ms-3 white'>
+              <div class="d-flex justify-content-start">
+                <img class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class='white'>Посмотреть, что в наличии</span>
+              </div>
+          </a>
 		</div>
 	</div>
-{% include 'cars/carousel_used.html' %}
+{% include 'cars/carousel_new.html' %}
 </section>
 
 <section>
