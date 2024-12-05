@@ -56,8 +56,8 @@
 
         <div class="d-flex justify-content-between mt-1">
           <div class='pt-2'>
-            <a  href='#'><img class='smm_head py-2 pe-2' src='{% static "icons/whatsapp.png" %}'></a>
-            <a  href='#'><img class='smm_head py-2 me-4' src='{% static "icons/telegram.png" %}'></a>
+            <a  href='https://wa.me/79052226226'><img class='smm_head py-2 pe-2' src='{% static "icons/whatsapp.png" %}'></a>
+            <a  href='https://t.me/RedGroupAuto'><img class='smm_head py-2 me-4' src='{% static "icons/telegram.png" %}'></a>
           </div>
 
 
@@ -154,48 +154,50 @@
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>
   <footer class=' py-4 gray_light we_300 black_hot_bg'>
 
-  <div class='desctop_84'>
-    <div class="d-flex justify-content-between">
+    <div class='desctop_84'>
+      <div class="d-flex justify-content-between">
 
-      <div class=''>
-        <a class="" href='{% url "main:index" %}'>
-          <div class="center">
-            <img class='footer_logo center' src='{% static "brand/logo_dark.svg" %}'>
+        <div class=''>
+          <a class="" href='{% url "main:index" %}'>
+            <div class="center">
+              <img class='footer_logo center' src='{% static "brand/logo_dark.svg" %}'>
+            </div>
+          </a>
+        </div>
+
+        <div class='py-3'>
+          <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Легковые авто</p></a>
+          <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Грузовые машины</p></a>
+          <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Автобусы</p></a>
+          <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Спецтехника</p></a>
+        </div>
+
+        <div class='py-3'>
+          <a class="nav_footer_mob" href='{% url "main:insurance" %}'><p>Страхование</p></a>
+          <a class="nav_footer_mob" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
+          <a class="nav_footer_mob" href='{% url "main:spares" %}'><p>Диагностика и сервисное обслуживание</p></a>
+          <a class="nav_footer_mob" href='{% url "main:jurists" %}'><p>Юридическая поддержка</p></a>
+          <a class="nav_footer_mob" href='{% url "main:about" %}'><p>О нас</p></a>
+        </div>
+
+        <div class='py-3'>
+          <p class="gray_light">+7 921 444‑24‑40</p>
+          <p class="gray_light">+7 905 222‑62-26</p>
+          <p class="gray_light">info@rgspace.pro</p>
+
+
+          <div class="d-flex justify-content-start mt-4">
+            <a href='https://youtube.com/@bezpili78?si=kQtvLs9u3OWsO0TR'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
+            <a href='https://t.me/RedGroupAuto'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
+            <a href='https://wa.me/79052226226'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
           </div>
-        </a>
-      </div>
-
-      <div class='py-3'>
-        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Легковые авто</p></a>
-        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Грузовые машины</p></a>
-        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Автобусы</p></a>
-        <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Спецтехника</p></a>
-      </div>
-
-      <div class='py-3'>
-        <a class="nav_footer_mob" href='{% url "main:insurance" %}'><p>Страхование</p></a>
-        <a class="nav_footer_mob" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
-        <a class="nav_footer_mob" href='{% url "main:spares" %}'><p>Диагностика и сервисное обслуживание</p></a>
-        <a class="nav_footer_mob" href='{% url "main:jurists" %}'><p>Юридическая поддержка</p></a>
-      </div>
-
-      <div class='py-3'>
-        <p class="gray_light">+7 999 111 22 33</p>
-        <p class="gray_light">info@rg.ru</p>
-
-
-        <div class="d-flex justify-content-start mt-4">
-          <a href='#'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
-          <a href='#'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
-          <a href='#'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
         </div>
       </div>
+      
+      <div class='gray_light smaller we_300'>  
+      © 2024, R.E.D. Group Auto. Все права защищены.
+      </div>
     </div>
-    
-    <div class='gray_light smaller we_300'>  
-    © 2024, Red Group Auto. Все права защищены.
-    </div>
-  </div>
   
   </footer>
 </div>
@@ -205,7 +207,6 @@
   <footer class='py-4 white black_hot_bg'>
 
     <div class="d-flex justify-content-between px-4">
-
       <div class=''>
 
         <a class="" href='{% url "main:index" %}'>
@@ -213,27 +214,33 @@
             <img class='footer_logo center' src='{% static "brand/logo_dark.svg" %}'>
           </div>
         </a>
+
+        <p class="nav_footer pt-5 mt-2">+7 921 444‑24‑40</p>
+        <p class="nav_footer py-3">+7 905 222‑62-26</p>
+        <p class="nav_footer">info@rgspace.pro</p>
       </div>
 
       <div class='py-3'>
         <a class="nav_footer" href='{% url "cars:catalog" %}'><p>Каталог</p></a>
-        <a class="nav_footer" href='{% url "main:insurance" %}'><p>Страхование</p></a>
+        <a class="nav_footer" href='{% url "main:insurance" %}'><p >Страхование</p></a>
         <a class="nav_footer" href='{% url "main:guarantee" %}'><p>Оформить гарантию</p></a>
-        <a class="nav_footer" href='{% url "main:service" %}'><p>Сервиcное обслуживание</p></a>
+        <a class="nav_footer" href='{% url "main:jurists" %}'><p>Юридическая поддержка</p></a>
+        <a class="nav_footer" href='{% url "main:service" %}'><p class='pt-4'>Сервиcное обслуживание</p></a>
         <a class="nav_footer" href='{% url "main:spares" %}'><p>Запчасти</p></a>
-        <a class="nav_footer" href='{% url "main:about" %}'><p>О нас</p></a>
+        
+        <a class="nav_footer" href='{% url "main:about" %}'><p class='pt-4'>О нас</p></a>
         <a class="nav_footer" href='{% url "main:contact" %}'><p>Контакты</p></a>
 
         <div class="d-flex justify-content-start mt-4">
-          <a href='#'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
-          <a href='#'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
-          <a href='#'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
+          <a href='https://youtube.com/@bezpili78?si=kQtvLs9u3OWsO0TR'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
+          <a href='https://t.me/RedGroupAuto'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
+          <a href='https://wa.me/79052226226'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
         </div>
       </div>
     </div>
    
     <center class='mt-3 gray_light smaller we_300'>  
-    © 2024, Red Group Auto. Все права защищены.
+    © 2024, R.E.D. Group Auto. Все права защищены.
     </center>
 
   </footer>
