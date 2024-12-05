@@ -1,0 +1,161 @@
+{% load static %}
+
+<style type="text/css">
+
+	.container_fl {
+	  display: flex;
+	  height: 70%;
+	  width: 100%;
+	  justify-content: center;
+	  align-items: center;
+	  overflow: hidden;
+	}
+	.container_fl.grid, .container_fl.columns {
+	  align-content: stretch;
+	  align-items: stretch;
+	  flex-wrap: wrap;
+	}
+	.container_fl.grid .letter {
+	  flex-basis: 50%;
+	}
+	.container_fl.columns .letter {
+	  flex-basis: 25%;
+	}
+
+  	/*  DESCTOP  */
+	@media (min-width: 811px){
+		.flip_body {
+			padding: 0;
+			margin: 0;
+			font-weight: 300;
+			height: 70vh;
+			overflow: hidden;
+		}
+		.letter {
+			text-align: center;
+			color: black;
+			font-size: 8vmax;
+			font-weight: 400;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 2px 6px;
+		}
+
+		.for, .gsap {
+			font-size: 3vmax;
+			color: rgb(27, 25, 24);;
+		}
+		.for {
+			padding: 2px 1.6vmax;
+			font-weight: 300;
+			display: none;
+		}
+	}
+
+  	/*  PHONE  */
+	@media (max-width: 810px) {
+		.flip_body {
+			padding: 0;
+			margin: 0;
+			font-weight: 300;
+			height: 50vh;
+			overflow: hidden;
+		}
+		.letter {
+		  text-align: center;
+		  color: black;
+		  font-size: 4vmax;
+		  font-weight: 400;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  padding: 2px 6px;
+		}
+
+		.for, .gsap {
+		  font-size: 2vmax;
+		  color: rgb(27, 25, 24);;
+		}
+		.for {
+		  padding: 2px 1.2vmax;
+		  font-weight: 300;
+		  display: none;
+		}
+	}
+
+
+
+
+	.gsap {
+	  padding: 2px 0;
+	  font-weight: 500;
+	  display: none;
+	}
+	.container_fl.final .for, .container_fl.final .gsap {
+	  display: block;
+	}
+	.F {
+	  background: rgb(212, 16, 65);
+	}
+	.l {
+	  background: rgb(119, 118, 118);
+	}
+	.i {
+	   background: rgb(217, 217, 217);
+	}
+	.p {
+	  background: rgb(245, 245, 245);
+	}
+	.container_fl.plain .letter {
+	  background: transparent;
+	  color: var(--color-surface-white);
+	  padding: 0;
+	}
+
+</style>
+
+<div class="flip_body">
+	<div class="container_fl final">
+		<div class="letter F">А</div>
+		<div class="letter l">В</div>
+		<div class="letter i">Т</div>
+		<div class="letter p">О</div>
+		<div class="for">R.E.D.</div>
+		<div class="gsap">каталог</div>
+	</div>
+</div>
+
+<script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
+<script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+
+<script type="text/javascript">
+	gsap.registerPlugin(Flip);
+
+	let layouts = ["final", "plain", "columns", "grid"],
+			container_fl = document.querySelector(".container_fl"),
+			curLayout = 0; // index of the current layout
+
+	function nextState() {
+	  const state = Flip.getState(".letter, .for, .gsap", {props: "color,backgroundColor", simple: true}); // capture current state
+	  
+	  container_fl.classList.remove(layouts[curLayout]); // remove old class
+	  curLayout = (curLayout + 1) % layouts.length;   // increment (loop back to the start if at the end)
+	  container_fl.classList.add(layouts[curLayout]);    // add the new class
+
+	  Flip.from(state, { // animate from the previous state
+	    absolute: true,
+	    stagger: 0.07,
+	    duration: 0.7,
+	    ease: "power2.inOut",
+	    spin: curLayout === 0, // only spin when going to the "final" layout
+	    simple: true,
+	    onEnter: (elements, animation) => gsap.fromTo(elements, {opacity: 0}, {opacity: 1, delay: animation.duration() - 0.1}),
+	    onLeave: elements => gsap.to(elements, {opacity: 0})
+	  });
+
+	  gsap.delayedCall(curLayout === 0 ? 3.5 : 1.5, nextState);
+	}
+
+	gsap.delayedCall(1, nextState);
+</script>
