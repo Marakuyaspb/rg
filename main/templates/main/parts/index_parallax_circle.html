@@ -1,0 +1,481 @@
+{% load static %}
+
+<style type="text/css">
+
+/* parallax here */
+
+  .wrapper_p {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide_scroll {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+  .slide_scroll:first-child {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .slide_content{
+    padding: 6em 1em;
+    height: 100vh;
+    width: 100%;
+    overflow-x: clip!important;
+    position: relative;
+  }
+
+  /* other animations */
+
+  .relative_block{
+		position: relative;
+		width: 100%; 
+    height: 100vh;
+    overflow: hidden;
+	}
+	.absolute_center{
+		position: absolute;
+		top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+	.background_el{
+		position: absolute;
+		z-index: -5;
+	}
+
+	#car_rl {
+    position: absolute;
+    top: 5%;
+    animation: moveCarRL 7s linear infinite;
+    height: 9em;
+	}
+	@keyframes moveCarRL {
+	    0% {
+	        left: 110%;
+	    }
+	    100% {
+	        left: -10%;
+	    }
+	}
+
+	#car_lr {
+    position: absolute;
+    top: 75%;
+    animation: moveCarLR 7s linear infinite;
+    height: 9em;
+	}
+	@keyframes moveCarLR {
+	    0% {
+	        left: -10%;
+	    }
+	    100% {
+	        left: 110%;
+	    }
+	}
+
+	#el_wh_1{animation: pulse 2s infinite; }
+	@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(.9);
+    }
+	}
+
+
+
+
+  /* mobile */
+  @media (max-width: 810px) {
+  	#logo_1{
+			position: absolute;
+			z-index: 222;
+			width: 26em;
+		}
+		#h2_move{
+			position: absolute;
+			z-index: 4;
+		}
+		#h2_move h2{
+			font-size: 3em;
+		}
+
+		#h2_prof{
+			position: absolute;
+			z-index: 4;
+			left: 5%;
+			top:15%
+		}
+		#h2_prof h2{
+			font-size: 4em;
+			line-height: .9;
+		}
+		#founders{
+			position: absolute;
+			z-index: 5;
+			width: 32em;
+			bottom: 0%;
+			left: -15%;
+		}
+
+		#calend{
+			width: 8em;
+			position: absolute;
+    	animation: levitation_calend 5s infinite;
+		}
+		@keyframes levitation_calend {
+	    0% {
+	      top: 33%;
+	      left:70%;
+	    }
+	    50% {
+	      top: 34%;
+	      left:70%;
+
+	    }
+	    100% {
+	      top: 33%;
+	      left:70%;
+	    }
+	  }
+
+	 	#elem_4{
+			width: 6em;
+			position: absolute;
+	  	animation: levitation_elem_4 6s infinite;
+		}
+		@keyframes levitation_elem_4 {
+	    0% {
+	      top: 3%;
+	      left:-2%;
+	    }
+	    50% {
+	      top: 2%;
+	      left:-2%;
+
+	    }
+	    100% {
+	      top: 3%;
+	      left:-2%;
+	    }
+	  }
+
+	}
+
+
+
+
+  /* desctop */
+  @media (min-width: 811px){
+		#logo_1{
+			position: absolute;
+			z-index: 222;
+			width: 40%;
+		}
+		#h2_move{
+			position: absolute;
+			z-index: 4;
+		}
+		#h2_move h2{
+			font-size: 5em;
+		}
+
+		#h2_prof{
+			position: absolute;
+			z-index: 4;
+			left: 30%;
+			top:3%
+		}
+		#h2_prof h2{
+			font-size: 12em;
+			line-height: .9;
+		}
+		#founders{
+			position: absolute;
+			z-index: 5;
+			width: 60em;
+			bottom: 0%;
+			left: 25%;
+		}
+
+		#beauty_car_1{
+			width: 50em;
+			position: absolute;
+			left: -10%;
+			top: 52%;
+		}
+		#BMW320i{
+			width: 54em;
+			position: absolute;
+			left: 70%;
+			top: 52%;
+		}
+
+		#calend{
+			width: 12em;
+			position: absolute;
+    	animation: levitation_calend 5s infinite;
+		}
+		@keyframes levitation_calend {
+	    0% {
+	      top: 30%;
+	      left:84%;
+	    }
+	    50% {
+	      top: 31%;
+	      left:84%;
+
+	    }
+	    100% {
+	      top: 30%;
+	      left:84%;
+	    }
+	  }
+	
+		#elem_4{
+			width: 9em;
+			position: absolute;
+	  	animation: levitation_elem_4 6s infinite;
+		}
+		@keyframes levitation_elem_4 {
+	    0% {
+	      top: 23%;
+	      left:15%;
+	    }
+	    50% {
+	      top: 22%;
+	      left:15%;
+
+	    }
+	    100% {
+	      top: 23%;
+	      left:15%;
+	    }
+	  }
+  	#thing_19{
+  		width: 7em;
+			position: absolute;
+	  	animation: levitation_thing_19 7s infinite;
+  	}
+  	@keyframes levitation_thing_19 {
+	    0% {
+	      top: 3%;
+	      left:5%;
+	    }
+	    50% {
+	      top: 5%;
+	      left:5%;
+
+	    }
+	    100% {
+	      top: 3%;
+	      left:5%;
+	    }
+	  }
+	  #clay{
+  		width: 10em;
+			position: absolute;
+	  	animation: levitation_clay 6s infinite;
+  	}
+  	@keyframes levitation_clay {
+	    0% {
+	      top: 3%;
+	      left:75%;
+	    }
+	    50% {
+	      top: 5%;
+	      left:75%;
+
+	    }
+	    100% {
+	      top: 3%;
+	      left:75%;
+	    }
+	  }
+
+
+	}
+
+
+	#el_red_min{
+		position: absolute;
+		top: 50%;
+		left: 60%;
+		width: 22em;
+		animation: rotate 5s linear infinite;
+	}
+	@keyframes rotate {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
+  #el_red_twice{
+  	top: 5%;
+    left: 25%;
+  	animation: rotate_b 7s linear infinite;
+  }
+  @keyframes rotate_b {
+      0% {
+          transform: rotate(360deg);
+      }
+      100% {
+          transform: rotate(0deg);
+      }
+  }
+</style>
+
+
+
+
+
+ <div class="wrapper_p">
+
+   <!--  <div class="slide_scroll">
+    	<section class='relative_block'>
+				<center>
+					<img id='logo_1' class='absolute_center p-5' src='{% static "brand/red-logo-transp-light_rect.png" %}'>
+				</center>
+
+				<img id='car_rl' class='' src="{% static 'transperent/Range_Rover_Long_Supercharger_mini.png' %}" alt="" />	
+				<img id='car_lr' class='' src="{% static 'transperent/Mitsubishi_Outlander_mini.png' %}" alt="" />
+
+				<img id='el_wh_1' class='absolute_center background_el' src="{% static 'abstract/ellipse_2_white.svg' %}" alt="" />
+			</section>
+    </div> -->
+<!-- 
+    <div class="slide_scroll">
+      <div class='slide_content white_dirty_bg'></div>
+    </div>
+
+    <div class="slide_scroll">
+      <div class='slide_content red_bg'></div>
+    </div>
+
+    <div class="slide_scroll">
+      <div class='slide_content black_bg'></div>
+    </div>
+ -->
+
+
+
+    <div class="slide_scroll">
+    	<section class='relative_block red_bg'>
+				<div id='h2_move' class='absolute_center'>
+					<h2 class="white we_200">НЕПРЕРЫВНОЕ</h2>
+					<h2 class="white we_200">ДВИЖЕНИЕ</h2>
+				</div>
+
+				<img id='el_red_twice' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" />
+				<img id='el_red_min' class='absolute_center' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />		
+			</section>
+    </div>
+
+
+
+   	<div class="slide_scroll">
+      <div class='slide_content red_bg'></div>
+    </div>
+    <div class="slide_scroll">
+      <div class='slide_content black_bg'></div>
+    </div>
+    <div class="slide_scroll">
+      <div class='slide_content white_dirty_bg'></div>
+    </div> 
+
+
+    <div class="slide_scroll">
+    	<section class='relative_block'>
+				<img id='' class='absolute_center' src="{% static 'abstract/ellipse_2_white.svg' %}" alt="" />
+
+				<div id='h2_prof' class="">
+					
+					<div class='d-block d-lg-none'>
+						<h2 class="black we_300 ps-5">ЭКСПЕР</h2>
+						<h2 class="black we_300 ps-5">ТНОСТЬ</h2>
+						<br><br><br><br>
+					</div>
+
+					<h2 class="red we_300">ПРОФЕС</h2>
+					<h2 class="red we_300">CИОНА</h2>
+					<h2 class="red we_300">ЛИЗМ</h2>
+
+				</div>
+				<img id='founders' class='' src="{% static 'transperent/founders.png' %}" alt="" />
+
+				<img id='elem_4' class='illustr_sm' src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
+				<img id='calend' class='illustr_sm'  src="{% static 'illustr/calendar_front.svg' %}" alt="" />
+
+				<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+					<img id='thing_19' class='illustr_sm'  src="{% static 'illustr/18.svg' %}" alt="" />
+					<img id='clay' class='illustr_sm'  src="{% static 'illustr/clay.svg' %}" alt="" />
+
+					<img id='beauty_car_1' class='illustr_sm'  src="{% static 'transperent/beauty_car_1.png' %}" alt="" />
+					<img id='BMW320i' class='illustr_sm'  src="{% static 'transperent/BMW320i.png' %}" alt="" />
+				</div>
+			</section>
+    </div>
+
+  </div>
+
+
+
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script type="text/javascript">
+  console.clear();
+  gsap.registerPlugin(ScrollTrigger);
+
+  const slides = gsap.utils.toArray(".slide_scroll");
+  slides.shift();
+
+  gsap.to(slides, {
+    duration: 1,
+    clipPath: "circle(0% at 50% 50%)",
+    /*clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",*/
+    stagger: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".wrapper_p",
+      start: "top top",
+      end: "+=" + 60 * slides.length + "%",
+      scrub: true,
+      snap: 1 / slides.length,
+      pin: true,
+      markers: true
+    }
+  });
+
+
+/*slides.forEach((slide, index) => {
+  gsap.to(slide, {
+    scrollTrigger: {
+      trigger: slide,
+      start: "top top",
+      end: "+=100%",
+      scrub: true,
+      onEnter: () => {
+          gsap.to(slide, { clipPath: "circle(150% at 50% 50%)" }); // Adjust circle size for reveal
+      },
+      onLeaveBack: () => {
+          gsap.to(slide, { clipPath: "circle(0% at 50% 50%)" }); // Reset circle size
+      }
+    }
+  });
+});*/
+</script>

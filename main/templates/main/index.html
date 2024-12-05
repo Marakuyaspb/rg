@@ -14,41 +14,54 @@
 
 <div class='desctop_84'>
 
-<div class='d-none d-lg-block d-xl-block d-xxl-block'>
-  <div class='row'>
-    <div class='col-md-6'>
-        <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
+  <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+    <div class='row'>
+      <div class='col-md-6'>
+          <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
 
-        <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
-         {% include 'cars/popups/popup_call_me.html' %}
+          <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
+           {% include 'cars/popups/popup_call_me.html' %}
+      </div>
+      <div class='col-md-6'>
+        <img id='main_right_desctop' class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
+        <img id='red_header_ellipce' class='' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />
+
+      </div> 
     </div>
-    <div class='col-md-6'>
-      <img id='main_right_desctop' class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
-      <img id='red_header_ellipce' class='' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />
-
-    </div> 
   </div>
+
+  <div class='d-block d-lg-none'>
+    <div class='row'>
+      <div class='col-md-6 pt-4'>
+        <h1 class='very_big'>ПРОСТР</h1>
+        <h1 class='very_big'>АНСТВО</h1>
+        <h1 class='very_big'>ДВИЖЕ</h1>
+        <h1 class='very_big'>НИЯ</h1>
+      </div>
+      <div class='col-md-6'>
+        <img class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
+      </div> 
+    </div>
+
+    <h2 class='pt-2 pb-4 we_300 index_sub'>Лучшие машины ойкумены</h2>
+      {% include 'cars/popups/popup_call_me.html' %}
+  </div>
+
+  <div class='row py-5'>
+    <div class='col-md-4 my-3'>
+      <h3 class='we_300'><span class='red'>Продажа</span> новых и подержанных <span class='red'>автомобилей</span> ведущих мировых брендов.</h3>
+    </div>
+    <div class='col-md-4 my-3'>
+      <h3 class='we_300'>Профессиональное <span class='red'>сервисное обслуживание:</span> от технического осмотра до сложного ремонта.</h3>
+    </div>
+    <div class='col-md-4 my-3'>
+      <h3 class='we_300'><span class='red'>Услуги страхования, кредитования и лизинга</span>, позволяющие каждому клиенту найти оптимальное финансовое решение.</h3>
+    </div>
+  </div>
+
 </div>
 
-<div class='d-block d-lg-none'>
-  <div class='row'>
-    <div class='col-md-6 pt-4'>
-      <h1 class='very_big'>ПРОСТР</h1>
-      <h1 class='very_big'>АНСТВО</h1>
-      <h1 class='very_big'>ДВИЖЕ</h1>
-      <h1 class='very_big'>НИЯ</h1>
-    </div>
-    <div class='col-md-6'>
-      <img class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
-    </div> 
-  </div>
 
-  <h2 class='pt-2 pb-4 we_300 index_sub'>Лучшие машины ойкумены</h2>
-    {% include 'cars/popups/popup_call_me.html' %}
-  </div>
-
-
-</div>
 
 {% include 'main/parts/index_parallax.html' %}
 

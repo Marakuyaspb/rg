@@ -631,7 +631,7 @@ tr {
 
   .nav-link{
     color: #31030F!important;
-    font-size: 1.1em!important;
+    font-size: 1em!important;
     font-weight: 300;
     margin: 0 .3em;
   }
@@ -680,7 +680,7 @@ tr {
 
   .very_big_catalog{
     color: var(--red);
-    font-size: 15em;
+    font-size: 12em;
   }
 
   .catalog_sub{
@@ -1169,4 +1169,17 @@ tr {
 
 .gsap-marker-end, .gsap-marker-start, .gsap-marker-scroller-end, .gsap-marker-scroller-start{
   opacity: 0%!important;
+}
+
+.illustr_sm{
+  width: 3em;
+}
+.illustr{
+  width: 6em;
+}
+.illustr_big{
+  width: 9em;
+}
+.illustr, .illustr_sm, .illustr_big{
+  position: absolute;
 }
