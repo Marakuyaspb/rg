@@ -1,42 +1,204 @@
 {% load static %}
 <style type="text/css">
-	.relative_block{
-		position: relative;
-	}
-	.absolute_block{
-		position: absolute;
-	}
+
 </style>
 
-<section id='bubbles_wrap' class='py-2'>
-	<div id='bubbles'>
+<style type="text/css">
+
+/* parallax here */
+
+  .wrapper_p {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide_scroll {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+
+  .slide_scroll:first-child {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .slide_content{
+    padding: 6em 1em;
+    height: 100vh;
+    width: 100%;
+    overflow-x: clip!important;
+    position: relative;
+  }
+
+  /* other animations */
+
+  .relative_block{
+		position: relative;
+		width: 100%; 
+    height: 100vh;
+    overflow: hidden;
+	}
+	.absolute_center{
+		position: absolute;
+		top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+	.background_el{
+		position: absolute;
+		z-index: -5;
+	}
+
+	#car_rl {
+    position: absolute;
+    top: 5%;
+    animation: moveCarRL 7s linear infinite;
+    height: 9em;
+	}
+	@keyframes moveCarRL {
+	    0% {
+	        left: 110%;
+	    }
+	    100% {
+	        left: -10%;
+	    }
+	}
+
+	#car_lr {
+    position: absolute;
+    top: 75%;
+    animation: moveCarLR 7s linear infinite;
+    height: 9em;
+	}
+	@keyframes moveCarLR {
+	    0% {
+	        left: -10%;
+	    }
+	    100% {
+	        left: 110%;
+	    }
+	}
+
+	#el_wh_1{animation: pulse 2s infinite; }
+	@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+	}
+
+  /* mobile */
+  @media (max-width: 810px) {
+  	#logo_1{
+			position: absolute;
+			z-index: 222;
+			width: 26em;
+		}
+		#h2_move{
+			position: absolute;
+			z-index: 4;
+		}
+		#h2_move h2{
+			font-size: 3em;
+		}
+  }
+
+    /* desctop */
+  @media (min-width: 811px){
+		#logo_1{
+			position: absolute;
+			z-index: 222;
+			width: 40%;
+		}
+		#h2_move{
+			position: absolute;
+			z-index: 4;
+		}
+		#h2_move h2{
+			font-size: 5em;
+		}
+	}
+
+	#el_red_min{
+		position: absolute;
+		top: 50%;
+		left: 60%;
+		width: 22em;
+		animation: rotate 5s linear infinite;
+	}
+	@keyframes rotate {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
+  #el_red_twice{
+  	top: 5%;
+    left: 25%;
+  	animation: rotate_b 7s linear infinite;
+  }
+  @keyframes rotate_b {
+      0% {
+          transform: rotate(360deg);
+      }
+      100% {
+          transform: rotate(0deg);
+      }
+  }
+</style>
+
+
 
 		  <h1 class='very_big'>ЭМОЦИИ</h1>
 
       <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Только вперёд!</h2>
 
-		<img id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" />	
-
 
 
 		<section class='relative_block'>
-			<img id='' class='absolute_block w-100' src="{% static 'abstract/ellipse_2_white.svg' %}" alt="" />
+			<center>
+				<img id='logo_1' class='absolute_center p-5' src='{% static "brand/red-logo-transp-light_rect.png" %}'>
+			</center>
+
+			<img id='car_rl' class='' src="{% static 'transperent/Range_Rover_Long_Supercharger_mini.png' %}" alt="" />	
+			<img id='car_lr' class='' src="{% static 'transperent/Mitsubishi_Outlander_mini.png' %}" alt="" />
+
+			<img id='el_wh_1' class='absolute_center background_el' src="{% static 'abstract/ellipse_2_white.svg' %}" alt="" />
+		</section>
+
+		<section class='relative_block red_bg'>
+
+			<div id='h2_move' class=' absolute_center'>
+				<h2 class="white we_200">НЕПРЕРЫВНОЕ</h2>
+				<h2 class="white we_200">ДВИЖЕНИЕ</h2>
+			</div>
+
+			<img id='el_red_twice' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" />
+			<img id='el_red_min' class='absolute_center' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />
+			
 		</section>
 
 		<section class='relative_block'>
-			<img id='' class='absolute_block' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />
+			<img id='' class='absolute_center' src="{% static 'abstract/ellipse_3_white.svg' %}" alt="" />
 		</section>
 
-		<section class='relative_block'>
-			<img id='' class='absolute_block' src="{% static 'abstract/ellipse_3_white.svg' %}" alt="" />
-		</section>
 
 		<section class='relative_block'>
-			<img id='' class='absolute_block' src="{% static 'abstract/ellipse_3.svg' %}" alt="" />
-		</section>
-
-		<section class='relative_block'>
-			<img id='' class='absolute_block' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" />
+			<img id='' class='absolute_center' src="{% static 'abstract/ellipse_3.svg' %}" alt="" />
 		</section>
 
 
@@ -46,14 +208,12 @@
 		<img id='elem_3' class=' ' src="{% static 'illustr/Cone_01_2_15.svg' %}"  alt="" />
 		<img id='elem_4' class=' ' src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
 		<img id='elem_5' class=' '  src="{% static 'illustr/Cone_01_2_10.svg' %}" alt="" />
-	</div>
-</section>
 
 
 
 
 
- <div class="wrapper">
+ <div class="wrapper_p">
     <div class="slide_scroll">
     </div>
         <div class="slide_scroll">
@@ -89,7 +249,7 @@
     stagger: 1,
     ease: "power2.inOut",
     scrollTrigger: {
-      trigger: ".wrapper",
+      trigger: ".wrapper_p",
       start: "top top",
       end: "+=" + 60 * slides.length + "%",
       scrub: true,
@@ -101,19 +261,19 @@
 
 
 slides.forEach((slide, index) => {
-        gsap.to(slide, {
-            scrollTrigger: {
-                trigger: slide,
-                start: "top top",
-                end: "+=100%",
-                scrub: true,
-                onEnter: () => {
-                    gsap.to(slide, { clipPath: "circle(150% at 50% 50%)" }); // Adjust circle size for reveal
-                },
-                onLeaveBack: () => {
-                    gsap.to(slide, { clipPath: "circle(0% at 50% 50%)" }); // Reset circle size
-                }
-            }
-        });
-    });
+  gsap.to(slide, {
+    scrollTrigger: {
+      trigger: slide,
+      start: "top top",
+      end: "+=100%",
+      scrub: true,
+      onEnter: () => {
+          gsap.to(slide, { clipPath: "circle(150% at 50% 50%)" }); // Adjust circle size for reveal
+      },
+      onLeaveBack: () => {
+          gsap.to(slide, { clipPath: "circle(0% at 50% 50%)" }); // Reset circle size
+      }
+    }
+  });
+});
 </script>

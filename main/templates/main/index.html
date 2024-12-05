@@ -2,41 +2,15 @@
 {% load static %}
 
 {% block content %}
-
 <style type="text/css">
-  .wrapper {
-    width: 100%;
-    height: 60vh;
-    position: relative;
-    overflow: hidden;
-  }
-  .slide_scroll {
-    width: 100%;
-    height: 60vh;
+  #red_header_ellipce{
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--dark);
-    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-  }
-
-  .slide_scroll:first-child {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-
-  .slide_content{
-    padding: 6em 1em;
-    height: 60vh;
-    width: 100%;
-    overflow-x: clip!important;
-    position: relative;
+    width: 45em;
+    top: 10%;
+    left: 60%;
+    z-index: -7;
   }
 </style>
-
 
 <div class='desctop_84'>
 
@@ -49,7 +23,9 @@
          {% include 'cars/popups/popup_call_me.html' %}
     </div>
     <div class='col-md-6'>
-      <img class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
+      <img id='main_right_desctop' class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
+      <img id='red_header_ellipce' class='' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />
+
     </div> 
   </div>
 </div>
