@@ -22,6 +22,7 @@ General Styles
 html{
   margin: 0;
   padding: 0;
+
 }
 body {
   background-color: #F5F5F5;
@@ -641,8 +642,8 @@ tr {
 
 
   .img_header {
-    margin-top: -8.5em;
-    position: relative;
+    margin-top: -12em;
+    position: absolute;
     z-index: -999;
     width: 100%;
     height: 100vh;
@@ -683,6 +684,9 @@ tr {
     font-size: 12em;
   }
 
+  .catalog_h1{
+    font-size: 5em;
+  }
   .catalog_sub{
     color: var(--bordo_dark);
     font-size: 3.3em;
@@ -887,7 +891,7 @@ tr {
     position: absolute;
     z-index: -999;
     width: auto;
-    height: 100vh;
+    height: 130vh;
     object-fit: cover;
     top: 50%;
     left: 50%;
@@ -929,6 +933,10 @@ tr {
     color: var(--black);
     font-size: 4.6em;
     font-weight: 300;
+  }
+  .catalog_h1{
+    font-size: 2.2em;
+    margin-top: -4em;
   }
 
   .catalog_sub{
@@ -1182,4 +1190,10 @@ tr {
 }
 .illustr, .illustr_sm, .illustr_big{
   position: absolute;
+}
+
+
+.mesh_cover{
+  background-repeat: no-repeat;
+  background-size: cover;
 }
