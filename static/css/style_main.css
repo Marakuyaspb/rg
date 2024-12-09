@@ -637,8 +637,22 @@ tr {
     margin: 0 .3em;
   }
   .nav-link:hover{
-    color:  #5E0A0E !important;
+    color: var(--bordo) !important;
   }
+
+  #base_min .nav-item .nav-link{
+    color: #31030F!important;
+    font-size: 1.8em!important;
+    font-weight: 200;
+
+    padding: .3em 0 .3em .3em!important;
+  }
+  #base_min .nav-item .nav-link:hover{
+    color: var(--black) !important;
+    background-color: var(--red)!important;
+    transition: color .5s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out!important;
+  }
+
 
 
   .img_header {

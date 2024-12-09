@@ -1,4 +1,4 @@
-{% extends 'main/base.html' %}
+{% extends 'main/base_min.html' %}
 {% load static %}
 
 {% block content %}
@@ -134,15 +134,15 @@
 
 </style>
 
-<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+<!-- <div class='d-none d-lg-block d-xl-block d-xxl-block'>
   <img class='img_header' src="{% static 'abstract/mesh_5.png' %}">
 </div>
 <div class='d-block d-lg-none'>
   <img class='img_header' src="{% static 'abstract/mesh_5_mob.png' %}">
-</div>
+</div> -->
 
 
-<div class='desctop_84'>
+<!-- <div class='desctop_84'>
 
   <div class='d-none d-lg-block d-xl-block d-xxl-block'>
     <div class='row'>
@@ -176,28 +176,36 @@
     <h2 class='pt-2 pb-4 we_300 index_sub'>Лучшие машины ойкумены</h2>
       {% include 'cars/popups/popup_call_me.html' %}
   </div>
-</div>
+</div> -->
 
 
   <div class="base">
     <section class='relative_block mesh_3 mesh_cover'>
-      <img id='' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" />
+
+
+      <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
+
+      <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
+      {% include 'cars/popups/popup_call_me.html' %}
+
+      <!-- <img id='' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" /> -->
 
       <div id='h2_prof' class="">
-        
+      <!--         
         <div class='d-block d-lg-none'>
           <h2 class="white_dirty we_200 ps-5">ЭКСПЕР</h2>
           <h2 class="white_dirty we_200 ps-5">ТНОСТЬ</h2>
           <br><br><br><br>
-        </div>
+        
 
-        <h2 class=" we_200">ПРОФЕС</h2>
-        <h2 class=" we_200">CИОНА</h2>
-        <h2 class=" we_200">ЛИЗМ</h2>
+          <h2 class=" we_200">ПРОФЕС</h2>
+          <h2 class=" we_200">CИОНА</h2>
+          <h2 class=" we_200">ЛИЗМ</h2> -->
+        </div>
 
       </div>
 
-      <img id='founders' class='' src="{% static 'transperent/founders.png' %}" alt="" />
+      <img id='logo_1' class='absolute_center p-5' src='{% static "brand/logo_light_auto.svg" %}'>
 
       <img id='elem_4' class='illustr_sm' src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
       <img id='calend' class='illustr_sm'  src="{% static 'illustr/calendar_front.svg' %}" alt="" />

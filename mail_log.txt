@@ -5460,3 +5460,4 @@ Traceback (most recent call last):
     raise ConnectionError(str(exc)) from exc
 kombu.exceptions.OperationalError: Error 111 connecting to localhost:6380. Connection refused.
 2024-12-06 22:01:16,766 - Not Found: /favicon.ico
+2024-12-09 13:24:08,051 - Not Found: /favicon.ico
