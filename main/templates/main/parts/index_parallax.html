@@ -148,96 +148,6 @@
 	    }
 	  }
 
-	#car_rl {
-    position: absolute;
-    top: 5%;
-    animation: moveCarRL 2s linear infinite;
-    height: 9em;
-	}
-	@keyframes moveCarRL {
-	    0% {
-	        left: 110%;
-	    }
-	    100% {
-	        left: -70%;
-	    }
-	}
-
-	#car_lr {
-    position: absolute;
-    top: 75%;
-    animation: moveCarLR 2s linear infinite;
-    height: 9em;
-	}
-	@keyframes moveCarLR {
-	    0% {
-	        left: -10%;
-	    }
-	    100% {
-	        left: 110%;
-	    }
-	}
-
-
-
-		#container_circle { 
-			margin: 0%; 
-			display: flex;
-	    justify-content: center; 
-	    align-items: center;
-	    height: 100vh;
-	  }
-
-		#circle { 
-			position: relative;
-			width: 100%;
-			padding:60%;
-			overflow: hidden;
-			top:8%
-		}
-
-		#circle text {
-			font-weight: 200;
-		}
-
-		#circle svg {
-			position: absolute;
-			left: -30%;
-    	top: -15%;
-			width: 150%;
-			height: 150%;
-
-		  -webkit-animation-name: rotate;
-		     -moz-animation-name: rotate;
-		      -ms-animation-name: rotate;
-		       -o-animation-name: rotate;
-		          animation-name: rotate;
-		  -webkit-animation-duration: 5s;
-		     -moz-animation-duration: 5s;
-		      -ms-animation-duration: 5s;
-		       -o-animation-duration: 5s;
-		          animation-duration: 5s;
-		  -webkit-animation-iteration-count: infinite;
-		     -moz-animation-iteration-count: infinite;
-		      -ms-animation-iteration-count: infinite;
-		       -o-animation-iteration-count: infinite;
-		          animation-iteration-count: infinite;
-		  -webkit-animation-timing-function: linear;
-		     -moz-animation-timing-function: linear;
-		      -ms-animation-timing-function: linear;
-		       -o-animation-timing-function: linear;
-		          animation-timing-function: linear;
-		  -webkit-animation-direction: reverse;
-		  animation-direction: reverse;
-		}
-
-		@-webkit-keyframes rotate {
-		    from { -webkit-transform: rotate(360deg); }
-		}
-
-		@keyframes rotate {
-		    from { transform: rotate(360deg); }
-		}
 
 
 
@@ -285,96 +195,6 @@
 			top: 52%;
 			z-index: 22;
 		}
-
-		#car_rl {
-	    position: absolute;
-	    top: 5%;
-	    animation: moveCarRL 7s linear infinite;
-	    height: 9em;
-		}
-		@keyframes moveCarRL {
-		    0% {
-		        left: 110%;
-		    }
-		    100% {
-		        left: -10%;
-		    }
-		}
-
-		#car_lr {
-	    position: absolute;
-	    top: 75%;
-	    animation: moveCarLR 7s linear infinite;
-	    height: 9em;
-		}
-		@keyframes moveCarLR {
-		    0% {
-		        left: -10%;
-		    }
-		    100% {
-		        left: 110%;
-		    }
-		}
-
-
-			#container_circle { 
-		margin: 0%; 
-		display: flex;
-    justify-content: center; 
-    align-items: center;
-    height: 100vh;
-  }
-
-#circle { 
-	position: relative;
-	width: 80%;
-	padding-bottom: 100%;
-	overflow: hidden;
-}
-
-#circle text {
-	font-weight: 200;
-}
-
-#circle svg {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-
-  -webkit-animation-name: rotate;
-     -moz-animation-name: rotate;
-      -ms-animation-name: rotate;
-       -o-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-duration: 5s;
-     -moz-animation-duration: 5s;
-      -ms-animation-duration: 5s;
-       -o-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-     -moz-animation-iteration-count: infinite;
-      -ms-animation-iteration-count: infinite;
-       -o-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-     -moz-animation-timing-function: linear;
-      -ms-animation-timing-function: linear;
-       -o-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
-
-@-webkit-keyframes rotate {
-    from { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes rotate {
-    from { transform: rotate(360deg); }
-}
-
 
 
 	}
@@ -449,33 +269,18 @@
     <div class="slide_scroll">
       <div class='slide_content red_bg'>
       	<div id='h2_move' class='absolute_center'>
-					<h2 class="white we_200">ИНОМАРКИ</h2>
-					<h2 class="white we_200">НОВЫЕ  И</h2>
-					<h2 class="white we_200">С ПРОБЕГОМ</h2>
+
 				</div>
       </div>
     </div>
 
 
     <div class="slide_scroll">
-      <div class='slide_content black_bg'>
+      <div class='slide_content'>
 
-      	<div id="container_circle">
-					<div id="circle">
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-						    <defs>
-						        <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
-						    </defs>
-						    <circle cx="150" cy="100" r="75" fill="none"/>
-						    <g>
-						        <use xlink:href="#circlePath" fill="none"/>
-						        <text fill="#F5F5F5">
-						            <textPath xlink:href="#circlePath">Продажа  • Страхование • Кредитование • Лизинг • </textPath> 
-						        </text>
-						    </g>
-						</svg>
-					</div>
-				</div>
+      	<video autoplay loop muted preload="none" data-src="{% static 'video/fields.mp4' %}">
+			    <source src="{% static 'video/fields.mp4' %}" type="video/mp4">
+				</video>
 
       </div>
     </div>
@@ -497,8 +302,8 @@
 					<h2 class="white we_200">ДВИЖЕНИЕ</h2>
 				</div>
 
-				<img loading="lazy" loading="lazy" id='el_red_twice' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" />
-				<img loading="lazy" loading="lazy" id='el_red_min' class='absolute_center' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />		
+				<img loading="lazy"  id='el_red_twice' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" />
+				<img loading="lazy"  id='el_red_min' class='absolute_center' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />		
 			</section>
     </div>
 
@@ -506,7 +311,7 @@
 
     <div class="slide_scroll">
       <div class='slide_content black_bg'>
-      	<img loading="lazy" loading="lazy" id='logo_1' class='absolute_center p-5' src='{% static "brand/logo_dark_auto.svg" %}'>
+      	<img loading="lazy" id='logo_1' class='absolute_center p-5' src='{% static "brand/logo_dark_auto.svg" %}'>
       </div>
     </div>	
 

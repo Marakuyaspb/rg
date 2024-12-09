@@ -43,7 +43,7 @@
   }
 
   .parallax__content {
-    padding: var(--section-padding) var(--container-padding);
+    padding: 15em 2.5em;;
     justify-content: center;
     align-items: center;
     min-height: 100svh;
@@ -117,7 +117,6 @@
 
   .parallax__black-line-overflow {
     z-index: 20;
-    background-color: var(--color-black);
     width: 100%;
     height: 2px;
     position: absolute;
@@ -125,19 +124,140 @@
     left: 0;
   }
 
-  .parallax__title {
-    pointer-events: auto;
-    text-align: center;
-    text-transform: none;
-    margin-top: 0;
-    margin-bottom: .1em;
-    margin-right: .075em;
-    font-family: PP Neue Corp Wide, sans-serif;
-    font-size: 8em;
-    font-weight: 800;
-    line-height: 1;
-    position: relative;
+  /*  PHONE  */
+  @media (max-width: 810px) {
+    .parallax__title {
+        pointer-events: auto;
+        text-align: center;
+        text-transform: none;
+        margin-top: 0;
+        margin-bottom: .1em;
+        margin-right: .075em;
+        color: var(--red);
+        font-size: 3em;
+        font-weight: 800;
+        line-height: 1;
+        position: relative;
+      }
+
+
+      #car_rl {
+        position: relative;
+        top: 15%;
+        animation: moveCarRL 2.1s linear infinite;
+        height: 8em;
+      }
+      @keyframes moveCarRL {
+          0% {
+              left: 120%;
+          }
+          100% {
+              left: -180%;
+          }
+      }
+
+      #car_lr {
+        position: relative;
+        top: 25%;
+        animation: moveCarLR 2s linear infinite;
+        height: 8em;
+      }
+      @keyframes moveCarLR {
+          0% {
+              left: -105%;
+          }
+          100% {
+              left: 120%;
+          }
+      }
+
+
+      #car_lr_2 {
+        position: absolute;
+        top: 58%;
+        animation: moveCarLR2 1.8s linear infinite;
+        height: 9.7em;
+      }
+      @keyframes moveCarLR2 {
+          0% {
+              left: -60%;
+          }
+          100% {
+              left: 120%;
+          }
+      }
+
+
+
   }
+
+  /*  DESCTOP  */
+  @media (min-width: 811px){
+    .parallax__title {
+      pointer-events: auto;
+      text-align: center;
+      text-transform: none;
+      margin-top: 0;
+      margin-bottom: .1em;
+      margin-right: .075em;
+      color: var(--red);
+      font-size: 8em;
+      font-weight: 800;
+      line-height: 1;
+      position: relative;
+    }
+
+
+    #car_rl {
+      position: absolute;
+      top: 74%;
+      animation: moveCarRL 6s linear infinite;
+      height: 9em;
+    }
+    @keyframes moveCarRL {
+        0% {
+            left: 110%;
+        }
+        100% {
+            left: -10%;
+        }
+    }
+
+    #car_lr {
+      position: absolute;
+      top: 79%;
+      animation: moveCarLR 7s linear infinite;
+      height: 9.2em;
+    }
+    @keyframes moveCarLR {
+        0% {
+            left: -10%;
+        }
+        100% {
+            left: 110%;
+        }
+    }
+
+
+    #car_lr_2 {
+      position: absolute;
+      top: 82%;
+      animation: moveCarLR2 6.5s linear infinite;
+      height: 10em;
+    }
+    @keyframes moveCarLR2 {
+        0% {
+            left: -30%;
+        }
+        100% {
+            left: 120%;
+        }
+    }
+
+
+
+  }
+
 
   .parallax__radial-gradient {
     z-index: 10;
@@ -156,7 +276,7 @@
     height: 100svh;
     /*display: flex;*/
     position: absolute;
-    top: 0;
+    top: 5em!important;
     left: 0;
   }
 
@@ -170,18 +290,13 @@
     top: -17.5%;
     left: 0;
   }
-
+  #earth{
+    opacity: .9;
+  }
   .parallax__layer-img.is-third {
     top: -20%;
   }
 
-  @font-face {
-    font-family: 'PP Neue Corp Wide';
-    src: url('https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717e399d30a606fed425914_PPNeueCorp-WideUltrabold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-  }
 </style>
 
 
@@ -193,9 +308,19 @@
 
         <div data-parallax-layers class="parallax__layers">
 
-          <img loading="lazy" src="{% static 'abstract/mesh_2.png' %}" loading="eager" width="800" data-parallax-layer="1" alt="" class="parallax__layer-img">
+          <img loading="lazy" src="{% static 'abstract/mesh_blue_black.png' %}" loading="eager" width="800" data-parallax-layer="1" alt="" class="parallax__layer-img">
 
-          <img loading="lazy" src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795b4d5ac529e7d3a562_osmo-parallax-layer-2.webp" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
+
+          <!-- PHONE -->
+          <div class='d-block d-lg-none '>
+            <img id='earth' loading="lazy" src="{% static 'transperent/earth.svg' %}" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
+          </div>
+
+          <!-- DESCTOP -->
+          <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+            <img id='earth' loading="lazy" src="{% static 'transperent/earth.svg' %}" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
+          </div>
+
 
           <div data-parallax-layer="3" class="parallax__layer-title">
             <h2 class="parallax__title pt-5 mt-5">ЛУЧШИЕ</h2>
@@ -203,21 +328,38 @@
             <h2 class="parallax__title">ОЙКУМЕНЫ</h2>
           </div>
 
-          <img loading="lazy" src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795bb5aceca85011ad83_osmo-parallax-layer-1.webp" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
+          <!-- PHONE -->
+          <div class='d-block d-lg-none '>
+            <img loading="lazy" src="{% static 'transperent/rocks.svg' %}" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
+          </div>
+
+          <!-- DESCTOP -->
+          <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+            <img loading="lazy" src="{% static 'transperent/rocks.png' %}" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
+          </div>
+
 
         </div>
         <div class="parallax__fade"></div>
       </div>
     </section>
-    <section class="parallax__content">
 
+    <section class="parallax__content red_deep_bg">
 
-    <div class="desctop_84">
-      <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
+      <div class=''>
+          <h2 class="white big_guar we_600">ИНОМАРКИ</h2>
+          <h2 class="white big_guar we_200">НОВЫЕ И</h2>
+          <h2 class="white big_guar we_200">С ПРОБЕГОМ</h2>
 
-      <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
-    </div>
+          <div class="pt-4">
+            {% include 'cars/popups/popup_call_me.html' %}
+          </div>
 
+          <img id='car_rl' class='' src="{% static 'transperent/Range_Rover_Long_Supercharger_mini.png' %}" alt="" /> 
+          <img  id='car_lr' class='' src="{% static 'transperent/Mitsubishi_Outlander_mini.png' %}" alt="" />
+          <img id='car_lr_2' class='' src="{% static 'transperent/audi_green.png' %}" alt="" />
+
+      </div>
     </section>
   </div>
 

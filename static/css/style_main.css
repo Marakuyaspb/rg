@@ -973,6 +973,14 @@ tr {
     padding-bottom: 6em;
   }
 
+
+  .big_guar{
+    font-size: 3em;
+  }
+  .big_h2_guar{ 
+    font-size: 1.5em;
+  }
+
   .h1_header{
     margin-top: 12em;
     padding-bottom: 6em;
@@ -1034,11 +1042,6 @@ tr {
     transform: translate(-50%, -50%);
   }
 
-  .brand_aik {
-    font-size: 1.2em!important;
-    font-weight: 300;
-    padding-top: .6em;
-  }
 
   /*.thumb{
     width: 100%;

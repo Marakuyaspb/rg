@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const source = video.querySelector('source');
                 source.src = video.getAttribute('data-src');
                 video.load(); // Load the video
+                video.play(); // Start playing the video
                 observer.unobserve(video); // Stop observing once loaded
             }
         });
