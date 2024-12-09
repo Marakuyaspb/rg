@@ -143,31 +143,31 @@
     font-size: 3.2em;
     line-height: .9;
   }
-/*  DESCTOP  */
-@media (min-width: 811px){
-  .ellipse{
-    width: 30em;
+  /*  DESCTOP  */
+  @media (min-width: 811px){
+    .ellipse{
+      width: 30em;
+    }
+    .ellipse_twice{
+      position: absolute;
+      width: 60em;
+      top: -30%;
+      left: 44%;
+    }
+    .ellipse_2{
+      width: 16em;
+      position: relative;
+      right: 16%;
+      top:10%;
+    }
   }
-  .ellipse_twice{
-    position: absolute;
-    width: 60em;
-    top: -30%;
-    left: 44%;
+    /*  PHONE  */
+  @media (max-width: 810px) {
+    .ellipse{
+      width: 20em;
+      position: relative;
+    }
   }
-  .ellipse_2{
-    width: 16em;
-    position: relative;
-    right: 16%;
-    top:10%;
-  }
-}
-  /*  PHONE  */
-@media (max-width: 810px) {
-  .ellipse{
-    width: 20em;
-    position: relative;
-  }
-}
 </style>
 
   
@@ -179,10 +179,10 @@
     <h2 class='pt-2 pb-4 we_300'>В наличии и под заказ из любой точки планеты</h2>
 
     <div class='d-none d-lg-block d-xl-block d-xxl-block'>
-      <img class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'> 
-      <img id='cone_18' class='' src='{% static "illustr/Cone_01_2(18).svg" %}'>  
-      <img id='cone_3' class='' src='{% static "illustr/Cone_01_2_3.svg" %}'>  
-      <img id='chrome8' class='' src='{% static "illustr/chrome8.svg" %}'>  
+      <img loading="lazy" class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'> 
+      <img loading="lazy" id='cone_18' class='' src='{% static "illustr/Cone_01_2(18).svg" %}'>  
+      <img loading="lazy" id='cone_3' class='' src='{% static "illustr/Cone_01_2_3.svg" %}'>  
+      <img loading="lazy" id='chrome8' class='' src='{% static "illustr/chrome8.svg" %}'>  
     </div>
 
     <div class='row pt-4'>
@@ -196,9 +196,9 @@
 
     <div class='row pt-5 pb-3'>
       <div class='col-md-6'>
-        <img id='jet' class='' src='{% static "illustr/jet.png" %}'> 
-        <img class='ps-5 abstract ellipse' src='{% static "abstract/ellipse_big.svg" %}'>
-        <img class='ps-5 abstract ellipse_2' src='{% static "abstract/ellipse_2.svg" %}'> 
+        <img loading="lazy" id='jet' class='' src='{% static "illustr/jet.png" %}'> 
+        <img loading="lazy" class='ps-5 abstract ellipse' src='{% static "abstract/ellipse_big.svg" %}'>
+        <img loading="lazy" class='ps-5 abstract ellipse_2' src='{% static "abstract/ellipse_2.svg" %}'> 
 
       </div>
       <div class='col-md-5'>
@@ -227,7 +227,7 @@
 
       </div>
       <div class='col-6'>
-          <img id='tools' class='spares_head_img' src="{% static 'illustr/chrome8.svg' %}" alt="" />
+          <img loading="lazy" id='tools' class='spares_head_img' src="{% static 'illustr/chrome8.svg' %}" alt="" />
       </div>
     </div>
 
@@ -235,7 +235,7 @@
 
     <p>У нас есть выходы на официальных производителей, дилеров и разные каналы параллельного импорта. Найдем и доставим в Россию любую необходимую деталь!</p>
 
-    <img id='jet_mob' class='' src='{% static "illustr/jet.png" %}'>
+    <img loading="lazy" id='jet_mob' class='' src='{% static "illustr/jet.png" %}'>
 
 
     <h2 class='pb-5 big_sp we_400 red'>А ДЕТАЛЬ ТОЧНО ПОДОЙДЁТ?</h2>

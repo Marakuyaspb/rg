@@ -4,42 +4,42 @@
 {% block content %}
 
 <style type="text/css">
-  /*  DESCTOP  */
-@media (min-width: 811px){
-  .ellipse_3{
-    position: absolute;
-    width: 74em;
-    top: -27%;
-    left: 32%;
+    /*  DESCTOP  */
+  @media (min-width: 811px){
+    .ellipse_3{
+      position: absolute;
+      width: 74em;
+      top: -27%;
+      left: 32%;
+    }
+    .ellipse_big{
+      position: absolute;
+      width: 34em;
+      top: 25%;
+      left: 70%;
+    }
+    #car_head{
+      width: 80%;
+    }
   }
-  .ellipse_big{
-    position: absolute;
-    width: 34em;
-    top: 25%;
-    left: 70%;
+    /*  PHONE  */
+  @media (max-width: 810px) {
+    .ellipse_3{
+      position: absolute;
+      width: 34em;
+      top: 22%;
+      left: 33%;
+    }
+    .ellipse_big{
+      position: absolute;
+      width: 14em;
+      top: 75%;
+      left: -7%;
+    }
+    #car_head{
+      width: 100%;
+    }
   }
-  #car_head{
-    width: 80%;
-  }
-}
-  /*  PHONE  */
-@media (max-width: 810px) {
-  .ellipse_3{
-    position: absolute;
-    width: 34em;
-    top: 22%;
-    left: 33%;
-  }
-  .ellipse_big{
-    position: absolute;
-    width: 14em;
-    top: 75%;
-    left: -7%;
-  }
-  #car_head{
-    width: 100%;
-  }
-}
 </style>
 
   <div class='desctop_84'>
@@ -50,17 +50,17 @@
 
         <section>
           <div class="d-flex align-items-start mt-2">
-            <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+            <img loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
             <h2 class='pt-2 large_text we_300'>Юридическое сопровождение сделок трейд-ин</h2>
           </div>
 
           <div class="d-flex align-items-start">
-            <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+            <img loading="lazy" loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
             <h2 class='pt-2 large_text we_300'>Полная проверка истории автомобиля с пробегом</h2>
           </div>
 
           <div class="d-flex align-items-start">
-            <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+            <img loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
             <h2 class='pt-2 large_text we_300'>Юридическая поддержка в нестандартных ситациях </h2>
           </div>
         </section>
@@ -72,7 +72,7 @@
       </div>
 
       <div class='col-md-6'>    
-        <img id='car_head' class='' src="{% static 'transperent/Audi_Q6_black.png' %}" alt="" />  
+        <img loading="lazy" id='car_head' class='' src="{% static 'transperent/Audi_Q6_black.png' %}" alt="" />  
       </div>
     </div>
 

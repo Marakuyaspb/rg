@@ -30,7 +30,7 @@
   <div>
     <div class='button_form_base center mt-3 mb-2 ms-3 white'>
       <div class="d-flex justify-content-start">
-        <img class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class='pt-1'>В наличии</span>
+        <img loading="lazy" class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class='pt-1'>В наличии</span>
       </div>
     </div>
   </div>
@@ -45,10 +45,10 @@
 <!-- 
 <section id='filter' class='black_bg py-3'>
   <div class="d-flex justify-content-center">
-    <img class='smm_head mx-2' src='{% static "icons/car.png" %}'>
-    <img class='smm_head mx-2' src='{% static "icons/bus.png" %}'>
-    <img class='smm_head mx-2' src='{% static "icons/work.png" %}'>
-    <img class='smm_head mx-2' src='{% static "icons/away.png" %}'>
+    <img loading="lazy" class='smm_head mx-2' src='{% static "icons/car.png" %}'>
+    <img loading="lazy" class='smm_head mx-2' src='{% static "icons/bus.png" %}'>
+    <img loading="lazy" class='smm_head mx-2' src='{% static "icons/work.png" %}'>
+    <img loading="lazy" class='smm_head mx-2' src='{% static "icons/away.png" %}'>
   </div>
 </section> 
 
@@ -64,7 +64,7 @@
 
     <a href='{% url "cars:the_car" car.id %}'>
       <div class='wrap_car_img'>
-        <img src='{{car.main_img.url}}' class='case_prev'>
+        <img loading="lazy" src='{{car.main_img.url}}' class='case_prev'>
         <h3 class='car_name black ps-3 mt-4'>{{car.name}}</h3>
         <p class='black ps-3 pt-2 price_display'>{{car.price}} ₽</p>
       </div>
@@ -78,7 +78,7 @@
   <section id='nothing'>
     <div class="d-flex justify-content-start py-2">
       <div>
-        <img class='img_auto' src="{% static 'icons/search_64.png' %}" />
+        <img loading="lazy" class='img_auto' src="{% static 'icons/search_64.png' %}" />
       </div>
       <div class='ps-2'>
         <h1 class='py-3 we_300'>Пожалуйста, измените параметры поиска</h1>

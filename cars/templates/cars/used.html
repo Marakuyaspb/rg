@@ -32,7 +32,7 @@
     {% for car in cars %}
     <a href='{% url "cars:the_car" car.id %}'>
       <div class='wrap_car_img'>
-        <img src='{{car.main_img.url}}' class='case_prev'>
+        <img loading="lazy" src='{{car.main_img.url}}' class='case_prev'>
         <h3 class='car_name black ps-3 mt-4'>{{car.name}}</h3>
         <p class='black ps-3 pt-2 price_display'>{{car.price}} ₽</p>
       </div>
