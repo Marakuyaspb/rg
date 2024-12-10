@@ -8,9 +8,9 @@
   @media (min-width: 811px){
     .ellipse_3{
       position: absolute;
-      width: 74em;
-      top: -27%;
-      left: 32%;
+      width: 60em;
+      top: -24%;
+      left: 40%;
     }
     .ellipse_big{
       position: absolute;
@@ -19,22 +19,24 @@
       left: 70%;
     }
     #car_head{
-      width: 80%;
+      width: 70%;
     }
   }
     /*  PHONE  */
   @media (max-width: 810px) {
-    .ellipse_3{
+    .ellipse_big{
       position: absolute;
       width: 34em;
       top: 22%;
       left: 33%;
+      opacity: .5;
     }
-    .ellipse_big{
-      position: absolute;
-      width: 14em;
-      top: 75%;
-      left: -7%;
+    .ellipse_3{
+      block: absolute;
+      width: .01em;
+      top: 70%;
+      left: 55%;
+      opacity: .5;
     }
     #car_head{
       width: 100%;
@@ -72,12 +74,12 @@
       </div>
 
       <div class='col-md-6'>    
-        <img loading="lazy" id='car_head' class='' src="{% static 'transperent/Audi_Q6_black.png' %}" alt="" />  
+        <img loading="lazy" id='car_head' class='' src="{% static 'transperent/KIA_K3_yellow_2.png' %}" alt="" />  
       </div>
     </div>
 
-    <img class='abstract ellipse_3 ' src='{% static "abstract/ellipse_3.svg" %}'>
-    <img class='abstract ellipse_big ' src='{% static "abstract/ellipse_big.svg" %}'>
+    <img loading="lazy" class='abstract ellipse_3 ' src='{% static "abstract/mesh_cropped.png" %}'>
+    <img loading="lazy" class='abstract ellipse_big ' src='{% static "transperent/earth_640.png" %}'>
       
   </div>
 
