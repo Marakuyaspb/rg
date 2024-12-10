@@ -12,10 +12,11 @@
   }
 
 
+
   .mesh_1{
     background-image: url("{% static 'abstract/mesh_1.png' %}");
   }
-   .mesh_2{
+  .mesh_2{
     background-image: url("{% static 'abstract/mesh_2.png' %}");
   }
   .mesh_3{
@@ -33,6 +34,7 @@
   .mesh_blue_black{
     background-image: url("{% static 'abstract/mesh_blue_black_1.png' %}");
   }
+
   #h2_prof{
     position: absolute;
     z-index: 4;
@@ -147,29 +149,12 @@
 
 <div class='red_deep_bg py-5'></div>
 
-<!-- <div class='red_deep_bg py-5'></div>
-<div class='red_deep_bg py-5'></div>
-<div class='red_deep_bg py-5'></div>
-<div class='red_deep_bg py-5'></div> -->
-
-<!--     <div class='row py-5'>
-      <div class='col-md-4 my-3'>
-        <h3 class='we_300'><span class='red'>Продажа</span> новых и подержанных <span class='red'>автомобилей</span> ведущих мировых брендов.</h3>
-      </div>
-      <div class='col-md-4 my-3'>
-        <h3 class='we_300'>Профессиональное <span class='red'>сервисное обслуживание:</span> от технического осмотра до сложного ремонта.</h3>
-      </div>
-      <div class='col-md-4 my-3'>
-        <h3 class='we_300'><span class='red'>Услуги страхования, кредитования и лизинга</span>, позволяющие каждому клиенту найти оптимальное финансовое решение.</h3>
-      </div>
-    </div> 
-
-  </div>-->
-
-
-
 {% include 'main/parts/index_parallax.html' %}
 
+<section class='pt-5'>
+  <h2 class='big_guar gray center'>ПОПУЛЯРНЫЕ МОДЕЛИ</h2>
+  {% include 'cars/carousel_new.html' %}
+</section>
 
 
 <!-- DESCTOP -->

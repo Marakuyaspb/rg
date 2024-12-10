@@ -167,6 +167,12 @@ tr {
     backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
+
+
+
+
+
+
 .center{
   text-align: center;
   margin-right: auto!important;
@@ -954,9 +960,9 @@ tr {
   }
 
   .catalog_sub{
-    color: var(--red);
-    font-size: 2.4em;
-    line-height: 1;
+    color: var(--bordo_dark);
+    font-size: 2em;
+    line-height: .9;
     position: relative;
   }
 
@@ -1154,7 +1160,7 @@ tr {
 .modal_full{
   display: none;
   position: fixed;
-  z-index: 777;
+  z-index: 1777;
   left: 0;
   top: 0;
   width: 100%;

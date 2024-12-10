@@ -43,70 +43,64 @@
 </style>
 
 <div class="content_wrap_mob">
-	<div class="wrap_dir_mob">	
-		<img loading="lazy" src="{% static 'img/catalog.png' %}" class="direction_image_mob" alt="Каталог авто" />
 
-		<a href='{% url "cars:catalog" %}'>
+	<a href='{% url "cars:catalog" %}'>	
+		<div class="wrap_dir_mob">	
+			<img loading="lazy" src="{% static 'img/catalog.png' %}" class="direction_image_mob" alt="Каталог авто" />
 			<div class="profile_detail_mob">
 				Выбрать автомобиль ➜		
 			</div>
-		</a>
-	</div>
+		</div>
+	</a>
 
-	<div class="wrap_dir_mob">
-		
-		<img loading="lazy" src="{% static 'img/insurance.png' %}" class="direction_image_mob" alt="Автострахование" />
 
-		<a href='{% url "main:insurance" %}'>
+	<a href='{% url "main:insurance" %}'>
+		<div class="wrap_dir_mob">		
+			<img loading="lazy" src="{% static 'img/insurance.png' %}" class="direction_image_mob" alt="Автострахование" />		
 			<div class="profile_detail_mob">
 				Рассчитать страховку ➜
-			</div>
-		</a>
-	</div>
+			</div>		
+		</div>
+	</a>	
 
-	<div class="wrap_dir_mob">
-		
-		<img loading="lazy" src="{% static 'img/guarantee.png' %}" class="direction_image_mob" alt="Гарантия" />
 
-		<a href='{% url "main:guarantee" %}'>
+	<a href='{% url "main:guarantee" %}'>
+		<div class="wrap_dir_mob">
+			<img loading="lazy" src="{% static 'img/guarantee.png' %}" class="direction_image_mob" alt="Гарантия" />
 			<div class="profile_detail_mob">
 				Оформить гарантию ➜
-			</div>
-		</a>
-	</div>
+			</div>		
+		</div>
+	</a>
 
-	<div class="wrap_dir_mob">
+
+	<a href='{% url "main:service" %}'>	
+		<div class="wrap_dir_mob">
 		
-		<img loading="lazy" src="{% static 'img/service.png' %}" class="direction_image_mob" alt="Автосервис" />
+			<img loading="lazy" src="{% static 'img/service.png' %}" class="direction_image_mob" alt="Автосервис" />
 
-		<a href='{% url "main:service" %}'>	
+
 			<div class="profile_detail_mob">
 				Диагностика и сервисное обслуживание ➜
 			</div>
+		</div>
+	</a>
 
-		</a>
-	</div>
+	<a href='{% url "main:jurists" %}'>		
+		<div class="wrap_dir_mob">		
+			<img loading="lazy" src="{% static 'img/jurists.png' %}" class="direction_image_mob" alt="Юристы" />
+				<div class="profile_detail_mob">
+					Юридическая поддержка ➜
+				</div>
+		</div>
+	</a>
 
-	<div class="wrap_dir_mob">
-		
-		<img loading="lazy" src="{% static 'img/jurists.png' %}" class="direction_image_mob" alt="Юристы" />
-
-		<a href='{% url "main:jurists" %}'>	
-			<div class="profile_detail_mob">
-				Юридическая поддержка ➜
-			</div>
-		</a>
-	</div>
-
-	<div class="wrap_dir_mob">
-		
-		<img loading="lazy" src="{% static 'img/spares.png' %}" class="direction_image_mob" alt="Запчасти" />
-
-		<a href='{% url "main:spares" %}'>	
+	<a href='{% url "main:spares" %}'>		
+		<div class="wrap_dir_mob">	
+			<img loading="lazy" src="{% static 'img/spares.png' %}" class="direction_image_mob" alt="Запчасти" />
 			<div class="profile_detail_mob">
 				Запчасти на заказ ➜
-			</div>
-
-		</a>
-	</div>
+			</div>	
+		</div>
+	</a>
 </div>

@@ -5809,3 +5809,4 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'catalog/fresh' not found. 'c
 2024-12-10 13:53:21,850 - Not Found: /installHook.js.map
 2024-12-10 13:53:22,619 - Not Found: /installHook.js.map
 2024-12-10 14:16:13,120 - Not Found: /installHook.js.map
+2024-12-10 15:53:45,484 - Not Found: /favicon.ico
