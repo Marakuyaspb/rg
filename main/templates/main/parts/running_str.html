@@ -1,0 +1,44 @@
+{% load static %}
+
+<style type="text/css">
+
+	.marquee {
+		position: relative;
+		width: 100vw;
+		max-width: 100%;
+		height: 200px;
+		overflow-x: hidden;
+	}
+  /*  PHONE  */
+	@media (max-width: 810px) {
+		.track {
+			position: absolute;
+			white-space: nowrap;
+			will-change: transform;
+			animation: marquee 14s linear infinite;
+		}
+	}
+
+	/*  DESCTOP  */
+	@media (min-width: 811px){
+	.track {
+			position: absolute;
+			white-space: nowrap;
+			will-change: transform;
+			animation: marquee 32s linear infinite;
+		}
+	}
+	@keyframes marquee {
+		from { transform: translateX(0); }
+		to { transform: translateX(-50%); }
+	}
+
+</style>
+
+<div class="marquee red_deep_bg">
+  	<div class="track ">
+
+		<h1 class="moving_text white we_200 big_guar py-5">&nbsp;ТРЕЙД ИН • СТРАХОВАНИЕ • КРЕДИТОВАНИЕ • ЛИЗИНГ • ОПТИМАЛЬНЫЕ РЕШЕНИЯ • </h1>
+
+	</div>
+</div>

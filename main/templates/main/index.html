@@ -30,7 +30,9 @@
   .mesh_5_mob{
     background-image: url("{% static 'abstract/mesh_5_mob.png' %}");
   }
-
+  .mesh_blue_black{
+    background-image: url("{% static 'abstract/mesh_blue_black_1.png' %}");
+  }
   #h2_prof{
     position: absolute;
     z-index: 4;
@@ -135,98 +137,20 @@
 </style>
 
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
 {% include 'main/parts/space_of_move.html' %}
 
+{% include 'main/parts/running_str.html' %}
 
+<div class='red_deep_bg py-5'></div>
 
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- <div class='d-none d-lg-block d-xl-block d-xxl-block'>
-  <img loading="lazy" class='img_header' src="{% static 'abstract/mesh_5.png' %}">
-</div>
-<div class='d-block d-lg-none'>
-  <img loading="lazy" class='img_header' src="{% static 'abstract/mesh_5_mob.png' %}">
-</div> -->
-
-
-<!-- <div class='desctop_84'>
-
-  <div class='d-none d-lg-block d-xl-block d-xxl-block'>
-    <div class='row'>
-      <div class='col-md-6'>
-          <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
-
-          <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
-           {% include 'cars/popups/popup_call_me.html' %}
-      </div>
-      <div class='col-md-6'>
-        <img loading="lazy" id='main_right_desctop' class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
-        <img loading="lazy" id='red_header_ellipce' class='' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />
-
-      </div> 
-    </div>
-  </div>
-
-  <div class='d-block d-lg-none'>
-    <div class='row'>
-      <div class='col-md-6 pt-4'>
-        <h1 class='very_big'>ПРОСТР</h1>
-        <h1 class='very_big'>АНСТВО</h1>
-        <h1 class='very_big'>ДВИЖЕ</h1>
-        <h1 class='very_big'>НИЯ</h1>
-      </div>
-      <div class='col-md-6'>
-        <img loading="lazy" class='main_right_img' src="{% static 'transperent/Audi_Q6_black.png' %}" />
-      </div> 
-    </div>
-
-    <h2 class='pt-2 pb-4 we_300 index_sub'>Лучшие машины ойкумены</h2>
-      {% include 'cars/popups/popup_call_me.html' %}
-  </div>
-</div> -->
-
-
-<!--   <div class="base">
-    <section class='relative_block mesh_3 mesh_cover'>
-
-
-      <h1 class='very_big'>ПРОСТРАНСТВО ДВИЖЕНИЯ</h1>
-
-      <h2 class='pt-2 pb-4 we_300 index_sub pt-4'>Лучшие машины ойкумены</h2>
-      {% include 'cars/popups/popup_call_me.html' %}
-
-     <img loading="lazy" id='' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" /> 
-
-      <div id='h2_prof' class="">
-              
-        <div class='d-block d-lg-none'>
-          <h2 class="white_dirty we_200 ps-5">ЭКСПЕР</h2>
-          <h2 class="white_dirty we_200 ps-5">ТНОСТЬ</h2>
-          <br><br><br><br>
-        
-
-          <h2 class=" we_200">ПРОФЕС</h2>
-          <h2 class=" we_200">CИОНА</h2>
-          <h2 class=" we_200">ЛИЗМ</h2> 
-        </div>
-
-      </div>
-
-      <img loading="lazy" id='logo_1' class='absolute_center p-5' src='{% static "brand/logo_light_auto.svg" %}'>
-
-      <img loading="lazy" id='elem_4' class='illustr_sm' src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
-      <img loading="lazy" id='calend' class='illustr_sm'  src="{% static 'illustr/calendar_front.svg' %}" alt="" />
-
-      <div class='d-none d-lg-block d-xl-block d-xxl-block'>
-        <img loading="lazy" id='thing_19' class='illustr_sm'  src="{% static 'illustr/18.svg' %}" alt="" />
-        <img loading="lazy" id='clay' class='illustr_sm'  src="{% static 'illustr/clay.svg' %}" alt="" />
-
-        <img loading="lazy" id='beauty_car_1' class='illustr_sm'  src="{% static 'transperent/beauty_car_1.png' %}" alt="" />
-        <img loading="lazy" id='BMW320i' class='illustr_sm'  src="{% static 'transperent/BMW320i.png' %}" alt="" />
-      </div>
-
-  </div> -->
-
+<!-- <div class='red_deep_bg py-5'></div>
+<div class='red_deep_bg py-5'></div>
+<div class='red_deep_bg py-5'></div>
+<div class='red_deep_bg py-5'></div> -->
 
 <!--     <div class='row py-5'>
       <div class='col-md-4 my-3'>
@@ -238,9 +162,9 @@
       <div class='col-md-4 my-3'>
         <h3 class='we_300'><span class='red'>Услуги страхования, кредитования и лизинга</span>, позволяющие каждому клиенту найти оптимальное финансовое решение.</h3>
       </div>
-    </div> -->
+    </div> 
 
-  </div>
+  </div>-->
 
 
 

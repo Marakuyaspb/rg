@@ -5,376 +5,275 @@
 
 <style type="text/css">
 
-	/* parallax here */
-  .wrapper_p {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
-  .slide_scroll {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--dark);
-    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-  }
-  .slide_scroll:first-child {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-  .slide_content{
-    padding: 6em 1em;
-    height: 100vh;
-    width: 100%;
-    overflow-x: clip!important;
-    position: relative;
-  }
+/* About parallax */
 
-  /* other animations */
-
-  .relative_block{
+	.intro {
 		position: relative;
-		width: 100%; 
-    height: 100vh;
-    overflow: hidden;
-	}
+		height: 90vh;
+		background-color: var(--black);
+		color: var(--white);
 
-	.background_el{
-		position: absolute;
-		z-index: -5;
-	}
-
-
-
-	#el_wh_1{animation: pulse 2s infinite; }
-	@keyframes pulse {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(.9);
-    }
-	}
-
-
-
-
-  /* mobile */
-  @media (max-width: 810px) {
-
-  	.absolute_center{
-  		position: absolute;
-		  top: 50%;
-		  left: 50%;
-		  transform: translate(-50%, -50%);
-		  width: 110%;
-		}
-  	#logo_1{
-			position: absolute;
-			z-index: 222;
-			width: 20em;
-		}
-		#h2_move{
-			position: absolute;
-			z-index: 4;
-		}
-		#h2_move h2{
-			font-size: 3em;
-		}
-
-		#h2_prof{
-			position: absolute;
-			z-index: 4;
-			left: 5%;
-			top:15%
-		}
-		#h2_prof h2{
-			font-size: 4em;
-			line-height: .9;
-		}
-		#founders{
-			position: absolute;
-			z-index: 5;
-			width: 32em;
-			bottom: 0%;
-			left: -15%;
-		}
-
-		#calend{
-			width: 8em;
-			position: absolute;
-    	animation: levitation_calend 5s infinite;
-		}
-		@keyframes levitation_calend {
-	    0% {
-	      top: 33%;
-	      left:70%;
-	    }
-	    50% {
-	      top: 34%;
-	      left:70%;
-
-	    }
-	    100% {
-	      top: 33%;
-	      left:70%;
-	    }
+	.visual {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  
+	  &::after {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: radial-gradient(rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5));
 	  }
-
-	 	#elem_4{
-			width: 6em;
-			position: absolute;
-	  	animation: levitation_elem_4 6s infinite;
-		}
-		@keyframes levitation_elem_4 {
-	    0% {
-	      top: 3%;
-	      left:-2%;
-	    }
-	    50% {
-	      top: 2%;
-	      left:-2%;
-
-	    }
-	    100% {
-	      top: 3%;
-	      left:-2%;
-	    }
-	  }
-
-
-
-
 	}
 
-
-
-
-  /* desctop */
-  @media (min-width: 811px){
-  	.absolute_center{
-			position: absolute;
-			top: 50%;
-	    left: 50%;
-	    transform: translate(-50%, -50%);
-	    z-index: 2;
-
-		}
-		#logo_1{
-			position: absolute;
-			z-index: 22;
-			width: 26em;
-		}
-		#h2_move{
-			position: absolute;
-			z-index: 4;
-		}
-		#h2_move h2{
-			font-size: 5em;
-		}
-
-		
-
-		#beauty_car_1{
-			width: 50em;
-			position: absolute;
-			left: -10%;
-			top: 52%;
-			z-index: 22;
-		}
-		#BMW320i{
-			width: 54em;
-			position: absolute;
-			left: 70%;
-			top: 52%;
-			z-index: 22;
-		}
-
-
+	.bg-img {
+	  will-change: transform filter;
+	  filter: brightness(50%);
+	}
 	}
 
+	.title {
+		position: relative;
+	}
 
-
-
-	#el_red_min{
+	.bg-img {
 		position: absolute;
-		top: 50%;
-		left: 60%;
-		width: 22em;
-		animation: rotate 5s linear infinite;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: brightness(60%);
 	}
-	@keyframes rotate {
-      0% {
-          transform: rotate(0deg);
-      }
-      100% {
-          transform: rotate(360deg);
-      }
-  }
 
-  #el_red_twice{
-  	top: 5%;
-    left: 25%;
-  	animation: rotate_b 7s linear infinite;
-  }
-  @keyframes rotate_b {
-      0% {
-          transform: rotate(360deg);
-      }
-      100% {
-          transform: rotate(0deg);
-      }
-  }
+	.footer {
+		height: 70vh;
+		color: var(--red);
+		background-color: var(--white);
+	}
+
+	.slide-container {
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.intro, .slide, .footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slide {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		color: var(--white);
+		will-change: transform;
 
 
 
+	&::after {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+	}
 
-	/* Circle thing */
+	.bg-img {
+		  width: 120%;
+		  height: 120%;
+		  left: -10%;
+		}
+	}
+
+	.slide-title {
+		position: relative;
+	}
 
 
-	  /* desctop */
-  @media (min-width: 811px){
 
-}
 
 </style>
 
 
 
 
-
- <div class="wrapper_p">
-
-  <div class="slide_scroll">
-  	<section class='relative_block mesh_2 mesh_cover'>
-			<center>
-				<img loading="lazy" loading="lazy" id='logo_1' class='absolute_center p-5' src='{% static "brand/logo_light_auto.svg" %}'>
-			</center>
-
-			<img loading="lazy" loading="lazy" id='car_rl' class='' src="{% static 'transperent/Range_Rover_Long_Supercharger_mini.png' %}" alt="" />	
-			<img loading="lazy" loading="lazy" id='car_lr' class='' src="{% static 'transperent/Mitsubishi_Outlander_mini.png' %}" alt="" />
-
-			<img loading="lazy" loading="lazy" id='el_wh_1' class='absolute_center background_el' src="{% static 'abstract/ellipse_2_white.svg' %}" alt="" />
-		</section>
-  </div> 
+ 
 
 
-
-    <div class="slide_scroll">
-      <div class='slide_content red_bg'>
-      	<div id='h2_move' class='absolute_center'>
-
-				</div>
-      </div>
-    </div>
-
-
-    <div class="slide_scroll">
-      <div class='slide_content'>
-
-      	<video autoplay loop muted preload="none" data-src="{% static 'video/fields.mp4' %}">
-			    <source src="{% static 'video/fields.mp4' %}" type="video/mp4">
-				</video>
-
-      </div>
-    </div>
-
-
-
-    <div class="slide_scroll">
-      <div class='slide_content black_bg'>
-      </div>
-    </div>	
-
-
-
-
-    <div class="slide_scroll">
-    	<section class='relative_block mesh_1 mesh_cover'>
-				<div id='h2_move' class='absolute_center'>
-					<h2 class="white we_200">НЕПРЕРЫВНОЕ</h2>
-					<h2 class="white we_200">ДВИЖЕНИЕ</h2>
-				</div>
-
-				<img loading="lazy"  id='el_red_twice' class='absolute_center' src="{% static 'abstract/ellipse_twice.svg' %}" alt="" />
-				<img loading="lazy"  id='el_red_min' class='absolute_center' src="{% static 'abstract/ellipse_2.svg' %}" alt="" />		
-			</section>
-    </div>
-
-
-
-    <div class="slide_scroll">
-      <div class='slide_content black_bg'>
-      	<img loading="lazy" id='logo_1' class='absolute_center p-5' src='{% static "brand/logo_dark_auto.svg" %}'>
-      </div>
-    </div>	
-
-
-
-    <div class="slide_scroll">
-      <div class='slide_content red_bg'>
-      	<div id='h2_move' class='absolute_center'>
-					<h2 class="big_guar white we_200">ДЕЛАЕМ</h2>
-					<h2 class="white we_200">ЖИЗНЬ</h2>
-					<h2 class="white we_200">ЯРЧЕ</h2>
-				</div>
-      </div>
-    </div>
-
-
-
+<div class="intro">
+  <div class="visual">
+  	<video class="bg-img" autoplay loop muted preload="none" data-src="{% static 'video/0_Road_Winter_3840x2160.mp4' %}">
+				<source src="{% static 'video/0_Road_Winter_3840x2160.mp4' %}" type="video/mp4">
+					</video>
   </div>
+  <h1 class="title big_guar we_200">МАШИНЫ ДЛЯ ЖИЗНИ</h1>
+</div>
+
+<div class="slide-container">
+  <section id="slide-1" class="slide slide-odd p-4">
+    <img loading="lazy" src='{% static "img/many_cars.jpg" %}' class="bg-img" />
+    <h2 class="slide-title">Поможем найти авто мечты</h2>
+  </section>
+
+  <section id="slide-2" class="slide slide-even p-4">
+    <img loading="lazy" src='{% static "img/road_bridge.jpg" %}' class="bg-img" />
+    <h2 class="slide-title">Доставим в Россию из любой точки мира</h2>
+  </section>
+
+  <section id="slide-3" class="slide slide-odd p-4">
+    <img loading="lazy" src='{% static "img/parked_cars.jpg" %}' class="bg-img" />
+    <h2 class="slide-title">Оформим страховку и гарантию</h2>
+  </section>
+  
+
+</div>
 
 
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<div class='footer mesh_blue_black mesh_cover '>
+	<center>
+    <h2 class="big_guar we_500">ДЕЛАЕМ</h2>
+  	<h2 class="big_guar we_500">ЖИЗНЬ</h2>
+  	<h2 class="big_guar we_500">ЯРЧЕ</h2>
+
+  	<div class="my-5 d-flex justify-content-center">
+
+  		<div class="">{% include 'cars/popups/popup_call_me.html' %}</div>
+
+  		<div class="mt-3">	
+  			<a href='https://t.me/RedGroupAuto'>
+					<div class='button_form_base center ms-3 white'>
+	          <div class="d-flex justify-content-start">
+	            <img class='py-1 pe-2 tg_btn_icon' src='{% static "icons/telegram_white.png" %}'><span class='white pt-1'>В наличии</span>
+	          </div>
+	        </div>
+      	</a>
+    	</div>
+        
+    </div>
+  </center>
+</div>
+
+
 
 <script type="text/javascript">
-  console.clear();
-  gsap.registerPlugin(ScrollTrigger);
+  const lenis_1 = new Lenis();
 
-  const slides = gsap.utils.toArray(".slide_scroll");
-  slides.shift();
+	function raf(time) {
+	  lenis_1.raf(time)
+	  requestAnimationFrame(raf)
+	}
 
-  gsap.to(slides, {
-    duration: 1,
-    clipPath: "circle(0% at 50% 50%)",
-    /*clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",*/
-    stagger: 1,
-    ease: "power2.inOut",
-    scrollTrigger: {
-      trigger: ".wrapper_p",
-      start: "top top",
-      end: "+=" + 60 * slides.length + "%",
-      scrub: true,
-      snap: 1 / slides.length,
-      pin: true,
-      markers: true
-    }
-  });
+	requestAnimationFrame(raf)
 
+	gsap.registerPlugin(ScrollTrigger);
 
-/*slides.forEach((slide, index) => {
-  gsap.to(slide, {
-    scrollTrigger: {
-      trigger: slide,
-      start: "top top",
-      end: "+=100%",
-      scrub: true,
-      onEnter: () => {
-          gsap.to(slide, { clipPath: "circle(150% at 50% 50%)" }); // Adjust circle size for reveal
-      },
-      onLeaveBack: () => {
-          gsap.to(slide, { clipPath: "circle(0% at 50% 50%)" }); // Reset circle size
-      }
-    }
-  });
-});
-*/
+	// parallax effect on the header img
+	gsap.to('.intro .bg-img', {
+	  y: '80%',
+	  ease: Power0.easeNone,
+	  scrollTrigger: {
+	    trigger: '.intro',
+	    start: 'top 1px',
+	    end: 'bottom 100px',
+	    scrub: true,
+	    // markers: true,
+	  },
+	});
+
+	// gradually darken and blur the header img
+	gsap.to('.intro .bg-img', {
+	  filter: 'brightness(0.25) blur(16px)',
+	  ease: Power0.easeNone,
+	  scrollTrigger: {
+	    trigger: '.intro',
+	    start: 'center top',
+	    scrub: true,
+	    // markers: true,
+	  },
+	});
+
+	// the header title
+	gsap.to('.intro .title', {
+	  y: '45vh',
+	  ease: Power0.easeNone,
+	  scrollTrigger: {
+	    trigger: '.intro',
+	    start: '25% top',
+	    scrub: true,
+	  }
+	});
+
+	const progressTL = gsap.to('.progress-thumb', { scaleX: 1, ease: Power0.easeNone, paused: true });
+
+	const slides = gsap.utils.toArray('.slide');
+
+	const slidesTL = gsap.timeline();
+
+	function slideTL(slide, isFirst = false) {
+	  const tl = gsap.timeline();
+	  if (!isFirst) {
+	    tl.from(slide, {
+	        xPercent: 100,
+	      });
+	    tl.from(slide.querySelector('h2'), {
+	      duration: 0.25,
+	      opacity: 0,
+	      x: 100,
+	    }, 0.2);
+	  }
+	  
+	  tl.fromTo(slide.querySelector('.bg-img'), {
+	    xPercent: isFirst ? 0 : 8,
+	  }, {
+	    xPercent: -8,  
+	  }, 0);
+	  
+	  return tl;
+	}
+
+	slides.forEach((slide, i) => {
+	  if (i === 0) {
+	    slidesTL.add(slideTL(slide, true));
+	  } else {
+	    slidesTL.add(slideTL(slide), '-=0.1');
+	  }
+	});
+
+	ScrollTrigger.create({
+	  animation: slidesTL,
+	  trigger: ".slide-container",
+	  start: "top top",
+	  end: `+=${slides.length * 100}%`, 
+	  scrub: 1,
+	  pin: true,
+	  anticipatePin: 1,
+	  onUpdate: (self) => {
+	    progressTL.progress(self.progress);
+	  },
+	});
+
+	gsap.from('.footer h2', {
+	  opacity: 0,
+	  y: 100,
+	  duration: 0.6,
+	  scrollTrigger: {
+	    trigger: 'footer',
+	    toggleActions: 'play none none reset',
+	    start: 'center bottom',
+	    // scrub: 0.5,
+	    // markers: true,
+	  },
+	});
 </script>

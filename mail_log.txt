@@ -5803,3 +5803,9 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'catalog/fresh' not found. 'catalog/fresh' is not a valid view function or pattern name.
 2024-12-09 18:50:17,227 - Not Found: /favicon.ico
+2024-12-10 13:21:55,775 - Not Found: /installHook.js.map
+2024-12-10 13:51:53,714 - Not Found: /installHook.js.map
+2024-12-10 13:52:37,949 - Not Found: /installHook.js.map
+2024-12-10 13:53:21,850 - Not Found: /installHook.js.map
+2024-12-10 13:53:22,619 - Not Found: /installHook.js.map
+2024-12-10 14:16:13,120 - Not Found: /installHook.js.map
