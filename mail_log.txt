@@ -5810,3 +5810,39 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'catalog/fresh' not found. 'c
 2024-12-10 13:53:22,619 - Not Found: /installHook.js.map
 2024-12-10 14:16:13,120 - Not Found: /installHook.js.map
 2024-12-10 15:53:45,484 - Not Found: /favicon.ico
+2024-12-10 18:06:50,785 - Not Found: /spares/{% static 'icons/close.png' %}
+2024-12-10 18:06:53,494 - Not Found: /spares/{% static 'icons/menu.png' %}
+2024-12-10 18:06:54,493 - Not Found: /spares/{% static 'icons/close.png' %}
+2024-12-10 18:07:02,204 - Not Found: /spares/{% static 'icons/close.png' %}
+2024-12-10 18:07:03,478 - Not Found: /spares/{% static 'icons/menu.png' %}
+2024-12-10 18:07:04,425 - Not Found: /spares/{% static 'icons/close.png' %}
+2024-12-10 18:07:35,942 - Not Found: /{% static 'icons/close.png' %}
+2024-12-10 18:07:36,361 - Not Found: /{% static 'icons/menu.png' %}
+2024-12-10 18:07:53,123 - Not Found: /{% static 'icons/close.png' %}
+2024-12-10 18:07:54,026 - Not Found: /{% static 'icons/menu.png' %}
+2024-12-10 18:07:55,126 - Not Found: /{% static 'icons/close.png' %}
+2024-12-10 18:07:56,280 - Not Found: /{% static 'icons/menu.png' %}
+2024-12-10 18:07:58,887 - Not Found: /{% static 'icons/close.png' %}
+2024-12-10 18:08:00,937 - Not Found: /{% static 'icons/menu.png' %}
+2024-12-10 18:08:01,967 - Not Found: /{% static 'icons/close.png' %}
+2024-12-10 18:09:29,725 - Not Found: /{% static 'icons/close.png' %}
+2024-12-10 18:09:30,597 - Not Found: /{% static 'icons/menu.png' %}
+2024-12-10 18:09:32,776 - Not Found: /{% static 'icons/close.png' %}
+2024-12-10 18:09:35,421 - Not Found: /catalog/used/{% static 'icons/close.png' %}
+2024-12-10 18:09:35,837 - Not Found: /catalog/used/{% static 'icons/menu.png' %}
+2024-12-10 18:09:37,141 - Not Found: /catalog/used/{% static 'icons/close.png' %}
+2024-12-10 18:09:38,456 - Not Found: /catalog/used/{% static 'icons/menu.png' %}
+2024-12-10 18:09:39,440 - Not Found: /catalog/used/{% static 'icons/close.png' %}
+2024-12-10 18:09:40,856 - Not Found: /catalog/used/{% static 'icons/menu.png' %}
+2024-12-10 18:09:42,363 - Not Found: /catalog/used/{% static 'icons/close.png' %}
+2024-12-10 18:09:43,490 - Not Found: /catalog/used/{% static 'icons/menu.png' %}
+2024-12-10 18:09:47,587 - Not Found: /catalog/used/{% static 'icons/close.png' %}
+2024-12-10 18:10:43,333 - Not Found: /catalog/used/static/icons/close.png
+2024-12-10 18:10:44,556 - Not Found: /catalog/used/static/icons/menu.png
+2024-12-10 18:10:45,594 - Not Found: /catalog/used/static/icons/close.png
+2024-12-10 18:10:46,204 - Not Found: /catalog/used/static/icons/menu.png
+2024-12-10 18:11:02,159 - Not Found: /catalog/used/static/icons/close.png
+2024-12-10 18:11:03,258 - Not Found: /catalog/used/static/icons/menu.png
+2024-12-10 18:11:03,998 - Not Found: /catalog/used/static/icons/close.png
+2024-12-10 18:11:04,736 - Not Found: /catalog/used/static/icons/menu.png
+2024-12-10 18:11:07,901 - Not Found: /catalog/used/static/icons/close.png

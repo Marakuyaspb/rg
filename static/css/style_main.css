@@ -1178,10 +1178,21 @@ tr {
 
 }
 
-.popup_big_logo{
-  max-width: 10em;
-  margin: -2em auto 1em;
+  /*  DESCTOP  */
+@media (min-width: 811px){
+    .popup_big_logo{
+      max-width: 10em;
+      margin: -2em auto 1em;
+    }
 }
+  /*  PHONE  */
+@media (max-width: 810px) {
+    .popup_big_logo{
+      max-width: 10em;
+      margin: 2em auto 1em;
+    }
+}
+
 
 .thumb {
   display: block;

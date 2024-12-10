@@ -20,10 +20,9 @@
 
 <header>
 
+
 <div id="follower" class="follower"></div>
 <div class="cursor"></div>
-
-
 
 
   <nav id='nav_mob' class=" fixed-top">
@@ -36,17 +35,19 @@
           </a>
         </div>
         <div class='pt-4'>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();">
-            <img class='menu_icon' src="{% static 'icons/menu.png' %}">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();" onclick="toggleMenuIcon();">
+            <img id="menuIcon" class='menu_icon' src="{% static 'icons/menu.png' %}">
           </button>
         </div>
       </div>
 
 
+
+
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <!-- DESCTOP -->
-        <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+        <div class='d-none d-lg-block d-xl-block d-xxl-block '>
           <div class='row'>
             <div class='col-6'></div>
             <div class='col-6'>
@@ -260,6 +261,7 @@
 <script src='{% static "js/add_bg.js" %}'></script>
 <script src='{% static "js/add_space.js" %}'></script>
 <script src='{% static "js/modal_form.js" %}'></script>
+<script src='{% static "js/toggle_menu.js" %}'></script>
 
 <script src="{% static 'owl/owl.carousel.min.js' %}"></script>
 
@@ -304,6 +306,10 @@
     });
   });
 </script>
+
+
+
+
 
 </body>
 </html>

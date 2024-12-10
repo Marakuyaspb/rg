@@ -106,13 +106,13 @@
     <div class="container-fluid mx-3">
       
       <a class="navbar-brand" href='{% url "main:index" %}'> 
-        <div class='d-flex'>   
+        <div class='d-flex'>  
           <div><img class='logo_mob  mt-3' src='{% static "brand/logo.svg" %}'></div>
         </div>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();">
-        <img class='menu_icon' src="{% static 'icons/menu.png' %}">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();" onclick="toggleMenuIcon();">
+        <img id="menuIcon" class='menu_icon' src="{% static 'icons/menu.png' %}">
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -283,6 +283,7 @@
 <script src='{% static "js/add_space.js" %}'></script>
 <script src='{% static "js/modal_form.js" %}'></script>
 <script src="{% static 'js/lazy_video_load.js' %}"></script>
+<script src='{% static "js/toggle_menu.js" %}'></script>
 
 <script src="{% static 'owl/owl.carousel.min.js' %}"></script>
 
