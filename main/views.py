@@ -33,9 +33,12 @@ def about(request):
 	used_cars = Car.objects.filter(status=2)
 
 	callme_form = handle_callme_form(request)
+	car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'callme_form': callme_form,
+		'car_survey_full_form': car_survey_full_form,
+
 		'cars' : cars,
 		'new_cars': new_cars,
 		'used_cars': used_cars,

@@ -5860,3 +5860,5 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'catalog/fresh' not found. 'c
 2024-12-13 12:53:13,468 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
 2024-12-13 12:53:38,124 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
 2024-12-13 21:27:59,667 - Not Found: /about/installHook.js.map
+2024-12-13 22:52:20,793 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-13 22:52:35,179 - /media/aa/A7/red/rg/main/views.py changed, reloading.

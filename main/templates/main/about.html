@@ -19,10 +19,62 @@
     }
 
   }
+
+  .black_absolute_bg{
+    background-color: #000;
+  }
+  .black_absolute{
+    color: #000;
+  }
 </style>
 
 
 {% include 'main/parts/space_about.html' %}
+
+<div class="gray_light_bg py-3">
+  <div class="desctop_84">
+    <div class="row">
+        <div class="col-md-4">
+          <h1 class='big_contact pb-3 pt-3 black we_200'>В ЛИЦАХ</h1>
+          <div class="black we_200">
+            <p><span class='we_400'>Александр</span> — бизнесмен, автоэксперт, пауэрлифтер</p>
+            <p><span class='we_400'>Фёдор</span> — предприниматель и меценат</p>
+            <p><span class='we_400'>Дмитрий</span> — инвестор и специалист в сфере недвижимости</p>
+            <p><span class='we_400'>Игорь</span> — бизнесмен, арт-критик, ЗОЖник</p>
+
+            <p class="pt-3 we_400">Что нас объединяет?</p>Дружба! И несколько совместных бизнес-проектов. 
+            <p>А ещё тяга исследовать новое. 
+            <p>Смотрите свежие выпуски на нашем канале:
+          </div>
+
+          <a href='https://youtube.com/@bezpili78?si=kQtvLs9u3OWsO0TR'><img id='bez_pyli' class='my-4' src="{% static 'logos/bez_pyli.png' %}"></a>        
+        </div>
+
+        <div class="col-md-8 ">
+          <div class='row'>
+            <div class="col-md-6">
+              <a href='https://youtu.be/zF9lWkOuN6A?si=b2hJf37MOzQInpSx'>
+                <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_pokupat_avto_opasno.png' %}">
+              </a> 
+              <a href='https://youtu.be/mgxgv381kvs?si=ALQw9u05C5TJqLOC'>
+                <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_BMW_1.png' %}">
+              </a> 
+              
+            </div>
+            <div class="col-md-6">
+              <a href='https://youtu.be/PiI6GyoWZUA?si=0Ex9RzBL1H5owJLK'>
+                <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_smotrim_2shky.png' %}">
+              </a> 
+              <a href='https://youtu.be/pC4wmXi2FwU?si=ovb60FdkfVYh5nKm'>
+                <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_nude_king.png' %}">
+              </a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 
 
 {% endblock %}

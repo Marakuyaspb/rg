@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
   }
+
   .cloneable {
     padding: var(--container-padding);
     justify-content: center;
@@ -13,14 +14,17 @@
     display: flex;
     position: relative;
   }
+
   .parallax__fade {
     --color-dark-rgb: 0, 0, 0;
     background: linear-gradient(to top, rgba(var(--color-dark-rgb), 1) 0%, rgba(var(--color-dark-rgb), 0.738) 19%, rgba(var(--color-dark-rgb), 0.541) 34%, rgba(var(--color-dark-rgb), 0.382) 47%, rgba(var(--color-dark-rgb), 0.278) 56.5%, rgba(var(--color-dark-rgb), 0.194) 65%, rgba(var(--color-dark-rgb), 0.126) 73%, rgba(var(--color-dark-rgb), 0.075) 80.2%, rgba(var(--color-dark-rgb), 0.042) 86.1%, rgba(var(--color-dark-rgb), 0.021) 91%, rgba(var(--color-dark-rgb), 0.008) 95.2%, rgba(var(--color-dark-rgb), 0.002) 98.2%, transparent 100%);
   }
+
   .osmo-icon-svg {
     width: 8em;
     position: relative;
   }
+
   .parallax__header {
     z-index: 2;
     padding: var(--section-padding) var(--container-padding);
@@ -30,13 +34,14 @@
     display: flex;
     position: relative;
   }
+  
   .parallax {
     width: 100%;
     position: relative;
     overflow: hidden;
   }
   .parallax__content {
-    padding: 15em 2.5em;;
+    padding: 15em 2.5em 2.5em 2.5em;
     justify-content: center;
     align-items: center;
     min-height: 100svh;
@@ -175,9 +180,9 @@
     object-fit: cover;
     width: 100%;
     max-width: none;
-    height: 125%;
+    height: 117.5%;
     position: absolute;
-    top: -25%;
+    top: -17.5%;
     left: 0;
   }
 
@@ -232,62 +237,30 @@
 
 
         <div class="desctop_84 py-3">
-          <div class='white we_200'>
+          <div class='we_200'>
             <div class="row">
               <div class="col-md-6">
-                 <img loading="lazy" class='w-100 my-2' src="{% static 'transperent/beauty_car_1.png' %}">
+                 <img id="car" loading="lazy" class='my-2 w-100' src="{% static 'transperent/beauty_car_1.png' %}">
               </div>
               <div class="col-md-6">
-                <h1 class='big_contact pb-3 red we_200'></h1>
+                <h1 class='big_contact pb-3 red we_200'>ПОЧЕМУ МЫ?</h1>
+                <h2 class='pb-1 gray we_300'>ОПЫТ & НАСМОТРЕННОСТЬ</h2>
+                <p class="white">Наша команда занимается продажей и сервисным обслуживанием машин много лет. Мы знаем, каким производителям можно доверять, какие слабые места есть у разных моделей. Мы ориентируемся во всем многообразии мирового и азиатского автопрома и предлагаем действительно лучшие машины.</p>
+                
+                <h2 class='pb-1 gray we_300'>ЗНАНИЕ ЗАКОНОВ</h2>
+                <p class="white">Мы знаем, как юридически грамотно оформить параллельный импорт машины. У нас есть юрист, специализирующийся на правовых основах международной торговли и таможенном праве.</p>
 
-                <p>Наша команда занимается продажей и сервисным обслуживанием машин много лет. Мы знаем, каким производителям можно доверять, какие слабые места есть у разных моделей. Мы ориентируемся во всем многообразии мирового и азиатского автопрома и предлагаем действительно лучшие машины.</p>
+                <h2 class='pb-1 gray we_300'>ДЕШЕВЛЕ — МОЖНО</h2>
+                <p class="white">У нас есть система дисконтов и бонусов. Например, раннее бронирование машины, которая уже находится на пути в Россию, зафиксирует цену со скидкой.</p>
 
-                <p>Нужна машина?</p>
-                {% include 'cars/popups/popup_survey_full.html' %}
+                <p class="white we_200">Нужна консультация?</p>
+                <center>{% include 'cars/popups/popup_call_me.html' %}</center>
 
               </div>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-4">
-              <h1 class='big_contact pb-3 pt-3 white we_200'>В ЛИЦАХ</h1>
-              <div class="white we_200">
-                <p><span class='we_400'>Александр</span> — бизнесмен, автоэксперт, пауэрлифтер</p>
-                <p><span class='we_400'>Фёдор</span> — предприниматель и меценат</p>
-                <p><span class='we_400'>Дмитрий</span> — инвестор и специалист в сфере недвижимости</p>
-                <p><span class='we_400'>Игорь</span> — бизнесмен, арт-критик, ЗОЖник</p>
 
-                <p class="pt-3 we_400">Что нас объединяет?</p>Дружба! И несколько совместных бизнес-проектов. Автобизнес — одно из направлений деятельности <a class='we_400 white' href='https://rgspace.pro/'>R.E.D. Group</a>.
-                <p>А ещё тяга исследовать новое. 
-                <p>Смотрите свежие выпуски на нашем канале:
-              </div>
-
-              <a href='https://youtube.com/@bezpili78?si=kQtvLs9u3OWsO0TR'><img id='bez_pyli' class='my-4' src="{% static 'logos/bez_pyli_for_dark.png' %}"></a>        
-            </div>
-
-            <div class="col-md-8 ">
-              <div class='row'>
-                <div class="col-md-6">
-                  <a href='https://youtu.be/zF9lWkOuN6A?si=b2hJf37MOzQInpSx'>
-                    <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_pokupat_avto_opasno.png' %}">
-                  </a> 
-                  <a href='https://youtu.be/mgxgv381kvs?si=ALQw9u05C5TJqLOC'>
-                    <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_BMW_1.png' %}">
-                  </a> 
-                  
-                </div>
-                <div class="col-md-6">
-                  <a href='https://youtu.be/PiI6GyoWZUA?si=0Ex9RzBL1H5owJLK'>
-                    <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_smotrim_2shky.png' %}">
-                  </a> 
-                  <a href='https://youtu.be/pC4wmXi2FwU?si=ovb60FdkfVYh5nKm'>
-                    <img loading="lazy" class='w-100 my-2' src="{% static 'img/zastavky_nude_king.png' %}">
-                  </a> 
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
