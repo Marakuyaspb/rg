@@ -5856,3 +5856,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'catalog/fresh' not found. 'c
 2024-12-10 18:41:11,517 - Not Found: /{% static 'icons/menu.png' %}
 2024-12-10 18:41:23,726 - Not Found: /insurance/{% static 'icons/menu.png' %}
 2024-12-10 18:41:26,157 - Not Found: /{% static 'icons/menu.png' %}
+2024-12-13 12:32:44,611 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-13 12:53:13,468 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-13 12:53:38,124 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-13 21:27:59,667 - Not Found: /about/installHook.js.map

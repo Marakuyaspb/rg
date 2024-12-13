@@ -6,6 +6,7 @@ General Styles
 
 
 :root{
+  --black_absolute:rgb(0,0,0);
   --black:rgb(27, 25, 24);
   --black_hot: rgb(38, 29, 29);
   --bordo_dark: rgb(49, 3, 15);
@@ -79,13 +80,14 @@ h4{
 hr{
   background-color: #a2b5c5!important;
 }
-
 tr {
   height: 1.6em;
 }
 
 
-
+.black_absolute{
+  color: #000;
+}
 .black{
   color: #1b1918;
 }
@@ -117,6 +119,10 @@ tr {
   color: #F5F5F5;
 }
 
+
+.black_absolute_bg{
+  background-color: #000;
+}
 .black_bg{
   background-color: #1b1918;
 }

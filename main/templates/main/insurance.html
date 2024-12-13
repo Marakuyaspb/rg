@@ -20,14 +20,7 @@
       position: absolute;
       transition: transform 0.5s ease;
   }
-  /* desctop */
-  @media (min-width: 811px){
-  
- }
-   /* mobile */
-  @media (max-width: 810px) {
 
-  }
 
   #help{
     height: 8em;
@@ -156,16 +149,19 @@
     <h1 class='we_400 big_insh red'>ХОВКУ</h1>
     <h2 class='pt-3 we_300'>С нами надёжно.</h2>
 
-      <img loading="lazy" id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" /> 
+    <img loading="lazy" id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" /> 
 
-      <img loading="lazy" class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'>
+    <img loading="lazy" class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'>
+
+    <div class='py-4'>
+      {% include 'cars/popups/popup_casco_count.html' %}
+    </div>
+
 
     </div>
   </section>
 
-  <center id='popup_casco_count' class='py-4'>
-    {% include 'cars/popups/popup_casco_count.html' %}
-  </center>
+
 
 </div>
 
