@@ -33,15 +33,25 @@
   <noscript><div><img src="https://mc.yandex.ru/watch/99176486" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
+
+<style>
+  .light_bg{
+    background-color: var(--black);
+  }
+  #nav_mob {
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  .op_it {
+    opacity: 0; /* Make it invisible */
+}
+</style>
+
 </head>
 <body>
 
 <header>
 
-
-<div id="follower" class="follower"></div>
-<div class="cursor"></div>
-
+  <div id="follower" class="follower"></div>
 
   <nav id='nav_mob' class=" fixed-top">
     <div class="container-fluid ">
@@ -49,7 +59,7 @@
       <div class='d-flex justify-content-between mx-4'> 
         <div> 
           <a class="navbar-brand" href='{% url "main:index" %}'>          
-              <img class='logo_mob  mt-3' src='{% static "brand/logo.svg" %}'>
+              <img class='logo_mob  mt-3' src='{% static "brand/logo_dark.svg" %}'>
           </a>
         </div>
         <div class='pt-4'>
@@ -282,6 +292,33 @@
 <script src='{% static "js/toggle_menu.js" %}'></script>
 
 <script src="{% static 'owl/owl.carousel.min.js' %}"></script>
+
+
+
+<script type="text/javascript">
+  
+  let lastScrollTop = 0;
+  const navMob = document.getElementById('nav_mob');
+
+  window.addEventListener('scroll', function() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop) {
+          // Scrolling down
+          navMob.classList.add('light_bg');
+          navMob.classList.remove('op_it');
+      } else {
+          // Scrolling up
+          navMob.classList.remove('light_bg');
+          navMob.classList.add('op_it');
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  });
+
+
+</script>
+
 
 
 
