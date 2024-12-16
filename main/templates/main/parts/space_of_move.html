@@ -16,7 +16,7 @@
   }
 
   .parallax__fade {
-    --color-dark-rgb: 0, 0, 0;
+    --color-dark-rgb: 27, 25, 24;
     background: linear-gradient(to top, rgba(var(--color-dark-rgb), 1) 0%, rgba(var(--color-dark-rgb), 0.738) 19%, rgba(var(--color-dark-rgb), 0.541) 34%, rgba(var(--color-dark-rgb), 0.382) 47%, rgba(var(--color-dark-rgb), 0.278) 56.5%, rgba(var(--color-dark-rgb), 0.194) 65%, rgba(var(--color-dark-rgb), 0.126) 73%, rgba(var(--color-dark-rgb), 0.075) 80.2%, rgba(var(--color-dark-rgb), 0.042) 86.1%, rgba(var(--color-dark-rgb), 0.021) 91%, rgba(var(--color-dark-rgb), 0.008) 95.2%, rgba(var(--color-dark-rgb), 0.002) 98.2%, transparent 100%);
   }
 
@@ -129,12 +129,12 @@
         pointer-events: auto;
         text-align: center;
         text-transform: none;
-        margin-top: 0;
-        margin-bottom: .1em;
-        margin-right: .075em;
-        color: var(--red);
-        font-size: 3em;
-        font-weight: 800;
+        margin: 0 0 .1em .2em;
+        color: var(--white);
+        -webkit-text-stroke: 1px var(--gray);
+        text-stroke: 1px var(--gray);
+        font-size: 3.6em;
+        font-weight: 300;
         line-height: 1;
         position: relative;
       }
@@ -170,7 +170,6 @@
           }
       }
 
-
       #car_lr_2 {
         position: absolute;
         top: 58%;
@@ -187,7 +186,6 @@
       }
 
 
-
   }
 
   /*  DESCTOP  */
@@ -198,10 +196,11 @@
       text-transform: none;
       margin-top: 0;
       margin-bottom: .1em;
-      margin-right: .075em;
-      color: var(--red);
+      color: var(--white);
+        -webkit-text-stroke: 1px var(--black);
+        text-stroke: 1px var(--black);
       font-size: 8em;
-      font-weight: 800;
+      font-weight: 300;
       line-height: 1;
       position: relative;
     }
@@ -236,7 +235,6 @@
             left: 110%;
         }
     }
-
 
     #car_lr_2 {
       position: absolute;
@@ -288,14 +286,14 @@
     position: absolute;
     top: -17.5%;
     left: 0;
+    filter: brightness(60%);
   }
   #earth{
-    opacity: .9;
+
   }
   .parallax__layer-img.is-third {
     top: -20%;
   }
-
 </style>
 
 
@@ -307,18 +305,11 @@
 
         <div data-parallax-layers class="parallax__layers">
 
-          <img loading="lazy" src="{% static 'abstract/mesh_blue_black.png' %}" loading="eager" width="800" data-parallax-layer="1" alt="" class="parallax__layer-img">
+         <img loading="lazy" src="{% static 'img/4074.jpg' %}" loading="eager" width="800" data-parallax-layer="1" alt="" class="parallax__layer-img">
 
 
-          <!-- PHONE -->
-          <div class='d-block d-lg-none '>
-            <img id='earth' loading="lazy" src="{% static 'transperent/earth.svg' %}" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
-          </div>
-
-          <!-- DESCTOP -->
-          <div class='d-none d-lg-block d-xl-block d-xxl-block'>
-            <img id='earth' loading="lazy" src="{% static 'transperent/earth.svg' %}" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
-          </div>
+          <!--      <img id='earth' loading="lazy" src="{% static 'transperent/earth_640.png' %}" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
+       -->
 
 
           <div data-parallax-layer="3" class="parallax__layer-title">
@@ -327,21 +318,15 @@
             <h2 class="parallax__title">ОЙКУМЕНЫ</h2>
           </div>
 
-          <!-- PHONE -->
-          <div class='d-block d-lg-none '>
-            <img loading="lazy" src="{% static 'transperent/rocks.svg' %}" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
-          </div>
 
-          <!-- DESCTOP -->
-          <div class='d-none d-lg-block d-xl-block d-xxl-block'>
-            <img loading="lazy" src="{% static 'transperent/rocks.png' %}" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
-          </div>
-
+          <!-- <img id='earth' loading="lazy" src="{% static 'transperent/earth_640.png' %}" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img"> -->
 
         </div>
         <div class="parallax__fade"></div>
       </div>
     </section>
+
+
 
     <section class="parallax__content red_deep_bg">
 
@@ -364,7 +349,7 @@
     </section>
   </div>
 
-  </div>
+</div>
 
 
 

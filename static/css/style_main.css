@@ -502,7 +502,9 @@ tr {
   width: 100%;
 }
 
-
+  .bg-img {
+    filter: brightness(70%);
+  }
 
 .slider_h1{
   padding-top: 2.5em;
@@ -664,7 +666,6 @@ tr {
     background-color: var(--red)!important;
     transition: color .5s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out!important;
   }
-
 
 
   .img_header {
