@@ -1,4 +1,4 @@
-{% extends 'main/base_min.html' %}
+{% extends 'main/base.html' %}
 {% load static %}
 
 {% block content %}
@@ -20,21 +20,14 @@
 
   }
 
-  .black_absolute_bg{
-    background-color: #000;
-  }
-  .black_absolute{
-    color: #000;
-  }
-
-
   .mesh_dark{
     background-image: url("{% static 'abstract/mesh_dark.png' %}");
   }
 </style>
 
-
-{% include 'main/parts/space_about.html' %}
+<section class='block_header'>
+  {% include 'main/parts/space_about.html' %}
+</section>
 
 <div class="gray_light_bg py-3">
   <div class="desctop_84">
@@ -47,8 +40,8 @@
             <p><span class='we_400'>Дмитрий</span> — инвестор и специалист в сфере недвижимости</p>
             <p><span class='we_400'>Игорь</span> — бизнесмен, арт-критик, ЗОЖник</p>
 
-            <p class="pt-3 we_400">Что нас объединяет?</p>Дружба! И несколько совместных бизнес-проектов. 
-            <p>А ещё тяга исследовать новое. 
+            <p class="pt-3 we_400">Что нас объединяет?</p>Многолетняя дружба, ставшая основой для нескольких бизнес-проектов. 
+            <p>А ещё — тяга исследовать новое. 
             <p>Смотрите свежие выпуски на нашем канале:
           </div>
 

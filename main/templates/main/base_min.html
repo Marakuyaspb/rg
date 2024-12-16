@@ -35,14 +35,20 @@
 
 
 <style>
-  .light_bg{
+  .black_bg{
     background-color: var(--black);
+  }
+  .white{
+    color: var(--white);
   }
   #nav_mob {
     transition: background-color 0.3s ease, opacity 0.3s ease;
   }
   .op_it {
     opacity: 0; /* Make it invisible */
+}
+.menu_mob_list{
+  color: var(--white)!important;
 }
 </style>
 
@@ -75,7 +81,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <!-- DESCTOP -->
-        <div class='d-none d-lg-block d-xl-block d-xxl-block '>
+        <div class='d-none d-lg-block d-xl-block d-xxl-block black_bg '>
           <div class='row'>
             <div class='col-6'></div>
             <div class='col-6'>
@@ -123,54 +129,47 @@
         <!-- PHONE -->
         <div class='d-block d-lg-none '>
         
-        <ul class="navbar-nav menu_mob_list">
+          <ul class="navbar-nav menu_mob_list">
 
-          <li class="nav-item">
-             <a class="nav-link" href='{% url "cars:catalog" %}'>Каталог авто</a>
-          </li>
-          <li class="nav-item">
-             <a class="nav-link ps-2" href='{% url "cars:fresh_cars" %}'><span class='red pe-3'>•</span> Новые</a>
-          </li>
-          <li class="nav-item">
-             <a class="nav-link ps-2" href='{% url "cars:used_cars" %}'><span class='red pe-3'>•</span> С пробегом</a>
-          </li>
-          <li class="nav-item we_300 ms-2 my-2">——————————</li>
-          <li class="nav-item">
-            <a class="nav-link" href='{% url "main:guarantee" %}'>Оформить гарантию</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href='{% url "main:insurance" %}'>Автострахование</a>
-          </li>
-          <li class="nav-item">
-           <a class="nav-link" href='{% url "main:jurists" %}'>Юридическая поддержка</a>
-          </li>
-
-          <li class="nav-item we_300 ms-2 my-2">——————————</li>
-          <li class="nav-item">
-            <a class="nav-link" href='{% url "main:service" %}'>Диагностика & сервис</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href='{% url "main:spares" %}'>Запчасти</a>
-          </li>
-          <!--
+            <li class="nav-item">
+               <a class="nav-link" href='{% url "cars:catalog" %}'>Каталог авто</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link ps-2" href='{% url "cars:fresh_cars" %}'><span class='red pe-3'>•</span> Новые</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link ps-2" href='{% url "cars:used_cars" %}'><span class='red pe-3'>•</span> С пробегом</a>
+            </li>
             <li class="nav-item we_300 ms-2 my-2">——————————</li>
             <li class="nav-item">
-              <a class="nav-link" href='{% url "main:feedback" %}'>Отзывы</a>
-              <a class="nav-link" href='#'>Блог</a> 
+              <a class="nav-link" href='{% url "main:guarantee" %}'>Оформить гарантию</a>
             </li>
-          -->
-          <li class="nav-item we_300 ms-2 my-2">——————————</li>
-          <li class="nav-item">
-            <a class="nav-link" href='{% url "main:about" %}'>О нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href='{% url "main:contact" %}'>Контакты</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href='{% url "main:insurance" %}'>Автострахование</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" href='{% url "main:jurists" %}'>Юридическая поддержка</a>
+            </li>
 
-          <div class='pt-3 modal_container' onclick='showModal(this);'>
-            {% include 'cars/popups/popup_call_me.html' %}
-          </div>
-        </ul>
+            <li class="nav-item we_300 ms-2 my-2">——————————</li>
+            <li class="nav-item">
+              <a class="nav-link" href='{% url "main:service" %}'>Диагностика & сервис</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='{% url "main:spares" %}'>Запчасти</a>
+            </li>
+            <li class="nav-item we_300 ms-2 my-2">——————————</li>
+            <li class="nav-item">
+              <a class="nav-link" href='{% url "main:about" %}'>О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='{% url "main:contact" %}'>Контакты</a>
+            </li>
+
+            <div class='pt-3 modal_container' onclick='showModal(this);'>
+              {% include 'cars/popups/popup_call_me.html' %}
+            </div>
+          </ul>
         </div>
 
       </div>
@@ -286,7 +285,7 @@
 
 
 <!-- <script src='{% static "js/cursor.js" %}'></script> -->
-<script src='{% static "js/add_bg.js" %}'></script>
+
 <script src='{% static "js/add_space.js" %}'></script>
 <script src='{% static "js/modal_form.js" %}'></script>
 <script src='{% static "js/toggle_menu.js" %}'></script>
@@ -305,11 +304,13 @@
 
       if (currentScroll > lastScrollTop) {
           // Scrolling down
-          navMob.classList.add('light_bg');
+          navMob.classList.add('black_bg');
+          navMob.classList.add('white');
           navMob.classList.remove('op_it');
       } else {
           // Scrolling up
-          navMob.classList.remove('light_bg');
+          navMob.classList.remove('black_bg');
+          navMob.classList.remove('white');
           navMob.classList.add('op_it');
       }
 

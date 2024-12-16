@@ -33,6 +33,12 @@ body {
   padding: 0;
   background-color: var(--white)!important;
 }
+
+header{
+  position: relative;
+  z-index: 999;
+}
+
 video{
   width: 100%;
 }
@@ -668,6 +674,11 @@ tr {
   }
 
 
+  .block_header{
+    margin-top: -12em;
+    position: relative;
+  }
+
   .img_header {
     margin-top: -12em;
     position: absolute;
@@ -910,6 +921,11 @@ tr {
   }
   .nav-link:hover{
     color: #0c365c!important;
+  }
+
+  .block_header {
+    margin-top: -8.5em;
+    position: relative;
   }
 
 
