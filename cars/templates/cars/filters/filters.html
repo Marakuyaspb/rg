@@ -35,7 +35,7 @@
 		<form method="get">
       	{% csrf_token %}
 
-      	<center>
+      		<center>
 			<label class="checkbox white we_300 px-2">
 			    <input class="checkbox-input_red" type="checkbox" name="status" value="1">
 			    <span class="checkbox-checkmark-box_red">
@@ -52,6 +52,18 @@
 			    </span>
 			 С пробегом
 			</label>
+
+
+			<h3 class='filter_header'>Марка</h3>
+				{% for brand in unique_brand %}
+					<label class="checkbox white we_300 px-2">
+					    <input class="checkbox-input_red" type="checkbox" name='brand' value="{{ brand.brand }}">
+					    <span class="checkbox-checkmark-box_red">
+					      <span class="checkbox-checkmark_red"></span>
+					    </span>
+					 {{ brand.brand }}
+					</label>
+				{% endfor %}
 
 
 			<h3 class='filter_header'>Цвет</h3>

@@ -1,6 +1,21 @@
 from django.db import models
 
 
+class Brand(models.Model):
+	id_brand = models.AutoField(primary_key=True)
+	brand = models.CharField(max_length=30, verbose_name='Марка', default='Audi')
+	class Meta:
+		ordering = ['brand']
+		indexes = [
+			models.Index(fields=['brand']),
+		]
+		verbose_name = 'Марка'
+		verbose_name_plural = 'Марка'	
+
+	def __str__(self):
+		return self.brand
+
+
 class Category(models.Model):
 	id_cat = models.AutoField(primary_key=True)
 	category = models.CharField(max_length=60, verbose_name='Категория')
@@ -58,6 +73,9 @@ class Car(models.Model):
 	color = models.ForeignKey(Color,
 		related_name='colors',
 		on_delete=models.CASCADE, verbose_name = 'Цвет', null=True)
+	brand = models.ForeignKey(Brand,
+		related_name='brands',
+		on_delete=models.CASCADE, verbose_name = 'Марка', null=True)
 
 	name = models.CharField(max_length=250, null=True, blank=True, verbose_name = 'Название модели')
 	price = models.IntegerField(null=True, blank=True, verbose_name = 'Цена')

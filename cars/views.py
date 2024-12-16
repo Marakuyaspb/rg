@@ -37,6 +37,7 @@ def catalog(request):
 	context = {
 		'cars' : cars,
 		'queryset': queryset,
+		'unique_brand': unique_values['unique_brand'],
 		'unique_color': unique_values['unique_color'],
 		'unique_year': unique_values['unique_year'],
 		'unique_transmission': unique_values['unique_transmission'],
@@ -60,6 +61,17 @@ def fresh_cars(request):
 	callme_form = handle_callme_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
 
+
+	if request.method == 'GET':
+		filtered_queryset = cars_filtering(request, queryset)
+		print(filtered_queryset)
+		if filtered_queryset.exists():
+			queryset = filtered_queryset
+		else:
+			queryset = None
+
+	unique_values = unique_names(request)
+
 	context = {
 		'cars' : cars,
 		'used_cars': used_cars,
@@ -80,6 +92,17 @@ def used_cars(request):
 
 	callme_form = handle_callme_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
+
+
+	if request.method == 'GET':
+		filtered_queryset = cars_filtering(request, queryset)
+		print(filtered_queryset)
+		if filtered_queryset.exists():
+			queryset = filtered_queryset
+		else:
+			queryset = None
+
+	unique_values = unique_names(request)
 
 	context = {
 		'cars':cars,
