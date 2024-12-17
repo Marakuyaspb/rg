@@ -16,55 +16,6 @@
     width: 80%;
     height: 100vh;
   }
-  .elem {
-      position: absolute;
-      transition: transform 0.5s ease;
-  }
-
-
-  #help{
-    height: 8em;
-    position: absolute;
-    animation: levitation_help 6s infinite;
-  }
-
-  #cone{
-    height: 5em;
-    position: absolute;
-    animation: levitation_cone 6s infinite; 
-  }
-  @keyframes levitation_help {
-    0% {
-      top: 20%;
-      left:40%;
-    }
-    50% {
-      top: 21%;
-      left:41%;
-
-    }
-    100% {
-      top: 20%;
-      left:40%;
-    }
-  }
-
-  @keyframes levitation_cone {
-    0% {
-      top: 45%;
-      left:46%;
-    }
-    50% {
-      top: 47%;
-      left:45%;
-
-    }
-    100% {
-      top: 45%;
-      left:46%;
-    }
-  }
-
 
   /* mobile */
   @media (max-width: 810px) {
@@ -72,13 +23,6 @@
     .big_insh{
       font-size: 4em;
       line-height: .9em;
-    }
-    .the_car_img {
-      max-width: 16em;
-      position: absolute;
-      z-index: 1;
-      top: 25%;
-      left: 46%;
     }
 
     .ellipse_twice{
@@ -94,12 +38,7 @@
     .big_insh{
       font-size: 6em;
     }
-    .the_car_img {
-      max-width: 30em;
-      position: absolute;
-      z-index: 10; 
-    }
-
+    
     .ellipse_twice{
       position: absolute;
       width: 60em;
@@ -111,87 +50,12 @@
 
 </style>
 
-<!-- DESCTOP -->
-<div class='d-none d-lg-block d-xl-block d-xxl-block'>
-  <img loading="lazy" class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'>
 
-  <div class="desctop_84">
-    <div class="row">
-      <div class='col-6'>
-        <h1 class='we_300 pt-4 big_insh pb-3'>ОФОРМИМ СТРАХОВКУ</h1>
-        <h2 class='pt-2 pb-4 we_300'>С нами надёжно.</h2>
-
-        <div class="d-flex align-items-start">
-          <img loading="lazy" loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
-          <h2 class='pt-2 large_text we_300'>Честная цена</h2>
-        </div>
-
-        <div class="d-flex align-items-start">
-          <img loading="lazy" loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
-          <h2 class='pt-2 large_text we_300'>Ведущие страховые компании</h2>
-        </div>
-        <div class="d-flex align-items-start">
-          <img loading="lazy" loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
-          <h2 class='pt-2 large_text we_300'>Быстрое оформление</h2>
-        </div>
-
-        <section id='popup_casco_count' class='pt-5'>
-            {% include 'cars/popups/popup_casco_count.html' %}
-
-        </section>
-      </div>
-
-      <div class='col-6'>
-        <img loading="lazy" class='w-100' src='{% static "transperent/beauty_car_2.png" %}'>  
-        <img loading="lazy" id='help' class='' src='{% static "illustr/4.svg" %}'>  
-        <img loading="lazy" id='cone' class='' src='{% static "illustr/Cone_black.svg" %}'>  
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PHONE -->
-<div class='d-block d-lg-none '>
-  <section id='' class='py-2'>
-
-
-    <div class='desctop_84'>
-
-    <h1 class='we_300 big_insh'>ОФОРМИМ СТРАХОВКУ</h1>
-
-    <h2 class='pt-3 we_300'>С нами надёжно.</h2>
-
-    <div class="d-flex align-items-start">
-      <img loading="lazy" loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
-      <h2 class='pt-2 large_text we_300'>Честная цена</h2>
-    </div>
-
-    <div class="d-flex align-items-start">
-      <img loading="lazy" loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
-      <h2 class='pt-2 large_text we_300'>Ведущие страховые компании</h2>
-    </div>
-    <div class="d-flex align-items-start">
-      <img loading="lazy" loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
-      <h2 class='pt-2 large_text we_300'>Быстрое оформление</h2>
-    </div>
-
-    <img loading="lazy" id='car' class='the_car_img' src="{% static 'transperent/beauty_car_2.png' %}" alt="" /> 
-
-    <img loading="lazy" class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'>
-
-    <div class='py-4'>
-      {% include 'cars/popups/popup_casco_count.html' %}
-    </div>
-
-
-    </div>
-  </section>
+{% include 'main/parts/insurance_animate_header.html' %}
 
 
 
-</div>
-
-<section class="mt-5 white_dirty_bg">
+<section class="mt-5 white_bg">
   <div class="desctop_84 py-3">
     <h2 class='big_h2_guar we_200 pt-5'>НОВЫЕ ИНОМАРКИ</h2>
     <h3 class="we_300 red">Из разных точек мира</h3>

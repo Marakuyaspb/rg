@@ -60,22 +60,6 @@ def contact(request):
 	}
 	return render(request, 'main/contact.html', context)
 	
-def feedback(request):
-	cars = Car.objects.all()
-	new_cars = Car.objects.filter(status=1)
-	used_cars = Car.objects.filter(status=2)
-
-	callme_form = handle_callme_form(request)
-
-	context = {
-		'callme_form': callme_form,
-		'cars' : cars,
-		'new_cars': new_cars,
-		'used_cars': used_cars,
-
-	}
-	return render(request, 'main/feedback.html', context)
-
 
 def guarantee(request):
 	cars = Car.objects.all()
