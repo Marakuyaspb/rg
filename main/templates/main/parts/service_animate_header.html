@@ -121,7 +121,7 @@
 		 height: 120%;
 		 object-fit: cover;
 	}
-	 .section-landing:before {
+/*	 .section-landing:before {
 		 content: '';
 		 position: absolute;
 		 top: 50%;
@@ -131,14 +131,15 @@
 		 background-color: white;
 		 z-index: 3;
 		 transform: translateY(-13vw);
-	}
+	}*/
 	 .section-landing .item-parallax-media {
 		 opacity: calc(1 - (var(--y) * 0.0009));
 	}
-	 .landing-content {
-		 padding-left: 30%;
-	}
-/*	 .section-intro:before {
+
+
+
+
+	 .section-intro:before {
 		 content: '';
 		 position: absolute;
 		 top: 50%;
@@ -149,7 +150,7 @@
 		 transform: translateX(-50%) translateY(-50%) rotate(calc((var(--y) * 0.1deg)));
 		 will-change: transform;
 		 backface-visibility: visible;
-	}*/
+	}
 	 .img-grid {
 		 flex-direction: column;
 		 justify-content: space-around;
@@ -220,93 +221,87 @@
 		position: relative;
 		z-index: 333!important;
 	}
+
+
+
+
+  	/* desctop */
+		@media (min-width: 811px){
+			.landing-content {
+			 padding-left: 30%;
+			}
+			.img_30{
+				width: 30%;
+			}
+		}
+  	/* mobile */
+  		@media (max-width: 810px) {
+			.landing-content {
+				 padding-left: 5%;
+			}
+			.img_30{
+				width: 80%;
+			}
+		}
 </style>
 
  
 <section class="wrap_content block_header">
-	<main class="content_header js-content">
+	<main class="content_header js-content ">
 	  
 	  <section class="block section-landing">
 	    <figure class="item-parallax-media">
-	      <img class='bg-img' src="{% static 'img/raod_b_1.png' %}" alt="" />
+	      <img class='bg-img-dark' src="{% static 'office/come.png' %}" alt="" />
 	    </figure>
 	    <div class="item-parallax-content flex-container">
 	      <div class="landing-content centered-content">
-	        <h1 class="head-large white">ЛУЧШИЕ МАШИНЫ ОЙКУМЕНЫ</h1>
+	        <h1 class="big_serv white we_300">ДИАГНОСТИКА<br>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
+
+
+			<div class="d-flex align-items-start mt-5">
+			    <img loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+			    <h2 class='pt-2 large_text white we_300'>Опытные мастера<br>Все виды работ</h2>
+			</div>
+			<div class="d-flex align-items-start mt-2">
+			    <img loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+			    <h2 class='pt-2 large_text white we_300'>Честные цены</h2>
+			</div>
+			<div class="d-flex align-items-start mt-2">
+			    <img loading="lazy" class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+			    <h2 class='pt-2 large_text white we_300'>Подбор комплектующих</h2>
+			</div>
+
+
+			<!-- PHONE -->
+			<div class='d-block d-lg-none pt-5'>
+				{% include 'cars/popups/popup_need_service.html' %}
+				<div class='pt-2'>
+				{% include 'cars/popups/btn_wa.html' %}
+				</div>
+			</div>
+			<!-- DESCTOP -->
+			<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+		        <section class='py-5 d-flex justify-content-start'>
+		            {% include 'cars/popups/popup_need_service.html' %}
+		            <div class='ms-3 mt-3'>
+		            {% include 'cars/popups/btn_wa.html' %}
+		            </div>
+		        </section>
+		   </div>
 	      </div>
 	    </div>
 	  </section>
 	  
-	  <section class="block gray_light_bg section-intro">
+	  <section class="block black_bg section-intro">
 	    <div class="item-parallax-content flex-container">
 	      <div class="centered-content">
-	        <h2 class="big_guar black head-centered">В НАЛИЧИИ<br>И ПОД ЗАКАЗ</h2>
 
-	        <h2 class="head-centered we_300 black py-4">Новые и подержанные автомобили<br>ведущих мировых брендов</h2>
+	      	<center>
+	      		<img class='img_30' src="{% static 'office/dreaming.png' %}" alt="" />
+		      	<img class='img_30 my-5 mx-3' src="{% static 'office/man.jpeg' %}" alt="" />
+		      	<img class='img_30' src="{% static 'office/two_cars.png' %}" alt="" />      	
+			</center>
 
-	        <div class='d-flex justify-content-center mx-2'>
-	  		
-	        	<div class="me-3 mt-3">{% include 'cars/popups/btn_wa.html' %}</div>
-			
-	        
-	  			<a href ='{% url "cars:catalog" %}'><button class='thumb button_form_base mt-3'>В каталог</button></a>
-
-			</div>
-	  		
-	        {% include 'main/parts/cars_move.html' %}
-
-	        
-	      </div>
-	    </div>
-	  </section>
-	  
-	  
-	  <section class="block black_bg">
-	    <div class="item-parallax-content flex-container img-grid">
-	      	<figure class="img-gridItem type-right">
-		        <img  src="{% static 'img/road_bridge.jpg' %}" alt="" />
-		        <figcaption class="img-caption">
-		          <h2 class="head-small">АВТО ПОД КЛЮЧ</h2>
-		          <p class="copy white mt-5">
-		            Поможем найти авто мечты.<p class="copy white">Доставим в Россию из любой точки мира.
-		          </p>
-
-		          <div class="d-none d-lg-block d-xl-block d-xxl-block pt-4">{% include 'cars/popups/popup_survey_full.html' %}</div>
-
-		        </figcaption>
-	      	</figure>
-
-	      	<div class="d-block d-lg-none ms-4 pt-4">{% include 'cars/popups/popup_call_me.html' %}</div>
-
-	      	<figure class="img-gridItem type-left">
-		        <img src="{% static 'img/parked_cars.jpg' %}" alt="" />
-		        <figcaption class="img-caption">
-		          <h2 class="head-small">СПОКОЙСТВИЕ</h2>
-		          <p class="copy copy-white">
-		           Оформим страховку и гарантийное обслуживание.
-		          </p>
-
-		          <div class="d-none d-lg-block d-xl-block d-xxl-block pt-4">{% include 'cars/popups/popup_call_me.html' %}</div>
-
-		        </figcaption>
-
-	      	
-	      	</figure>
-
-
-	      	
-	    </div>
-	  </section>
-	  
-	  <section class="block red_bg section-end">
-	    <figure class="item-parallax-media">
-	      <img class='bg-img' src="{% static 'img/happy-tourist-couple-sea.jpg' %}" alt="" />
-	    </figure>
-	    <div class="item-parallax-content flex-container">
-	      <div class="landing-content centered-content">
-	        <h1 class="big_guar white">МАШИНЫ<br/>ДЛЯ ЖИЗНИ</h1>
-
-	        <div class=" pt-4">{% include 'cars/popups/popup_call_me.html' %}</div>
 	      </div>
 	    </div>
 	  </section>

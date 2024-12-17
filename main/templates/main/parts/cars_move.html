@@ -1,0 +1,114 @@
+{% load static %}
+
+
+<style type="text/css">
+
+  /*  PHONE  */
+  @media (max-width: 810px) {
+      #car_rl {
+        position: relative;
+        top: 15%;
+        animation: moveCarRL 2.1s linear infinite;
+        height: 8em;
+      }
+      @keyframes moveCarRL {
+          0% {
+              left: 120%;
+          }
+          100% {
+              left: -180%;
+          }
+      }
+
+      #car_lr {
+        position: relative;
+        top: 25%;
+        animation: moveCarLR 2s linear infinite;
+        height: 8em;
+      }
+      @keyframes moveCarLR {
+          0% {
+              left: -105%;
+          }
+          100% {
+              left: 120%;
+          }
+      }
+
+      #car_lr_2 {
+        position: absolute;
+        top: 58%;
+        animation: moveCarLR2 1.8s linear infinite;
+        height: 9.7em;
+      }
+      @keyframes moveCarLR2 {
+          0% {
+              left: -60%;
+          }
+          100% {
+              left: 120%;
+          }
+      }
+
+
+  }
+
+  /*  DESCTOP  */
+  @media (min-width: 811px){
+
+    #car_rl {
+      position: absolute;
+      top: 74%;
+      animation: moveCarRL 6s linear infinite;
+      height: 9em;
+    }
+    @keyframes moveCarRL {
+        0% {
+            left: 110%;
+        }
+        100% {
+            left: -10%;
+        }
+    }
+
+    #car_lr {
+      position: absolute;
+      top: 79%;
+      animation: moveCarLR 7s linear infinite;
+      height: 9.2em;
+    }
+    @keyframes moveCarLR {
+        0% {
+            left: -10%;
+        }
+        100% {
+            left: 110%;
+        }
+    }
+
+    #car_lr_2 {
+      position: absolute;
+      top: 82%;
+      animation: moveCarLR2 6.5s linear infinite;
+      height: 10em;
+    }
+    @keyframes moveCarLR2 {
+        0% {
+            left: -30%;
+        }
+        100% {
+            left: 120%;
+        }
+    }
+
+
+
+  }
+
+
+</style>
+
+
+<img id='car_rl' class='' src="{% static 'transperent/Range_Rover_Long_Supercharger_mini.png' %}" alt="" /> 
+<img  id='car_lr' class='' src="{% static 'transperent/Mitsubishi_Outlander_mini.png' %}" alt="" />
+<img id='car_lr_2' class='' src="{% static 'transperent/audi_green.png' %}" alt="" />

@@ -353,7 +353,7 @@ tr {
 
 .tg_btn_icon{
   margin: -.05em 0 0 -.4em;
-  height: 1.8em;
+  height: 1.5em;
   width: auto;
 }
 
@@ -460,11 +460,12 @@ tr {
 .button_form_base{
   border-radius: 8px;
   text-align: center;
-  padding: .4em 1em;
+  padding: .4em .8em;
   border: none;
-/*  border: 2px solid rgb(243, 248, 253);*/
   color: #F0F4F5;
   background-color: #D41041;
+  font-size: 1em;
+  font-weight: 300;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -477,6 +478,17 @@ tr {
   border: 1px solid #010305;
   cursor: pointer;
 }
+
+.button_light{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--black);
+  background-color: var(--white_dirty);
+  padding: .4em .8em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
 
 .team_photo{
   width: 16em;
@@ -509,7 +521,11 @@ tr {
 }
 
   .bg-img {
-    filter: brightness(70%);
+    filter: brightness(50%);
+  }
+
+  .bg-img-dark{
+    filter: brightness(0%);
   }
 
 .slider_h1{
@@ -651,7 +667,7 @@ tr {
 @media (min-width: 811px){
 
   .nav-link{
-    color: #31030F!important;
+    color: var(--bordo_dark)!important;
     font-size: 1em!important;
     font-weight: 300;
     margin: 0 .3em;

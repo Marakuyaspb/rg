@@ -15,9 +15,10 @@
 			background-color: #2E6C2D;
 			color: #FAF9F9;
 			border-radius: 5px 0 0 5px;
-			z-index: 999;
+			z-index: 999!important;
 			transition: all 0.5s ease-in-out;
-			vertical-align: middle
+			vertical-align: middle;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		}
 		.whats-float a span {
 			color: #FAF9F9;
@@ -32,7 +33,7 @@
 	@media (max-width: 810px) {
 		.whats-float {
 			position: fixed;
-			transform:translate(203px,0px);
+			transform:translate(194px,0px);
 			top:35%;
 			right:0;
 			width:244px;
@@ -40,9 +41,10 @@
 			background-color: #2E6C2D;
 			color: #FAF9F9;
 			border-radius: 5px 0 0 5px;
-			z-index: 10;
+			z-index: 999;
 			transition: all 0.5s ease-in-out;
-			vertical-align: middle
+			vertical-align: middle;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		}
 
 		.whats-float a span {
@@ -71,7 +73,7 @@
     <a href="https://wa.me/79052226226"
        target="_blank">
         
-			<img class="py-1 px-2 tg_btn_icon" src="{% static 'icons/whatsapp_white.png' %}">
+			<img class="px-2 tg_btn_icon" src="{% static 'icons/whatsapp_white.png' %}">
 			<span class="btn_text">Написать в WhatsApp</span>
 	 	
     </a>

@@ -3,57 +3,18 @@
 
 {% block content %}
 <style type="text/css">
-  .big_serv{
-    font-size: 6em;
-  }
+  
   /*  DESCTOP  */
   @media (min-width: 811px){
-    #chrome51{
-      animation: levitation_chrome 5s infinite;
-      position: absolute;
-      width: 14em;
-    }
-
-    @keyframes levitation_chrome {
-      0% {
-        top: 5%;
-        left:68%;
-      }
-      50% {
-        top: 4%;
-        left:68%;
-
-      }
-      100% {
-        top: 5%;
-        left:68%;
-      }
+    .big_serv{
+      font-size: 6em;
     }
   }
     /*  PHONE  */
   @media (max-width: 810px){
-    #chrome51{
-      animation: levitation_chrome 5s infinite;
-      position: absolute;
-      width: 12em;
+    .big_serv{
+      font-size: 2.6em;
     }
-
-    @keyframes levitation_chrome {
-      0% {
-        top: 25%;
-        left:55%;
-      }
-      50% {
-        top: 26%;
-        left:55%;
-
-      }
-      100% {
-        top: 25%;
-        left:55%;
-      }
-    }
-  }
 
   .ellipse_3{
       height: 66em;
@@ -112,93 +73,36 @@
   }
 </style>
 
+{% include 'main/parts/service_animate_header.html' %}
 
-<!-- DESCTOP -->
-<div class='d-none d-lg-block d-xl-block d-xxl-block'>
-  <div class="desctop_84">
-    <div class='pt-3'>
-      
-      <div class="row">
-        <div class='col-6'>
-          <h1 class='big_serv red pt-2'>ДИАГНОСТИКА</h1>
-          <h1 class='we_300 big_serv black'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
-          <section class='py-5 d-flex justify-content-start'>
-            {% include 'cars/popups/popup_need_service.html' %}
-            <div class='ms-3'>
-            {% include 'cars/popups/popup_need_diagnostic.html' %}
-            </div>
-          </section>
-        </div>
 
-        <div class='col-6'>    
-          <img class='w-100' src='{% static "illustr/big_key.png" %}'>  
-        </div>
-      </div>
-
-      <img loading="lazy" id='elem_4' class='elem rellax' src="{% static 'illustr/gear_top.svg' %}" alt="" />
-      <img loading="lazy" id='clay' class='elem rellax' src="{% static 'illustr/Cone_01_2.svg' %}" alt="" />
-      <img loading="lazy" id='chrome51' class=' pb-3' src="{% static 'illustr/chrome51.svg' %}">
-
-      <img loading="lazy" class='ps-5 abstract ellipse_twice_white' src='{% static "abstract/ellipse_2_white.svg" %}'>
-
-    </div>
-  </div>
+<div>
+    {% include 'main/parts/running_str_service.html' %} 
 </div>
+
+
+<h1 class='pt-4 we_300 center'>Ждём вас в сервисном центре!</h1>
 
 
 <!-- PHONE -->
-<div class='d-block d-lg-none '>
-  <div class='px-4 pt-3'>
-    <p class='very_big'>ДИАГ</p>
-    <p class='very_big'>НОСТ</p>
-    <p class='very_big'>ИКА</p>
-    <p class='we_300 h1_24-5 red'>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</p>
-
-
-    <section class='py-2'>
-    {% include 'cars/popups/popup_need_diagnostic.html' %}
-    </section>
-    <img loading="lazy" class='w-100' src='{% static "illustr/big_key.png" %}'>
-
-    <img loading="lazy" id='chrome51' class=' pb-3' src="{% static 'illustr/chrome51.svg' %}">
+<div class='d-block d-lg-none pt-3 ps-4'>
+  {% include 'cars/popups/popup_need_service.html' %}
+  <div class='pt-2'>
+  {% include 'cars/popups/popup_need_diagnostic.html' %}
   </div>
 </div>
 
-
-
-<div class="desctop_84">
-  <div class="row">
-    <div class="col-md-4 py-3">
-      <img loading="lazy" id='' class='w-100' src="{% static 'office/man.jpeg' %}"> 
-      <h2 class='we_300 py-4'>ОПЫТНЫЕ МАСТЕРА</h2> 
-      <img id='' class='w-100' src="{% static 'office/launge.jpeg' %}">   
-    </div>
-
-    <div class="col-md-4 py-3">
-      <img loading="lazy" id='' class='w-100' src="{% static 'office/come.png' %}">         
-      <h2 class='we_300 py-4'>ПОДБОР КОМПЛЕКТУЮЩИХ</h2>
-      <img loading="lazy" id='' class='w-100' src="{% static 'office/ironman.jpeg' %}">   
-
-    </div>
-
-    <div class="col-md-4 py-3">
-      <img loading="lazy" id='' class='w-100' src="{% static 'office/up.png' %}">     
-      <h2 class='we_300 py-4'>КАЧЕСТВЕННОЕ ОБОРУДОВАНИЕ</h2>
-      <img loading="lazy" id='' class='w-100' src="{% static 'office/two_cars.png' %}">   
-    </div>
-
-  </div>
-
-    <h2 class='we_300 center'>Ждём вас в сервисном центре!</h2>
-
+<!-- DESCTOP -->
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+  <section class='py-3 d-flex justify-content-center'>
+      {% include 'cars/popups/popup_need_service.html' %}
+      <div class='ms-3 mt-3'>
+      {% include 'cars/popups/popup_need_diagnostic.html' %}
+      </div>
+  </section>
 </div>
   
 
-<section class='py-4'>
-  <center>
-    {% include 'cars/popups/popup_need_service.html' %}
-  </center>
-</section>
 
 <section class="white_dirty_bg">
   <div class="desctop_84 py-3">
@@ -213,6 +117,5 @@
 </section>
 
 
-</script>
 
 {% endblock %}

@@ -22,6 +22,7 @@
       z-index: -3;
       top: 105%;
       left: -96%;
+      overflow: hidden;
     }
     .ellipse_3_white{
       height: 36em;
@@ -29,6 +30,7 @@
       z-index: -4;
       top: -1%;
       left: 2%;
+      overflow: hidden;
     }
   }
 
@@ -122,9 +124,6 @@
 </style>
 
 
-<!-- DESCTOP -->
-<div class='d-none d-lg-block d-xl-block d-xxl-block'>
-
   <img loading="lazy" class='ps-5 abstract ellipse_twice_white' src='{% static "abstract/ellipse_2_white.svg" %}'>
   <img loading="lazy" id='clay' class='elem rellax' src="{% static 'illustr/clay.svg' %}" alt="" />
   <img loading="lazy" class='ps-5 abstract ellipse_3_white' src='{% static "abstract/ellipse_3_white.svg" %}'> 
@@ -133,41 +132,23 @@
     <div class="row">
       <div class='col-6'>
         <h1 class='we_300 pt-4 big_guar red pb-3'>ОФОРМИМ ГАРАНТИЮ</h1>
-        <h2 class='pt-2 we_300'>Даже если вы приобрели машину</h2>
-        <h2 class='we_300'>не через RG Auto!</h2>
+        <h2 class='pt-2 we_300'>Даже если вы приобрели машину<br>не через RG Auto!</h2>
 
       </div>
 
-      <div class='col-6'>    
-        <img loading="lazy" id='car_d' class='' src="{% static 'transperent/cute_car.png' %}" alt="" />  
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PHONE -->
-<div class='d-block d-lg-none '>
-  <section class='desctop_84'>
-    <div class="row mb-5">
       <div class='col-6'>
-
-        <h1 class='very_big'>ОФОР</h1>
-        <h1 class='very_big'>МИМ </h1>
-        <h1 class='very_big'>ГАРАН</h1>
-        <h1 class='very_big'>ТИЮ</h1>
-        <img loading="lazy" class='ps-5 abstract ellipse_3_white' src='{% static "abstract/ellipse_3_white.svg" %}'> 
-      </div>
-      <div loading="lazy" class='col-6'>
-          <img id='tools' class='gua_head_img' src="{% static 'illustr/tools.png' %}" alt="" />
+        <div class='d-none d-lg-block d-xl-block d-xxl-block'> 
+          <img loading="lazy" id='car_d' class='' src="{% static 'transperent/cute_car.png' %}" alt="" /> 
+        </div>
       </div>
     </div>
 
-    <h2 class=' we_300 pb-3'>Даже если вы приобрели машину не через RG Auto!</h2>
     <center>{% include 'cars/popups/popup_guarantee.html' %}</center>
-  </section>
-</div>
+  </div>
 
 
+
+<div class='d-none d-lg-block d-xl-block d-xxl-block'>
 <section class='py-5'> 
   <div class="desctop_84">
     <div class='row'>
@@ -176,7 +157,7 @@
       <div class='col-md-4'><img loading="lazy" id='' class='w-100 py-2' src="{% static 'office/perspective.jpeg' %}"></div>
     </div>
 </section>
-
+</div>
 
 <!-- DESCTOP -->
 <div class='d-none d-lg-block d-xl-block d-xxl-block pb-4'>
@@ -264,11 +245,13 @@
     </div>  
 </div>
 
+
+
 <!-- PHONE -->
 <div class='d-block d-lg-none desctop_84 pb-3'>
   <img class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'> 
 
-  <h2 class='big_h2_guar we_200'>КАК ЭТО РАБОТАЕТ?</h2>
+  <h2 class='big_guar we_200 pt-5'>КАК ЭТО РАБОТАЕТ?</h2>
   <section class="mt-5">
     <div class="d-flex align-items-start">
       <div>
@@ -297,8 +280,8 @@
       </div>
     </div>
 
-    <center>
-      {% include 'cars/popups/popup_guarantee.html' %}  
+    <center class='pt-3'>
+      {% include 'cars/popups/btn_wa.html' %}  
     </center>
   </section>
 
@@ -306,7 +289,7 @@
   <img class='w-100 py-5' src='{% static "transperent/cute_car.png" %}'> 
 
 
-  <h2 class=' big_h2_guar we_200'>ПОЧЕМУ МЫ?</h2>
+  <h2 class=' big_guar we_200'>ПОЧЕМУ МЫ?</h2>
   <section class=" mt-5">
     <div class="d-flex align-items-start">
 

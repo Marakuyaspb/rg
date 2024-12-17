@@ -61,7 +61,7 @@ def fresh_cars(request):
 	callme_form = handle_callme_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
 
-
+	queryset = cars
 	if request.method == 'GET':
 		filtered_queryset = cars_filtering(request, queryset)
 		print(filtered_queryset)
@@ -93,7 +93,7 @@ def used_cars(request):
 	callme_form = handle_callme_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
 
-
+	queryset = cars
 	if request.method == 'GET':
 		filtered_queryset = cars_filtering(request, queryset)
 		print(filtered_queryset)

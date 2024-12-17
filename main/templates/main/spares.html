@@ -8,67 +8,6 @@
     font-size: 6em;
   }
 
-  #cone_18{
-    height: 5em;
-    position: absolute;
-    animation: levitation_cone_18 6s infinite;
-  }
-  #cone_3{
-    height: 4em;
-    position: absolute;
-    animation: levitation_cone_3 5s infinite; 
-  }
-  #chrome8{
-    height: 14em;
-    position: absolute;
-    animation: levitation_chrome8 5s infinite; 
-  }
-  @keyframes levitation_chrome8 {
-    0% {
-      top: 20%;
-      left:65%;
-    }
-    50% {
-      top: 21%;
-      left:65%;
-
-    }
-    100% {
-      top: 20%;
-      left:65%;
-    }
-  }
-  @keyframes levitation_cone_3 {
-    0% {
-      top: 35%;
-      left:79%;
-    }
-    50% {
-      top: 37%;
-      left:80%;
-
-    }
-    100% {
-      top: 35%;
-      left:79%;
-    }
-  }
-  @keyframes levitation_cone_18 {
-    0% {
-      top: 15%;
-      left:55%;
-    }
-    50% {
-      top: 17%;
-      left:55%;
-
-    }
-    100% {
-      top: 15%;
-      left:55%;
-    }
-  }
-
   /* Next block */
 
   #jet{
@@ -78,16 +17,16 @@
   }
   @keyframes levitation_jet {
     0% {
-      top:61%;
+      top:67%;
       left:16%;
     }
     50% {
-      top: 59%;
+      top: 69%;
       left:16%;
 
     }
     100% {
-      top: 61%;
+      top: 67%;
       left:16%;
     }
   }
@@ -143,6 +82,7 @@
     font-size: 3.2em;
     line-height: .9;
   }
+
   /*  DESCTOP  */
   @media (min-width: 811px){
     .ellipse{
@@ -180,15 +120,27 @@
 
     <div class='d-none d-lg-block d-xl-block d-xxl-block'>
       <img loading="lazy" class='ps-5 abstract ellipse_twice' src='{% static "abstract/ellipse_twice.svg" %}'> 
-      <img loading="lazy" id='cone_18' class='' src='{% static "illustr/Cone_01_2(18).svg" %}'>  
-      <img loading="lazy" id='cone_3' class='' src='{% static "illustr/Cone_01_2_3.svg" %}'>  
-      <img loading="lazy" id='chrome8' class='' src='{% static "illustr/chrome8.svg" %}'>  
+ 
     </div>
 
     <div class='row pt-4'>
 
       <div class='col-md-6 pe-5'>
-        <p class='me-5 pe-5'>У нас есть выходы на официальных производителей, дилеров, а также разные каналы параллельного импорта. Найдем и доставим в Россию любую необходимую деталь!</p>
+
+        <div class="d-flex align-items-start mt-2">
+          <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+          <h2 class='pt-2 large_text we_300'>Выходы на официальных производителей</h2>
+        </div>
+        <div class="d-flex align-items-start mt-2">
+          <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+          <h2 class='pt-2 large_text we_300'>Дилерские центры</h2>
+        </div>
+        <div class="d-flex align-items-start mt-2">
+          <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+          <h2 class='pt-2 large_text we_300'>Разные каналы параллельного импорта</h2>
+        </div>
+
+        <p class='mt-3 pe-5 large_text'>Найдем и доставим в Россию любую необходимую деталь!</p>
       </div>
       <div class='col-md-6'>
       </div>
@@ -202,10 +154,10 @@
 
       </div>
       <div class='col-md-5'>
-        <h2 class='pt-5 pb-4 we_300 big_spares red'>ДЕТАЛЬ ТОЧНО ПОДОЙДЁТ?</h2>
+        <h2 class='pt-5 pb-4 we_300 big_guar red'>ДЕТАЛЬ ТОЧНО ПОДОЙДЁТ</h2>
         <p>Чтобы быть уверенными в этом, мы осуществляем подбор запчастей по VIN-номеру. 
         <p>Разве модели и года выпска мало? Да. Автопроизводители в рамках конкретной модели машины никогда ограничиваются одной комплектацией. На это разнообразие влияют: дополнительное оснащение, регион эксплуатации и другие факторы.
-        <p>Поэтому укажите, пожалуйста, в заявке на подбор VIN-номер.</p>
+        <p>Поэтому укажите в заявке на подбор VIN-номер.</p>
 
         <div class='py-4'>
           {% include 'cars/popups/popup_shesterenky_need.html' %}
@@ -218,35 +170,46 @@
 <!-- PHONE -->
 <div class='d-block d-lg-none '>
   <section class='desctop_84'>
-    <div class="row">
-      <div class='col-6 pt-3'>
 
-        <h1 class='very_big_sp'>ЗАП</h1>
-        <h1 class='very_big_sp'>ЧАС</h1>
-        <h1 class='very_big_sp'>ТИ</h1>
+    <h1 class='big_guar we_300 red'>ЗАПЧАСТИ</h1>
 
+
+    <h2 class='py-3 we_300'>В наличии и под заказ из любой точки планеты</h2>
+
+      <div class="d-flex align-items-start mt-2">
+        <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+        <h2 class='pt-2 large_text we_300'>Выходы на официальных производителей</h2>
       </div>
-      <div class='col-6'>
-          <img loading="lazy" id='tools' class='spares_head_img' src="{% static 'illustr/chrome8.svg' %}" alt="" />
+      <div class="d-flex align-items-start mt-2">
+        <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+        <h2 class='pt-2 large_text we_300'>Дилерские центры</h2>
       </div>
-    </div>
+      <div class="d-flex align-items-start mt-2">
+        <img class='icon_3 me-2' src='{% static "icons/galka_red.png" %}'>
+        <h2 class='pt-2 large_text we_300'>Разные каналы параллельного импорта</h2>
+      </div>
 
-    <h2 class='py-5 we_300'>В наличии и под заказ из любой точки планеты</h2>
+        <p class='mt-3 pe-5 large_text'>Найдем и доставим в Россию любую необходимую деталь!</p>
 
-    <p>У нас есть выходы на официальных производителей, дилеров и разные каналы параллельного импорта. Найдем и доставим в Россию любую необходимую деталь!</p>
+        <div class='py-1'>
+          {% include 'cars/popups/popup_shesterenky_need.html' %}
+        </div>
 
     <img loading="lazy" id='jet_mob' class='' src='{% static "illustr/jet.png" %}'>
 
 
-    <h2 class='pb-5 big_sp we_400 red'>А ДЕТАЛЬ ТОЧНО ПОДОЙДЁТ?</h2>
+    <h2 class='pb-3 big_guar we_400 red'>ДЕТАЛЬ ТОЧНО ПОДОЙДЁТ</h2>
     <p>Чтобы быть уверенными в этом, мы осуществляем подбор по VIN-номеру. </p> 
     <p>Автопроизводители в рамках конкретной модели машины никогда не ограничиваются одной комплектацией.
     На это разнообразие влияют: дополнительное оснащение, регион эксплуатации и другие факторы.</p> 
     <p>Поэтому укажите, пожалуйста, в заявке на подор VIN-номер.</p>
 
 
-  <div class='py-5'>
+  <div class='py-3'>
     {% include 'cars/popups/popup_shesterenky_need.html' %}
+    <div class='pt-2'>
+      {% include 'cars/popups/btn_wa.html' %}
+    </div>
   </div>
 
 </div>
