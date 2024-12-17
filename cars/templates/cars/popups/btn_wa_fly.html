@@ -1,0 +1,78 @@
+{% load static %}
+
+
+<style type="text/css">
+
+	/*  DESCTOP  */
+	@media (min-width: 811px){
+		.whats-float {
+			position: fixed;
+			transform:translate(210px,0px);
+			top:25%;
+			right:0;
+			width:244px;
+			overflow: hidden;
+			background-color: #2E6C2D;
+			color: #FAF9F9;
+			border-radius: 5px 0 0 5px;
+			z-index: 999;
+			transition: all 0.5s ease-in-out;
+			vertical-align: middle
+		}
+		.whats-float a span {
+			color: #FAF9F9;
+			position: absolute;
+			font-weight: 300;
+			margin: .2em 0 0 0;
+		}
+
+	}
+
+	/*  PHONE  */
+	@media (max-width: 810px) {
+		.whats-float {
+			position: fixed;
+			transform:translate(203px,0px);
+			top:35%;
+			right:0;
+			width:244px;
+			overflow: hidden;
+			background-color: #2E6C2D;
+			color: #FAF9F9;
+			border-radius: 5px 0 0 5px;
+			z-index: 10;
+			transition: all 0.5s ease-in-out;
+			vertical-align: middle
+		}
+
+		.whats-float a span {
+			color:  #2E6C2D;
+			position: absolute;
+			font-weight: 300;
+			margin: .2em 0 0 0;
+		}
+
+	}
+
+
+	.whats-float:hover {
+	    color: #FAF9F9;
+	    transform:translate(0px,0px);
+	}
+
+	.whats-float:hover i  {
+	    transform:rotate(360deg);
+	}
+</style>
+
+
+
+<div class="whats-float p-2">
+    <a href="https://wa.me/79052226226"
+       target="_blank">
+        
+			<img class="py-1 px-2 tg_btn_icon" src="{% static 'icons/whatsapp_white.png' %}">
+			<span class="btn_text">Написать в WhatsApp</span>
+	 	
+    </a>
+</div>

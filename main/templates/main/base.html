@@ -63,6 +63,13 @@
     .mesh_blue_black{
       background-image: url("{% static 'abstract/mesh_blue_black_1.png' %}");
     }
+
+
+    #wa_fly{
+      position: absolute;
+      top:0%;
+      right: 5%;
+    }
   </style>
 
 <div id="follower" class="follower"></div>
@@ -120,6 +127,7 @@
 
 <!-- PHONE -->
 <div class='d-block d-lg-none '>
+
   <nav  id='nav_mob' class="navbar navbar-expand-lg">
     <div class="container-fluid mx-3">
       
@@ -188,7 +196,12 @@
       </div>
     </div>
   </nav>
+
 </div>
+
+
+<div id='wa_fly'>{% include 'cars/popups/btn_wa_fly.html' %}</div>
+
 </header>
 
 
@@ -223,6 +236,12 @@
           <a class="nav_footer_mob" href='{% url "main:spares" %}'><p>Диагностика и сервисное обслуживание</p></a>
           <a class="nav_footer_mob" href='{% url "main:jurists" %}'><p>Юридическая поддержка</p></a>
           <a class="nav_footer_mob" href='{% url "main:about" %}'><p>О нас</p></a>
+
+          <div class="d-flex justify-content-start">
+            <p  class="nav_footer pt-3 pe-2">Новости</p>
+            <a href='https://youtube.com/@bezpili78?si=kQtvLs9u3OWsO0TR'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
+            <a href='https://t.me/RedGroupAuto'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
+          </div>
         </div>
 
         <div class='py-3'>
@@ -231,11 +250,18 @@
           <p class="gray_light">info@rgspace.pro</p>
 
 
-          <div class="d-flex justify-content-start mt-4">
-            <a href='https://youtube.com/@bezpili78?si=kQtvLs9u3OWsO0TR'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
-            <a href='https://t.me/RedGroupAuto'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
-            <a href='https://wa.me/79052226226'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
-          </div>
+          
+        <a href='https://wa.me/79052226226'>
+          <button class='mt-3 btn_whatsapp'>
+            <div class="d-flex justify-content-start">
+              <img loading="lazy" class="py-1 pe-2 tg_btn_icon" src="{% static 'icons/whatsapp_white.png' %}">
+              <span class=" btn_text">Чат в WhatsApp</span>
+            </div>
+          </button>
+        </a>
+
+
+
         </div>
       </div>
       
@@ -276,11 +302,23 @@
         <a class="nav_footer" href='{% url "main:about" %}'><p class='pt-4'>О нас</p></a>
         <a class="nav_footer" href='{% url "main:contact" %}'><p>Контакты</p></a>
 
-        <div class="d-flex justify-content-start mt-4">
+        <a href='https://wa.me/79052226226'>
+          <button class='mt-3 btn_whatsapp'>
+            <div class="d-flex justify-content-start">
+              <img loading="lazy" class="py-1 pe-2 tg_btn_icon" src="{% static 'icons/whatsapp_white.png' %}">
+              <span class=" btn_text">Чат в WhatsApp</span>
+            </div>
+          </button>
+        </a>
+
+        <div class="d-flex justify-content-start mt-2">
+          <p  class="nav_footer pt-3 pe-2">Новости</p>
           <a href='https://youtube.com/@bezpili78?si=kQtvLs9u3OWsO0TR'><img class='smm_head pt-1 me-2' src='{% static "icons/youtube_gray.png" %}'></a>
           <a href='https://t.me/RedGroupAuto'><img class='smm_head py-2 me-3' src='{% static "icons/telegram_gray.png" %}'></a>
-          <a href='https://wa.me/79052226226'><img class='smm_head py-2' src='{% static "icons/whatsapp_gray.png" %}'></a>
         </div>
+
+
+
       </div>
     </div>
    
