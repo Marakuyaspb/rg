@@ -521,7 +521,7 @@ tr {
 }
 
   .bg-img {
-    filter: brightness(50%);
+    filter: brightness(60%);
   }
 
   .bg-img-dark{
@@ -667,7 +667,7 @@ tr {
 @media (min-width: 811px){
 
   .nav-link{
-    color: var(--bordo_dark)!important;
+    color: var(--black)!important;
     font-size: 1em!important;
     font-weight: 300;
     margin: 0 .3em;
