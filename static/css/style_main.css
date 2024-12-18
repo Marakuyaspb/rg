@@ -248,6 +248,7 @@ tr {
 
 .btn_text{
   font-size: 16px!important;
+  line-height: 1.1em;
 }
 
 .checkbox-input_red {

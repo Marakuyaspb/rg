@@ -251,34 +251,20 @@
 	  
 		<section class="block_p section-landing">
 		    <figure class="item-parallax-media">
-		      <img class='bg-img-dark' src="{% static 'img/blue_car.jpg' %}" alt="" />
+		      <img class='bg-img' src="{% static 'img/red_car_piece.jpg' %}" alt="" />
 		    </figure>
 		    <div class="item-parallax-content flex-container">
 		      <div class="landing-content centered-content">
-		        <h1 class="big_serv white we_300">ДИАГНОСТИКА<br>И СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h1>
+		        <h1 class="big_guar white we_300">ОФОРМИМ<br>ГАРАНТИЮ</h1>
+		         <h2 class=" white we_200">Даже если вы приобрели машину<br>не через RG Auto!</h2>
 
 
-				<div class="d-flex align-items-start mt-5">
-				    <img loading="lazy" class='menu_icon me-2' src='{% static "icons/galka_white.png" %}'>
-				    <h2 class='pt-2 large_text white we_300'>Опытные мастера</h2>
-				</div>
-				<div class="d-flex align-items-start mt-2">
-				    <img loading="lazy" class='menu_icon me-2' src='{% static "icons/galka_white.png" %}'>
-				    <h2 class='pt-2 large_text white we_300'>Все виды работ</h2>
-				</div>
-				<div class="d-flex align-items-start mt-2">
-				    <img loading="lazy" class='menu_icon me-2' src='{% static "icons/galka_white.png" %}'>
-				    <h2 class='pt-2 large_text white we_300'>Честные цены</h2>
-				</div>
-				<div class="d-flex align-items-start mt-2">
-				    <img loading="lazy" class='menu_icon me-2' src='{% static "icons/galka_white.png" %}'>
-				    <h2 class='pt-2 large_text white we_300'>Подбор комплектующих</h2>
-				</div>
+
 
 
 				<!-- PHONE -->
 				<div class='d-block d-lg-none pt-5'>
-					{% include 'cars/popups/popup_need_service.html' %}
+					{% include 'cars/popups/popup_guarantee.html' %}
 					<div class='pt-2'>
 					{% include 'cars/popups/btn_wa.html' %}
 					</div>
@@ -286,7 +272,7 @@
 				<!-- DESCTOP -->
 				<div class='d-none d-lg-block d-xl-block d-xxl-block'>
 			        <section class='py-5 d-flex justify-content-start'>
-			            {% include 'cars/popups/popup_need_service.html' %}
+			            {% include 'cars/popups/popup_guarantee.html' %}
 			            <div class='ms-3 mt-3'>
 			            {% include 'cars/popups/btn_wa.html' %}
 			            </div>
@@ -295,23 +281,12 @@
 		      </div>
 		    </div>
 		</section>
-			  
-		<div>
-		    {% include 'main/parts/running_str_service.html' %} 
-		</div>
 
-		<div class="centered-content py-3">
-
-			<center>
-				<img class='img_30' src="{% static 'office/dreaming.png' %}" alt="" />
-		  		<img class='img_30 my-5 mx-3' src="{% static 'office/man.jpeg' %}" alt="" />
-		  		<img class='img_30' src="{% static 'office/two_cars.png' %}" alt="" />	
-			</center>
-
-		</div>
-	  
 	</main>
 </section>
+
+
+
 
 
 
