@@ -51,11 +51,34 @@
 </style>
 
 
-{% include 'main/parts/insurance_animate_header.html' %}
+{% include 'main/parts/inshurance_animate_header.html' %}
 
 
 
-<section class="mt-5 white_bg">
+<div>
+    {% include 'main/parts/running_str_inshurance.html' %} 
+</div>
+
+<div class='desctop_50'>
+
+  <h2 class="red pt-4 pb-2 big_h2_guar we_300">Что влияет на стоимость КАСКО?</h2>
+  <p class="large_text my-4 we_400">Среди факторов, влияющих на стоимость страховки:</p>
+
+  <p>• Характеристики автомобиля: возраст, мощность двигателя
+  <p>• Цены на запчасти и услуги ТО для марки автомобиля в вашем городе
+  <p>• Возраст и стаж вождения всех водителей машины; их страховая история
+  <p>• Тип охранного устройства автомобиля
+  <p>• Статистика угонов конкретной марки и модели транспортного средства в вашем регионе
+  <p>• Место ночной парковки — гараж, охраняемая стоянка или просто улица
+  <p>• Дополнительные услуги, включенные в полис (например, эвакуация, выезд аварийного комиссара)
+
+  <div class='py-3'>
+  {% include 'cars/popups/popup_casco_count.html' %}
+  </div>
+
+</div>
+
+<section class="mt-5 white_dirty_bg">
   <div class="desctop_84 py-3">
     <h2 class='big_h2_guar we_200 pt-5'>НОВЫЕ ИНОМАРКИ</h2>
     <h3 class="we_300 red">Из разных точек мира</h3>

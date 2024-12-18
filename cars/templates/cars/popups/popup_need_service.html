@@ -6,11 +6,15 @@
     <div class='modal_full hide'>
       <div class=''>
         
-        <div class='d-flex flex-row-reverse pe-3'>
-          <span class="close" onclick="closeModal(this);">&times;</span>
-        </div>
+
         
         <form method="post" class="callme_container white_dirty_bg">
+
+          <div class='d-flex flex-row-reverse pe-3'>
+            <span class="close" onclick="closeModal(this);">&times;</span>
+          </div>
+
+           <center><img class='popup_big_logo' src='{% static "brand/logo.svg" %}'></center>
           
           <h2 class='we_300 ms-4'>ЗАПИСЬ НА СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</h2>
           <div class='form_container we_300'>
@@ -22,8 +26,8 @@
             {{ need_service_form.phone }}
 
             <div class='d-flex justify-content-start py-2'>
-              <label class='' for="{{ need_service_form.urgency.id_for_label }}">Cрочно?</label>
-              {{ need_service_form.urgency }}
+              {{ need_service_form.urgency }} <label class='pt-1' for="{{ need_service_form.urgency.id_for_label }}">Cрочно?</label>
+              
             </div>
             
            
