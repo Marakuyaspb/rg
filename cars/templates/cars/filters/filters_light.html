@@ -1,0 +1,638 @@
+<style>
+	.filter_header{
+		font-size: 1.25em!important;
+		padding-top: 1em;
+	}
+	.form-check-label{
+		z-index: 2!important;
+		font-size: 1.125em!important;
+		color: #50504E;
+	}
+
+	@media (min-width: 811px){
+		.modal{
+			width: 33%!important;
+	  		height: 100vh!important;
+	  		right:0!important;
+	  		left:auto;
+	  		padding: 0px!important;
+		}
+	}
+
+	@media (max-width: 810px) {
+		.modal{
+			width: 100%!important;
+			height: 100vh!important;
+			padding: 0px!important;
+		}
+	}
+
+	@media (min-width: 576px) {
+	  .modal-dialog {
+	    max-width: 100%!important;
+		}
+	}
+
+
+	@media (max-width: 577px) {
+	  .modal-dialog {
+	    max-width: 100%!important;
+		}
+	}
+
+
+	.part33{
+		width: auto;
+	}
+	.modal-dialog {
+		
+		margin: 0px!important;
+	}
+
+
+
+
+	.wrapper {
+	  position: relative;
+	  width: 100%;
+	  background-color: #ffffff;
+	  padding: 10px 40px 20px 0px;
+	  border-radius: 10px;
+	}
+	.container {
+	  position: relative;
+	  width: 100%;
+	  height: 100px;
+
+	}
+	input[type="range"] {
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+	  width: 100%;
+	  outline: none;
+	  position: absolute;
+	  margin: auto;
+	  top: 0;
+	  bottom: 0;
+	  background-color: transparent;
+	  pointer-events: none;
+	}
+	.slider-track {
+		width: 100%;
+		height: 4px;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		border-radius: 5px;
+	}
+	.slider-trackd {
+		width: 100%;
+		height: 4px;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		border-radius: 5px;
+	}
+		.slider-trackw {
+		width: 100%;
+		height: 4px;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		border-radius: 5px;
+	}
+	input[type="range"]::-webkit-slider-runnable-track {
+	  -webkit-appearance: none;
+	  height: 5px;
+	}
+	input[type="range"]::-moz-range-track {
+	  -moz-appearance: none;
+	  height: 5px;
+	}
+	input[type="range"]::-ms-track {
+	  appearance: none;
+	  height: 5px;
+	}
+	input[type="range"]::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  height: 1em;
+	  width: 1em;
+	  background-color: #9f8a88;
+	  cursor: pointer;
+	  margin-top: -9px;
+	  pointer-events: auto;
+	  border-radius: 50%;
+	}
+	input[type="range"]::-moz-range-thumb {
+	  -webkit-appearance: none;
+	  height: 1em;
+	  width: 1em;
+	  cursor: pointer;
+	  border-radius: 50%;
+	  background-color: #9f8a88;
+	  pointer-events: auto;
+	  border: none;
+	}
+	input[type="range"]::-ms-thumb {
+	  appearance: none;
+	  height: 1.7em;
+	  width: 1.7em;
+	  cursor: pointer;
+	  border-radius: 50%;
+	  background-color: #9f8a88;
+	  pointer-events: auto;
+	}
+	input[type="range"]:active::-webkit-slider-thumb {
+	  background-color: #ffffff;
+	  border: 1px solid #9f8a88;
+	}
+	.values {
+	  background-color: #ffffff;
+	  width: 80%;
+	  position: relative;
+	  margin: auto;
+	  padding: 10px 5px;
+	  border-radius: 5px;
+	  text-align: center;
+	  font-weight: 500;
+	  font-size: 1.1em;
+	  color: #9f8a88;
+	}
+	.values:before {
+	  content: "";
+	  position: absolute;
+	  height: 0;
+	  width: 0;
+	  border-top: 15px solid transparent;
+	  border-left: 15px solid transparent;
+	  border-right: 15px solid transparent;
+	  margin: auto;
+	  bottom: -14px;
+	  left: 0;
+	  right: 0;
+	}
+
+
+	.checkbox {
+		display: flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+
+		z-index: 2!important;
+		font-size: 1.125em!important;
+		color: #50504E;
+
+	  &:hover {
+	    .checkbox-checkmark {
+	      border: 2px solid #9F8A88;
+	    }
+	  }
+	}
+
+	.checkbox-input {
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	  height: 0;
+	  width: 0;
+
+
+	  &:focus ~ .checkbox-checkmark-box {
+	    border-color: #9F8A88;
+	  }
+
+	  &:checked ~ .checkbox-checkmark-box {
+	    .checkbox-checkmark {
+	      &:after {
+	        display: block;
+	      }
+	    }
+	  }
+
+	  &:checked ~ .checkbox-checkmark-box {
+	    .checkbox-checkmark {
+	      background-color: #9F8A88;
+	      border: 2px solid #9F8A88;
+	    }
+	  }
+
+	  &:disabled ~ .checkbox-checkmark-box {
+	    .checkbox-checkmark {
+	      border: 2px solid #F6F1EE;
+	      cursor: not-allowed;
+	    }
+	  }
+
+	  &:disabled {
+	    &:checked ~ .checkbox-checkmark-box {
+	      .checkbox-checkmark {
+	        background-color: #F6F1EE;
+
+	        &:after {
+	          background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='%2374767B'/%3E%3C/svg%3E%0A") no-repeat center;
+	    background-size: contain;
+	        }
+	      }
+	    }
+	  }
+	}
+
+	.checkbox-checkmark-box {
+	  min-width: 36px;
+	  max-width: 36px;
+	  min-height: 36px;
+	  max-height: 36px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	/*  border: 2px solid transparent;
+	  border-radius: 4px;*/
+	}
+
+	.checkbox-checkmark {
+	  min-width: 26px;
+	  max-width: 26px;
+	  min-height: 26px;
+	  max-height: 26px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  border: 2px solid #9F8A88;
+	  border-radius: 4px;
+	  cursor: pointer;
+
+	  &:after {
+	    content: "";
+	    display: none;
+	    background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center;
+	    width: 24px;
+	    height: 20px;
+	    background-size: contain;
+	  }
+	}
+
+</style>
+
+
+
+<div class="d-flex justify-content-center ps-3 px-2">
+	<form method="get">
+		<button class="btn_transperent mt-2" type="submit" name="sort_by" value="desc">Сначала дорогие ↑</button>
+		<button class="btn_transperent mt-2" type="submit" name="sort_by" value="asc">Сначала бюджетные ↓</button>
+	</form>
+	<button type="button" class="btn_transperent mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+	  Показать все фильтры
+	</button>
+</div>
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+ 	<div class="modal-dialog">
+		<div class="modal-content ps-5">
+
+			<div class="modal-header">
+				<h5 class="modal-title mt-5" id="staticBackdropLiveLabel">Фильтры</h5>
+
+				<button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"><div></div></button>
+			</div>
+      		
+      		<div class="modal-body modal-dialog-scrollable">
+      			
+      			<form method="get">
+      				{% csrf_token %}
+					<div class='filters_container'>
+
+			<label class="checkbox white we_300 px-2">
+			    <input class="checkbox-input_red" type="checkbox" name="status" value="1">
+			    <span class="checkbox-checkmark-box_red">
+			      <span class="checkbox-checkmark_red"></span>
+			    </span>
+			 Новая машина
+			</label>
+
+
+			<label class="checkbox white we_300 px-2">
+			    <input class="checkbox-input_red" type="checkbox"name="status" value="2">
+			    <span class="checkbox-checkmark-box_red">
+			      <span class="checkbox-checkmark_red"></span>
+			    </span>
+			 С пробегом
+			</label>
+
+
+			<h3 class='filter_header'>Марка</h3>
+				{% for brand in unique_brand %}
+					<label class="checkbox white we_300 px-2">
+					    <input class="checkbox-input_red" type="checkbox" name='brand' value="{{ brand.brand }}">
+					    <span class="checkbox-checkmark-box_red">
+					      <span class="checkbox-checkmark_red"></span>
+					    </span>
+					 {{ brand.brand }}
+					</label>
+				{% endfor %}
+
+
+			<h3 class='filter_header'>Цвет</h3>
+				{% for the_color in unique_color %}
+
+					<style>
+						.checkbox-input_{{ the_color.color_id }} {
+							position: absolute;
+							opacity: 0;
+							cursor: pointer;
+							height: 0;
+							width: 0;
+
+							&:focus ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+								border-color: #{{ the_color.color_code }};
+							}
+
+							&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+							.checkbox-checkmark_{{ the_color.color_id }} {
+								&:after {
+									display: block;
+								}
+							}
+						}
+
+						&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+							.checkbox-checkmark {
+								background-color: {{ the_color.color_code }};
+								border: 2px solid {{ the_color.color_code }};
+							}
+						}
+
+						&:disabled ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+							.checkbox-checkmark_{{ the_color.color_id }} {
+								border: 2px solid {{ the_color.color_code }};
+								cursor: not-allowed;
+							}
+						}
+
+						&:disabled {
+							&:checked ~ .checkbox-checkmark-box_{{ the_color.color_id }} {
+								.checkbox-checkmark_{{ the_color.color_id }} {
+									background-color: {{ the_color.color_code }};
+
+									&:after {
+									background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='%2374767B'/%3E%3C/svg%3E%0A") no-repeat center;
+									background-size: contain;
+									}
+								}
+							}
+						}
+						}
+
+						.checkbox-checkmark-box_{{ the_color.color_id }} {
+							min-width: 36px;
+							max-width: 36px;
+							min-height: 36px;
+							max-height: 36px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+
+							}
+
+						.checkbox-checkmark_{{ the_color.color_id }} {
+							min-width: 26px;
+							max-width: 26px;
+							min-height: 26px;
+							max-height: 26px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25) inset;
+							-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25) inset;
+							-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25) inset;
+							border-radius: 4px;
+							cursor: pointer;
+							background-color: {{ the_color.color_code }};
+
+							&:after {
+							content: "";
+							display: none;
+							background: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center;
+							width: 24px;
+							height: 20px;
+							background-size: contain;
+							}
+						}
+					</style>
+
+					<label class="checkbox white we_300 p-1">
+						<input class="checkbox-input_{{ the_color.color_id }}" type="checkbox" value="{{ the_color.color_id }}" name="color_id">
+						<span class="checkbox-checkmark-box_{{ the_color.color_id }}">
+						<span class="checkbox-checkmark_{{ the_color.color_id }}"></span>
+						</span>
+						{{ the_color.color_name }}
+					</label>
+				{% endfor %}
+			<div class="row">
+				<div class='col-md-4'>
+				<h3 class='filter_header'>Год выпуска</h3>
+					{% for year in unique_year %}
+						<label class="checkbox white we_300 px-2">
+						    <input class="checkbox-input_red" type="checkbox" name='year' value="{{ year.year }}">
+						    <span class="checkbox-checkmark-box_red">
+						      <span class="checkbox-checkmark_red"></span>
+						    </span>
+						 {{ year.year }}
+						</label>
+					{% endfor %}
+				</div>
+				<div class='col-md-4'>
+					<h3 class='filter_header'>Трансмиссия</h3>
+					{% for transmission in unique_transmission %}
+						<label class="checkbox white we_300 px-2">
+						    <input class="checkbox-input_red" type="checkbox" name='transmission' value="{{ transmission.transmission }}">
+						    <span class="checkbox-checkmark-box_red">
+						      <span class="checkbox-checkmark_red"></span>
+						    </span>
+						 {{ transmission.transmission }}
+						</label>
+					{% endfor %}
+				</div>
+
+				<div class='col-md-4'>
+					<h3 class='filter_header'>Привод</h3>
+					{% for drive in unique_drive %}
+						<label class="checkbox white we_300 px-2">
+						    <input class="checkbox-input_red" type="checkbox" name='drive' value="{{ drive.drive }}">
+						    <span class="checkbox-checkmark-box_red">
+						      <span class="checkbox-checkmark_red"></span>
+						    </span>
+						 {{ drive.drive }}
+						</label>
+					{% endfor %}
+
+				</div>
+			</div>
+
+
+
+						<div class="pt-5 pb-3 mb-4">
+							<center>
+								<button type="submit" name='filter_products' class="button_form_base">Показать варианты</button>
+							</center>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	window.onload = function () {
+		slideOne();
+		slideTwo();
+
+		slideOneW();
+		slideTwoW();
+
+
+		slideOneD();
+		slideTwoD();
+
+
+		listenChanges();
+
+	};
+
+	let sliderOne = document.getElementById("slider-1");
+	let sliderTwo = document.getElementById("slider-2");
+	let displayValOne = document.getElementById("min_price");
+	let displayValTwo = document.getElementById("max_price");
+
+
+	let sliderOneW = document.getElementById("slider-1w");
+	let sliderTwoW = document.getElementById("slider-2w");
+	let displayValOneW = document.getElementById("range1w");
+	let displayValTwoW = document.getElementById("range2w");
+
+
+	let sliderOneD = document.getElementById("slider-1d");
+	let sliderTwoD = document.getElementById("slider-2d");
+	let displayValOneD = document.getElementById("range1d");
+	let displayValTwoD = document.getElementById("range2d");
+
+
+
+	let minGap = 0;
+	let sliderTrack = document.querySelector(".slider-track");
+	let sliderMaxValue = document.getElementById("slider-1").max;
+
+	let minGapW = 0;
+	let sliderTrackW = document.querySelector(".slider-trackw");
+	let sliderMaxValueW = document.getElementById("slider-1w").max;
+
+	let minGapD = 0;
+	let sliderTrackD = document.querySelector(".slider-trackd");
+	let sliderMaxValueD = document.getElementById("slider-1d").max;
+
+
+	function slideOne() {
+		if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+			sliderOne.value = parseInt(sliderTwo.value) - minGap;
+		}
+		displayValOne.textContent = sliderOne.value;
+		fillColor();
+	}
+	function slideTwo() {
+		if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+			sliderTwo.value = parseInt(sliderOne.value) + minGap;
+		}
+		displayValTwo.textContent = sliderTwo.value;
+		fillColor();
+	}
+
+
+	
+	function slideOneW() {
+		if (parseInt(sliderTwoW.value) - parseInt(sliderOneW.value) <= minGapW) {
+			sliderOneW.value = parseInt(sliderTwoW.value) - minGapW;
+		}
+		displayValOneW.textContent = sliderOneW.value;
+		fillColorW();
+	}
+	function slideTwoW() {
+		if (parseInt(sliderTwoW.value) - parseInt(sliderOneW.value) <= minGapW) {
+			sliderTwoW.value = parseInt(sliderOneW.value) + minGapW;
+		}
+		displayValTwoW.textContent = sliderTwoW.value;
+		fillColorW();
+	}
+
+
+
+	function slideOneD() {
+		if (parseInt(sliderTwoD.value) - parseInt(sliderOneD.value) <= minGapD) {
+			sliderOneD.value = parseInt(sliderTwoD.value) - minGapD;
+		}
+		displayValOneD.textContent = sliderOneD.value;
+		fillColor();
+	}
+	function slideTwoD() {
+		if (parseInt(sliderTwoD.value) - parseInt(sliderOneD.value) <= minGapD) {
+			sliderTwoD.value = parseInt(sliderOneD.value) + minGapD;
+		}
+		displayValTwoD.textContent = sliderTwoD.value;
+		fillColorD();
+	}
+	
+
+	function fillColor() {
+		percent1 = (sliderOne.value / sliderMaxValue) * 100;
+		percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+		sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #9F8A88 ${percent1}% , #9F8A88 ${percent2}%, #dadae5 ${percent2}%)`;
+	}
+
+
+	function fillColorW() {
+		percent1w = (sliderOneW.value / sliderMaxValueW) * 100;
+		percent2w = (sliderTwoW.value / sliderMaxValueW) * 100;
+
+		sliderTrackW.style.background = `linear-gradient(to right, #dadae5 ${percent1w}% , #9F8A88 ${percent1w}% , #9F8A88 ${percent2w}%, #dadae5 ${percent2w}%)`;
+	}
+
+
+	function fillColorD() {
+		percent1d = (sliderOneD.value / sliderMaxValueD) * 100;
+		percent2d = (sliderTwoD.value / sliderMaxValueD) * 100;
+		sliderTrackD.style.background = `linear-gradient(to right, #dadae5 ${percent1d}% , #9F8A88 ${percent1d}% , #9F8A88 ${percent2d}%, #dadae5 ${percent2d}%)`;
+	}	
+
+
+	function listenChanges(){
+		var sleepPlaceCheckbox = document.getElementById('sleep_place');
+	    var linenDrawerCheckbox = document.getElementById('linen_drawer');
+
+	    sleepPlaceCheckbox.addEventListener('change', function() {
+	        if (this.checked) {
+	            this.value = 'True';
+	        } else {
+	            this.value = 'False';
+	        }
+	    });
+
+	    linenDrawerCheckbox.addEventListener('change', function() {
+	        if (this.checked) {
+	            this.value = 'True';
+	        } else {
+	            this.value = 'False';
+	        }
+	    });
+	}
+
+</script>
