@@ -18,7 +18,7 @@
 		 clip-path: border-box;
 		 transform: translateZ(0);
 	}
-	.block {
+	.block_p {
 		 position: relative;
 		 height: 100vh;
 	}
@@ -38,34 +38,34 @@
 	 .item-parallax-content {
 		 z-index: 2;
 	}
-	 .block:nth-child( 1) .item-parallax-content {
+	 .block_p:nth-child( 1) .item-parallax-content {
 		 transform: translateY(calc(var(--yBlock-1) * 0.5px));
 	}
-	 .block:nth-child( 1) .item-parallax-media img {
+	 .block_p:nth-child( 1) .item-parallax-media img {
 		 transform: translateY(calc(var(--yBlock-1) * 0.1px));
 	}
-	 .block:nth-child( 2) .item-parallax-content {
+	 .block_p:nth-child( 2) .item-parallax-content {
 		 transform: translateY(calc(var(--yBlock-2) * 0.5px));
 	}
-	 .block:nth-child( 2) .item-parallax-media img {
+	 .block_p:nth-child( 2) .item-parallax-media img {
 		 transform: translateY(calc(var(--yBlock-2) * 0.1px));
 	}
-	 .block:nth-child( 3) .item-parallax-content {
+	 .block_p:nth-child( 3) .item-parallax-content {
 		 transform: translateY(calc(var(--yBlock-3) * 0.5px));
 	}
-	 .block:nth-child( 3) .item-parallax-media img {
+	 .block_p:nth-child( 3) .item-parallax-media img {
 		 transform: translateY(calc(var(--yBlock-3) * 0.1px));
 	}
-	 .block:nth-child( 4) .item-parallax-content {
+	 .block_p:nth-child( 4) .item-parallax-content {
 		 transform: translateY(calc(var(--yBlock-4) * 0.5px));
 	}
-	 .block:nth-child( 4) .item-parallax-media img {
+	 .block_p:nth-child( 4) .item-parallax-media img {
 		 transform: translateY(calc(var(--yBlock-4) * 0.1px));
 	}
-	 .block:nth-child( 5) .item-parallax-content {
+	 .block_p:nth-child( 5) .item-parallax-content {
 		 transform: translateY(calc(var(--yBlock-5) * 0.5px));
 	}
-	 .block:nth-child( 5) .item-parallax-media img {
+	 .block_p:nth-child( 5) .item-parallax-media img {
 		 transform: translateY(calc(var(--yBlock-5) * 0.1px));
 	}
 	 .flex-container {
@@ -226,7 +226,7 @@
 <section class="wrap_content block_header">
 	<main class="content_header js-content">
 	  
-	  <section class="block section-landing">
+	  <section class="block_p section-landing">
 	    <figure class="item-parallax-media">
 	      <img class='bg-img' src="{% static 'img/raod_b_1.png' %}" alt="" />
 	    </figure>
@@ -237,7 +237,7 @@
 	    </div>
 	  </section>
 	  
-	  <section class="block gray_light_bg section-intro">
+	  <section class="block_p gray_light_bg section-intro">
 	    <div class="item-parallax-content flex-container">
 	      <div class="centered-content">
 	        <h2 class="big_guar black head-centered">В НАЛИЧИИ<br>И ПОД ЗАКАЗ</h2>
@@ -268,7 +268,7 @@
 <script type="text/javascript">
 	const body = document.body;
 	const content = document.querySelector('.js-content');
-	const blocks = document.querySelectorAll('.block');
+	const blocks = document.querySelectorAll('.block_p');
 
 	const updateOffset = () => {
 	  requestAnimationFrame(updateOffset);

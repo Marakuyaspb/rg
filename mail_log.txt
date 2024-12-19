@@ -6926,3 +6926,8 @@ TypeError: send_email_need_diagnostic_form() takes 2 positional arguments but 3 
 2024-12-19 22:14:57,723 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
 2024-12-19 22:16:15,840 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
 2024-12-19 22:16:36,177 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
+2024-12-19 22:26:59,138 - Not Found: /installHook.js.map
+2024-12-19 22:27:00,528 - Not Found: /installHook.js.map
+2024-12-19 22:27:36,521 - Not Found: /installHook.js.map
+2024-12-19 22:30:31,425 - Not Found: /installHook.js.map
+2024-12-19 22:30:35,183 - Not Found: /installHook.js.map
