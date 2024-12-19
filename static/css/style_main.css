@@ -48,6 +48,12 @@ a {
 button{
   cursor: pointer;
 }
+textarea{
+  width: 100%;
+  border: 1px solid #010305;
+  border-radius: 8px;
+  padding: 6px;
+}
 input{
   width: 100%;
   border: 1px solid #010305;
@@ -1200,7 +1206,7 @@ tr {
 .modal_full{
   display: none;
   position: fixed;
-  z-index: 1777;
+  z-index: 777;
   left: 0;
   top: 0;
   width: 100%;

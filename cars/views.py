@@ -31,7 +31,7 @@ def catalog(request):
 		status = int(status)
 		cars = cars.filter(status=status)
 
-	callme_form = handle_callme_form(request)
+	callme_form, success = handle_callme_form(request)
 	car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {

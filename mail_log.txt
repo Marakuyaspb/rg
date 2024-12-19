@@ -6518,3 +6518,411 @@ Traceback (most recent call last):
     raise self.error(
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static'. Did you forget to register or load this tag?
 2024-12-18 02:19:15,390 - Not Found: /favicon.ico
+2024-12-19 15:45:49,734 - Not Found: /static/css/style_main.css
+2024-12-19 15:45:49,735 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:45:49,737 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:45:49,741 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:45:49,744 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:45:49,747 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:45:49,752 - Not Found: /static/js/add_bg.js
+2024-12-19 15:45:49,754 - Not Found: /static/js/add_space.js
+2024-12-19 15:45:49,758 - Not Found: /static/js/modal_form.js
+2024-12-19 15:45:49,761 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:45:49,763 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:45:49,766 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:45:49,801 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:45:49,804 - Not Found: /static/brand/logo.svg
+2024-12-19 15:45:49,807 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:45:49,810 - Not Found: /static/icons/telegram.png
+2024-12-19 15:45:49,812 - Not Found: /static/icons/menu.png
+2024-12-19 15:45:49,814 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:45:49,843 - Not Found: /static/img/foggy.jpg
+2024-12-19 15:45:49,848 - Not Found: /static/img/working.png
+2024-12-19 15:45:49,852 - Not Found: /static/img/insurance.png
+2024-12-19 15:45:49,858 - Not Found: /static/icons/galka_red.png
+2024-12-19 15:45:49,859 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:45:49,861 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:45:49,885 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:45:49,892 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:45:49,896 - Not Found: /static/img/working.jpg
+2024-12-19 15:45:49,932 - Not Found: /static/js/add_bg.js
+2024-12-19 15:45:49,978 - Not Found: /static/js/add_space.js
+2024-12-19 15:45:49,983 - Not Found: /static/js/modal_form.js
+2024-12-19 15:45:49,987 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:45:49,993 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:45:50,000 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:45:50,050 - Not Found: /static/brand/favicon.ico
+2024-12-19 15:45:59,659 - Not Found: /static/css/style_main.css
+2024-12-19 15:45:59,665 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:45:59,667 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:45:59,669 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:45:59,671 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:45:59,673 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:45:59,676 - Not Found: /static/js/add_bg.js
+2024-12-19 15:45:59,682 - Not Found: /static/js/add_space.js
+2024-12-19 15:45:59,685 - Not Found: /static/js/modal_form.js
+2024-12-19 15:45:59,687 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:45:59,691 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:45:59,695 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:45:59,722 - Not Found: /static/img/dream.jpg
+2024-12-19 15:45:59,725 - Not Found: /static/img/feedback.jpg
+2024-12-19 15:45:59,729 - Not Found: /static/js/add_bg.js
+2024-12-19 15:45:59,730 - Not Found: /static/img/4083.jpg
+2024-12-19 15:45:59,735 - Not Found: /static/brand/logo.svg
+2024-12-19 15:45:59,739 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:45:59,766 - Not Found: /static/icons/telegram.png
+2024-12-19 15:45:59,769 - Not Found: /static/icons/menu.png
+2024-12-19 15:45:59,775 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:45:59,776 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:45:59,778 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:45:59,784 - Not Found: /static/js/add_space.js
+2024-12-19 15:45:59,809 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:45:59,831 - Not Found: /static/js/modal_form.js
+2024-12-19 15:45:59,879 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:45:59,885 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:45:59,892 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:47:53,087 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-19 15:47:56,100 - Not Found: /static/css/style_main.css
+2024-12-19 15:47:56,101 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:47:56,103 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:47:56,106 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:47:56,110 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:47:56,113 - Not Found: /static/js/add_space.js
+2024-12-19 15:47:56,115 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:47:56,117 - Not Found: /static/js/add_bg.js
+2024-12-19 15:47:56,121 - Not Found: /static/js/modal_form.js
+2024-12-19 15:47:56,123 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:47:56,126 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:47:56,130 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:47:56,160 - Not Found: /static/img/dream.jpg
+2024-12-19 15:47:56,165 - Not Found: /static/img/feedback.jpg
+2024-12-19 15:47:56,167 - Not Found: /static/img/4083.jpg
+2024-12-19 15:47:56,169 - Not Found: /static/js/add_space.js
+2024-12-19 15:47:56,171 - Not Found: /static/brand/logo.svg
+2024-12-19 15:47:56,173 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:47:56,202 - Not Found: /static/icons/telegram.png
+2024-12-19 15:47:56,212 - Not Found: /static/icons/menu.png
+2024-12-19 15:47:56,214 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:47:56,217 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:47:56,218 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:47:56,219 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:47:56,247 - Not Found: /static/js/modal_form.js
+2024-12-19 15:47:56,294 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:47:56,341 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:47:56,349 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:47:57,515 - Not Found: /static/css/style_main.css
+2024-12-19 15:47:57,518 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:47:57,521 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:47:57,524 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:47:57,528 - Not Found: /static/icons/telegram.png
+2024-12-19 15:47:57,529 - Not Found: /static/img/dream.jpg
+2024-12-19 15:47:57,532 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:47:57,534 - Not Found: /static/icons/menu.png
+2024-12-19 15:47:57,536 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:47:57,537 - Not Found: /static/img/feedback.jpg
+2024-12-19 15:47:57,543 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:47:57,546 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:47:57,574 - Not Found: /static/js/add_bg.js
+2024-12-19 15:47:57,581 - Not Found: /static/js/add_space.js
+2024-12-19 15:47:57,583 - Not Found: /static/js/modal_form.js
+2024-12-19 15:47:57,586 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:47:57,589 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:47:57,592 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:47:57,617 - Not Found: /static/img/4083.jpg
+2024-12-19 15:47:57,630 - Not Found: /static/brand/logo.svg
+2024-12-19 15:47:57,635 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:47:57,637 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:47:57,640 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:47:57,691 - Not Found: /static/brand/favicon.ico
+2024-12-19 15:51:08,719 - Not Found: /static/css/style_main.css
+2024-12-19 15:51:08,721 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:51:08,725 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:51:08,729 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:51:08,731 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:08,732 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:51:08,734 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:08,737 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:51:08,739 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:08,742 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:08,746 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:08,749 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:08,783 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:51:08,785 - Not Found: /static/img/dream.jpg
+2024-12-19 15:51:08,788 - Not Found: /static/img/feedback.jpg
+2024-12-19 15:51:08,790 - Not Found: /static/img/4083.jpg
+2024-12-19 15:51:08,792 - Not Found: /static/brand/logo.svg
+2024-12-19 15:51:08,793 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:51:08,837 - Not Found: /static/icons/telegram.png
+2024-12-19 15:51:08,840 - Not Found: /static/icons/menu.png
+2024-12-19 15:51:08,842 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:51:08,844 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:51:08,847 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:51:08,848 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:51:08,886 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:51:08,931 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:08,941 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:08,946 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:08,952 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:08,958 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:08,963 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:22,096 - Not Found: /static/css/style_main.css
+2024-12-19 15:51:22,099 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:51:22,102 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:51:22,105 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:51:22,108 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:22,111 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:51:22,113 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:22,116 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:22,120 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:22,121 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:51:22,125 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:22,127 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:22,151 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:51:22,159 - Not Found: /static/img/4083.jpg
+2024-12-19 15:51:22,161 - Not Found: /static/img/dream.jpg
+2024-12-19 15:51:22,166 - Not Found: /static/img/feedback.jpg
+2024-12-19 15:51:22,168 - Not Found: /static/brand/logo.svg
+2024-12-19 15:51:22,171 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:51:22,194 - Not Found: /static/icons/telegram.png
+2024-12-19 15:51:22,205 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:22,206 - Not Found: /static/icons/menu.png
+2024-12-19 15:51:22,212 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:51:22,215 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:51:22,218 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:51:22,237 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:51:22,259 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:22,305 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:22,311 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:22,318 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:22,324 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:22,335 - Not Found: /static/brand/favicon.ico
+2024-12-19 15:51:24,086 - Not Found: /static/css/style_main.css
+2024-12-19 15:51:24,089 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:51:24,091 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:51:24,093 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:51:24,098 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:51:24,100 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:51:24,102 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:24,106 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:24,108 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:24,111 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:24,113 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:24,116 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:24,147 - Not Found: /static/brand/logo.svg
+2024-12-19 15:51:24,155 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:51:24,157 - Not Found: /static/icons/telegram.png
+2024-12-19 15:51:24,160 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:24,161 - Not Found: /static/icons/menu.png
+2024-12-19 15:51:24,162 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:51:24,190 - Not Found: /static/img/red_car_piece.jpg
+2024-12-19 15:51:24,201 - Not Found: /static/icons/service.png
+2024-12-19 15:51:24,204 - Not Found: /static/icons/document.png
+2024-12-19 15:51:24,206 - Not Found: /static/icons/gradation.png
+2024-12-19 15:51:24,207 - Not Found: /static/icons/professionals_black.png
+2024-12-19 15:51:24,208 - Not Found: /static/icons/calc_black.png
+2024-12-19 15:51:24,235 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:24,245 - Not Found: /static/icons/map_black.png
+2024-12-19 15:51:24,249 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:51:24,252 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:51:24,254 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:51:24,255 - Not Found: /static/img/working.png
+2024-12-19 15:51:24,279 - Not Found: /static/img/insurance.png
+2024-12-19 15:51:24,288 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:24,335 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:24,342 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:24,348 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:58,886 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 15:51:58,888 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:51:58,889 - Not Found: /static/css/style_main.css
+2024-12-19 15:51:58,892 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 15:51:58,893 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:51:58,895 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 15:51:58,900 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:58,904 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:58,952 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:58,954 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:58,958 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:58,962 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:58,995 - Not Found: /static/brand/logo.svg
+2024-12-19 15:51:58,996 - Not Found: /static/icons/whatsapp.png
+2024-12-19 15:51:58,998 - Not Found: /static/icons/telegram.png
+2024-12-19 15:51:59,002 - Not Found: /static/icons/menu.png
+2024-12-19 15:51:59,004 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 15:51:59,006 - Not Found: /static/img/raod_b_1.png
+2024-12-19 15:51:59,043 - Not Found: /static/transperent/Range_Rover_Long_Supercharger_mini.png
+2024-12-19 15:51:59,047 - Not Found: /static/transperent/Mitsubishi_Outlander_mini.png
+2024-12-19 15:51:59,049 - Not Found: /static/transperent/audi_green.png
+2024-12-19 15:51:59,051 - Not Found: /static/icons/telegram_white.png
+2024-12-19 15:51:59,053 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 15:51:59,055 - Not Found: /static/img/soft-evening.jpg
+2024-12-19 15:51:59,085 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 15:51:59,091 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 15:51:59,099 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 15:51:59,136 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 15:51:59,185 - Not Found: /static/js/add_bg.js
+2024-12-19 15:51:59,189 - Not Found: /static/js/add_space.js
+2024-12-19 15:51:59,194 - Not Found: /static/js/modal_form.js
+2024-12-19 15:51:59,202 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 15:51:59,209 - Not Found: /static/js/toggle_menu.js
+2024-12-19 15:51:59,255 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 15:51:59,264 - Not Found: /static/brand/favicon.ico
+2024-12-19 16:01:10,790 - Not Found: /static/img/many_cars.jpg
+2024-12-19 16:01:10,792 - Not Found: /static/img/road_bridge.jpg
+2024-12-19 16:01:10,796 - Not Found: /static/img/parked_cars.jpg
+2024-12-19 16:01:14,003 - Not Found: /static/css/style_main.css
+2024-12-19 16:01:14,005 - Not Found: /static/css/bootstrap.min.css
+2024-12-19 16:01:14,008 - Not Found: /static/owl/owl.carousel.min.css
+2024-12-19 16:01:14,011 - Not Found: /static/owl/owl.theme.default.min.css
+2024-12-19 16:01:14,015 - Not Found: /static/js/bootstrap.min.js
+2024-12-19 16:01:14,017 - Not Found: /static/js/add_bg.js
+2024-12-19 16:01:14,019 - Not Found: /static/js/add_space.js
+2024-12-19 16:01:14,022 - Not Found: /static/js/jquery-3.7.1.min.js
+2024-12-19 16:01:14,024 - Not Found: /static/js/modal_form.js
+2024-12-19 16:01:14,028 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 16:01:14,032 - Not Found: /static/js/toggle_menu.js
+2024-12-19 16:01:14,035 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 16:01:14,063 - Not Found: /static/img/dream.jpg
+2024-12-19 16:01:14,075 - Not Found: /static/img/feedback.jpg
+2024-12-19 16:01:14,077 - Not Found: /static/img/4083.jpg
+2024-12-19 16:01:14,079 - Not Found: /static/brand/logo.svg
+2024-12-19 16:01:14,081 - Not Found: /static/icons/whatsapp.png
+2024-12-19 16:01:14,082 - Not Found: /static/icons/telegram.png
+2024-12-19 16:01:14,108 - Not Found: /static/js/add_bg.js
+2024-12-19 16:01:14,123 - Not Found: /static/icons/menu.png
+2024-12-19 16:01:14,126 - Not Found: /static/icons/whatsapp_white.png
+2024-12-19 16:01:14,129 - Not Found: /static/brand/logo_dark.svg
+2024-12-19 16:01:14,130 - Not Found: /static/icons/youtube_gray.png
+2024-12-19 16:01:14,132 - Not Found: /static/icons/telegram_gray.png
+2024-12-19 16:01:14,154 - Not Found: /static/js/add_space.js
+2024-12-19 16:01:14,200 - Not Found: /static/js/modal_form.js
+2024-12-19 16:01:14,246 - Not Found: /static/js/lazy_video_load.js
+2024-12-19 16:01:14,294 - Not Found: /static/js/toggle_menu.js
+2024-12-19 16:01:14,342 - Not Found: /static/owl/owl.carousel.min.js
+2024-12-19 16:05:10,384 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-19 16:09:41,673 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-19 16:10:04,432 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-19 16:17:35,959 - /media/aa/A7/red/rg/rg/settings/celery.py changed, reloading.
+2024-12-19 16:21:39,780 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-19 16:22:11,510 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-19 16:26:52,102 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-19 16:27:15,996 - Internal Server Error: /service/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 142, in service
+    need_diagnostic_form = handle_need_diagnostic_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 105, in handle_need_diagnostic_form
+    send_email_need_diagnostic_form.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email_need_diagnostic_form() takes 2 positional arguments but 3 were given
+2024-12-19 16:27:16,117 - Not Found: /favicon.ico
+2024-12-19 16:27:43,213 - Internal Server Error: /service/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 142, in service
+    need_diagnostic_form = handle_need_diagnostic_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 105, in handle_need_diagnostic_form
+    send_email_need_diagnostic_form.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email_need_diagnostic_form() takes 2 positional arguments but 3 were given
+2024-12-19 16:28:02,288 - Internal Server Error: /jurists/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 112, in jurists
+    legal_help_form = handle_legal_help_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 178, in handle_legal_help_form
+    legal_help_form.where_auto,
+AttributeError: 'LegalHelpForm' object has no attribute 'where_auto'
+2024-12-19 16:29:39,936 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-19 16:50:33,402 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-19 16:50:48,818 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-19 16:50:59,090 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-19 16:51:16,560 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-19 16:52:25,933 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-19 16:52:44,387 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-19 16:53:22,675 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/cars/views.py", line 34, in catalog
+    callme_form, success = handle_callme_form(request, 'Спасибо. Скоро перезвоним вам!')
+TypeError: handle_callme_form() takes 1 positional argument but 2 were given
+2024-12-19 16:53:29,967 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/cars/views.py", line 34, in catalog
+    callme_form, success = handle_callme_form(request, 'Спасибо. Скоро перезвоним вам!')
+TypeError: handle_callme_form() takes 1 positional argument but 2 were given
+2024-12-19 16:54:23,094 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/cars/views.py", line 34, in catalog
+    callme_form, success = handle_callme_form(request, 'Спасибо. Скоро перезвоним вам!')
+TypeError: handle_callme_form() takes 1 positional argument but 2 were given
+2024-12-19 16:54:24,088 - Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/cars/views.py", line 34, in catalog
+    callme_form, success = handle_callme_form(request, 'Спасибо. Скоро перезвоним вам!')
+TypeError: handle_callme_form() takes 1 positional argument but 2 were given
+2024-12-19 16:54:24,205 - Not Found: /favicon.ico
+2024-12-19 17:00:01,840 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-19 17:02:27,128 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-19 17:04:19,220 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-19 17:07:08,693 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-19 17:10:55,623 - Internal Server Error: /jurists/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 112, in jurists
+    legal_help_form = handle_legal_help_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 178, in handle_legal_help_form
+    legal_help_form.where_auto,
+AttributeError: 'LegalHelpForm' object has no attribute 'where_auto'
+2024-12-19 17:33:59,117 - Internal Server Error: /service/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 142, in service
+    need_diagnostic_form = handle_need_diagnostic_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 105, in handle_need_diagnostic_form
+    send_email_need_diagnostic_form.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email_need_diagnostic_form() takes 2 positional arguments but 3 were given
+2024-12-19 17:33:59,236 - Not Found: /favicon.ico
+2024-12-19 22:14:55,579 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
+2024-12-19 22:14:57,723 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
+2024-12-19 22:16:15,840 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
+2024-12-19 22:16:36,177 - /media/aa/A7/red/rg/cars/models.py changed, reloading.

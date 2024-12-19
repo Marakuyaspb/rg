@@ -157,16 +157,16 @@ class WantThisCar(models.Model):
 
 class CarSurveyFull(models.Model):
 	id = models.AutoField(primary_key=True)
-	car_characteristics =  models.CharField(max_length=300, verbose_name = 'Марка, модель, мотор', null=True, blank=True)
-	country = models.CharField(max_length=300, verbose_name = 'Из какой страны Вас интересует автомобиль?', null=True, blank=True)
-	when =  models.CharField(max_length=300, verbose_name = 'Когда планируете покупать? ', null=True, blank=True)
-	payment_type =  models.CharField(max_length=300, verbose_name = 'Форма оплаты за автомобиль?', null=True, blank=True)
+	car_characteristics =  models.TextField(verbose_name = 'Марка, модель, мотор', null=True, blank=True)
+	country = models.CharField(max_length=50, verbose_name = 'Из какой страны Вас интересует автомобиль?', null=True, blank=True)
+	when =  models.CharField(max_length=50, verbose_name = 'Когда планируете покупать? ', null=True, blank=True)
+	payment_type =  models.CharField(max_length=50, verbose_name = 'Форма оплаты за автомобиль?', null=True, blank=True)
 	max_price =  models.CharField(max_length=300, verbose_name = 'Максимальный бюджет для покупки?', null=True, blank=True)
 	trade_in =  models.CharField(max_length=300, verbose_name = 'Планируете трейд ин? Какой авто? Пробег?', null=True, blank=True)
-	complectation =  models.CharField(max_length=600, verbose_name = 'Комплектация?', null=True, blank=True)
-	colors =  models.CharField(max_length=300, verbose_name = 'Желаемые цвета кузова и салона', null=True, blank=True)
+	complectation =  models.TextField(max_length=600, verbose_name = 'Комплектация?', null=True, blank=True)
+	colors =  models.CharField(max_length=100, verbose_name = 'Желаемые цвета кузова и салона', null=True, blank=True)
 	need_casco = models.BooleanField(verbose_name = 'Планируете ли делать Каско?', default=True)
-	real_price =  models.CharField(max_length=300, verbose_name = 'Какова стоимость реального предложения автомобиля, которое Вам удалось найти?', null=True, blank=True)
+	real_price =  models.CharField(max_length=100, verbose_name = 'Какова стоимость реального предложения автомобиля, которое Вам удалось найти?', null=True, blank=True)
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
@@ -279,8 +279,8 @@ class CascoCount(models.Model):
 
 class LegalHelp(models.Model):
 	id = models.AutoField(primary_key=True)
-	where_auto = models.CharField(max_length=300, verbose_name = 'Где сейчас находится авто? В РФ/в др.стране/на таможне?', null=True, blank=True)
-	documents = models.CharField(max_length=300, verbose_name = 'Какие документы у вас есть сейчас?', null=True, blank=True)
+	where_auto = models.TextField(verbose_name = 'Где сейчас находится авто? В РФ/в др.стране/на таможне?', null=True, blank=True)
+	documents = models.TextField(verbose_name = 'Какие документы у вас есть сейчас?', null=True, blank=True)
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')

@@ -52,7 +52,7 @@ def send_email_car_survey_full_form(name, phone):
 def send_email_guarantee_count_form(name, phone):
     subject = f"{name} хочет оформить гарантию! ☎ {phone}"
     body = f"Имя: {name}\nТелефон: {phone}\n\nАвто куплено через R.E.D. Group? {who_sold}\nЕсть ли Гос. номер? {have_goverment_number}\nЕсли да, укажите: {goverment_number}\n Есть регистрация в ГАИ? {is_gai_record}"
-    recipient_list = ['sales@rgspace.pro']
+    recipient_list = ['service@rgspace.pro']
 
     try:
         send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
@@ -65,7 +65,7 @@ def send_email_guarantee_count_form(name, phone):
 def send_email_need_diagnostic_form(name, phone):
     subject = f"{name} хочет на диагностику! ☎ {phone}"
     body = f"Имя: {name}\n\nТелефон: {phone} \n\nСрочно? {urgency}"
-    recipient_list = ['sales@rgspace.pro']
+    recipient_list = ['service@rgspace.pro']
 
     try:
         send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
@@ -79,7 +79,7 @@ def send_email_need_diagnostic_form(name, phone):
 def send_email_need_service_form(name, phone):
     subject = f"{name} хочет на сервисное обслуживание ☎ {phone}"
     body = f"Имя: {name}\n\nТелефон: {phone} \n\nСрочно? {urgency}"
-    recipient_list = ['sales@rgspace.pro']
+    recipient_list = ['service@rgspace.pro']
 
     try:
         send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
@@ -93,7 +93,7 @@ def send_email_need_service_form(name, phone):
 def send_email_shesterenky_need_form(name, phone):
     subject = f"{name} хочет запчасть {its_name} ☎ {phone}"
     body = f"Имя: {name}\n\nТелефон: {phone}\n\nГод выпуска: {year}\n\nVIN-номер: {vin}\n\nНазвание: {its_name}"
-    recipient_list = ['sales@rgspace.pro']
+    recipient_list = ['service@rgspace.pro']
 
     try:
         send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
@@ -107,7 +107,7 @@ def send_email_shesterenky_need_form(name, phone):
 def send_email_casco_count_form(name, phone):
     subject = f"{name} хочет КАСКО ☎ {phone}"
     body = f"Имя: {name}\n\nТелефон: {phone}\n\nБюджет: {budget}\n\nТип: {type}"
-    recipient_list = ['sales@rgspace.pro']
+    recipient_list = ['service@rgspace.pro']
 
     try:
         send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
