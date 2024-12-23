@@ -66,10 +66,11 @@
             {{ guarantee_count_form.phone }}
 
             {% csrf_token %}
-          
-          <center class='pt-5 pb-3'><input type="submit" value="Перезвоните мне" class="button_dark"></center>
 
-          <p class='pt-3 smaller'>* Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            <input type="hidden" name="form_type" value="guarantee_count">
+            <center class='pt-5 pb-3'><input type="submit" value="Перезвоните мне" class="button_dark"></center>
+
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

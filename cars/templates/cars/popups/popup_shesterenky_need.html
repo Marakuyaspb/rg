@@ -37,7 +37,9 @@
             {{ shesterenky_need_form.phone }}
             
             {% csrf_token %}
-          
+
+            <input type="hidden" name="form_type" value="shesterenky_need">
+            
             <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
             <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>

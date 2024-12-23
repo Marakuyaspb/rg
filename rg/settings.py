@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -143,7 +143,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# REDIS
+#REDIS
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
@@ -155,14 +155,14 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('127.0.0.1', 6380)],
+            'hosts': [('127.0.0.1', 6379)],
         },
     },
 }
 # CELERY
 CELERY_TIMEZONE = 'UTC'
 CELERY_TASK_TRACK_STARTED = True
-CELERY_BROKER_URL = 'redis://localhost:6380/0'
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
@@ -172,10 +172,9 @@ EMAIL_DEBUG = True
 
 #SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_DEBUG = True
-EMAIL_HOST = 'smtp.timeweb.ru'
-EMAIL_PORT = 465
-EMAIL_USE_TLS = False
+EMAIL_HOST = 'smtp.timeweb.ru'  
+EMAIL_PORT = 465  # 465 for SSL | 587 for TLS
 EMAIL_USE_SSL = True
-EMAIL_HOST_USER =  str(os.getenv('TW_MAIL'))
-EMAIL_HOST_PASSWORD =  str(os.getenv('TW_PASSWORD'))
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = str(os.getenv('TW_MAIL'))
+EMAIL_HOST_PASSWORD = str(os.getenv('TW_PASSWORD'))

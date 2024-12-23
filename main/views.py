@@ -32,8 +32,15 @@ def about(request):
 	new_cars = Car.objects.filter(status=1)
 	used_cars = Car.objects.filter(status=2)
 
-	callme_form = handle_callme_form(request)
-	car_survey_full_form = handle_car_survey_full_form(request)
+	callme_form = CallMeForm()
+	car_survey_full_form = CarSurveyFullForm()
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'car_survey_full':
+			car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'callme_form': callme_form,
@@ -60,16 +67,28 @@ def contact(request):
 	}
 	return render(request, 'main/contact.html', context)
 	
-
 def guarantee(request):
 	cars = Car.objects.all()
 	new_cars = Car.objects.filter(status=1)
 	used_cars = Car.objects.filter(status=2)
 
-	callme_form = handle_callme_form(request)
-	guarantee_count_form = handle_guarantee_count_form(request)
-	need_service_form = handle_need_service_form(request)
-	need_diagnostic_form = handle_need_diagnostic_form(request)
+	callme_form = CallMeForm()
+	need_diagnostic_form = NeedDiagnosticForm()
+	need_service_form = NeedServeceForm()
+	guarantee_count_form = GuaranteeCountForm()
+
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'need_service':
+			need_service_form = handle_need_service_form(request)
+		elif form_type == 'need_diagnostic':
+			need_diagnostic_form = handle_need_diagnostic_form(request)
+		elif form_type == 'guarantee_count':	
+			guarantee_count_form = handle_guarantee_count_form(request)
 
 	context = {
 		'callme_form': callme_form,
@@ -82,14 +101,22 @@ def guarantee(request):
 	}
 	return render(request, 'main/guarantee.html', context)
 
-
 def insurance(request):
 	cars = Car.objects.all()
 	new_cars = Car.objects.filter(status=1)
 	used_cars = Car.objects.filter(status=2)
 
-	callme_form = handle_callme_form(request)
-	casco_count_form = handle_casco_count_form(request)
+	callme_form = CallMeForm()
+	casco_count_form = CascoCountForm()
+
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'casco_count':
+			casco_count_form = handle_casco_count_form(request)
 
 
 	context = {
@@ -102,14 +129,21 @@ def insurance(request):
 	}
 	return render(request, 'main/insurance.html', context)
 
-
 def jurists(request):
 	cars = Car.objects.all()
 	new_cars = Car.objects.filter(status=1)
 	used_cars = Car.objects.filter(status=2)
 
-	callme_form = handle_callme_form(request)
-	legal_help_form = handle_legal_help_form(request)
+	callme_form = CallMeForm()
+	legal_help_form = LegalHelpForm()
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'legal_help':
+			legal_help_form = handle_legal_help_form(request)
 
 	context = {
 		'callme_form': callme_form,
@@ -121,7 +155,6 @@ def jurists(request):
 	}
 	return render(request, 'main/jurists.html', context)
 
-
 def privacy(request):
 	cars = Car.objects.all()
 	callme_form = handle_callme_form(request)
@@ -132,22 +165,29 @@ def privacy(request):
 	}
 	return render(request, 'main/privacy.html', context)
 
-
 def service(request):
 	cars = Car.objects.all()
 	new_cars = Car.objects.filter(status=1)
 	used_cars = Car.objects.filter(status=2)
 
-	callme_form = handle_callme_form(request)
-	need_diagnostic_form = handle_need_diagnostic_form(request)
-	need_service_form = handle_need_service_form(request)
-	guarantee_count_form = handle_guarantee_count_form(request)
+	callme_form = CallMeForm()
+	need_diagnostic_form = NeedDiagnosticForm()
+	need_service_form = NeedServeceForm()
+	
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'need_service':
+			need_service_form = handle_need_service_form(request)
+		elif form_type == 'need_diagnostic':
+			need_diagnostic_form = handle_need_diagnostic_form(request)
 
 	context = {
 		'callme_form': callme_form,
 		'need_diagnostic_form': need_diagnostic_form,
 		'need_service_form': need_service_form,
-		'guarantee_count_form': guarantee_count_form,
 		
 		'cars' : cars,
 		'new_cars': new_cars,
@@ -161,10 +201,23 @@ def spares(request):
 	new_cars = Car.objects.filter(status=1)
 	used_cars = Car.objects.filter(status=2)
 
-	callme_form = handle_callme_form(request)
-	shesterenky_need_form = handle_shesterenky_need_form(request)
-	need_diagnostic_form = handle_need_diagnostic_form(request)
-	need_service_form = handle_need_service_form(request)
+	callme_form = CallMeForm()
+	shesterenky_need_form = ShesterenkyNeedForm()
+	need_diagnostic_form = NeedDiagnosticForm()
+	need_service_form = NeedServeceForm()
+
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'shesterenky_need':
+			shesterenky_need_form = handle_shesterenky_need_form(request)
+		elif form_type == 'need_service':
+			need_service_form = handle_need_service_form(request)
+		elif form_type == 'need_diagnostic':
+			need_diagnostic_form = handle_need_diagnostic_form(request)
 
 	context = {
 		'callme_form': callme_form,

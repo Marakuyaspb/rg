@@ -26,17 +26,14 @@
             {{ need_service_form.phone }}
 
             <div class='d-flex justify-content-start py-2'>
-              {{ need_service_form.urgency }} <label class='pt-1' for="{{ need_service_form.urgency.id_for_label }}">Cрочно?</label>
-              
+              {{ need_service_form.urgency }} <label class='pt-1' for="{{ need_service_form.urgency.id_for_label }}">Cрочно?</label> 
             </div>
             
-           
-            
             {% csrf_token %}
-          
-          <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+            <input type="hidden" name="form_type" value="need_service">
+            <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
-          <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

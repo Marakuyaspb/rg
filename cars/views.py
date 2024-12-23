@@ -31,8 +31,16 @@ def catalog(request):
 		status = int(status)
 		cars = cars.filter(status=status)
 
-	callme_form, success = handle_callme_form(request)
-	car_survey_full_form = handle_car_survey_full_form(request)
+
+	callme_form = CallMeForm()
+	car_survey_full_form = CarSurveyFullForm()
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'car_survey_full':
+			car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'cars' : cars,
@@ -58,8 +66,6 @@ def fresh_cars(request):
 	cars = cars_ordering(Car, cars, sort_by)
 	used_cars = Car.objects.filter(status=2)
 
-	callme_form = handle_callme_form(request)
-	car_survey_full_form = handle_car_survey_full_form(request)
 
 	queryset = cars
 	if request.method == 'GET':
@@ -69,8 +75,18 @@ def fresh_cars(request):
 			queryset = filtered_queryset
 		else:
 			queryset = None
-
 	unique_values = unique_names(request)
+
+
+	callme_form = CallMeForm()
+	car_survey_full_form = CarSurveyFullForm()
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'car_survey_full':
+			car_survey_full_form = handle_car_survey_full_form(request)
 
 	context = {
 		'cars' : cars,
@@ -90,9 +106,6 @@ def used_cars(request):
 	cars = cars_ordering(Car, cars, sort_by)
 	new_cars = Car.objects.filter(status=1)
 
-	callme_form = handle_callme_form(request)
-	car_survey_full_form = handle_car_survey_full_form(request)
-
 	queryset = cars
 	if request.method == 'GET':
 		filtered_queryset = cars_filtering(request, queryset)
@@ -101,8 +114,19 @@ def used_cars(request):
 			queryset = filtered_queryset
 		else:
 			queryset = None
-
 	unique_values = unique_names(request)
+
+
+	callme_form = CallMeForm()
+	car_survey_full_form = CarSurveyFullForm()
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'car_survey_full':
+			car_survey_full_form = handle_car_survey_full_form(request)
+
 
 	context = {
 		'cars':cars,
@@ -123,11 +147,25 @@ def the_car(request, id):
 		similar_cars = Car.objects.filter(category=the_car.category)
 		new_cars = Car.objects.filter(status=1)
 		used_cars = Car.objects.filter(status=2)
+
+
+
+	callme_form = CallMeForm()
+	want_this_car_form = WantThisCarForm()
+	car_survey_full_form = CarSurveyFullForm()
+	casco_count_form = CascoCountForm()
 	
-	callme_form = handle_callme_form(request)
-	want_this_car = handle_want_this_car_form(request)
-	car_survey_full_form = handle_car_survey_full_form(request)
-	casco_count_form = handle_casco_count_form(request)
+
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
+		elif form_type == 'want_this_car':
+			want_this_car = handle_want_this_car_form(request)
+		elif form_type == 'car_survey_full':
+			car_survey_full_form = handle_car_survey_full_form(request)
+		elif form_type == 'casco_count':
+			casco_count_form = handle_casco_count_form(request)
 
 
 	context = {

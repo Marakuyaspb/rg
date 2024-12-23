@@ -29,10 +29,11 @@
             {{ callme_form.phone }}
             
             {% csrf_token %}
-          
-          <center class='pt-5 pb-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
-          <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            <input type="hidden" name="form_type" value="call_me">
+            <center class='pt-5 pb-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

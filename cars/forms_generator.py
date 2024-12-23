@@ -119,11 +119,12 @@ def handle_need_service_form(request):
         need_service_form = NeedServeceForm(request.POST)
         if need_service_form.is_valid():
             need_service = need_service_form.save()
-            send_email.delay(
+            send_email_need_service_form.delay(
                 need_service.first_name,
                 need_service.phone,
                 need_service.urgency
             )
+            print(os.getenv('TW_MAIL'))
             return need_service_form 
     else:
         need_service_form = NeedServeceForm()
@@ -136,11 +137,16 @@ def handle_shesterenky_need_form(request):
         shesterenky_need_form = ShesterenkyNeedForm(request.POST)
         if shesterenky_need_form.is_valid():
             shesterenky_need = shesterenky_need_form.save()
+            img_url = None
+            if shesterenky_need.img:
+                img_url = shesterenky_need.img.url
+
+
             send_email_shesterenky_need_form.delay(
                 shesterenky_need.year,
                 shesterenky_need.vin,
                 shesterenky_need.its_name,
-                shesterenky_need.img,
+                img_url,
                 shesterenky_need.first_name,
                 shesterenky_need.phone,
             )
@@ -160,7 +166,7 @@ def handle_casco_count_form(request):
                 casco_count.budget,
                 casco_count.type,
                 casco_count.first_name,
-               casco_count. phone
+                casco_count.phone
             )
             return casco_count_form 
     else:
@@ -175,10 +181,10 @@ def handle_legal_help_form(request):
         if legal_help_form.is_valid():
             legal_help = legal_help_form.save()
             send_email_legal_help_form.delay(
-                legal_help_form.where_auto,
-                legal_help_form.documents,
-                legal_help_form.first_name,
-                legal_help_form.phone
+                legal_help_form.cleaned_data['where_auto'],
+                legal_help_form.cleaned_data['documents'],
+                legal_help_form.cleaned_data['first_name'],
+                legal_help_form.cleaned_data['phone']
             )
             return legal_help_form 
     else:

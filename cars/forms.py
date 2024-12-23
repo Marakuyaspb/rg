@@ -118,7 +118,6 @@ class ShesterenkyNeedForm(forms.ModelForm):
 		'img',
 		'first_name',
 		'phone'
-
 		]
 		labels = {
 		'year': 'Год выпуска',

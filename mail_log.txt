@@ -6931,3 +6931,424 @@ TypeError: send_email_need_diagnostic_form() takes 2 positional arguments but 3 
 2024-12-19 22:27:36,521 - Not Found: /installHook.js.map
 2024-12-19 22:30:31,425 - Not Found: /installHook.js.map
 2024-12-19 22:30:35,183 - Not Found: /installHook.js.map
+2024-12-19 23:18:11,100 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-19 23:33:19,359 - Internal Server Error: /spares/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 165, in spares
+    shesterenky_need_form = handle_shesterenky_need_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 139, in handle_shesterenky_need_form
+    send_email_shesterenky_need_form.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email_shesterenky_need_form() takes 2 positional arguments but 6 were given
+2024-12-19 23:33:19,475 - Not Found: /favicon.ico
+2024-12-19 23:38:37,837 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-19 23:40:54,527 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-19 23:41:27,233 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-19 23:41:53,128 - Internal Server Error: /spares/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 41, in _reraise_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 220, in dumps
+    payload = encoder(data)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 63, in dumps
+    return _dumps(s, cls=cls, **dict(default_kwargs, **kwargs))
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 47, in default
+    return super().default(o)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ImageFieldFile is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 165, in spares
+    shesterenky_need_form = handle_shesterenky_need_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 139, in handle_shesterenky_need_form
+    send_email_shesterenky_need_form.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 175, in publish
+    body, content_type, content_encoding = self._prepare(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 268, in _prepare
+    body) = dumps(body, serializer=serializer)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 219, in dumps
+    with _reraise_errors(EncodeError):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 45, in _reraise_errors
+    reraise(wrapper, wrapper(exc), sys.exc_info()[2])
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/exceptions.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 41, in _reraise_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 220, in dumps
+    payload = encoder(data)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 63, in dumps
+    return _dumps(s, cls=cls, **dict(default_kwargs, **kwargs))
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 47, in default
+    return super().default(o)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+kombu.exceptions.EncodeError: Object of type ImageFieldFile is not JSON serializable
+2024-12-19 23:41:53,243 - Not Found: /favicon.ico
+2024-12-19 23:43:16,113 - Internal Server Error: /jurists/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 112, in jurists
+    legal_help_form = handle_legal_help_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 178, in handle_legal_help_form
+    legal_help_form.where_auto,
+AttributeError: 'LegalHelpForm' object has no attribute 'where_auto'
+2024-12-19 23:43:16,226 - Not Found: /favicon.ico
+2024-12-19 23:44:10,948 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-19 23:44:55,892 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-19 23:54:19,324 - /media/aa/A7/red/rg/rg/settings/dev.py changed, reloading.
+2024-12-19 23:58:58,832 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-20 00:20:09,180 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-20 11:05:46,303 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-20 11:05:53,594 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-20 11:06:23,384 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-20 11:10:16,938 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-20 11:10:26,269 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-20 11:10:39,648 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-20 11:11:00,159 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-20 11:20:08,091 - Internal Server Error: /jurists/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 112, in jurists
+    legal_help_form = handle_legal_help_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 178, in handle_legal_help_form
+    legal_help_form.where_auto,
+AttributeError: 'LegalHelpForm' object has no attribute 'where_auto'
+2024-12-20 11:20:08,211 - Not Found: /favicon.ico
+2024-12-20 11:20:40,914 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 11:20:46,086 - Internal Server Error: /jurists/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 112, in jurists
+    legal_help_form = handle_legal_help_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 178, in handle_legal_help_form
+    legal_help_form.where_auto,
+AttributeError: 'LegalHelpForm' object has no attribute 'where_auto'
+2024-12-20 11:21:56,782 - /media/aa/A7/red/rg/rg/settings/base.py changed, reloading.
+2024-12-20 11:28:42,449 - Internal Server Error: /guarantee/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/virtual/base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 358, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 359, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 731, in _connect
+    raise err
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 719, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/virtual/base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/virtual/base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/transport/redis.py", line 744, in __init__
+    self.client.ping()
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 1423, in get_connection
+    connection.connect()
+  File "/home/aa/.local/lib/python3.10/site-packages/redis/connection.py", line 364, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6380. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 69, in guarantee
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 22, in handle_callme_form
+    send_email_callme_form.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to localhost:6380. Connection refused.
+2024-12-20 11:30:09,968 - /media/aa/A7/red/rg/rg/celery.py changed, reloading.
+2024-12-20 11:30:42,761 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-20 11:30:57,009 - Internal Server Error: /guarantee/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 71, in guarantee
+    need_service_form = handle_need_service_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 122, in handle_need_service_form
+    send_email.delay(
+NameError: name 'send_email' is not defined
+2024-12-20 11:32:10,160 - Internal Server Error: /guarantee/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 71, in guarantee
+    need_service_form = handle_need_service_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 122, in handle_need_service_form
+    send_email.delay(
+NameError: name 'send_email' is not defined
+2024-12-20 11:38:04,058 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-20 11:39:50,466 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-20 11:40:19,933 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 11:40:32,201 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 11:40:48,550 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 11:41:15,996 - Internal Server Error: /service/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 143, in service
+    need_service_form = handle_need_service_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 122, in handle_need_service_form
+    send_email.delay(
+NameError: name 'send_email' is not defined
+2024-12-20 11:41:33,643 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 11:42:35,190 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 11:58:46,750 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-20 12:05:55,381 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-20 12:06:17,940 - Internal Server Error: /service/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 141, in service
+    callme_form = NeedCallMeForm()
+NameError: name 'NeedCallMeForm' is not defined
+2024-12-20 12:10:54,253 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-20 13:40:12,034 - Internal Server Error: /jurists/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 112, in jurists
+    legal_help_form = handle_legal_help_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 179, in handle_legal_help_form
+    legal_help_form.where_auto,
+AttributeError: 'LegalHelpForm' object has no attribute 'where_auto'
+2024-12-20 13:43:37,296 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 13:45:01,169 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-20 13:48:29,870 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-20 13:52:24,340 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-20 14:05:00,679 - Not Found: /installHook.js.map
+2024-12-20 14:36:29,143 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-23 10:29:55,456 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-23 11:02:57,748 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-23 11:09:48,794 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-23 11:10:12,391 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-23 11:11:25,172 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-23 11:12:00,878 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-23 11:27:51,137 - Internal Server Error: /spares/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 41, in _reraise_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 220, in dumps
+    payload = encoder(data)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 63, in dumps
+    return _dumps(s, cls=cls, **dict(default_kwargs, **kwargs))
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 47, in default
+    return super().default(o)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ImageFieldFile is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 216, in spares
+    shesterenky_need_form = handle_shesterenky_need_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 140, in handle_shesterenky_need_form
+    send_email_shesterenky_need_form.delay(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 175, in publish
+    body, content_type, content_encoding = self._prepare(
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/messaging.py", line 268, in _prepare
+    body) = dumps(body, serializer=serializer)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 219, in dumps
+    with _reraise_errors(EncodeError):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 45, in _reraise_errors
+    reraise(wrapper, wrapper(exc), sys.exc_info()[2])
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/exceptions.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 41, in _reraise_errors
+    yield
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/serialization.py", line 220, in dumps
+    payload = encoder(data)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 63, in dumps
+    return _dumps(s, cls=cls, **dict(default_kwargs, **kwargs))
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/aa/.local/lib/python3.10/site-packages/kombu/utils/json.py", line 47, in default
+    return super().default(o)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+kombu.exceptions.EncodeError: Object of type ImageFieldFile is not JSON serializable
+2024-12-23 11:27:51,282 - Not Found: /favicon.ico
+2024-12-23 11:31:09,476 - /media/aa/A7/red/rg/cars/forms.py changed, reloading.
+2024-12-23 11:35:44,151 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-23 11:36:21,936 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-23 11:37:02,055 - Internal Server Error: /spares/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 216, in spares
+    shesterenky_need_form = handle_shesterenky_need_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 144, in handle_shesterenky_need_form
+    img_url,
+NameError: name 'img_url' is not defined
+2024-12-23 11:37:45,844 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-23 11:38:11,214 - Internal Server Error: /spares/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 216, in spares
+    shesterenky_need_form = handle_shesterenky_need_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 144, in handle_shesterenky_need_form
+    img_url,
+NameError: name 'img_url' is not defined
+2024-12-23 11:58:10,941 - Internal Server Error: /spares/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/main/views.py", line 216, in spares
+    shesterenky_need_form = handle_shesterenky_need_form(request)
+  File "/media/aa/A7/red/rg/cars/forms_generator.py", line 144, in handle_shesterenky_need_form
+    img_url,
+NameError: name 'img_url' is not defined
+2024-12-23 11:58:14,612 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
