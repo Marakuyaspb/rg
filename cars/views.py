@@ -10,6 +10,7 @@ from .models import *
 from .forms import *
 from .forms_generator import *
 from .filters import *
+from .tasks import * 
 
 
 def catalog(request):
@@ -149,12 +150,12 @@ def the_car(request, id):
 		used_cars = Car.objects.filter(status=2)
 
 
-
 	callme_form = CallMeForm()
 	want_this_car_form = WantThisCarForm()
 	car_survey_full_form = CarSurveyFullForm()
 	casco_count_form = CascoCountForm()
 	
+	want_this_car = None
 
 	if request.method == 'POST':
 		form_type = request.POST.get('form_type')

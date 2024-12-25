@@ -134,13 +134,12 @@ def handle_need_service_form(request):
 # SHESTERENKY COUNT
 def handle_shesterenky_need_form(request):
     if request.method == 'POST':
-        shesterenky_need_form = ShesterenkyNeedForm(request.POST)
+        shesterenky_need_form = ShesterenkyNeedForm(request.POST, request.FILES)
         if shesterenky_need_form.is_valid():
             shesterenky_need = shesterenky_need_form.save()
             img_url = None
             if shesterenky_need.img:
                 img_url = shesterenky_need.img.url
-
 
             send_email_shesterenky_need_form.delay(
                 shesterenky_need.year,
@@ -156,7 +155,7 @@ def handle_shesterenky_need_form(request):
     return shesterenky_need_form
 
 
-# KASCO COUNT
+# CASCO COUNT
 def handle_casco_count_form(request):
     if request.method == 'POST':
         casco_count_form = CascoCountForm(request.POST)

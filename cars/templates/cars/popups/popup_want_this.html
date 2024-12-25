@@ -14,22 +14,29 @@
           <img class='w-100 px-5' src='{% static "brand/logo.svg" %}'>
           <div class='form_container we_300'>
             
-            <label for="{{ want_this_car.first_name.id_for_label }}">{{ want_this_car.first_name.label }}</label>
-            {{ want_this_car.first_name }}
+            <label for="{{ want_this_car_form.first_name.id_for_label }}">{{ want_this_car_form.first_name.label }}</label>
+            {{ want_this_car_form.first_name }}
 
-            <label class='pt-2' for="{{ want_this_car.phone.id_for_label }}">{{ want_this_car.phone.label }}</label>
-            {{ want_this_car.phone }}
+            <label class='pt-2' for="{{ want_this_car_form.phone.id_for_label }}">{{ want_this_car_form.phone.label }}</label>
+            {{ want_this_car_form.phone }}
             
             {% csrf_token %}
              <input type="hidden" name="car_name" value="{{ the_car.name }}, {{ the_car.year }}, {{ the_car.engine }}, {{ the_car.transmission }}, {{ the_car.drive }}">
              
             <input type="hidden" name="form_type" value="want_this_car">
 
-
             <center class='py-3'><input type="submit" value="Хочу такую же" class="button_dark"></center>
 
             <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
+
+
+
+          {% if want_this_car_form.errors %}
+              <div class="error">
+                  {{ want_this_car_form.errors }}
+              </div>
+          {% endif %}
         </form>
 
       </div>

@@ -7352,3 +7352,75 @@ Traceback (most recent call last):
     img_url,
 NameError: name 'img_url' is not defined
 2024-12-23 11:58:14,612 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-23 12:24:22,627 - /media/aa/A7/red/rg/cars/__init__.py changed, reloading.
+2024-12-23 12:25:00,700 - /media/aa/A7/red/rg/rg/__init__.py changed, reloading.
+2024-12-23 12:27:30,542 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-23 12:27:43,870 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-23 12:28:50,896 - Internal Server Error: /4/
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A7/red/rg/cars/views.py", line 179, in the_car
+    'want_this_car': want_this_car,
+UnboundLocalError: local variable 'want_this_car' referenced before assignment
+2024-12-23 12:30:29,147 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-23 12:30:39,473 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-23 12:30:41,611 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-23 12:32:30,879 - /media/aa/A7/red/rg/cars/views.py changed, reloading.
+2024-12-25 09:47:50,180 - Not Found: /favicon.ico
+2024-12-25 09:50:48,071 - /media/aa/A7/red/rg/main/views.py changed, reloading.
+2024-12-25 09:51:07,543 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-25 09:58:02,931 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 09:58:53,821 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 09:59:10,773 - Not Found: /favicon.ico
+2024-12-25 09:59:17,606 - Not Found: /favicon.ico
+2024-12-25 10:03:36,182 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 10:03:46,948 - Not Found: /favicon.ico
+2024-12-25 14:27:13,826 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-25 14:27:49,466 - Not Found: /favicon.ico
+2024-12-25 14:29:07,787 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:29:35,475 - /media/aa/A7/red/rg/cars/forms_generator.py changed, reloading.
+2024-12-25 14:34:15,696 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:34:18,000 - Not Found: /favicon.ico
+2024-12-25 14:34:20,007 - Not Found: /favicon.ico
+2024-12-25 14:35:02,942 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:35:57,116 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:36:18,619 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:36:20,885 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:36:46,931 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:36:50,134 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:38:37,158 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:38:38,977 - Not Found: /favicon.ico
+2024-12-25 14:38:57,712 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:39:38,596 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:39:47,009 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:40:28,024 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:40:42,367 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:40:46,593 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:41:07,343 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:41:48,386 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
+2024-12-25 14:42:18,183 - Not Found: /favicon.ico
+2024-12-25 14:43:04,009 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:43:21,552 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:43:37,373 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:43:45,597 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:44:20,398 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:44:46,044 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
+2024-12-25 14:45:20,940 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:46:20,990 - Not Found: /favicon.ico
+2024-12-25 14:47:03,295 - Not Found: /favicon.ico
+2024-12-25 14:47:55,540 - Not Found: /favicon.ico
+2024-12-25 14:53:57,949 - Not Found: /favicon.ico
+2024-12-25 14:55:55,454 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:56:38,175 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:57:37,293 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:58:20,206 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:58:23,060 - Not Found: /favicon.ico
+2024-12-25 14:58:57,046 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:59:06,373 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 14:59:37,163 - /media/aa/A7/red/rg/cars/admin.py changed, reloading.
+2024-12-25 15:00:21,476 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
+2024-12-25 15:00:42,802 - Not Found: /favicon.ico
+2024-12-25 15:01:23,789 - /media/aa/A7/red/rg/cars/models.py changed, reloading.

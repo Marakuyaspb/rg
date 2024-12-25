@@ -9,7 +9,7 @@ from django.urls import reverse
 from cars.models import *
 from cars.forms import *
 from cars.forms_generator import *
-
+from cars.tasks import * 
 
 
 def index(request):
@@ -194,7 +194,6 @@ def service(request):
 		'used_cars': used_cars,
 	}
 	return render(request, 'main/service.html', context)
-
 
 def spares(request):
 	cars = Car.objects.all()

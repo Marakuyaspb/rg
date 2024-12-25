@@ -123,11 +123,13 @@ class Car(models.Model):
 
 
 
+
+
 class CallMe(models.Model):
 	id = models.AutoField(primary_key=True)
 	first_name = models.CharField(max_length=30)
 	phone = models.CharField(max_length=30)
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 
 	class Meta:
 		ordering = ['-created']
@@ -143,7 +145,7 @@ class WantThisCar(models.Model):
 	car_name = models.CharField(max_length=30, verbose_name = 'Марка машины')
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 	
 	class Meta:
 		ordering = ['-created']
@@ -170,7 +172,7 @@ class CarSurveyFull(models.Model):
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 	
 
 	class Meta:
@@ -191,7 +193,7 @@ class GuaranteeCount(models.Model):
 	is_gai_record = models.BooleanField(verbose_name = 'Поставлена ли машина на учёт?', default=True)
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 	
 	class Meta:
 		ordering = ['-created']
@@ -207,8 +209,8 @@ class NeedDiagnostic(models.Model):
 	id = models.AutoField(primary_key=True)
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	urgency = models.BooleanField(verbose_name = 'Срочно?', default=True)
-	created = models.DateTimeField(auto_now_add=True)
+	urgency = models.BooleanField(verbose_name = 'Срочно?', default=False)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 	
 	class Meta:
 		ordering = ['-created']
@@ -224,8 +226,8 @@ class NeedServece(models.Model):
 	id = models.AutoField(primary_key=True)
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	urgency = models.BooleanField(verbose_name = 'Срочно?', default=True)
-	created = models.DateTimeField(auto_now_add=True)
+	urgency = models.BooleanField(verbose_name = 'Срочно?', default=False)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 	
 	class Meta:
 		ordering = ['-created']
@@ -246,7 +248,7 @@ class ShesterenkyNeed(models.Model):
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 
 	class Meta:
 		ordering = ['-created']
@@ -265,7 +267,7 @@ class CascoCount(models.Model):
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 	
 	class Meta:
 		ordering = ['-created']
@@ -284,7 +286,7 @@ class LegalHelp(models.Model):
 
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
 	
 	class Meta:
 		ordering = ['-created']
