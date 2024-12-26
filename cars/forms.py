@@ -19,9 +19,12 @@ class WantThisCarForm(forms.ModelForm):
 		fields = ['first_name', 'phone', 'car_name']
 		labels = {
 		'first_name': 'Имя',
-		'phone': 'Телефон',
+		'phone': 'Телефон'
 		}
-		# car_name = forms.CharField(widget=forms.HiddenInput())
+		
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.fields['car_name'].required = False
 
 
 class CarSurveyFullForm(forms.ModelForm):

@@ -60,7 +60,6 @@ def catalog(request):
 
 
 
-
 def fresh_cars(request):
 	sort_by = request.GET.get('sort_by', 'asc')
 	cars = Car.objects.filter(status=1)
@@ -141,7 +140,6 @@ def used_cars(request):
 
 
 
-
 def the_car(request, id):		
 	if id:
 		the_car = get_object_or_404(Car, id=id)
@@ -163,6 +161,7 @@ def the_car(request, id):
 			callme_form = handle_callme_form(request)
 		elif form_type == 'want_this_car':
 			want_this_car = handle_want_this_car_form(request)
+			print(want_this_car_form.errors) 
 		elif form_type == 'car_survey_full':
 			car_survey_full_form = handle_car_survey_full_form(request)
 		elif form_type == 'casco_count':
@@ -176,7 +175,7 @@ def the_car(request, id):
 		'used_cars': used_cars,
 
 		'callme_form': callme_form,
-		'want_this_car': want_this_car,
+		'want_this_car_form': want_this_car_form,
 		'car_survey_full_form': car_survey_full_form,
 		'casco_count_form': casco_count_form
 	}

@@ -32,9 +32,14 @@ def handle_callme_form(request):
 # WANT THIS CAR
 def handle_want_this_car_form(request):
     if request.method == 'POST':
+        car_name = request.POST.get('car_name')
+
         want_this_car_form = WantThisCarForm(request.POST)
+
         if want_this_car_form.is_valid(): 
-            want_this_car = want_this_car_form.save()
+            want_this_car = want_this_car_form.save(commit=False)
+            want_this_car.car_name = car_name
+            want_this_car.save()
             
             send_email_want_this_car_form.delay(
                 want_this_car.first_name, 
@@ -42,15 +47,16 @@ def handle_want_this_car_form(request):
                 want_this_car.car_name
             )
             return want_this_car_form
-    else:
-        want_this_car_form = WantThisCarForm()
+
+        else:
+            want_this_car_form = WantThisCarForm()
     return want_this_car_form
 
 
 # CAR SURVEY FULL
 def handle_car_survey_full_form(request):
     if request.method == 'POST':
-        car_survey_full_form = WantThisCarForm(request.POST)
+        car_survey_full_form = CarSurveyFullForm(request.POST)
         if car_survey_full_form.is_valid():
             car_survey_full = car_survey_full_form.save()
             
@@ -70,7 +76,7 @@ def handle_car_survey_full_form(request):
             )
             return car_survey_full_form
     else:
-        car_survey_full_form = WantThisCarForm()
+        car_survey_full_form = CarSurveyFullForm()
     return car_survey_full_form
 
 

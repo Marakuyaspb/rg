@@ -21,7 +21,7 @@
             {{ want_this_car_form.phone }}
             
             {% csrf_token %}
-             <input type="hidden" name="car_name" value="{{ the_car.name }}, {{ the_car.year }}, {{ the_car.engine }}, {{ the_car.transmission }}, {{ the_car.drive }}">
+            <input type="hidden" name="car_name" value="{{ the_car.name }}, {{ the_car.year }}, {{ the_car.engine }}, {{ the_car.transmission }}, {{ the_car.drive }}">
              
             <input type="hidden" name="form_type" value="want_this_car">
 

@@ -1,5 +1,14 @@
 {% load static %}
 
+<style>
+  #id_need_casco{
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+    padding: .3em 0 0 0;
+  }
+</style>
+
 <div class='modal_container' onclick='showModal(this);'>
   <button class='thumb button_form_base mt-3 mb-2 black'>Заполнить заявку на подбор</button>
 
@@ -18,38 +27,41 @@
             <label class='' for="{{ car_survey_full_form.car_characteristics.id_for_label }}">Марка, модель, мотор</label>
             {{ car_survey_full_form.car_characteristics }}
 
-            <label class='' for="{{ car_survey_full_form.country.id_for_label }}">Из какой страны Вас интересует автомобиль?</label>
+            <label class='pt-3' for="{{ car_survey_full_form.country.id_for_label }}">Из какой страны Вас интересует автомобиль?</label>
             {{ car_survey_full_form.country }}
 
-            <label class='' for="{{ car_survey_full_form.when.id_for_label }}">Когда планируете покупать?</label>
+            <label class='pt-3' for="{{ car_survey_full_form.when.id_for_label }}">Когда планируете покупать?</label>
             {{ car_survey_full_form.when }}
 
-            <label class='' for="{{ car_survey_full_form.payment_type.id_for_label }}">Форма оплаты за автомобиль?</label>
+            <label class='pt-3' for="{{ car_survey_full_form.payment_type.id_for_label }}">Форма оплаты за автомобиль?</label>
             {{ car_survey_full_form.payment_type }}
 
             <label class='' for="{{ car_survey_full_form.max_price.id_for_label }}">Максимальный бюджет для покупки?</label>
             {{ car_survey_full_form.max_price }}
 
-            <label class='' for="{{ car_survey_full_form.trade_in.id_for_label }}">Планируете трейд ин? Какой авто? Пробег?</label>
+            <label class='pt-3' for="{{ car_survey_full_form.trade_in.id_for_label }}">Планируете трейд ин? Какой авто? Пробег?</label>
             {{ car_survey_full_form.trade_in }}
 
-            <label class='' for="{{ car_survey_full_form.complectation.id_for_label }}">Комплектация?</label>
+            <label class='pt-3' for="{{ car_survey_full_form.complectation.id_for_label }}">Желаемая комплектация?</label>
             {{ car_survey_full_form.complectation }}
 
-            <label class='' for="{{ car_survey_full_form.colors.id_for_label }}">Желаемые цвета кузова и салона</label>
+            <label class='pt-3' for="{{ car_survey_full_form.colors.id_for_label }}">Желаемые цвета кузова и салона</label>
             {{ car_survey_full_form.colors }}
 
-            <label class='' for="{{ car_survey_full_form.need_casco.id_for_label }}">Планируете ли делать КАСКО?</label>
-            {{ car_survey_full_form.need_casco }}
 
-            <label class='' for="{{ car_survey_full_form.real_price.id_for_label }}">Какова стоимость реального предложения автомобиля, которое Вам удалось найти?</label>
+            <div class='d-flex justify-content-start pt-3'>
+               {{ car_survey_full_form.need_casco }}
+               <label class='pt-1' for="{{ car_survey_full_form.need_casco.id_for_label }}">Планируете ли оформлять КАСКО?</label>
+            </div>
+
+            <label class='pt-3' for="{{ car_survey_full_form.real_price.id_for_label }}">Какова стоимость реального предложения автомобиля,<br> которое Вам удалось найти?</label>
             {{ car_survey_full_form.real_price }}
 
                       
-            <label for="{{ car_survey_full_form.first_name.id_for_label }}">{{ car_survey_full_form.first_name.label }}</label>
+            <label class='pt-3' for="{{ car_survey_full_form.first_name.id_for_label }}">{{ car_survey_full_form.first_name.label }}</label>
             {{ car_survey_full_form.first_name }}
 
-            <label class='pt-2' for="{{ car_survey_full_form.phone.id_for_label }}">{{ car_survey_full_form.phone.label }}</label>
+            <label class='pt-3' for="{{ car_survey_full_form.phone.id_for_label }}">{{ car_survey_full_form.phone.label }}</label>
             {{ car_survey_full_form.phone }}
             
             {% csrf_token %}
@@ -58,7 +70,7 @@
             
             <center class='py-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
 
-            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию", Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию",<br>Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
           </div>
         </form>
 

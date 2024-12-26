@@ -29,12 +29,12 @@
   <div class='w-100 black white_bg'>
     <div class='row'>
       <div class='col-md-5'>
-        <center class='py-5'>
+        <div class='py-5 ps-5 '>
           <h1 class='banner_big red ps-5 my-5'>— ЛЕГКО!</h1>
           <h4 class="black we_300 pb-3">Но не быстро. Логистика может потребовать времени. </h4>
 
           {% include 'cars/popups/popup_survey_full.html' %}
-        </center>
+        </div>
       </div>
       <div class='col-md-7'>
         <img loading="lazy" class='color_block ps-5' src="{% static 'img/red_trapts.svg' %}" />
@@ -66,7 +66,13 @@
       <h1 class='banner_big white'>ФАРАМИ!</h1>
     </div>
 
-    <h1 class='banner_big red my-5 ps-5'>— ЛЕГКО!</h1>
+    <h1 class='banner_big red mt-5 ps-5'>— ЛЕГКО!</h1>
+    <div class="ps-5">
+      <h4 class="gray we_300 py-4">Но не быстро. Логистика может потребовать времени. </h4>
+
+
+    </div>
+    
 
     <div class='desctop_84'>  
       <div class="d-flex justify-content-start">
@@ -77,6 +83,8 @@
         <img loading="lazy" class='icon_infogr' src="{% static 'icons/world.png' %}" />
         <p class='ps-2'>Организуем доставку из любой точки мира.</p>
       </div>
+
+      {% include 'cars/popups/popup_survey_full.html' %}
   </div>
 
 </div>
