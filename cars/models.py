@@ -142,7 +142,7 @@ class CallMe(models.Model):
 
 class WantThisCar(models.Model):
 	id = models.AutoField(primary_key=True)
-	car_name = models.CharField(max_length=30, verbose_name = 'Марка машины')
+	car_name = models.CharField(max_length=100, verbose_name = 'Марка машины')
 	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
 	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
 	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')

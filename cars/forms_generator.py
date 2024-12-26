@@ -33,7 +33,6 @@ def handle_callme_form(request):
 def handle_want_this_car_form(request):
     if request.method == 'POST':
         car_name = request.POST.get('car_name')
-
         want_this_car_form = WantThisCarForm(request.POST)
 
         if want_this_car_form.is_valid(): 
@@ -49,6 +48,7 @@ def handle_want_this_car_form(request):
             return want_this_car_form
 
         else:
+            print(want_this_car_form.errors)
             want_this_car_form = WantThisCarForm()
     return want_this_car_form
 
