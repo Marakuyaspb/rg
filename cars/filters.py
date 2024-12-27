@@ -39,7 +39,7 @@ def cars_filtering(request, queryset):
 
 def unique_names(request):
 	unique_color = Color.objects.values('color_name', 'color_id', 'color_code').distinct()
-	unique_brand = Car.objects.values('brand').annotate(total=Count('brand')).order_by('brand').distinct()
+	unique_brand = Brand.objects.values('brand').distinct()
 	unique_year = Car.objects.values('year').annotate(total=Count('year')).order_by('year').distinct()
 	unique_transmission = Car.objects.values('transmission').annotate(total=Count('transmission')).order_by('transmission').distinct()
 	unique_drive = Car.objects.values('drive').annotate(total=Count('drive')).order_by('drive').distinct()

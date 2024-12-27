@@ -1,5 +1,6 @@
 import os, sys
 from pathlib import Path
+from django.contrib.messages import constants as messages
 from celery import Celery
 from dotenv import load_dotenv
 
@@ -131,7 +132,7 @@ USE_TZ = True
 
 # for prod
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 MEDIA_URL = '/media/'
