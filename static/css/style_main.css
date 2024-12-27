@@ -443,10 +443,6 @@ tr {
   margin-right: auto;
   margin-left: auto;
 }
-.menu_icon{
-  width: 2em;
-  height: 2em;
-}
 
 .navbar-toggler:focus{
   outline: 0!important;
@@ -667,6 +663,9 @@ tr {
   margin: 0 auto 0 auto;
 }
 
+
+
+
 /**//**//**//**//**//**/  
 
 
@@ -792,6 +791,11 @@ tr {
     max-height: 90vh;
     /*rgb(214, 222, 230)*/
     background: rgba(111,111,111, 0.2);
+  }
+
+  .menu_icon{
+    width: 2em;
+    height: 2em;
   }
 
 
@@ -1045,6 +1049,10 @@ tr {
   }
   .footer_logo{
     height: 8em;
+  }
+  .menu_icon{
+    width: 1.2em;
+    height: 1.2em;
   }
 
   .cat_container_header{

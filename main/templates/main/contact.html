@@ -35,10 +35,10 @@
 
 
 
-*, *:before, *:after {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  *, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   .wrap_content {
      width: 100%;
@@ -277,7 +277,6 @@
         width: 80%;
       }
     }
-
 </style>
 
 
@@ -285,7 +284,9 @@
   <main class="content_header js-content ">
     <section class="block_p section-landing">
       <figure class="item-parallax-media">
-        <img class='' src="{% static 'img/contact.png' %}" alt="" />
+        <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+          <img class='' src="{% static 'img/contact.png' %}" alt="" />
+        </div>
       </figure>
       <div class="item-parallax-content flex-container">
         <div class="landing-content centered-content">

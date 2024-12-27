@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>500</h1>
+
+<h2>Что-то не так на сервере.<br>Извините за неудобства!<br>Мы скоро всё починим!</h2>
+
+<div class="d-flex justify-content-center">
+	<a class="nav-link" href='{% url "cars:catalog" %}'>Выбрать авто</a>
+	<span class='pt-2'>|</span>
+    <a class="nav-link" href='{% url "main:projection" %}'>Оформить гарантию</a>
+    <span class='pt-2'>|</span>
+    <a class="nav-link" href='{% url "main:screening" %}'>Диагностика & сервис</a>
+</div>
+
+{% endblock%}

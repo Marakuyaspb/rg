@@ -7,19 +7,21 @@
   <h1 class='we_300 h1_24-5 pt-4'>НОВЫЕ МАШИНЫ</h1>
   <h3 class='we_200'>Напрямую с завода</h3>
 
-  <div class="d-flex justify-content-center">
+<!--   <section id='filters' class="">
+      {% include 'cars/filters/filters_light.html' %}
+    </section> -->
+
+<div class="d-flex justify-content-center">
     <form method="get" class='p-3'>
       <button class="btn_transperent" type="submit" name="sort_by" value="desc">Сначала дорогие ↑</button>
       <button class="btn_transperent" type="submit" name="sort_by" value="asc">Сначала бюджетные ↓</button>
-    </form> 
-
+    </form>
     <div class='d-none d-lg-block d-xl-block d-xxl-block py-3'>
       <a class='' href='{% url "cars:used_cars" %}'>
         <button class="btn_transperent" type="" name="" value="asc">Посмотреть авто с пробегом →</button>
       </a>
-    </div>
-  </div>
-
+    </div> 
+  </div> 
   <div class='d-block d-lg-none'>
     <a class='p-3' href='{% url "cars:used_cars" %}'>
       <button class="btn_transperent red" type="" name="" value="asc">Посмотреть авто с пробегом →</button>

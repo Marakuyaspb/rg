@@ -3,12 +3,18 @@ from django.conf import settings
 from django.urls import path, include
 from django.contrib import admin
 
+from django.conf.urls import handler404, handler500
+from .views import custom_404_view, custom_500_view
+
 from main import urls
 from cars import urls
 
+
+
 admin.site.site_header = 'Система Централизованного Управления Контентом'
 
-# handler404 = views.error_404_view
+handler404 = custom_404_view
+handler500 = custom_500_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),

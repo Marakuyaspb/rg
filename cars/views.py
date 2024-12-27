@@ -66,8 +66,8 @@ def fresh_cars(request):
 	cars = cars_ordering(Car, cars, sort_by)
 	used_cars = Car.objects.filter(status=2)
 
-
 	queryset = cars
+	
 	if request.method == 'GET':
 		filtered_queryset = cars_filtering(request, queryset)
 		print(filtered_queryset)
@@ -91,6 +91,12 @@ def fresh_cars(request):
 	context = {
 		'cars' : cars,
 		'used_cars': used_cars,
+		'queryset': queryset,
+		'unique_brand': unique_values['unique_brand'],
+		'unique_color': unique_values['unique_color'],
+		'unique_year': unique_values['unique_year'],
+		'unique_transmission': unique_values['unique_transmission'],
+		'unique_drive': unique_values['unique_drive'],
 
 		'callme_form': callme_form,
 		'car_survey_full_form': car_survey_full_form
@@ -131,6 +137,12 @@ def used_cars(request):
 	context = {
 		'cars':cars,
 		'new_cars': new_cars,
+		'queryset': queryset,
+		'unique_brand': unique_values['unique_brand'],
+		'unique_color': unique_values['unique_color'],
+		'unique_year': unique_values['unique_year'],
+		'unique_transmission': unique_values['unique_transmission'],
+		'unique_drive': unique_values['unique_drive'],
 
 		'callme_form': callme_form,
 		'car_survey_full_form': car_survey_full_form

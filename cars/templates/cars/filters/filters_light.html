@@ -326,20 +326,21 @@
 			 С пробегом
 			</label>
 
-
-			<h3 class='filter_header'>Марка</h3>
-				{% for brand in unique_brand %}
-					<label class="checkbox white we_300 px-2">
-					    <input class="checkbox-input_red" type="checkbox" name='brand' value="{{ brand.brand }}">
-					    <span class="checkbox-checkmark-box_red">
-					      <span class="checkbox-checkmark_red"></span>
-					    </span>
-					 {{ brand.brand }}
-					</label>
-				{% endfor %}
-
-
-			<h3 class='filter_header'>Цвет</h3>
+			<div class="row">
+				<div class='col-md-6'>
+					<h3 class='filter_header'>Марка</h3>
+					{% for brand in unique_brand %}
+						<label class="checkbox white we_300 px-2">
+						    <input class="checkbox-input_red" type="checkbox" name='brand' value="{{ brand.id_brand }}">
+						    <span class="checkbox-checkmark-box_red">
+						      <span class="checkbox-checkmark_red"></span>
+						    </span>
+						 {{ brand.brand }}
+						</label>
+					{% endfor %}
+				</div>
+				<div class='col-md-6'>
+					<h3 class='filter_header'>Цвет</h3>
 				{% for the_color in unique_color %}
 
 					<style>
@@ -435,6 +436,9 @@
 						{{ the_color.color_name }}
 					</label>
 				{% endfor %}
+				</div>
+			</div>
+			
 			<div class="row">
 				<div class='col-md-4'>
 				<h3 class='filter_header'>Год выпуска</h3>
