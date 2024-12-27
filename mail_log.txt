@@ -7484,3 +7484,10 @@ AttributeError: 'WantThisCar' object has no attribute 'car_characteristics'
 2024-12-26 13:54:27,680 - Not Found: /favicon.ico
 2024-12-26 13:55:11,543 - /media/aa/A7/red/rg/cars/models.py changed, reloading.
 2024-12-26 13:55:44,328 - Not Found: /favicon.ico
+2024-12-26 13:56:30,078 - Not Found: /favicon.ico
+2024-12-26 13:59:01,572 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-26 14:07:48,283 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-26 14:08:27,918 - /media/aa/A7/red/rg/cars/tasks.py changed, reloading.
+2024-12-26 14:26:11,756 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-26 14:27:08,213 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.
+2024-12-26 14:41:55,412 - /media/aa/A7/red/rg/rg/settings.py changed, reloading.

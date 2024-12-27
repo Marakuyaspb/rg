@@ -143,15 +143,16 @@ def handle_shesterenky_need_form(request):
         shesterenky_need_form = ShesterenkyNeedForm(request.POST, request.FILES)
         if shesterenky_need_form.is_valid():
             shesterenky_need = shesterenky_need_form.save()
-            img_url = None
+            img_file = None
+
             if shesterenky_need.img:
-                img_url = shesterenky_need.img.url
+                img_file = shesterenky_need.img.path
 
             send_email_shesterenky_need_form.delay(
                 shesterenky_need.year,
                 shesterenky_need.vin,
                 shesterenky_need.its_name,
-                img_url,
+                img_file,
                 shesterenky_need.first_name,
                 shesterenky_need.phone,
             )

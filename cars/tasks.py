@@ -1,5 +1,7 @@
+import os
+import mimetypes
 from celery import shared_task
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 import logging
 
@@ -90,16 +92,35 @@ def send_email_need_service_form(name, phone, urgency):
 
 
 @shared_task
-def send_email_shesterenky_need_form(year, vin, its_name, img_url, name, phone):
-    subject = f"{name} хочет запчасть {its_name} ☎ {phone}"
-    body = f"Имя: {name}\n\nТелефон: {phone}\n\nГод выпуска: {year}\n\nVIN-номер: {vin}\n\nНазвание: {its_name}\n\nИзображение: {img_url}"
-    recipient_list = ['service@rgspace.pro']
+def send_email_shesterenky_need_form(year, vin, its_name, img_file, name, phone):
 
+    subject = f"{name} хочет запчасть {its_name} ☎ {phone}"
+
+    body = f"Имя: {name}\n\nТелефон: {phone}\n\nГод выпуска: {year}\n\nVIN-номер: {vin}\n\nНазвание: {its_name}\n\nИзображение прикреплено к письму файлом"
+
+    email = EmailMessage(subject, body, settings.EMAIL_HOST_USER, ['service@rgspace.pro'])
+
+    if img_file:
+        try:
+            with open(img_file, 'rb') as the_img_file:
+                mime_type, _ = mimetypes.guess_type(the_img_file.name)
+                if mime_type is None:
+                    mime_type = 'application/octet-stream'
+                email.attach(os.path.basename(the_img_file.name), the_img_file.read(), mime_type)
+        except Exception as e:
+            logger.error(f"Failed to attach image: {e}")
     try:
-        send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
+        email.send()
         logger.info(f"Email sent from {name}")
     except Exception as e:
         logger.error(f"Failed to send email: {e}")
+
+
+    # try:
+    #     send_mail(subject, body, settings.EMAIL_HOST_USER, recipient_list)
+    #     logger.info(f"Email sent from {name}")
+    # except Exception as e:
+    #     logger.error(f"Failed to send email: {e}")
 
 
 

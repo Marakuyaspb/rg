@@ -1,19 +1,25 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>R.E.D. Group Auto</title>
+  
+  <title>
+    {% if page_title %}
+      {{ page_title }}
+    {% else %}
+      R.E.D. Group Auto
+    {% endif %}
+  </title>
+
   <link rel="shortcut icon" type="image/png" href="{% static 'brand/favicon.ico' %}" >
- 
   <!-- <link rel="stylesheet" href='{% static "css/cursor.css" %}'> -->
   <link rel="stylesheet" href='{% static "css/style_main.css" %}'>
   <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
   <link rel="stylesheet" href="{% static 'owl/owl.carousel.min.css' %}">
   <link rel="stylesheet" href="{% static 'owl/owl.theme.default.min.css' %}">
-  
-
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
