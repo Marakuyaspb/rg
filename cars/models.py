@@ -197,8 +197,8 @@ class GuaranteeCount(models.Model):
 	
 	class Meta:
 		ordering = ['-created']
-		verbose_name = 'Заявка на рассчет гарантии'
-		verbose_name_plural = 'Заявки на рассчет гарантии'
+		verbose_name = 'Заявка на рассчет тех.поддержки'
+		verbose_name_plural = 'Заявки на рассчет тех.поддержки'
 
 	def __str__(self):
 		return self.first_name

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/png" href="https://rgauto.pro/static/brand/favicon.ico/" >
+
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    body{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: rgb(27, 25, 24);
+    }
+
+    .text-container {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(250, 249, 249);
+        font-size: 1.8em;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+    }
+    .text-container-2 {
+        width: 100%;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(250, 249, 249);
+        font-size: 1.8em;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    .reg-text {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 3.3333333333s ease-out, opacity 5s ease;
+    }
+    .reg-text.loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    .reg-text-2 {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 3.3333333333s ease-out, opacity 5s ease;
+    }
+    .reg-text-2.loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    .letter {
+      transition: transform 5s cubic-bezier(0.43, 0.1, 0.57, 0.9), filter 5s ease, opacity 5s ease;
+      opacity: 0;
+      filter: blur(5px);
+    }
+    .letter:nth-of-type(2) {
+      transform: translateY(-160px);
+      transition-duration: 2.5s;
+    }
+    .letter:nth-of-type(3) {
+      filter: blur(0);
+      transform: translateY(-170px);
+      transition-duration: 3.8461538462s;
+    }
+    .letter:nth-of-type(4) {
+      transform: translateY(-200px);
+      transition-duration: 3.3333333333s;
+    }
+    .letter:nth-of-type(5) {
+      transform: translateY(-150px);
+      transition-duration: 2.5s;
+    }
+    .letter:nth-of-type(6) {
+      filter: blur(0);
+      transform: translateY(-180px);
+      transition-duration: 2.1739130435s;
+    }
+    .letter.loaded {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="text-container">
+        <span class="reg-text">Программист</span>
+        <span class="letter">ж</span><span class="letter">д</span><span class="letter">ё</span><span class="letter">т</span>
+        <span class="reg-text">оплату</span>      
+    </div>
+
+    <br><br><br>
+
+    <div class="text-container-2">
+        <span class="reg-text-2">Сайт пока</span>
+        <span class="reg-text-2">отдыхает</span>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            setTimeout(function () {
+                $('.letter').addClass('loaded');
+                $('.reg-text').addClass('loaded');
+            }, 1000);
+        });
+
+
+        $(document).on('ready', function () {
+            setTimeout(function () {
+                $('.letter-2').addClass('loaded');
+                $('.reg-text-2').addClass('loaded');
+            }, 2000);
+        });
+
+    </script>
+
+</body>
+</html>

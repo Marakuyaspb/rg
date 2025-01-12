@@ -19,6 +19,9 @@ def custom_500_view(request):
     return render(request, 'main/500.html', status=500)
 
 
+# def index_cover(request):
+# 	return render(request, 'main/index_cover.html')
+
 def index(request):
 	cars = Car.objects.all()
 	new_cars = Car.objects.filter(status=1)

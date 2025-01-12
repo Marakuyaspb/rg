@@ -11,7 +11,7 @@ def page_title(request):
     elif path == '/contact/':
         title = "Контакты R.E.D. Group Auto"
     elif path == '/guarantee/':
-        title = "Оформить гарантийное обслуживание на иномарку"
+        title = "Техническая поддержка иномарки - как гарантийное обслуживание"
     elif path == '/insurance/':
         title = "КАСКО по справедливой цене"
     elif path == '/jurists/':
