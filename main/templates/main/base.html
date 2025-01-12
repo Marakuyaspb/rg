@@ -70,7 +70,13 @@
       background-image: url("{% static 'abstract/mesh_blue_black_1.png' %}");
     }
 
-
+    .copyright{
+      color: var(--gray);
+      transition: color 0.3s ease;
+    }
+    .copyright:hover{
+      color: var(--red);
+    }
   </style>
 
 <div id="follower" class="follower"></div>
@@ -218,7 +224,8 @@
         </div>
 
         <div class='py-3'>
-          <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Легковые авто</p></a>
+          <a class="nav_footer_mob" href='{% url "cars:fresh_cars" %}'><p>Новые легковые машины</p></a>
+          <a class="nav_footer_mob" href='{% url "cars:used_cars" %}'><p>Легковые машины с пробегом</p></a>
           <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Грузовые машины</p></a>
           <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Автобусы</p></a>
           <a class="nav_footer_mob" href='{% url "cars:catalog" %}'><p>Спецтехника</p></a>
@@ -260,7 +267,10 @@
       </div>
       
       <div class='gray_light smaller we_300'>  
-      © 2024, R.E.D. Group Auto. Все права защищены.
+        © 2024, R.E.D. Group Auto. Все права защищены.
+      </div>
+      <div class='gray smaller we_300 pt-3'>
+        Разработка сайта: <a class='copyright' href="https://coffeeinveins.ru/">Анна Букина</a>
       </div>
     </div>
   
@@ -287,6 +297,8 @@
 
       <div class='py-3'>
         <a class="nav_footer" href='{% url "cars:catalog" %}'><p>Каталог</p></a>
+        <a class="nav_footer" href='{% url "cars:fresh_cars" %}'><p>Новые авто</p></a>
+        <a class="nav_footer" href='{% url "cars:used_cars" %}'><p>Авто с пробегом</p></a>
         <a class="nav_footer" href='{% url "main:insurance" %}'><p >Страхование</p></a>
         <a class="nav_footer" href='{% url "main:guarantee" %}'><p>Техническая поддержка</p></a>
         <a class="nav_footer" href='{% url "main:jurists" %}'><p>Юридическая поддержка</p></a>
@@ -318,6 +330,10 @@
    
     <center class='mt-3 gray_light smaller we_300'>  
     © 2024, R.E.D. Group Auto. Все права защищены.
+    </center>
+
+    <center class='mt-3 gray smaller we_300'>  
+    Разработка сайта: <a class='copyright' href="https://coffeeinveins.ru/">Анна Букина</a>
     </center>
 
   </footer>

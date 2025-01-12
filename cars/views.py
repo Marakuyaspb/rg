@@ -14,8 +14,12 @@ from .tasks import *
 
 
 def catalog(request):
+	sort_by = request.GET.get('sort_by', 'asc')
 	cars = Car.objects.all()
+	cars = cars_ordering(Car, cars, sort_by)
+	
 	queryset = cars
+	
 
 	if request.method == 'GET':
 		filtered_queryset = cars_filtering(request, queryset)
